@@ -1,0 +1,12 @@
+\form#0:$\frac{d^2 I}{d \Omega d \omega} = const*Amplitude^2$
+\form#1:$1-\beta \times \vec n$
+\form#2:$omega_{Nyquist}$
+\form#3:$n$
+\form#4:$omega_{Nyquist} = (\pi - \epsilon )/(\delta t * (1 - \vec(\beta) * \vec(n)))$
+\form#5:\[ | \mathcal{F} |^2 = N + (N*N - N) * (sinc^2(n_x * L_x * \omega) * sinc^2(n_y * L_y * \omega) * sinc^2(n_z * L_z * \omega))^T_shapeOrder \]
+\form#6:$ \vec{n} = (n_x, n_y, n_z) $
+\form#7:$ \sqrt( | \mathcal{F} |^2 ) $
+\form#8:\[ | \mathcal{F} |^2 = N + (N*N - N) * sinc^2(n_y * L_y * \omega) \]
+\form#9:\[ <rho(r)> = N*q_e* 1/sqrt(2*pi*sigma^2) * exp(-0.5 * r^2/sigma^2) \]
+\form#10:\[ <rho(r)> = N*q_e* product[d={x,y,z}](1/sqrt(2*pi*sigma_d^2) * exp(-0.5 * d^2/sigma_d^2)) \]
+\form#11:$ \sqrt( | \mathcal{F} |^2 == \sqrt(weighting) $
