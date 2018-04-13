@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PIConGPU: /tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/param/species.param File Reference</title>
+<title>PIConGPU: /tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/param/species.param File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,7 +84,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a38b7066b7cd4ec01b31e307e587fa8ba"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="species_8param.html#a38b7066b7cd4ec01b31e307e587fa8ba">picongpu::UsedParticleShape</a> = particles::shapes::TSC</td></tr>
-<tr class="memdesc:a38b7066b7cd4ec01b31e307e587fa8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_particle.html">Particle</a> Shape definitions.  <a href="species_8param.html#a38b7066b7cd4ec01b31e307e587fa8ba">More...</a><br /></td></tr>
+<tr class="memdesc:a38b7066b7cd4ec01b31e307e587fa8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classpicongpu_1_1_particle.html">Particle</a> Shape definitions.  <a href="species_8param.html#a38b7066b7cd4ec01b31e307e587fa8ba">More...</a><br /></td></tr>
 <tr class="separator:a38b7066b7cd4ec01b31e307e587fa8ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42054111b62153a5da495317636419a0"><td class="memItemLeft" align="right" valign="top"><a id="a42054111b62153a5da495317636419a0"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="species_8param.html#a42054111b62153a5da495317636419a0">picongpu::UsedField2Particle</a> = FieldToParticleInterpolation&lt; UsedParticleShape, AssignedTrilinearInterpolation &gt;</td></tr>
@@ -119,8 +119,7 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spe
 <li>currentSolver::EmZ&lt; SHAPE &gt; : particle shapes - CIC, TSC, PCS, P4S (1st to 4th order)</li>
 </ul>
 <p class="">For development purposes:</p><ul>
-<li>currentSolver::currentSolver::EsirkepovNative&lt; SHAPE &gt; : generic version of currentSolverEsirkepov without optimization (~4x slower and needs more shared memory)</li>
-<li>currentSolver::ZigZag&lt; SHAPE &gt; : particle shapes - CIC, TSC, PCS, P4S (1st to 4th order) </li>
+<li>currentSolver::currentSolver::EsirkepovNative&lt; SHAPE &gt; : generic version of currentSolverEsirkepov without optimization (~4x slower and needs more shared memory) </li>
 </ul>
 
 </div>
@@ -138,13 +137,14 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spe
 </div><div class="memdoc">
 
 <p>particle pusher configuration </p>
-<p class="">Define a pusher is optional for particles</p>
+<p class="">Defining a pusher is optional for particles</p>
 <ul>
 <li>particles::pusher::Vay : better suited relativistic boris pusher</li>
 <li>particles::pusher::Boris : standard boris pusher</li>
 <li>particles::pusher::ReducedLandauLifshitz : 4th order RungeKutta pusher with classical radiation reaction</li>
 </ul>
 <p class="">For diagnostics &amp; modeling: ---------------------------------------------&mdash;</p><ul>
+<li>particles::pusher::Acceleration : Accelerate particles by applying a constant electric field</li>
 <li>particles::pusher::Free : free propagation, ignore fields (= free stream model)</li>
 <li>particles::pusher::Photon : propagate with c in direction of normalized mom.</li>
 <li>particles::pusher::Probe : Probe particles that interpolate E &amp; B For development purposes: -----------------------------------------------&mdash;</li>
@@ -165,14 +165,14 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="spe
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_particle.html">Particle</a> Shape definitions. </p>
+<p>Particle Shape definitions. </p>
 <ul>
 <li>particles::shapes::CIC : 1st order</li>
 <li>particles::shapes::TSC : 2nd order</li>
 <li>particles::shapes::PCS : 3rd order</li>
 <li>particles::shapes::P4S : 4th order</li>
 </ul>
-<p class="">example: using CICShape = particles::shapes::CIC; </p>
+<p class="">example: using UsedParticleShape = particles::shapes::CIC; </p>
 
 </div>
 </div>

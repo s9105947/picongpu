@@ -115,10 +115,10 @@ Public Member Functions</h2></td></tr>
 template&lt;typename DeferFunctor  = Functor&gt; </td></tr>
 <tr class="memitem:a3663f605aa738eb42d7577613a45ab20"><td class="memTemplItemLeft" align="right" valign="top">HINLINE&#160;</td><td class="memTemplItemRight" valign="bottom"><b>Filtered</b> (uint32_t const currentStep)</td></tr>
 <tr class="separator:a3663f605aa738eb42d7577613a45ab20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42e8cb8ba79aaaec26083c7f5e2e902d"><td class="memTemplParams" colspan="2">template&lt;typename T_OffsetType , uint32_t T_numWorkers, typename T_Acc &gt; </td></tr>
-<tr class="memitem:a42e8cb8ba79aaaec26083c7f5e2e902d"><td class="memTemplItemLeft" align="right" valign="top">HDINLINE auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structpmacc_1_1functor_1_1_filtered_3_01_t___filter_operator_00_01filter_1_1_interface_3_01_t___bdfa8dbdd55fb04fe29d2102e926af65.html#a42e8cb8ba79aaaec26083c7f5e2e902d">operator()</a> (T_Acc const &amp;acc, T_OffsetType const &amp;domainOffset, <a class="el" href="classpmacc_1_1mappings_1_1threads_1_1_worker_cfg.html">mappings::threads::WorkerCfg</a>&lt; T_numWorkers &gt; const &amp;workerCfg) -&gt; <a class="el" href="structpmacc_1_1functor_1_1acc_1_1_filtered.html">acc::Filtered</a>&lt; T_FilterOperator, decltype(alpaka::core::declval&lt; <a class="el" href="structpmacc_1_1functor_1_1_interface.html">Filter</a> &gt;()(acc, domainOffset, workerCfg)), decltype(alpaka::core::declval&lt; <a class="el" href="structpmacc_1_1functor_1_1_interface.html">Functor</a> &gt;()(acc, domainOffset, workerCfg)) &gt;</td></tr>
-<tr class="memdesc:a42e8cb8ba79aaaec26083c7f5e2e902d"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a filtered functor which can be used on the accelerator  <a href="#a42e8cb8ba79aaaec26083c7f5e2e902d">More...</a><br /></td></tr>
-<tr class="separator:a42e8cb8ba79aaaec26083c7f5e2e902d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a609dd3d5d6686a5f4403ebd82fda7298"><td class="memTemplParams" colspan="2">template&lt;typename T_OffsetType , uint32_t T_numWorkers, typename T_Acc &gt; </td></tr>
+<tr class="memitem:a609dd3d5d6686a5f4403ebd82fda7298"><td class="memTemplItemLeft" align="right" valign="top">HDINLINE auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structpmacc_1_1functor_1_1_filtered_3_01_t___filter_operator_00_01filter_1_1_interface_3_01_t___bdfa8dbdd55fb04fe29d2102e926af65.html#a609dd3d5d6686a5f4403ebd82fda7298">operator()</a> (T_Acc const &amp;acc, T_OffsetType const &amp;domainOffset, <a class="el" href="classpmacc_1_1mappings_1_1threads_1_1_worker_cfg.html">mappings::threads::WorkerCfg</a>&lt; T_numWorkers &gt; const &amp;workerCfg) const -&gt; <a class="el" href="structpmacc_1_1functor_1_1acc_1_1_filtered.html">acc::Filtered</a>&lt; T_FilterOperator, decltype(alpaka::core::declval&lt; <a class="el" href="structpmacc_1_1functor_1_1_interface.html">Filter</a> &gt;()(acc, domainOffset, workerCfg)), decltype(alpaka::core::declval&lt; <a class="el" href="structpmacc_1_1functor_1_1_interface.html">Functor</a> &gt;()(acc, domainOffset, workerCfg)) &gt;</td></tr>
+<tr class="memdesc:a609dd3d5d6686a5f4403ebd82fda7298"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a filtered functor which can be used on the accelerator  <a href="#a609dd3d5d6686a5f4403ebd82fda7298">More...</a><br /></td></tr>
+<tr class="separator:a609dd3d5d6686a5f4403ebd82fda7298"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4aaf43256a45b98ddbfc5087b6e416e"><td class="memItemLeft" align="right" valign="top">HINLINE std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpmacc_1_1functor_1_1_filtered_3_01_t___filter_operator_00_01filter_1_1_interface_3_01_t___bdfa8dbdd55fb04fe29d2102e926af65.html#ab4aaf43256a45b98ddbfc5087b6e416e">getName</a> () const</td></tr>
 <tr class="memdesc:ab4aaf43256a45b98ddbfc5087b6e416e"><td class="mdescLeft">&#160;</td><td class="mdescRight">get name the of the filtered functor  <a href="#ab4aaf43256a45b98ddbfc5087b6e416e">More...</a><br /></td></tr>
 <tr class="separator:ab4aaf43256a45b98ddbfc5087b6e416e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,9 +129,9 @@ template&lt;typename DeferFunctor  = Functor&gt; </td></tr>
 <tr class="memitem:ad9681611f56305594feacdedb6a0373e inherit pub_methods_structpmacc_1_1functor_1_1_interface"><td class="memItemLeft" align="right" valign="top">HINLINE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpmacc_1_1functor_1_1_interface.html#ad9681611f56305594feacdedb6a0373e">Interface</a> (uint32_t const currentStep, typename std::enable_if&lt; std::is_constructible&lt; DeferFunctor &gt;::value &gt;::type *=0)</td></tr>
 <tr class="memdesc:ad9681611f56305594feacdedb6a0373e inherit pub_methods_structpmacc_1_1functor_1_1_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <a href="structpmacc_1_1functor_1_1_interface.html#ad9681611f56305594feacdedb6a0373e">More...</a><br /></td></tr>
 <tr class="separator:ad9681611f56305594feacdedb6a0373e inherit pub_methods_structpmacc_1_1functor_1_1_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7442864c4b61ad398f3df54612ecd9c3 inherit pub_methods_structpmacc_1_1functor_1_1_interface"><td class="memItemLeft" align="right" valign="top">HDINLINE auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpmacc_1_1functor_1_1_interface.html#a7442864c4b61ad398f3df54612ecd9c3">operator()</a> (T_Acc const &amp;acc, T_OffsetType const &amp;domainOffset, <a class="el" href="classpmacc_1_1mappings_1_1threads_1_1_worker_cfg.html">mappings::threads::WorkerCfg</a>&lt; T_numWorkers &gt; const &amp;workerCfg) -&gt; <a class="el" href="structpmacc_1_1functor_1_1acc_1_1_interface.html">acc::Interface</a>&lt; decltype(alpaka::core::declval&lt; <a class="el" href="structpmacc_1_1functor_1_1_interface.html#a67edc643abea392525ae4bfa41eb8aec">UserFunctor</a> &gt;()(acc, domainOffset, workerCfg)), T_numArguments, void &gt;</td></tr>
-<tr class="memdesc:a7442864c4b61ad398f3df54612ecd9c3 inherit pub_methods_structpmacc_1_1functor_1_1_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a functor which can be used on the accelerator  <a href="structpmacc_1_1functor_1_1_interface.html#a7442864c4b61ad398f3df54612ecd9c3">More...</a><br /></td></tr>
-<tr class="separator:a7442864c4b61ad398f3df54612ecd9c3 inherit pub_methods_structpmacc_1_1functor_1_1_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03c5778d913fdafc41c78dde89954a32 inherit pub_methods_structpmacc_1_1functor_1_1_interface"><td class="memItemLeft" align="right" valign="top">HDINLINE auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpmacc_1_1functor_1_1_interface.html#a03c5778d913fdafc41c78dde89954a32">operator()</a> (T_Acc const &amp;acc, T_OffsetType const &amp;domainOffset, <a class="el" href="classpmacc_1_1mappings_1_1threads_1_1_worker_cfg.html">mappings::threads::WorkerCfg</a>&lt; T_numWorkers &gt; const &amp;workerCfg) const -&gt; <a class="el" href="structpmacc_1_1functor_1_1acc_1_1_interface.html">acc::Interface</a>&lt; decltype(alpaka::core::declval&lt; <a class="el" href="structpmacc_1_1functor_1_1_interface.html#a67edc643abea392525ae4bfa41eb8aec">UserFunctor</a> &gt;()(acc, domainOffset, workerCfg)), T_numArguments, void &gt;</td></tr>
+<tr class="memdesc:a03c5778d913fdafc41c78dde89954a32 inherit pub_methods_structpmacc_1_1functor_1_1_interface"><td class="mdescLeft">&#160;</td><td class="mdescRight">create a functor which can be used on the accelerator  <a href="structpmacc_1_1functor_1_1_interface.html#a03c5778d913fdafc41c78dde89954a32">More...</a><br /></td></tr>
+<tr class="separator:a03c5778d913fdafc41c78dde89954a32 inherit pub_methods_structpmacc_1_1functor_1_1_interface"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -177,8 +177,8 @@ template&lt;typename T_FilterOperator , typename T_Filter , typename T_Functor ,
 
 </div>
 </div>
-<a id="a42e8cb8ba79aaaec26083c7f5e2e902d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42e8cb8ba79aaaec26083c7f5e2e902d">&#9670;&nbsp;</a></span>operator()()</h2>
+<a id="a609dd3d5d6686a5f4403ebd82fda7298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a609dd3d5d6686a5f4403ebd82fda7298">&#9670;&nbsp;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -211,7 +211,7 @@ template&lt;typename T_OffsetType , uint32_t T_numWorkers, typename T_Acc &gt; <
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="structpmacc_1_1functor_1_1acc_1_1_filtered.html">acc::Filtered</a>&lt;
+          <td></td><td> const -&gt; <a class="el" href="structpmacc_1_1functor_1_1acc_1_1_filtered.html">acc::Filtered</a>&lt;
             T_FilterOperator,
             decltype(
                 alpaka::core::declval&lt; <a class="el" href="structpmacc_1_1functor_1_1_interface.html">Filter</a> &gt;( )(
@@ -260,7 +260,7 @@ template&lt;typename T_OffsetType , uint32_t T_numWorkers, typename T_Acc &gt; <
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/pmacc/functor/<a class="el" href="_filtered_8hpp_source.html">Filtered.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/pmacc/functor/<a class="el" href="_filtered_8hpp_source.html">Filtered.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

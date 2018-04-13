@@ -84,17 +84,18 @@ Inheritance diagram for picongpu::plugins::multi::IHelp:</div>
   <img src="structpicongpu_1_1plugins_1_1multi_1_1_i_help.png" usemap="#picongpu::plugins::multi::IHelp_map" alt=""/>
   <map id="picongpu::plugins::multi::IHelp_map" name="picongpu::plugins::multi::IHelp_map">
 <area href="structpicongpu_1_1adios_1_1_a_d_i_o_s_writer_1_1_help.html" alt="picongpu::adios::ADIOSWriter::Help" shape="rect" coords="0,56,392,80"/>
-<area href="structpicongpu_1_1_energy_particles_1_1_help.html" alt="picongpu::EnergyParticles&lt; ParticlesType &gt;::Help" shape="rect" coords="402,56,794,80"/>
-<area href="structpicongpu_1_1hdf5_1_1_h_d_f5_writer_1_1_help.html" alt="picongpu::hdf5::HDF5Writer::Help" shape="rect" coords="804,56,1196,80"/>
-<area href="structpicongpu_1_1_particle_calorimeter_1_1_help.html" alt="picongpu::ParticleCalorimeter&lt; ParticlesType &gt;::Help" shape="rect" coords="1206,56,1598,80"/>
-<area href="structpicongpu_1_1_phase_space_1_1_help.html" alt="picongpu::PhaseSpace&lt; T_AssignmentFunction, T_Species &gt;::Help" shape="rect" coords="1608,56,2000,80"/>
+<area href="structpicongpu_1_1_calc_emittance_1_1_help.html" alt="picongpu::CalcEmittance&lt; ParticlesType &gt;::Help" shape="rect" coords="402,56,794,80"/>
+<area href="structpicongpu_1_1_energy_particles_1_1_help.html" alt="picongpu::EnergyParticles&lt; ParticlesType &gt;::Help" shape="rect" coords="804,56,1196,80"/>
+<area href="structpicongpu_1_1hdf5_1_1_h_d_f5_writer_1_1_help.html" alt="picongpu::hdf5::HDF5Writer::Help" shape="rect" coords="1206,56,1598,80"/>
+<area href="structpicongpu_1_1_particle_calorimeter_1_1_help.html" alt="picongpu::ParticleCalorimeter&lt; ParticlesType &gt;::Help" shape="rect" coords="1608,56,2000,80"/>
+<area href="structpicongpu_1_1_phase_space_1_1_help.html" alt="picongpu::PhaseSpace&lt; T_AssignmentFunction, T_Species &gt;::Help" shape="rect" coords="2010,56,2402,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a2d1be360308636cdc2de34c79b94a1c0"><td class="memItemLeft" align="right" valign="top"><a id="a2d1be360308636cdc2de34c79b94a1c0"></a>
-virtual std::shared_ptr&lt; <a class="el" href="structpicongpu_1_1plugins_1_1multi_1_1_i_slave.html">ISlave</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1plugins_1_1multi_1_1_i_help.html#a2d1be360308636cdc2de34c79b94a1c0">create</a> (std::shared_ptr&lt; <a class="el" href="structpicongpu_1_1plugins_1_1multi_1_1_i_help.html">IHelp</a> &gt; &amp;help, size_t const id, <a class="el" href="classpmacc_1_1_mapping_description.html">MappingDesc</a> *cellDescription)=0</td></tr>
+virtual std::shared_ptr&lt; <a class="el" href="structpicongpu_1_1plugins_1_1multi_1_1_i_slave.html">ISlave</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1plugins_1_1multi_1_1_i_help.html#a2d1be360308636cdc2de34c79b94a1c0">create</a> (std::shared_ptr&lt; <a class="el" href="structpicongpu_1_1plugins_1_1multi_1_1_i_help.html">IHelp</a> &gt; &amp;help, size_t const id, <a class="el" href="memory_8param.html#afa4e51ff66db1d549123f10b285153b9">MappingDesc</a> *cellDescription)=0</td></tr>
 <tr class="memdesc:a2d1be360308636cdc2de34c79b94a1c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a <a class="el" href="structpicongpu_1_1plugins_1_1multi_1_1_i_slave.html" title="Interface for a slave plugin. ">ISlave</a> instance <br /></td></tr>
 <tr class="separator:a2d1be360308636cdc2de34c79b94a1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91300246e305f77a7271190e0ffe7f44"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1plugins_1_1multi_1_1_i_help.html#a91300246e305f77a7271190e0ffe7f44">registerHelp</a> (boost::program_options::options_description &amp;desc, std::string const &amp;masterPrefix=std::string{ })=0</td></tr>
@@ -160,7 +161,7 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <p>register independent help options </p>
 <p class="">This options can be used even if the plugin is not handling there own notification period. </p>
 
-<p>Implemented in <a class="el" href="structpicongpu_1_1_particle_calorimeter_1_1_help.html#ac86e57e6b41ff9bac4fea0d325ab3372">picongpu::ParticleCalorimeter&lt; ParticlesType &gt;::Help</a>, <a class="el" href="structpicongpu_1_1_energy_particles_1_1_help.html#ab411fa657489d51ea02bd2afcf7f5817">picongpu::EnergyParticles&lt; ParticlesType &gt;::Help</a>, <a class="el" href="structpicongpu_1_1adios_1_1_a_d_i_o_s_writer_1_1_help.html#a7a45e5735a7ad36c221e9c48d1709669">picongpu::adios::ADIOSWriter::Help</a>, <a class="el" href="structpicongpu_1_1hdf5_1_1_h_d_f5_writer_1_1_help.html#aec7f5b1c4d0fd92b55fb8f563281b305">picongpu::hdf5::HDF5Writer::Help</a>, and <a class="el" href="structpicongpu_1_1_phase_space_1_1_help.html#abde73eef2ec14d5b1310d953b725e4ba">picongpu::PhaseSpace&lt; T_AssignmentFunction, T_Species &gt;::Help</a>.</p>
+<p>Implemented in <a class="el" href="structpicongpu_1_1_particle_calorimeter_1_1_help.html#ac86e57e6b41ff9bac4fea0d325ab3372">picongpu::ParticleCalorimeter&lt; ParticlesType &gt;::Help</a>, <a class="el" href="structpicongpu_1_1_calc_emittance_1_1_help.html#a7ae0d39701f7c0894bee92584b3bd904">picongpu::CalcEmittance&lt; ParticlesType &gt;::Help</a>, <a class="el" href="structpicongpu_1_1_energy_particles_1_1_help.html#ab411fa657489d51ea02bd2afcf7f5817">picongpu::EnergyParticles&lt; ParticlesType &gt;::Help</a>, <a class="el" href="structpicongpu_1_1adios_1_1_a_d_i_o_s_writer_1_1_help.html#a7a45e5735a7ad36c221e9c48d1709669">picongpu::adios::ADIOSWriter::Help</a>, <a class="el" href="structpicongpu_1_1hdf5_1_1_h_d_f5_writer_1_1_help.html#aec7f5b1c4d0fd92b55fb8f563281b305">picongpu::hdf5::HDF5Writer::Help</a>, and <a class="el" href="structpicongpu_1_1_phase_space_1_1_help.html#abde73eef2ec14d5b1310d953b725e4ba">picongpu::PhaseSpace&lt; T_AssignmentFunction, T_Species &gt;::Help</a>.</p>
 
 </div>
 </div>
@@ -201,12 +202,12 @@ virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <p>register help options </p>
 <p class="">The options are used if the plugin is a <a class="el" href="structpicongpu_1_1plugins_1_1multi_1_1_i_slave.html" title="Interface for a slave plugin. ">ISlave</a> and is handling there own notification period. </p>
 
-<p>Implemented in <a class="el" href="structpicongpu_1_1_particle_calorimeter_1_1_help.html#a18076e890c26113c616f8607e928e16c">picongpu::ParticleCalorimeter&lt; ParticlesType &gt;::Help</a>, <a class="el" href="structpicongpu_1_1_energy_particles_1_1_help.html#aa18b630ee46eef377fff7b1a3952e28b">picongpu::EnergyParticles&lt; ParticlesType &gt;::Help</a>, <a class="el" href="structpicongpu_1_1adios_1_1_a_d_i_o_s_writer_1_1_help.html#aa2520edb59f0cee5d5df07e2b439f2f4">picongpu::adios::ADIOSWriter::Help</a>, <a class="el" href="structpicongpu_1_1hdf5_1_1_h_d_f5_writer_1_1_help.html#a1f0ea8679d1e752b1ee6b670562de086">picongpu::hdf5::HDF5Writer::Help</a>, and <a class="el" href="structpicongpu_1_1_phase_space_1_1_help.html#abdfaea3ad17dfd937c3fc8db0d1159b2">picongpu::PhaseSpace&lt; T_AssignmentFunction, T_Species &gt;::Help</a>.</p>
+<p>Implemented in <a class="el" href="structpicongpu_1_1_particle_calorimeter_1_1_help.html#a18076e890c26113c616f8607e928e16c">picongpu::ParticleCalorimeter&lt; ParticlesType &gt;::Help</a>, <a class="el" href="structpicongpu_1_1_calc_emittance_1_1_help.html#a37e711fdff29c623dd0a6eb0691191ab">picongpu::CalcEmittance&lt; ParticlesType &gt;::Help</a>, <a class="el" href="structpicongpu_1_1_energy_particles_1_1_help.html#aa18b630ee46eef377fff7b1a3952e28b">picongpu::EnergyParticles&lt; ParticlesType &gt;::Help</a>, <a class="el" href="structpicongpu_1_1adios_1_1_a_d_i_o_s_writer_1_1_help.html#aa2520edb59f0cee5d5df07e2b439f2f4">picongpu::adios::ADIOSWriter::Help</a>, <a class="el" href="structpicongpu_1_1hdf5_1_1_h_d_f5_writer_1_1_help.html#a1f0ea8679d1e752b1ee6b670562de086">picongpu::hdf5::HDF5Writer::Help</a>, and <a class="el" href="structpicongpu_1_1_phase_space_1_1_help.html#abdfaea3ad17dfd937c3fc8db0d1159b2">picongpu::PhaseSpace&lt; T_AssignmentFunction, T_Species &gt;::Help</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/plugins/multi/<a class="el" href="_i_help_8hpp_source.html">IHelp.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/plugins/multi/<a class="el" href="_i_help_8hpp_source.html">IHelp.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

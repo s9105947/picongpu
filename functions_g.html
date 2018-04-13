@@ -67,6 +67,13 @@ $(function() {
 <li>gamma
 : <a class="el" href="structpicongpu_1_1particles_1_1manipulators_1_1unary_1_1param_1_1_drift_cfg.html#afe481bb2435cb54112a543ca4b6ccd10">picongpu::particles::manipulators::unary::param::DriftCfg</a>
 </li>
+<li>gauss()
+: <a class="el" href="structpicongpu_1_1fields_1_1laser_profiles_1_1_exp_ramp_with_prepulse.html#ab5913738e50d27b63ec4cb14c451e891">picongpu::fields::laserProfiles::ExpRampWithPrepulse&lt; T_Params &gt;</a>
+</li>
+<li>GaussianBeam()
+: <a class="el" href="structpicongpu_1_1fields_1_1laser_profiles_1_1acc_1_1_gaussian_beam.html#a6472b44b77efae4a28a24b7a4d9a8b4a">picongpu::fields::laserProfiles::acc::GaussianBeam&lt; T_Unitless &gt;</a>
+, <a class="el" href="structpicongpu_1_1fields_1_1laser_profiles_1_1_gaussian_beam.html#a9bdf01dfb6d94e19133e2a49e1cb002f">picongpu::fields::laserProfiles::GaussianBeam&lt; T_Params &gt;</a>
+</li>
 <li>get()
 : <a class="el" href="structpicongpu_1_1plugins_1_1multi_1_1_option.html#af9779e05ea12ff2b9b1cabb5726a15d8">picongpu::plugins::multi::Option&lt; T_ValueType &gt;</a>
 , <a class="el" href="classpmacc_1_1_data_connector.html#ac3dd7fb247d8d952767d4f9a36d51553">pmacc::DataConnector</a>
@@ -155,6 +162,7 @@ $(function() {
 </li>
 <li>getDescription()
 : <a class="el" href="structpicongpu_1_1adios_1_1_a_d_i_o_s_writer_1_1_help.html#adec4865cfca0e212225042c3833a9d9e">picongpu::adios::ADIOSWriter::Help</a>
+, <a class="el" href="structpicongpu_1_1_calc_emittance_1_1_help.html#a1357991add12996da01a7a52b30cec03">picongpu::CalcEmittance&lt; ParticlesType &gt;::Help</a>
 , <a class="el" href="structpicongpu_1_1_energy_particles_1_1_help.html#aa8346b954e515d42ae79933cd2a9f157">picongpu::EnergyParticles&lt; ParticlesType &gt;::Help</a>
 , <a class="el" href="structpicongpu_1_1hdf5_1_1_h_d_f5_writer_1_1_help.html#ab951c8fb7689760a41fda720b66cfb7b">picongpu::hdf5::HDF5Writer::Help</a>
 , <a class="el" href="structpicongpu_1_1_particle_calorimeter_1_1_help.html#a239d3e84f5b3384b0bc538af5373e1e5">picongpu::ParticleCalorimeter&lt; ParticlesType &gt;::Help</a>
@@ -233,6 +241,7 @@ $(function() {
 <li>getHelp()
 : <a class="el" href="classpicongpu_1_1adios_1_1_a_d_i_o_s_writer.html#a51dc399882331cc99790442c4b05be00">picongpu::adios::ADIOSWriter</a>
 , <a class="el" href="classpicongpu_1_1_bin_energy_particles.html#af7136309453fb3a4d9c57b9c22d06843">picongpu::BinEnergyParticles&lt; ParticlesType &gt;</a>
+, <a class="el" href="classpicongpu_1_1_calc_emittance.html#a1deca1909e91898ff0a1e47e97b282b7">picongpu::CalcEmittance&lt; ParticlesType &gt;</a>
 , <a class="el" href="classpicongpu_1_1_energy_particles.html#a245fe6124b6643745a838f7450b2f7a8">picongpu::EnergyParticles&lt; ParticlesType &gt;</a>
 , <a class="el" href="classpicongpu_1_1hdf5_1_1_h_d_f5_writer.html#a8572693c567118240184ca7328edc0d7">picongpu::hdf5::HDF5Writer</a>
 , <a class="el" href="classpicongpu_1_1_phase_space.html#ad481b9c7beb4b9b086c46818b0101923">picongpu::PhaseSpace&lt; T_AssignmentFunction, T_Species &gt;</a>
@@ -285,9 +294,6 @@ $(function() {
 <li>getLocalSize()
 : <a class="el" href="classpicongpu_1_1_parser_grid_distribution.html#ad98f1ce90af8d781da4b37b998332919">picongpu::ParserGridDistribution</a>
 </li>
-<li>getManipulation()
-: <a class="el" href="classpicongpu_1_1_laser_manipulator.html#acae51fdb4b0d8ed02669475ba8a49a4c">picongpu::LaserManipulator</a>
-</li>
 <li>getMaxMomentumSpread2()
 : <a class="el" href="structpicongpu_1_1plugins_1_1particle_merging_1_1_voronoi_cell.html#a5ba4ba88ca70961e385c8b745e3a4b37">picongpu::plugins::particleMerging::VoronoiCell</a>
 </li>
@@ -314,7 +320,15 @@ $(function() {
 </li>
 <li>getName()
 : <a class="el" href="structpicongpu_1_1adios_1_1_a_d_i_o_s_writer_1_1_help.html#a1f8d900eb719403990f25957ae5c4abf">picongpu::adios::ADIOSWriter::Help</a>
+, <a class="el" href="structpicongpu_1_1_calc_emittance_1_1_help.html#a88411a3203c5e5f535e24062ad61af2a">picongpu::CalcEmittance&lt; ParticlesType &gt;::Help</a>
 , <a class="el" href="structpicongpu_1_1_energy_particles_1_1_help.html#acd59fb343725c8c102640529ab3b3217">picongpu::EnergyParticles&lt; ParticlesType &gt;::Help</a>
+, <a class="el" href="structpicongpu_1_1fields_1_1laser_profiles_1_1_exp_ramp_with_prepulse.html#aa35f5f5e703ec5230150bd4e7a5e862d">picongpu::fields::laserProfiles::ExpRampWithPrepulse&lt; T_Params &gt;</a>
+, <a class="el" href="structpicongpu_1_1fields_1_1laser_profiles_1_1_gaussian_beam.html#aaf3eaa88cf6c33d2b572c47e8414fafb">picongpu::fields::laserProfiles::GaussianBeam&lt; T_Params &gt;</a>
+, <a class="el" href="structpicongpu_1_1fields_1_1laser_profiles_1_1_none.html#afc27baeed10984b05e305f1aca42351c">picongpu::fields::laserProfiles::None&lt; T_Params &gt;</a>
+, <a class="el" href="structpicongpu_1_1fields_1_1laser_profiles_1_1_plane_wave.html#aa829d9314b8e95bae7e2a6294594cdca">picongpu::fields::laserProfiles::PlaneWave&lt; T_Params &gt;</a>
+, <a class="el" href="structpicongpu_1_1fields_1_1laser_profiles_1_1_polynom.html#a211942670128cf4daaf82ee25b832101">picongpu::fields::laserProfiles::Polynom&lt; T_Params &gt;</a>
+, <a class="el" href="structpicongpu_1_1fields_1_1laser_profiles_1_1_pulse_front_tilt.html#a58ff0c37fcd4aeb5687b1e32f753f1a8">picongpu::fields::laserProfiles::PulseFrontTilt&lt; T_Params &gt;</a>
+, <a class="el" href="structpicongpu_1_1fields_1_1laser_profiles_1_1_wavepacket.html#a5b7539cb86e5136dd361c53cf4e082f8">picongpu::fields::laserProfiles::Wavepacket&lt; T_Params &gt;</a>
 , <a class="el" href="structpicongpu_1_1hdf5_1_1_h_d_f5_writer_1_1_help.html#a46a4b960019cd5164cf533f0877b5f19">picongpu::hdf5::HDF5Writer::Help</a>
 , <a class="el" href="structpicongpu_1_1_particle_calorimeter_1_1_help.html#a2689f0cd5aa2989626c9316da6fb0897">picongpu::ParticleCalorimeter&lt; ParticlesType &gt;::Help</a>
 , <a class="el" href="structpicongpu_1_1particles_1_1manipulators_1_1generic_1_1_free.html#ab8c45fb5e883532e3c023bb7bc5efc95">picongpu::particles::manipulators::generic::Free&lt; T_Functor &gt;</a>
@@ -345,6 +359,7 @@ $(function() {
 </li>
 <li>getNumPlugins()
 : <a class="el" href="structpicongpu_1_1adios_1_1_a_d_i_o_s_writer_1_1_help.html#a98d7f1ddba074cdb99e13755d4becb7f">picongpu::adios::ADIOSWriter::Help</a>
+, <a class="el" href="structpicongpu_1_1_calc_emittance_1_1_help.html#ad0694193a983a7df0752e7f249f70dc1">picongpu::CalcEmittance&lt; ParticlesType &gt;::Help</a>
 , <a class="el" href="structpicongpu_1_1_energy_particles_1_1_help.html#a38ad87b7fa73814f71c9385ab4ad82ad">picongpu::EnergyParticles&lt; ParticlesType &gt;::Help</a>
 , <a class="el" href="structpicongpu_1_1hdf5_1_1_h_d_f5_writer_1_1_help.html#ababac3aa7299ea79ae80f791a934c701">picongpu::hdf5::HDF5Writer::Help</a>
 , <a class="el" href="structpicongpu_1_1_particle_calorimeter_1_1_help.html#ae88dd6cf945a2cddbcb80676b8736b14">picongpu::ParticleCalorimeter&lt; ParticlesType &gt;::Help</a>
@@ -408,7 +423,7 @@ $(function() {
 : <a class="el" href="classpmacc_1_1_grid_buffer.html#a1db8130f8720b2253b8bd3b003b798eb">pmacc::GridBuffer&lt; TYPE, DIM, BORDERTYPE &gt;</a>
 </li>
 <li>getRelativeDirections()
-: <a class="el" href="classpmacc_1_1_mask.html#a72d0bb71a5046ce460b874f590281fbc">pmacc::Mask</a>
+: <a class="el" href="classpmacc_1_1_mask.html#ac5d978c1a59f9a6f31e813bed5aa6ed9">pmacc::Mask</a>
 </li>
 <li>getRootSuperCellCoordinate()
 : <a class="el" href="classpmacc_1_1_mapping_description.html#a6d94b143c81fb7d14d13a42640491cfb">pmacc::MappingDescription&lt; DIM, SuperCellSize_ &gt;</a>

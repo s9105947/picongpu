@@ -108,10 +108,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1a3463bb8789e0663a33bf50e6fc25e8"><td class="memItemLeft" align="right" valign="top">HINLINE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1particles_1_1filter_1_1generic_1_1_free_total_cell_offset.html#a1a3463bb8789e0663a33bf50e6fc25e8">FreeTotalCellOffset</a> (uint32_t currentStep)</td></tr>
 <tr class="memdesc:a1a3463bb8789e0663a33bf50e6fc25e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <a href="#a1a3463bb8789e0663a33bf50e6fc25e8">More...</a><br /></td></tr>
 <tr class="separator:a1a3463bb8789e0663a33bf50e6fc25e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada9f741e19f84bcda14796b4d2c4b7e3"><td class="memTemplParams" colspan="2">template&lt;typename T_WorkerCfg , typename T_Acc &gt; </td></tr>
-<tr class="memitem:ada9f741e19f84bcda14796b4d2c4b7e3"><td class="memTemplItemLeft" align="right" valign="top">HDINLINE auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1particles_1_1filter_1_1generic_1_1_free_total_cell_offset.html#ada9f741e19f84bcda14796b4d2c4b7e3">operator()</a> (T_Acc const &amp;acc, <a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; simDim &gt; const &amp;localSupercellOffset, T_WorkerCfg const &amp;workerCfg) -&gt; <a class="el" href="structpicongpu_1_1particles_1_1filter_1_1generic_1_1acc_1_1_free_total_cell_offset.html">acc::FreeTotalCellOffset</a>&lt; <a class="el" href="structpicongpu_1_1particles_1_1functor_1_1_user.html">Functor</a> &gt;</td></tr>
-<tr class="memdesc:ada9f741e19f84bcda14796b4d2c4b7e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">create functor for the accelerator  <a href="#ada9f741e19f84bcda14796b4d2c4b7e3">More...</a><br /></td></tr>
-<tr class="separator:ada9f741e19f84bcda14796b4d2c4b7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fd90b7f214b18449faaf5669cc21550"><td class="memTemplParams" colspan="2">template&lt;typename T_WorkerCfg , typename T_Acc &gt; </td></tr>
+<tr class="memitem:a3fd90b7f214b18449faaf5669cc21550"><td class="memTemplItemLeft" align="right" valign="top">HDINLINE auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1particles_1_1filter_1_1generic_1_1_free_total_cell_offset.html#a3fd90b7f214b18449faaf5669cc21550">operator()</a> (T_Acc const &amp;acc, <a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; simDim &gt; const &amp;localSupercellOffset, T_WorkerCfg const &amp;workerCfg) const -&gt; <a class="el" href="structpicongpu_1_1particles_1_1filter_1_1generic_1_1acc_1_1_free_total_cell_offset.html">acc::FreeTotalCellOffset</a>&lt; <a class="el" href="structpicongpu_1_1particles_1_1functor_1_1_user.html">Functor</a> &gt;</td></tr>
+<tr class="memdesc:a3fd90b7f214b18449faaf5669cc21550"><td class="mdescLeft">&#160;</td><td class="mdescRight">create functor for the accelerator  <a href="#a3fd90b7f214b18449faaf5669cc21550">More...</a><br /></td></tr>
+<tr class="separator:a3fd90b7f214b18449faaf5669cc21550"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -147,7 +147,7 @@ struct picongpu::particles::filter::generic::FreeTotalCellOffset&lt; T_Functor &
   </table>
   </dd>
 </dl>
-<p>example for <code>particleFilters.param</code>: each particle with a cell offset of 5 in X direction </p><div class="fragment"><div class="line"><span class="keyword">struct </span>FunctorEachParticleInXCell5</div><div class="line">{</div><div class="line">    <span class="keyword">template</span>&lt; <span class="keyword">typename</span> T_Particle &gt;</div><div class="line">    HDINLINE <span class="keywordtype">bool</span> <a class="code" href="structpicongpu_1_1particles_1_1filter_1_1generic_1_1_free_total_cell_offset.html#ada9f741e19f84bcda14796b4d2c4b7e3">operator()</a>(</div><div class="line">        <a class="code" href="classpmacc_1_1_data_space.html">DataSpace&lt; simDim &gt;</a> <span class="keyword">const</span> &amp; particleOffsetToTotalOrigin,</div><div class="line">        T_Particle <span class="keyword">const</span> &amp; particle</div><div class="line">    )</div><div class="line">    {</div><div class="line">        <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div><div class="line">        <span class="keywordflow">if</span>( particleOffsetToTotalOrigin.x() == 5 )</div><div class="line">            result = <span class="keyword">true</span>;</div><div class="line">        <span class="keywordflow">return</span> result;</div><div class="line">    }</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">using</span> EachParticleInXCell5 = generic::FreeTotalCellOffset&lt;</div><div class="line">   FunctorEachParticleInXCell5</div><div class="line">&gt;;</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p>example for <code><a class="el" href="particle_filters_8param.html" title="A common task in both modeling and in situ processing (output) is the selection of particles of a par...">particleFilters.param</a></code>: each particle with a cell offset of 5 in X direction </p><div class="fragment"><div class="line"><span class="keyword">struct </span>FunctorEachParticleInXCell5</div><div class="line">{</div><div class="line">    <span class="keyword">template</span>&lt; <span class="keyword">typename</span> T_Particle &gt;</div><div class="line">    HDINLINE <span class="keywordtype">bool</span> <a class="code" href="structpicongpu_1_1particles_1_1filter_1_1generic_1_1_free_total_cell_offset.html#a3fd90b7f214b18449faaf5669cc21550">operator()</a>(</div><div class="line">        <a class="code" href="classpmacc_1_1_data_space.html">DataSpace&lt; simDim &gt;</a> <span class="keyword">const</span> &amp; particleOffsetToTotalOrigin,</div><div class="line">        T_Particle <span class="keyword">const</span> &amp; particle</div><div class="line">    )</div><div class="line">    {</div><div class="line">        <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div><div class="line">        <span class="keywordflow">if</span>( particleOffsetToTotalOrigin.x() == 5 )</div><div class="line">            result = <span class="keyword">true</span>;</div><div class="line">        <span class="keywordflow">return</span> result;</div><div class="line">    }</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">using</span> EachParticleInXCell5 = generic::FreeTotalCellOffset&lt;</div><div class="line">   FunctorEachParticleInXCell5</div><div class="line">&gt;;</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1a3463bb8789e0663a33bf50e6fc25e8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1a3463bb8789e0663a33bf50e6fc25e8">&#9670;&nbsp;</a></span>FreeTotalCellOffset()</h2>
 
@@ -185,8 +185,8 @@ template&lt;typename T_Functor &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ada9f741e19f84bcda14796b4d2c4b7e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ada9f741e19f84bcda14796b4d2c4b7e3">&#9670;&nbsp;</a></span>operator()()</h2>
+<a id="a3fd90b7f214b18449faaf5669cc21550"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fd90b7f214b18449faaf5669cc21550">&#9670;&nbsp;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,7 +219,7 @@ template&lt;typename T_WorkerCfg , typename T_Acc &gt; </div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="structpicongpu_1_1particles_1_1filter_1_1generic_1_1acc_1_1_free_total_cell_offset.html">acc::FreeTotalCellOffset</a>&lt; <a class="el" href="structpicongpu_1_1particles_1_1functor_1_1_user.html">Functor</a> &gt;
+          <td></td><td> const -&gt; <a class="el" href="structpicongpu_1_1particles_1_1filter_1_1generic_1_1acc_1_1_free_total_cell_offset.html">acc::FreeTotalCellOffset</a>&lt; <a class="el" href="structpicongpu_1_1particles_1_1functor_1_1_user.html">Functor</a> &gt;
         </td>
         </tr>
       </table>
@@ -250,8 +250,8 @@ template&lt;typename T_WorkerCfg , typename T_Acc &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/particles/filter/generic/FreeTotalCellOffset.def</li>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/particles/filter/generic/<a class="el" href="filter_2generic_2_free_total_cell_offset_8hpp_source.html">FreeTotalCellOffset.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/particles/filter/generic/FreeTotalCellOffset.def</li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/particles/filter/generic/<a class="el" href="filter_2generic_2_free_total_cell_offset_8hpp_source.html">FreeTotalCellOffset.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

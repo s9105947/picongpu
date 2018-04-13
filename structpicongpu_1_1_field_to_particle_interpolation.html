@@ -86,18 +86,18 @@ Public Types</h2></td></tr>
 <tr class="memitem:a38effa3058c26e43bf5aa0d2fbbbb66e"><td class="memItemLeft" align="right" valign="top"><a id="a38effa3058c26e43bf5aa0d2fbbbb66e"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>AssignmentFunction</b> = typename T_Shape::ChargeAssignmentOnSupport</td></tr>
 <tr class="separator:a38effa3058c26e43bf5aa0d2fbbbb66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a527a03101e9330d2e435d8d56a19cb5e"><td class="memItemLeft" align="right" valign="top"><a id="a527a03101e9330d2e435d8d56a19cb5e"></a>
-typedef <a class="el" href="structpmacc_1_1math_1_1_c_t_1_1make___int.html">pmacc::math::CT::make_Int</a>&lt; simDim, lowerMargin &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>LowerMargin</b></td></tr>
-<tr class="separator:a527a03101e9330d2e435d8d56a19cb5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c2a4e960574b17dbf073426cc859ff7"><td class="memItemLeft" align="right" valign="top"><a id="a9c2a4e960574b17dbf073426cc859ff7"></a>
-typedef <a class="el" href="structpmacc_1_1math_1_1_c_t_1_1make___int.html">pmacc::math::CT::make_Int</a>&lt; simDim, upperMargin &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>UpperMargin</b></td></tr>
-<tr class="separator:a9c2a4e960574b17dbf073426cc859ff7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d458568684045bfea79b9dcc405424"><td class="memItemLeft" align="right" valign="top"><a id="a12d458568684045bfea79b9dcc405424"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>LowerMargin</b> = typename <a class="el" href="structpmacc_1_1math_1_1_c_t_1_1make___int.html">pmacc::math::CT::make_Int</a>&lt; simDim, lowerMargin &gt;::type</td></tr>
+<tr class="separator:a12d458568684045bfea79b9dcc405424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba307cd1706a724ce5e4eda6f578d1d0"><td class="memItemLeft" align="right" valign="top"><a id="aba307cd1706a724ce5e4eda6f578d1d0"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>UpperMargin</b> = typename <a class="el" href="structpmacc_1_1math_1_1_c_t_1_1make___int.html">pmacc::math::CT::make_Int</a>&lt; simDim, upperMargin &gt;::type</td></tr>
+<tr class="separator:aba307cd1706a724ce5e4eda6f578d1d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac2bc4082270e86a3353c2a7b48467be0"><td class="memItemLeft" align="right" valign="top"><a id="ac2bc4082270e86a3353c2a7b48467be0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PMACC_CASSERT_MSG</b> (__FieldToParticleInterpolation_supercell_is_to_small_for_stencil, <a class="el" href="structpmacc_1_1math_1_1_c_t_1_1min.html">pmacc::math::CT::min</a>&lt; SuperCellSize &gt;::type::value &gt;=lowerMargin &amp;&amp;<a class="el" href="structpmacc_1_1math_1_1_c_t_1_1min.html">pmacc::math::CT::min</a>&lt; SuperCellSize &gt;::type::value &gt;=upperMargin)</td></tr>
-<tr class="separator:ac2bc4082270e86a3353c2a7b48467be0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14320189c319706cdb2763908409c033"><td class="memItemLeft" align="right" valign="top"><a id="a14320189c319706cdb2763908409c033"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>PMACC_CASSERT_MSG</b> (__FieldToParticleInterpolation_supercell_is_too_small_for_stencil, <a class="el" href="structpmacc_1_1math_1_1_c_t_1_1min.html">pmacc::math::CT::min</a>&lt; typename <a class="el" href="structpmacc_1_1math_1_1_c_t_1_1mul.html">pmacc::math::CT::mul</a>&lt; <a class="el" href="memory_8param.html#a5495cb778dcda321e7a831346ef54a77">SuperCellSize</a>, <a class="el" href="memory_8param.html#a1dfff0372ef605f4c277abb1a6e03597">GuardSize</a> &gt;::type &gt;::type::value &gt;=lowerMargin &amp;&amp;<a class="el" href="structpmacc_1_1math_1_1_c_t_1_1min.html">pmacc::math::CT::min</a>&lt; typename <a class="el" href="structpmacc_1_1math_1_1_c_t_1_1mul.html">pmacc::math::CT::mul</a>&lt; <a class="el" href="memory_8param.html#a5495cb778dcda321e7a831346ef54a77">SuperCellSize</a>, <a class="el" href="memory_8param.html#a1dfff0372ef605f4c277abb1a6e03597">GuardSize</a> &gt;::type &gt;::type::value &gt;=upperMargin)</td></tr>
+<tr class="separator:a14320189c319706cdb2763908409c033"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c9d024de90c00c40f7e15850d3dd232"><td class="memTemplParams" colspan="2">template&lt;class Cursor , class VecVector &gt; </td></tr>
 <tr class="memitem:a7c9d024de90c00c40f7e15850d3dd232"><td class="memTemplItemLeft" align="right" valign="top">HDINLINE Cursor::ValueType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1_field_to_particle_interpolation.html#a7c9d024de90c00c40f7e15850d3dd232">operator()</a> (Cursor field, const <a class="el" href="structpmacc_1_1math_1_1_vector.html">floatD_X</a> &amp;particlePos, const VecVector &amp;fieldPos)</td></tr>
 <tr class="separator:a7c9d024de90c00c40f7e15850d3dd232"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,7 +189,7 @@ template&lt;class Cursor , class VecVector &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/algorithms/<a class="el" href="_field_to_particle_interpolation_8hpp_source.html">FieldToParticleInterpolation.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/algorithms/<a class="el" href="_field_to_particle_interpolation_8hpp_source.html">FieldToParticleInterpolation.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

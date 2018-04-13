@@ -91,18 +91,15 @@ typedef SuperCellSize_&#160;</td><td class="memItemRight" valign="bottom"><b>Sup
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a37496fb373642fea7598c4dd1d2accbe"><td class="memItemLeft" align="right" valign="top"><a id="a37496fb373642fea7598c4dd1d2accbe"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MappingDescription</b> (<a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; DIM &gt; localGridCells=<a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; DIM &gt;(), int borderSuperCells=0, int guardingSuperCells=0)</td></tr>
-<tr class="separator:a37496fb373642fea7598c4dd1d2accbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf9c3f338b23932ee993ac91f592eca9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpmacc_1_1_mapping_description.html#adf9c3f338b23932ee993ac91f592eca9">MappingDescription</a> (<a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; DIM &gt; localGridCells, <a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; DIM &gt; guardingSuperCells=<a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; DIM &gt;::create(0))</td></tr>
+<tr class="memdesc:adf9c3f338b23932ee993ac91f592eca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <a href="#adf9c3f338b23932ee993ac91f592eca9">More...</a><br /></td></tr>
+<tr class="separator:adf9c3f338b23932ee993ac91f592eca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dcdf605684b0c30c51eefd59be69f0a"><td class="memItemLeft" align="right" valign="top"><a id="a3dcdf605684b0c30c51eefd59be69f0a"></a>
 HDINLINE <a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; DIM &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getGridSuperCells</b> () const</td></tr>
 <tr class="separator:a3dcdf605684b0c30c51eefd59be69f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af402e95e96e12a7f5aae8892121efb87"><td class="memItemLeft" align="right" valign="top"><a id="af402e95e96e12a7f5aae8892121efb87"></a>
-HDINLINE int&#160;</td><td class="memItemRight" valign="bottom"><b>getBorderSuperCells</b> () const</td></tr>
-<tr class="separator:af402e95e96e12a7f5aae8892121efb87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcdc1014f2fcea0a22f4408601e55298"><td class="memItemLeft" align="right" valign="top"><a id="afcdc1014f2fcea0a22f4408601e55298"></a>
-HDINLINE int&#160;</td><td class="memItemRight" valign="bottom"><b>getGuardingSuperCells</b> () const</td></tr>
-<tr class="separator:afcdc1014f2fcea0a22f4408601e55298"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accbcc5484033e6c61d5e4ec24548bbaa"><td class="memItemLeft" align="right" valign="top"><a id="accbcc5484033e6c61d5e4ec24548bbaa"></a>
+HDINLINE <a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; DIM &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getGuardingSuperCells</b> () const</td></tr>
+<tr class="separator:accbcc5484033e6c61d5e4ec24548bbaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb0e4a1e56201b9a3cc445e6719d1607"><td class="memItemLeft" align="right" valign="top"><a id="adb0e4a1e56201b9a3cc445e6719d1607"></a>
 HDINLINE void&#160;</td><td class="memItemRight" valign="bottom"><b>setGridSuperCells</b> (<a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; DIM &gt; superCellsCount)</td></tr>
 <tr class="separator:adb0e4a1e56201b9a3cc445e6719d1607"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,12 +120,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a50fbf2166bfd034134d8422c4ab097e0"><td class="memItemLeft" align="right" valign="top"><a id="a50fbf2166bfd034134d8422c4ab097e0"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>PMACC_ALIGN</b> (gridSuperCells, <a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; DIM &gt;)</td></tr>
 <tr class="separator:a50fbf2166bfd034134d8422c4ab097e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0891cb22fb861c65938252ad2f76c4dc"><td class="memItemLeft" align="right" valign="top"><a id="a0891cb22fb861c65938252ad2f76c4dc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PMACC_ALIGN</b> (guardingSuperCells, int)</td></tr>
-<tr class="separator:a0891cb22fb861c65938252ad2f76c4dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0579f6a1f693c772681aed9bc86b3f4a"><td class="memItemLeft" align="right" valign="top"><a id="a0579f6a1f693c772681aed9bc86b3f4a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PMACC_ALIGN</b> (borderSuperCells, int)</td></tr>
-<tr class="separator:a0579f6a1f693c772681aed9bc86b3f4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaca9b7fbcaae581ccba7642681f2812"><td class="memItemLeft" align="right" valign="top"><a id="afaca9b7fbcaae581ccba7642681f2812"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>PMACC_ALIGN</b> (guardingSuperCells, <a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; DIM &gt;)</td></tr>
+<tr class="separator:afaca9b7fbcaae581ccba7642681f2812"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;unsigned DIM, class SuperCellSize_&gt;<br />
@@ -142,7 +136,55 @@ class pmacc::MappingDescription&lt; DIM, SuperCellSize_ &gt;</h3>
   </table>
   </dd>
 </dl>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="adf9c3f338b23932ee993ac91f592eca9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf9c3f338b23932ee993ac91f592eca9">&#9670;&nbsp;</a></span>MappingDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned DIM, class SuperCellSize_&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classpmacc_1_1_mapping_description.html">pmacc::MappingDescription</a>&lt; DIM, SuperCellSize_ &gt;::<a class="el" href="classpmacc_1_1_mapping_description.html">MappingDescription</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; DIM &gt;&#160;</td>
+          <td class="paramname"><em>localGridCells</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; DIM &gt;&#160;</td>
+          <td class="paramname"><em>guardingSuperCells</em> = <code><a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt;DIM&gt;::create(0)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>constructor </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">localGridCells</td><td>number of cells in the local value (including guarding cells) </td></tr>
+    <tr><td class="paramname">guardingSuperCells</td><td>number of <b>supercells</b> within the guard </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a6d94b143c81fb7d14d13a42640491cfb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d94b143c81fb7d14d13a42640491cfb">&#9670;&nbsp;</a></span>getRootSuperCellCoordinate()</h2>
 
@@ -182,7 +224,7 @@ template&lt;unsigned DIM, class SuperCellSize_&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/pmacc/mappings/kernel/<a class="el" href="_mapping_description_8hpp_source.html">MappingDescription.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/pmacc/mappings/kernel/<a class="el" href="_mapping_description_8hpp_source.html">MappingDescription.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

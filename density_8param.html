@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PIConGPU: /tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/param/density.param File Reference</title>
+<title>PIConGPU: /tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/param/density.param File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -164,7 +164,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Profile Formula: <code>const float_X exponent = abs((y - gasCenter_SI) / gasSigma_SI);</code> <code>const float_X density = exp(gasFactor * pow(exponent, gasPower));</code> </p>
-<p class="">takes <code>gasCenterLeft_SI for y &lt; gasCenterLeft_SI</code>, <code>gasCenterRight_SI for y &gt; gasCenterRight_SI</code>, and <code>exponent = float_X(0.0) for gasCenterLeft_SI &lt; y &lt; gasCenterRight_SI</code> </p>
+<p class="">takes <code>gasCenterLeft_SI for y &lt; gasCenterLeft_SI</code>, <code>gasCenterRight_SI for y &gt; gasCenterRight_SI</code>, and <code>exponent = 0.0 for gasCenterLeft_SI &lt; y &lt; gasCenterRight_SI</code> </p>
 
 </div>
 </div>

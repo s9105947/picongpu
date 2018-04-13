@@ -94,21 +94,21 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>PhotonSpecies</b> = 
 <tr class="memitem:a125cd88d7c9466092da56426bbc33c80"><td class="memItemLeft" align="right" valign="top"><a id="a125cd88d7c9466092da56426bbc33c80"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>FrameType</b> = typename ElectronSpecies::FrameType</td></tr>
 <tr class="separator:a125cd88d7c9466092da56426bbc33c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a34e27e950c972558c371a3c5cee941"><td class="memItemLeft" align="right" valign="top"><a id="a6a34e27e950c972558c371a3c5cee941"></a>
-typedef <a class="el" href="structpmacc_1_1traits_1_1_resolve.html">pmacc::traits::Resolve</a>&lt; typename <a class="el" href="structpmacc_1_1traits_1_1_get_flag_type.html">GetFlagType</a>&lt; FrameType, interpolation&lt;&gt; &gt;::type &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>Field2ParticleInterpolation</b></td></tr>
-<tr class="separator:a6a34e27e950c972558c371a3c5cee941"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae92e31ee62adf8f7b22386aecb12ba9e"><td class="memItemLeft" align="right" valign="top"><a id="ae92e31ee62adf8f7b22386aecb12ba9e"></a>
-typedef <a class="el" href="structpicongpu_1_1traits_1_1_get_margin.html">GetMargin</a>&lt; Field2ParticleInterpolation &gt;::LowerMargin&#160;</td><td class="memItemRight" valign="bottom"><b>LowerMargin</b></td></tr>
-<tr class="separator:ae92e31ee62adf8f7b22386aecb12ba9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08ac197b82bc3a8460110b44afe3da64"><td class="memItemLeft" align="right" valign="top"><a id="a08ac197b82bc3a8460110b44afe3da64"></a>
-typedef <a class="el" href="structpicongpu_1_1traits_1_1_get_margin.html">GetMargin</a>&lt; Field2ParticleInterpolation &gt;::UpperMargin&#160;</td><td class="memItemRight" valign="bottom"><b>UpperMargin</b></td></tr>
-<tr class="separator:a08ac197b82bc3a8460110b44afe3da64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42740a2f1a175ea6527b00efa0459a28"><td class="memItemLeft" align="right" valign="top"><a id="a42740a2f1a175ea6527b00efa0459a28"></a>
-typedef <a class="el" href="structpmacc_1_1_super_cell_description.html">SuperCellDescription</a>&lt; typename MappingDesc::SuperCellSize, LowerMargin, UpperMargin &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>BlockArea</b></td></tr>
-<tr class="separator:a42740a2f1a175ea6527b00efa0459a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9f175814d0edda9563cbf591c4137e0"><td class="memItemLeft" align="right" valign="top"><a id="aa9f175814d0edda9563cbf591c4137e0"></a>
-typedef MappingDesc::SuperCellSize&#160;</td><td class="memItemRight" valign="bottom"><b>TVec</b></td></tr>
-<tr class="separator:aa9f175814d0edda9563cbf591c4137e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfd558b6b0be52400a4dca98c9497234"><td class="memItemLeft" align="right" valign="top"><a id="abfd558b6b0be52400a4dca98c9497234"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>Field2ParticleInterpolation</b> = typename <a class="el" href="structpmacc_1_1traits_1_1_resolve.html">pmacc::traits::Resolve</a>&lt; typename <a class="el" href="structpmacc_1_1traits_1_1_get_flag_type.html">GetFlagType</a>&lt; FrameType, interpolation&lt;&gt; &gt;::type &gt;::type</td></tr>
+<tr class="separator:abfd558b6b0be52400a4dca98c9497234"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a041f9f0b635551b64b2c8720c2dd58e9"><td class="memItemLeft" align="right" valign="top"><a id="a041f9f0b635551b64b2c8720c2dd58e9"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>LowerMargin</b> = typename <a class="el" href="structpicongpu_1_1traits_1_1_get_margin.html">GetMargin</a>&lt; Field2ParticleInterpolation &gt;::LowerMargin</td></tr>
+<tr class="separator:a041f9f0b635551b64b2c8720c2dd58e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9726c64193eab700452b18b8226498a7"><td class="memItemLeft" align="right" valign="top"><a id="a9726c64193eab700452b18b8226498a7"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>UpperMargin</b> = typename <a class="el" href="structpicongpu_1_1traits_1_1_get_margin.html">GetMargin</a>&lt; Field2ParticleInterpolation &gt;::UpperMargin</td></tr>
+<tr class="separator:a9726c64193eab700452b18b8226498a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62c428ea9e4b0daa98bcc22f54ec346a"><td class="memItemLeft" align="right" valign="top"><a id="a62c428ea9e4b0daa98bcc22f54ec346a"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>BlockArea</b> = <a class="el" href="structpmacc_1_1_super_cell_description.html">SuperCellDescription</a>&lt; typename MappingDesc::SuperCellSize, LowerMargin, UpperMargin &gt;</td></tr>
+<tr class="separator:a62c428ea9e4b0daa98bcc22f54ec346a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7874da2ebd81dbedeeb16e9f2873fa7"><td class="memItemLeft" align="right" valign="top"><a id="ab7874da2ebd81dbedeeb16e9f2873fa7"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>TVec</b> = MappingDesc::SuperCellSize</td></tr>
+<tr class="separator:ab7874da2ebd81dbedeeb16e9f2873fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65f6f109e9f181e2c66daf24e811c4aa"><td class="memItemLeft" align="right" valign="top"><a id="a65f6f109e9f181e2c66daf24e811c4aa"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>ValueTypeIonDensity</b> = <a class="el" href="structpmacc_1_1math_1_1_vector.html">FieldTmp::ValueType</a></td></tr>
 <tr class="separator:a65f6f109e9f181e2c66daf24e811c4aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -412,8 +412,8 @@ template&lt;typename T_Acc &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/particles/bremsstrahlung/<a class="el" href="_bremsstrahlung_8hpp_source.html">Bremsstrahlung.hpp</a></li>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/particles/bremsstrahlung/Bremsstrahlung.tpp</li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/particles/bremsstrahlung/<a class="el" href="_bremsstrahlung_8hpp_source.html">Bremsstrahlung.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/particles/bremsstrahlung/Bremsstrahlung.tpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

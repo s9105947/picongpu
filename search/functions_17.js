@@ -18,5 +18,6 @@ var searchData=
   ['_7eparticlesbuffer',['~ParticlesBuffer',['../classpmacc_1_1_particles_buffer.html#a6c8feac9de1f9f533db63fdce05ed9fe',1,'pmacc::ParticlesBuffer']]],
   ['_7estreamcontroller',['~StreamController',['../classpmacc_1_1_stream_controller.html#ace864eae178e750021668ad60374db2e',1,'pmacc::StreamController']]],
   ['_7estreamtask',['~StreamTask',['../classpmacc_1_1_stream_task.html#aeaf270a3588f1fc5dfb8e89fc7f1228e',1,'pmacc::StreamTask']]],
+  ['_7etaskreceivempi',['~TaskReceiveMPI',['../classpmacc_1_1_task_receive_m_p_i.html#a77b3c4a2277ad87ab68a93d9a087e782',1,'pmacc::TaskReceiveMPI']]],
   ['_7etransactionmanager',['~TransactionManager',['../classpmacc_1_1_transaction_manager.html#a855a36a91865fe969de17e59288427db',1,'pmacc::TransactionManager']]]
 ];

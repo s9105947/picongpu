@@ -81,18 +81,21 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aaf56ec4701b9620b6d30690301c0a708"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpicongpu_1_1_moving_window.html#aaf56ec4701b9620b6d30690301c0a708">setSlidingWindow</a> (bool value)</td></tr>
-<tr class="memdesc:aaf56ec4701b9620b6d30690301c0a708"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable sliding window.  <a href="#aaf56ec4701b9620b6d30690301c0a708">More...</a><br /></td></tr>
-<tr class="separator:aaf56ec4701b9620b6d30690301c0a708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbbc2cf2b2f860cc0cae922b9b7ea71e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpicongpu_1_1_moving_window.html#abbbc2cf2b2f860cc0cae922b9b7ea71e">setEndSlideOnStep</a> (int32_t step)</td></tr>
+<tr class="memdesc:abbbc2cf2b2f860cc0cae922b9b7ea71e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structpicongpu_1_1_set.html">Set</a> step where the simulation stops the moving window.  <a href="#abbbc2cf2b2f860cc0cae922b9b7ea71e">More...</a><br /></td></tr>
+<tr class="separator:abbbc2cf2b2f860cc0cae922b9b7ea71e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f319b594f08f7ec7e45caa047803126"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpicongpu_1_1_moving_window.html#a7f319b594f08f7ec7e45caa047803126">setSlideCounter</a> (uint32_t slides, uint32_t currentStep)</td></tr>
 <tr class="memdesc:a7f319b594f08f7ec7e45caa047803126"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structpicongpu_1_1_set.html">Set</a> the number of already performed moving window slides.  <a href="#a7f319b594f08f7ec7e45caa047803126">More...</a><br /></td></tr>
 <tr class="separator:a7f319b594f08f7ec7e45caa047803126"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b531aaae8c9a39201b2e26c200fd5b5"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpicongpu_1_1_moving_window.html#a9b531aaae8c9a39201b2e26c200fd5b5">getSlideCounter</a> (uint32_t currentStep)</td></tr>
 <tr class="memdesc:a9b531aaae8c9a39201b2e26c200fd5b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the number of slides since start of simulation.  <a href="#a9b531aaae8c9a39201b2e26c200fd5b5">More...</a><br /></td></tr>
 <tr class="separator:a9b531aaae8c9a39201b2e26c200fd5b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa59f3d02816853dec792ff161bb2d55e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpicongpu_1_1_moving_window.html#aa59f3d02816853dec792ff161bb2d55e">isSlidingWindowActive</a> () const</td></tr>
-<tr class="memdesc:aa59f3d02816853dec792ff161bb2d55e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if sliding window is active.  <a href="#aa59f3d02816853dec792ff161bb2d55e">More...</a><br /></td></tr>
-<tr class="separator:aa59f3d02816853dec792ff161bb2d55e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39b16030b21f26367e7fc1b9bbd08b68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpicongpu_1_1_moving_window.html#a39b16030b21f26367e7fc1b9bbd08b68">isEnabled</a> () const</td></tr>
+<tr class="memdesc:a39b16030b21f26367e7fc1b9bbd08b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if sliding window is enabled.  <a href="#a39b16030b21f26367e7fc1b9bbd08b68">More...</a><br /></td></tr>
+<tr class="separator:a39b16030b21f26367e7fc1b9bbd08b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d82ea140a97b9598c95cb06c64afd7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpicongpu_1_1_moving_window.html#a98d82ea140a97b9598c95cb06c64afd7">isSlidingWindowActive</a> (const uint32_t currenStep) const</td></tr>
+<tr class="memdesc:a98d82ea140a97b9598c95cb06c64afd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns if the window can move in the current step.  <a href="#a98d82ea140a97b9598c95cb06c64afd7">More...</a><br /></td></tr>
+<tr class="separator:a98d82ea140a97b9598c95cb06c64afd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6867ac42a438b3510fbf19e6979c6f57"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpicongpu_1_1_moving_window.html#a6867ac42a438b3510fbf19e6979c6f57">slideInCurrentStep</a> (uint32_t currentStep)</td></tr>
 <tr class="memdesc:a6867ac42a438b3510fbf19e6979c6f57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return if a slide occurs in the current simulation step.  <a href="#a6867ac42a438b3510fbf19e6979c6f57">More...</a><br /></td></tr>
 <tr class="separator:a6867ac42a438b3510fbf19e6979c6f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -251,8 +254,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa59f3d02816853dec792ff161bb2d55e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa59f3d02816853dec792ff161bb2d55e">&#9670;&nbsp;</a></span>isSlidingWindowActive()</h2>
+<a id="a39b16030b21f26367e7fc1b9bbd08b68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39b16030b21f26367e7fc1b9bbd08b68">&#9670;&nbsp;</a></span>isEnabled()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -261,7 +264,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool picongpu::MovingWindow::isSlidingWindowActive </td>
+          <td class="memname">bool picongpu::MovingWindow::isEnabled </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -274,8 +277,71 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Returns if sliding window is active. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if active, false otherwise </dd></dl>
+<p>Returns if sliding window is enabled. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if enabled, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a98d82ea140a97b9598c95cb06c64afd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d82ea140a97b9598c95cb06c64afd7">&#9670;&nbsp;</a></span>isSlidingWindowActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool picongpu::MovingWindow::isSlidingWindowActive </td>
+          <td>(</td>
+          <td class="paramtype">const uint32_t&#160;</td>
+          <td class="paramname"><em>currenStep</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns if the window can move in the current step. </p>
+<dl class="section return"><dt>Returns</dt><dd>false, if Moving window is activated (<a class="el" href="classpicongpu_1_1_moving_window.html#a39b16030b21f26367e7fc1b9bbd08b68" title="Returns if sliding window is enabled. ">isEnabled()</a> == true) but already stopped. true if moving windows is enabled and simulation step is smaller than </dd></dl>
+
+</div>
+</div>
+<a id="abbbc2cf2b2f860cc0cae922b9b7ea71e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbbc2cf2b2f860cc0cae922b9b7ea71e">&#9670;&nbsp;</a></span>setEndSlideOnStep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void picongpu::MovingWindow::setEndSlideOnStep </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>step</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structpicongpu_1_1_set.html">Set</a> step where the simulation stops the moving window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">step</td><td>0 means no sliding window, else sliding is enabled until step is reached. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -324,40 +390,6 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aaf56ec4701b9620b6d30690301c0a708"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaf56ec4701b9620b6d30690301c0a708">&#9670;&nbsp;</a></span>setSlidingWindow()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void picongpu::MovingWindow::setSlidingWindow </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Enable or disable sliding window. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>true to enable, false otherwise </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a6867ac42a438b3510fbf19e6979c6f57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6867ac42a438b3510fbf19e6979c6f57">&#9670;&nbsp;</a></span>slideInCurrentStep()</h2>
 
@@ -394,7 +426,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/simulationControl/<a class="el" href="_moving_window_8hpp_source.html">MovingWindow.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/simulationControl/<a class="el" href="_moving_window_8hpp_source.html">MovingWindow.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

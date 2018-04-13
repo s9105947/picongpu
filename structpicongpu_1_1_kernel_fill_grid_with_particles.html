@@ -180,12 +180,13 @@ template&lt;typename T_DensityProfile , typename T_PositionFunctor , typename T_
   </table>
   </dd>
 </dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000001">Bug:</a></b></dt><dd>volatile is required for CUDA 9.2 and sm_60 else the compiler will optimize out <code>if(realParticlesPerCell &gt; 0.0_X)</code> later on. </dd></dl>
 <p class="">we now initialize all attributes of the new particle to their default values some attributes, such as the position, localCellIdx, weighting or the multiMask (</p><dl class="section see"><dt>See also</dt><dd>AttrToIgnore) of the particle will be set individually in the following lines since they are already known at this point.</dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/particles/ParticlesInit.kernel</li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/particles/ParticlesInit.kernel</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

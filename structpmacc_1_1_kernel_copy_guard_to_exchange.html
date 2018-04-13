@@ -88,6 +88,7 @@ Public Member Functions</h2></td></tr>
 struct pmacc::KernelCopyGuardToExchange&lt; T_numWorkers &gt;</h3>
 
 <p class="">copy particles from the guard to an exchange buffer </p>
+<dl class="section warning"><dt>Warning</dt><dd>This kernel resets the number of particles in the processed supercells even if there are particles left in the supercell and does not guarantee that the last frame is contiguous filled. Call <a class="el" href="structpmacc_1_1_kernel_fill_gaps.html" title="fill particle gaps in all frames ">KernelFillGaps</a> afterwards if you need a valid number of particles and a contiguously filled last frame.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T_numWorkers</td><td>number of workers </td></tr>
@@ -166,7 +167,7 @@ template&lt;typename T_ParBox , typename T_ExchangeValueType , typename T_Mappin
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/pmacc/particles/ParticlesBase.kernel</li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/pmacc/particles/ParticlesBase.kernel</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

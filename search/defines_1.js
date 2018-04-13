@@ -1,19 +1,4 @@
 var searchData=
 [
-  ['pic_5fverbose_5fradiation',['PIC_VERBOSE_RADIATION',['../radiation_8param.html#a5f09f9a5ff512c88ca857693e719b535',1,'radiation.param']]],
-  ['pmacc_5fc_5fstring',['PMACC_C_STRING',['../struct_8hpp.html#aef82bb229c5e323aa13a327ed3a498ba',1,'struct.hpp']]],
-  ['pmacc_5fc_5fvalue',['PMACC_C_VALUE',['../struct_8hpp.html#ace9eb8d1822d1939e2e44bdcd75f89f0',1,'struct.hpp']]],
-  ['pmacc_5fc_5fvector',['PMACC_C_VECTOR',['../struct_8hpp.html#adb586266022937539c32dc1d3677424c',1,'struct.hpp']]],
-  ['pmacc_5fc_5fvector_5fdim',['PMACC_C_VECTOR_DIM',['../struct_8hpp.html#a0fab919d101a7b173c6351d32a60aed0',1,'struct.hpp']]],
-  ['pmacc_5fextent',['PMACC_EXTENT',['../struct_8hpp.html#a96a7639abdd95ef753bf638df0187011',1,'struct.hpp']]],
-  ['pmacc_5fpp_5fadd_5fdata_5fto_5ftypedescription',['PMACC_PP_ADD_DATA_TO_TYPEDESCRIPTION',['../struct_8hpp.html#ad31102088374fd787856d4865346a11b',1,'struct.hpp']]],
-  ['pmacc_5fpp_5finit_5fvalue_5fvariables',['PMACC_PP_INIT_VALUE_VARIABLES',['../struct_8hpp.html#ac7fb9dfc50554aed2280750e1c888fbc',1,'struct.hpp']]],
-  ['pmacc_5fpp_5fselect_5ftypeid',['PMACC_PP_SELECT_TYPEID',['../struct_8hpp.html#a9f018e3ea0bf27858e8d2cc5c42a96a7',1,'struct.hpp']]],
-  ['pmacc_5fpp_5fseq_5fmacro_5fwith_5faccessor',['PMACC_PP_SEQ_MACRO_WITH_ACCESSOR',['../struct_8hpp.html#a2357fb265ac15d59214ebef03960c724',1,'struct.hpp']]],
-  ['pmacc_5fpp_5fstruct_5fdef',['PMACC_PP_STRUCT_DEF',['../struct_8hpp.html#aa38356a75ccd8ee60278a20c47ccbbdc',1,'struct.hpp']]],
-  ['pmacc_5fpp_5fx_5fselect_5ftypeid',['PMACC_PP_X_SELECT_TYPEID',['../struct_8hpp.html#ab6775ab5aa8e477797bc66ab99797f85',1,'struct.hpp']]],
-  ['pmacc_5fstruct',['PMACC_STRUCT',['../struct_8hpp.html#a7f54e4d3d45ff880b00eda797a6e204d',1,'struct.hpp']]],
-  ['pmacc_5fvalue',['PMACC_VALUE',['../struct_8hpp.html#a7d98b1a3387c1b121e98f4017a5848a5',1,'struct.hpp']]],
-  ['pmacc_5fvector',['PMACC_VECTOR',['../struct_8hpp.html#aa9e7f2c560e2c39718d5e9291c98bb01',1,'struct.hpp']]],
-  ['pmacc_5fvector_5fdim',['PMACC_VECTOR_DIM',['../struct_8hpp.html#ac844b143020fc95679539d7f90fc4b91',1,'struct.hpp']]]
+  ['simdim',['SIMDIM',['../dimension_8param.html#a3c54e81827c03a7690a700d9d081ee56',1,'dimension.param']]]
 ];

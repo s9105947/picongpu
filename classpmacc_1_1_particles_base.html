@@ -131,7 +131,7 @@ template&lt;uint32_t T_area&gt; </td></tr>
 <tr class="memitem:a65628496d40b8028735c786a27002b8f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>deleteParticlesInArea</b> ()</td></tr>
 <tr class="separator:a65628496d40b8028735c786a27002b8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0b501eea854b6131724bad369ecc81e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpmacc_1_1_particles_base.html#ab0b501eea854b6131724bad369ecc81e">copyGuardToExchange</a> (uint32_t exchangeType)</td></tr>
-<tr class="memdesc:ab0b501eea854b6131724bad369ecc81e"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy gard particles to intermediate exchange buffer  <a href="#ab0b501eea854b6131724bad369ecc81e">More...</a><br /></td></tr>
+<tr class="memdesc:ab0b501eea854b6131724bad369ecc81e"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy guard particles to intermediate exchange buffer  <a href="#ab0b501eea854b6131724bad369ecc81e">More...</a><br /></td></tr>
 <tr class="separator:ab0b501eea854b6131724bad369ecc81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae0c826087869d550457b77ca1ce48d5d"><td class="memItemLeft" align="right" valign="top"><a id="ae0c826087869d550457b77ca1ce48d5d"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>insertParticles</b> (uint32_t exchangeType)</td></tr>
@@ -201,14 +201,14 @@ template&lt;typename T_ParticleDescription , class MappingDesc , typename T_Devi
       </table>
 </div><div class="memdoc">
 
-<p>copy gard particles to intermediate exchange buffer </p>
-<p class="">Copy all particles from the guard of a direction to the device exchange buffer. </p>
+<p>copy guard particles to intermediate exchange buffer </p>
+<p class="">Copy all particles from the guard of a direction to the device exchange buffer. </p><dl class="section warning"><dt>Warning</dt><dd>This method resets the number of particles in the processed supercells even if there are particles left in the supercell and does not guarantee that the last frame is contiguous filled. Call fillAllGaps afterwards if you need a valid number of particles and a contiguously filled last frame. </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/pmacc/particles/<a class="el" href="_particles_base_8hpp_source.html">ParticlesBase.hpp</a></li>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/pmacc/particles/ParticlesBase.tpp</li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/pmacc/particles/<a class="el" href="_particles_base_8hpp_source.html">ParticlesBase.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/pmacc/particles/ParticlesBase.tpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

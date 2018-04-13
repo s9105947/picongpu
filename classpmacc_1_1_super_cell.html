@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PIConGPU: pmacc::SuperCell&lt; TYPE &gt; Class Template Reference</title>
+<title>PIConGPU: pmacc::SuperCell&lt; T_FrameType &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,45 +69,48 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classpmacc_1_1_super_cell-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">pmacc::SuperCell&lt; TYPE &gt; Class Template Reference</div>  </div>
+<div class="title">pmacc::SuperCell&lt; T_FrameType &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9ff6836af432a3677baaa810d8e34304"><td class="memItemLeft" align="right" valign="top"><a id="a9ff6836af432a3677baaa810d8e34304"></a>
-HDINLINE TYPE *&#160;</td><td class="memItemRight" valign="bottom"><b>FirstFramePtr</b> ()</td></tr>
-<tr class="separator:a9ff6836af432a3677baaa810d8e34304"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a8eca044be60c46023d420092e9f564"><td class="memItemLeft" align="right" valign="top"><a id="a7a8eca044be60c46023d420092e9f564"></a>
-HDINLINE TYPE *&#160;</td><td class="memItemRight" valign="bottom"><b>LastFramePtr</b> ()</td></tr>
-<tr class="separator:a7a8eca044be60c46023d420092e9f564"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51f1be61081220e3f3fd97cb18bf3cdc"><td class="memItemLeft" align="right" valign="top"><a id="a51f1be61081220e3f3fd97cb18bf3cdc"></a>
-HDINLINE const TYPE *&#160;</td><td class="memItemRight" valign="bottom"><b>FirstFramePtr</b> () const</td></tr>
-<tr class="separator:a51f1be61081220e3f3fd97cb18bf3cdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7469323a6b4d2ecb7f2a0301370e414d"><td class="memItemLeft" align="right" valign="top"><a id="a7469323a6b4d2ecb7f2a0301370e414d"></a>
-HDINLINE const TYPE *&#160;</td><td class="memItemRight" valign="bottom"><b>LastFramePtr</b> () const</td></tr>
-<tr class="separator:a7469323a6b4d2ecb7f2a0301370e414d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a55a73102483f95e68634d1a9cd55898b"><td class="memItemLeft" align="right" valign="top"><a id="a55a73102483f95e68634d1a9cd55898b"></a>
-HDINLINE bool&#160;</td><td class="memItemRight" valign="bottom"><b>mustShift</b> ()</td></tr>
-<tr class="separator:a55a73102483f95e68634d1a9cd55898b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afafbc86f3546b619d38e24f5b0d3f90e"><td class="memItemLeft" align="right" valign="top"><a id="afafbc86f3546b619d38e24f5b0d3f90e"></a>
-HDINLINE void&#160;</td><td class="memItemRight" valign="bottom"><b>setMustShift</b> (bool value)</td></tr>
-<tr class="separator:afafbc86f3546b619d38e24f5b0d3f90e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a766c8c556e48131b13ea8e84ee50f188"><td class="memItemLeft" align="right" valign="top"><a id="a766c8c556e48131b13ea8e84ee50f188"></a>
-HDINLINE lcellId_t&#160;</td><td class="memItemRight" valign="bottom"><b>getSizeLastFrame</b> ()</td></tr>
-<tr class="separator:a766c8c556e48131b13ea8e84ee50f188"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9d6c957bc9e922afb32d563b0649d6f"><td class="memItemLeft" align="right" valign="top"><a id="ad9d6c957bc9e922afb32d563b0649d6f"></a>
-HDINLINE void&#160;</td><td class="memItemRight" valign="bottom"><b>setSizeLastFrame</b> (lcellId_t size)</td></tr>
-<tr class="separator:ad9d6c957bc9e922afb32d563b0649d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab271f29e068fb8254a6e4fc38c5d6187"><td class="memItemLeft" align="right" valign="top"><a id="ab271f29e068fb8254a6e4fc38c5d6187"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PMACC_ALIGN</b> (firstFramePtr, TYPE *)</td></tr>
-<tr class="separator:ab271f29e068fb8254a6e4fc38c5d6187"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17f9342653d40500dfd9d62449634670"><td class="memItemLeft" align="right" valign="top"><a id="a17f9342653d40500dfd9d62449634670"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PMACC_ALIGN</b> (lastFramePtr, TYPE *)</td></tr>
-<tr class="separator:a17f9342653d40500dfd9d62449634670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee5be81893eba041e8958cac5d0fcad2"><td class="memItemLeft" align="right" valign="top"><a id="aee5be81893eba041e8958cac5d0fcad2"></a>
+HDINLINE T_FrameType *&#160;</td><td class="memItemRight" valign="bottom"><b>FirstFramePtr</b> ()</td></tr>
+<tr class="separator:aee5be81893eba041e8958cac5d0fcad2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84a449121ec03104f725bf84f64ff236"><td class="memItemLeft" align="right" valign="top"><a id="a84a449121ec03104f725bf84f64ff236"></a>
+HDINLINE T_FrameType *&#160;</td><td class="memItemRight" valign="bottom"><b>LastFramePtr</b> ()</td></tr>
+<tr class="separator:a84a449121ec03104f725bf84f64ff236"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8899a65f707e4474af31c12305c4a379"><td class="memItemLeft" align="right" valign="top"><a id="a8899a65f707e4474af31c12305c4a379"></a>
+HDINLINE T_FrameType const  *&#160;</td><td class="memItemRight" valign="bottom"><b>FirstFramePtr</b> () const</td></tr>
+<tr class="separator:a8899a65f707e4474af31c12305c4a379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a510d5d84f25008fbdbd25974f0ee0d34"><td class="memItemLeft" align="right" valign="top"><a id="a510d5d84f25008fbdbd25974f0ee0d34"></a>
+HDINLINE T_FrameType const  *&#160;</td><td class="memItemRight" valign="bottom"><b>LastFramePtr</b> () const</td></tr>
+<tr class="separator:a510d5d84f25008fbdbd25974f0ee0d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae951ccac11c2d544b5ffbdbbbc90f0ae"><td class="memItemLeft" align="right" valign="top"><a id="ae951ccac11c2d544b5ffbdbbbc90f0ae"></a>
+HDINLINE bool&#160;</td><td class="memItemRight" valign="bottom"><b>mustShift</b> () const</td></tr>
+<tr class="separator:ae951ccac11c2d544b5ffbdbbbc90f0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7aa10c86a55fc19ab6fa109f369d7f8"><td class="memItemLeft" align="right" valign="top"><a id="af7aa10c86a55fc19ab6fa109f369d7f8"></a>
+HDINLINE void&#160;</td><td class="memItemRight" valign="bottom"><b>setMustShift</b> (bool const value)</td></tr>
+<tr class="separator:af7aa10c86a55fc19ab6fa109f369d7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8dd77f119aea4797c0c3e4c965416d8"><td class="memItemLeft" align="right" valign="top"><a id="aa8dd77f119aea4797c0c3e4c965416d8"></a>
+HDINLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>getSizeLastFrame</b> () const</td></tr>
+<tr class="separator:aa8dd77f119aea4797c0c3e4c965416d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a622f0305dc6c09fe4d7814ccc5c8551f"><td class="memItemLeft" align="right" valign="top"><a id="a622f0305dc6c09fe4d7814ccc5c8551f"></a>
+HDINLINE uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>getNumParticles</b> () const</td></tr>
+<tr class="separator:a622f0305dc6c09fe4d7814ccc5c8551f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adac5fab2f74aedd8519ba409d5ce128f"><td class="memItemLeft" align="right" valign="top"><a id="adac5fab2f74aedd8519ba409d5ce128f"></a>
+HDINLINE void&#160;</td><td class="memItemRight" valign="bottom"><b>setNumParticles</b> (uint32_t const size)</td></tr>
+<tr class="separator:adac5fab2f74aedd8519ba409d5ce128f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7439d4cab2abb056b04835338d5beba"><td class="memItemLeft" align="right" valign="top"><a id="ab7439d4cab2abb056b04835338d5beba"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>PMACC_ALIGN</b> (firstFramePtr, T_FrameType *)</td></tr>
+<tr class="separator:ab7439d4cab2abb056b04835338d5beba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0497b628916b6d37af266cacc72bb813"><td class="memItemLeft" align="right" valign="top"><a id="a0497b628916b6d37af266cacc72bb813"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>PMACC_ALIGN</b> (lastFramePtr, T_FrameType *)</td></tr>
+<tr class="separator:a0497b628916b6d37af266cacc72bb813"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/pmacc/particles/memory/dataTypes/<a class="el" href="_super_cell_8hpp_source.html">SuperCell.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/pmacc/particles/memory/dataTypes/<a class="el" href="particles_2memory_2data_types_2_super_cell_8hpp_source.html">SuperCell.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

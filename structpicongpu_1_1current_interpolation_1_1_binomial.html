@@ -66,46 +66,40 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-types">Public Types</a> &#124;
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="structpicongpu_1_1current_interpolation_1_1_binomial-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">picongpu::currentInterpolation::Binomial Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Smoothing the current density before passing it to the field solver.  
+ <a href="structpicongpu_1_1current_interpolation_1_1_binomial.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_binomial_8hpp_source.html">Binomial.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for picongpu::currentInterpolation::Binomial:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="structpicongpu_1_1current_interpolation_1_1_binomial.png" usemap="#picongpu::currentInterpolation::Binomial_map" alt=""/>
+  <map id="picongpu::currentInterpolation::Binomial_map" name="picongpu::currentInterpolation::Binomial_map">
+<area href="structpicongpu_1_1current_interpolation_1_1detail_1_1_binomial.html" alt="picongpu::currentInterpolation::detail::Binomial&lt; simDim &gt;" shape="rect" coords="0,0,332,24"/>
+</map>
+ </div></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
-Public Types</h2></td></tr>
-<tr class="memitem:ada1b4ddd2ec1420f138d17c19b0e8dea"><td class="memItemLeft" align="right" valign="top"><a id="ada1b4ddd2ec1420f138d17c19b0e8dea"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>LowerMargin</b> = typename <a class="el" href="structpmacc_1_1math_1_1_c_t_1_1make___int.html">pmacc::math::CT::make_Int</a>&lt; dim, 1 &gt;::type</td></tr>
-<tr class="separator:ada1b4ddd2ec1420f138d17c19b0e8dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a85636ffcc13e11d2bc86f3ee2faf81d9"><td class="memItemLeft" align="right" valign="top"><a id="a85636ffcc13e11d2bc86f3ee2faf81d9"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>UpperMargin</b> = LowerMargin</td></tr>
-<tr class="separator:a85636ffcc13e11d2bc86f3ee2faf81d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr class="memitem:a48a79aa692de4ffdc53d69433f366981"><td class="memTemplParams" colspan="2"><a id="a48a79aa692de4ffdc53d69433f366981"></a>
-template&lt;typename T_DataBoxE , typename T_DataBoxB , typename T_DataBoxJ &gt; </td></tr>
-<tr class="memitem:a48a79aa692de4ffdc53d69433f366981"><td class="memTemplItemLeft" align="right" valign="top">HDINLINE void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>operator()</b> (T_DataBoxE fieldE, T_DataBoxB const, T_DataBoxJ const fieldJ)</td></tr>
-<tr class="separator:a48a79aa692de4ffdc53d69433f366981"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ad11f76c926ead163a000bdf5791af197"><td class="memItemLeft" align="right" valign="top"><a id="ad11f76c926ead163a000bdf5791af197"></a>
 static <a class="el" href="structpmacc_1_1traits_1_1_string_property.html">pmacc::traits::StringProperty</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getStringProperties</b> ()</td></tr>
 <tr class="separator:ad11f76c926ead163a000bdf5791af197"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:a46de4096e8bc01e9b89d31eec0ee6aff"><td class="memItemLeft" align="right" valign="top"><a id="a46de4096e8bc01e9b89d31eec0ee6aff"></a>
-static constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>dim</b> = simDim</td></tr>
-<tr class="separator:a46de4096e8bc01e9b89d31eec0ee6aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/fields/currentInterpolation/Binomial/<a class="el" href="_binomial_8hpp_source.html">Binomial.hpp</a></li>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p class="">Smoothing the current density before passing it to the field solver. </p>
+<p class="">This technique mitigates numerical Cherenkov effects and short wavelength instabilities as it effectively implements a low pass filter which damps high frequency noise (near the Nyquist frequency) in the current distribution.</p>
+<p class="">A description and a two-dimensional implementation of this filter is given in CK Birdsall, AB Langdon. Plasma Physics via Computer Simulation. Appendix C. <a class="el" href="structpicongpu_1_1_taylor.html">Taylor</a> &amp; Francis, 2004. It is a 2D version of the commonly used one-dimensional three points filter with binomial coefficients</p>
+<p class="">The three-dimensional extension of the above two-dimensional smoothing scheme uses all 26 neighbors of a cell. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/fields/currentInterpolation/Binomial/<a class="el" href="_binomial_8hpp_source.html">Binomial.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

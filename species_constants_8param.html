@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PIConGPU: /tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/param/speciesConstants.param File Reference</title>
+<title>PIConGPU: /tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/param/speciesConstants.param File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -77,10 +77,10 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:ae0381fe55bbc64358df247d49be63c2f"><td class="memItemLeft" align="right" valign="top">constexpr float_X&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="species_constants_8param.html#ae0381fe55bbc64358df247d49be63c2f">picongpu::GAMMA_THRESH</a> = float_X(1.005)</td></tr>
+<tr class="memitem:ae0381fe55bbc64358df247d49be63c2f"><td class="memItemLeft" align="right" valign="top">constexpr float_X&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="species_constants_8param.html#ae0381fe55bbc64358df247d49be63c2f">picongpu::GAMMA_THRESH</a> = 1.005_X</td></tr>
 <tr class="memdesc:ae0381fe55bbc64358df247d49be63c2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Threshold between relativistic and non-relativistic regime.  <a href="species_constants_8param.html#ae0381fe55bbc64358df247d49be63c2f">More...</a><br /></td></tr>
 <tr class="separator:ae0381fe55bbc64358df247d49be63c2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84f2b4004def20ce4912e49b6826928b"><td class="memItemLeft" align="right" valign="top">constexpr float_X&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="species_constants_8param.html#a84f2b4004def20ce4912e49b6826928b">picongpu::GAMMA_INV_SQUARE_RAD_THRESH</a> = float_X(0.18)</td></tr>
+<tr class="memitem:a84f2b4004def20ce4912e49b6826928b"><td class="memItemLeft" align="right" valign="top">constexpr float_X&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="species_constants_8param.html#a84f2b4004def20ce4912e49b6826928b">picongpu::GAMMA_INV_SQUARE_RAD_THRESH</a> = 0.18_X</td></tr>
 <tr class="memdesc:a84f2b4004def20ce4912e49b6826928b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Threshold in radiation plugin between relativistic and non-relativistic regime.  <a href="species_constants_8param.html#a84f2b4004def20ce4912e49b6826928b">More...</a><br /></td></tr>
 <tr class="separator:a84f2b4004def20ce4912e49b6826928b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4bb1e11014b45309208383069f418b8f"><td class="memItemLeft" align="right" valign="top">constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="species_constants_8param.html#a4bb1e11014b45309208383069f418b8f">picongpu::SI::BASE_MASS_SI</a> = ELECTRON_MASS_SI</td></tr>
@@ -137,13 +137,13 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr float_X picongpu::GAMMA_INV_SQUARE_RAD_THRESH = float_X(0.18)</td>
+          <td class="memname">constexpr float_X picongpu::GAMMA_INV_SQUARE_RAD_THRESH = 0.18_X</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Threshold in radiation plugin between relativistic and non-relativistic regime. </p>
-<p class="">This limit is used to decide between a pure 1-sqrt(1-x) calculation and a 5th order <a class="el" href="struct_taylor.html">Taylor</a> approximation of 1-sqrt(1-x) to avoid halving of significant digits due to the sqrt() evaluation at x = 1/gamma^2 near 0.0. With 0.18 the relative error between <a class="el" href="struct_taylor.html">Taylor</a> approximation and real value will be below 0.001% = 1e-5 * for x=1/gamma^2 &lt; 0.18 </p>
+<p class="">This limit is used to decide between a pure 1-sqrt(1-x) calculation and a 5th order Taylor approximation of 1-sqrt(1-x) to avoid halving of significant digits due to the sqrt() evaluation at x = 1/gamma^2 near 0.0. With 0.18 the relative error between Taylor approximation and real value will be below 0.001% = 1e-5 * for x=1/gamma^2 &lt; 0.18 </p>
 
 </div>
 </div>
@@ -154,7 +154,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">constexpr float_X picongpu::GAMMA_THRESH = float_X(1.005)</td>
+          <td class="memname">constexpr float_X picongpu::GAMMA_THRESH = 1.005_X</td>
         </tr>
       </table>
 </div><div class="memdoc">

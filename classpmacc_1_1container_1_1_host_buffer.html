@@ -90,9 +90,9 @@ Inheritance diagram for pmacc::container::HostBuffer&lt; Type, T_dim &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a96cdf2646d0704cc44e63eedf7ebf5d8"><td class="memItemLeft" align="right" valign="top"><a id="a96cdf2646d0704cc44e63eedf7ebf5d8"></a>
-typedef Base::PitchType&#160;</td><td class="memItemRight" valign="bottom"><b>PitchType</b></td></tr>
-<tr class="separator:a96cdf2646d0704cc44e63eedf7ebf5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5d6581e2d0b231b1216a530a1df8af1"><td class="memItemLeft" align="right" valign="top"><a id="ad5d6581e2d0b231b1216a530a1df8af1"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>PitchType</b> = typename Base::PitchType</td></tr>
+<tr class="separator:ad5d6581e2d0b231b1216a530a1df8af1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_classpmacc_1_1container_1_1_cart_buffer"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classpmacc_1_1container_1_1_cart_buffer')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classpmacc_1_1container_1_1_cart_buffer.html">pmacc::container::CartBuffer&lt; Type, T_dim, allocator::HostMemAllocator&lt; Type, T_dim &gt;, copier::H2HCopier&lt; T_dim &gt;, assigner::HostMemAssigner&lt;&gt; &gt;</a></td></tr>
 <tr class="memitem:a58bd32a62a8a1c509026b7839ed84414 inherit pub_types_classpmacc_1_1container_1_1_cart_buffer"><td class="memItemLeft" align="right" valign="top"><a id="a58bd32a62a8a1c509026b7839ed84414"></a>
 typedef Type&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
@@ -124,9 +124,15 @@ HINLINE&#160;</td><td class="memItemRight" valign="bottom"><b>HostBuffer</b> (si
 <tr class="memitem:ab0cc1ccbd6837f86e62d8502dfbf066d"><td class="memItemLeft" align="right" valign="top"><a id="ab0cc1ccbd6837f86e62d8502dfbf066d"></a>
 HINLINE&#160;</td><td class="memItemRight" valign="bottom"><b>HostBuffer</b> (size_t x, size_t y, size_t z)</td></tr>
 <tr class="separator:ab0cc1ccbd6837f86e62d8502dfbf066d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f5350e53d001f245398583f60602a7c"><td class="memItemLeft" align="right" valign="top">HINLINE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpmacc_1_1container_1_1_host_buffer.html#a4f5350e53d001f245398583f60602a7c">HostBuffer</a> (Type *ptr, const math::Size_t&lt; T_dim &gt; &amp;size, bool ownMemory, PitchType pitch=PitchType::create(0))</td></tr>
-<tr class="memdesc:a4f5350e53d001f245398583f60602a7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a host buffer from a pointer with a size.  <a href="#a4f5350e53d001f245398583f60602a7c">More...</a><br /></td></tr>
-<tr class="separator:a4f5350e53d001f245398583f60602a7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41874790123076efad78239ef43db9ea"><td class="memItemLeft" align="right" valign="top">HINLINE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpmacc_1_1container_1_1_host_buffer.html#a41874790123076efad78239ef43db9ea">HostBuffer</a> (Type *ptr, const math::Size_t&lt; 3 &gt; &amp;size, bool ownMemory, math::Size_t&lt; 2 &gt; pitch=math::Size_t&lt; 2 &gt;::create(0))</td></tr>
+<tr class="memdesc:a41874790123076efad78239ef43db9ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a host buffer from a pointer with a size.  <a href="#a41874790123076efad78239ef43db9ea">More...</a><br /></td></tr>
+<tr class="separator:a41874790123076efad78239ef43db9ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab71bc830f5a869473a0d3c94d2885111"><td class="memItemLeft" align="right" valign="top"><a id="ab71bc830f5a869473a0d3c94d2885111"></a>
+HINLINE&#160;</td><td class="memItemRight" valign="bottom"><b>HostBuffer</b> (Type *ptr, const math::Size_t&lt; 2 &gt; &amp;size, bool ownMemory, math::Size_t&lt; 1 &gt; pitch=math::Size_t&lt; 1 &gt;::create(0))</td></tr>
+<tr class="separator:ab71bc830f5a869473a0d3c94d2885111"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ca538c13cf6a2c9e1f68e4bd36e2a86"><td class="memItemLeft" align="right" valign="top"><a id="a3ca538c13cf6a2c9e1f68e4bd36e2a86"></a>
+HINLINE&#160;</td><td class="memItemRight" valign="bottom"><b>HostBuffer</b> (Type *ptr, const math::Size_t&lt; 1 &gt; &amp;size, bool ownMemory)</td></tr>
+<tr class="separator:a3ca538c13cf6a2c9e1f68e4bd36e2a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4507389af97f200e8d5ecf83542c5e2"><td class="memItemLeft" align="right" valign="top"><a id="ad4507389af97f200e8d5ecf83542c5e2"></a>
 HINLINE&#160;</td><td class="memItemRight" valign="bottom"><b>HostBuffer</b> (const <a class="el" href="classpmacc_1_1container_1_1_cart_buffer.html">Base</a> &amp;base)</td></tr>
 <tr class="separator:ad4507389af97f200e8d5ecf83542c5e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,8 +245,8 @@ class pmacc::container::HostBuffer&lt; Type, T_dim &gt;</h3>
   </dd>
 </dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4f5350e53d001f245398583f60602a7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f5350e53d001f245398583f60602a7c">&#9670;&nbsp;</a></span>HostBuffer()</h2>
+<a id="a41874790123076efad78239ef43db9ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41874790123076efad78239ef43db9ea">&#9670;&nbsp;</a></span>HostBuffer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -259,7 +265,7 @@ template&lt;typename Type, int T_dim&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const math::Size_t&lt; T_dim &gt; &amp;&#160;</td>
+          <td class="paramtype">const math::Size_t&lt; 3 &gt; &amp;&#160;</td>
           <td class="paramname"><em>size</em>, </td>
         </tr>
         <tr>
@@ -271,8 +277,8 @@ template&lt;typename Type, int T_dim&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">PitchType&#160;</td>
-          <td class="paramname"><em>pitch</em> = <code>PitchType::create(0)</code>&#160;</td>
+          <td class="paramtype">math::Size_t&lt; 2 &gt;&#160;</td>
+          <td class="paramname"><em>pitch</em> = <code>math::Size_t&lt;2&gt;::create(0)</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -302,7 +308,7 @@ template&lt;typename Type, int T_dim&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/pmacc/cuSTL/container/<a class="el" href="cu_s_t_l_2container_2_host_buffer_8hpp_source.html">HostBuffer.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/pmacc/cuSTL/container/<a class="el" href="cu_s_t_l_2container_2_host_buffer_8hpp_source.html">HostBuffer.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

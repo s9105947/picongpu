@@ -104,10 +104,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a94b720b0652260c4d5baf33a6cd09286"><td class="memItemLeft" align="right" valign="top">HINLINE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1particles_1_1filter_1_1generic_1_1_free.html#a94b720b0652260c4d5baf33a6cd09286">Free</a> (uint32_t currentStep)</td></tr>
 <tr class="memdesc:a94b720b0652260c4d5baf33a6cd09286"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <a href="#a94b720b0652260c4d5baf33a6cd09286">More...</a><br /></td></tr>
 <tr class="separator:a94b720b0652260c4d5baf33a6cd09286"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5769c5f4606bc694683ce062ecb2c3b"><td class="memTemplParams" colspan="2">template&lt;typename T_WorkerCfg , typename T_Acc &gt; </td></tr>
-<tr class="memitem:ad5769c5f4606bc694683ce062ecb2c3b"><td class="memTemplItemLeft" align="right" valign="top">HDINLINE <a class="el" href="structpicongpu_1_1particles_1_1filter_1_1generic_1_1acc_1_1_free.html">acc::Free</a>&lt; <a class="el" href="structpicongpu_1_1particles_1_1functor_1_1_user.html">Functor</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1particles_1_1filter_1_1generic_1_1_free.html#ad5769c5f4606bc694683ce062ecb2c3b">operator()</a> (T_Acc const &amp;, <a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; simDim &gt; const &amp;, T_WorkerCfg const &amp;)</td></tr>
-<tr class="memdesc:ad5769c5f4606bc694683ce062ecb2c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">create device filter  <a href="#ad5769c5f4606bc694683ce062ecb2c3b">More...</a><br /></td></tr>
-<tr class="separator:ad5769c5f4606bc694683ce062ecb2c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a272880f27071eda0d4a744b893ce3893"><td class="memTemplParams" colspan="2">template&lt;typename T_WorkerCfg , typename T_Acc &gt; </td></tr>
+<tr class="memitem:a272880f27071eda0d4a744b893ce3893"><td class="memTemplItemLeft" align="right" valign="top">HDINLINE <a class="el" href="structpicongpu_1_1particles_1_1filter_1_1generic_1_1acc_1_1_free.html">acc::Free</a>&lt; <a class="el" href="structpicongpu_1_1particles_1_1functor_1_1_user.html">Functor</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1particles_1_1filter_1_1generic_1_1_free.html#a272880f27071eda0d4a744b893ce3893">operator()</a> (T_Acc const &amp;, <a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; simDim &gt; const &amp;, T_WorkerCfg const &amp;) const</td></tr>
+<tr class="memdesc:a272880f27071eda0d4a744b893ce3893"><td class="mdescLeft">&#160;</td><td class="mdescRight">create device filter  <a href="#a272880f27071eda0d4a744b893ce3893">More...</a><br /></td></tr>
+<tr class="separator:a272880f27071eda0d4a744b893ce3893"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -142,7 +142,7 @@ struct picongpu::particles::filter::generic::Free&lt; T_Functor &gt;</h3>
   </table>
   </dd>
 </dl>
-<p>example for <code>particleFilters.param</code>: each particle with in-cell position greater than 0.5 </p><div class="fragment"><div class="line"><span class="keyword">struct </span>FunctorEachParticleAboveMiddleOfTheCell</div><div class="line">{</div><div class="line">    <span class="keyword">template</span>&lt; <span class="keyword">typename</span> T_Particle &gt;</div><div class="line">    HDINLINE <span class="keywordtype">bool</span> <a class="code" href="structpicongpu_1_1particles_1_1filter_1_1generic_1_1_free.html#ad5769c5f4606bc694683ce062ecb2c3b">operator()</a>( T_Particle <span class="keyword">const</span> &amp; particle )</div><div class="line">    {</div><div class="line">        <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div><div class="line">        <span class="keywordflow">if</span>( particle[ position_ ] &gt;= float_X( 0.5 ) )</div><div class="line">            result = <span class="keyword">true</span>;</div><div class="line">        <span class="keywordflow">return</span> result;</div><div class="line">    }</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">using</span> EachParticleAboveMiddleOfTheCell = generic::Free&lt;</div><div class="line">   FunctorEachParticleAboveMiddleOfTheCell</div><div class="line">&gt;;</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p>example for <code><a class="el" href="particle_filters_8param.html" title="A common task in both modeling and in situ processing (output) is the selection of particles of a par...">particleFilters.param</a></code>: each particle with in-cell position greater than 0.5 </p><div class="fragment"><div class="line"><span class="keyword">struct </span>FunctorEachParticleAboveMiddleOfTheCell</div><div class="line">{</div><div class="line">    <span class="keyword">template</span>&lt; <span class="keyword">typename</span> T_Particle &gt;</div><div class="line">    HDINLINE <span class="keywordtype">bool</span> <a class="code" href="structpicongpu_1_1particles_1_1filter_1_1generic_1_1_free.html#a272880f27071eda0d4a744b893ce3893">operator()</a>( T_Particle <span class="keyword">const</span> &amp; particle )</div><div class="line">    {</div><div class="line">        <span class="keywordtype">bool</span> result = <span class="keyword">false</span>;</div><div class="line">        <span class="keywordflow">if</span>( particle[ position_ ] &gt;= float_X( 0.5 ) )</div><div class="line">            result = <span class="keyword">true</span>;</div><div class="line">        <span class="keywordflow">return</span> result;</div><div class="line">    }</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">using</span> EachParticleAboveMiddleOfTheCell = generic::Free&lt;</div><div class="line">   FunctorEachParticleAboveMiddleOfTheCell</div><div class="line">&gt;;</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a94b720b0652260c4d5baf33a6cd09286"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a94b720b0652260c4d5baf33a6cd09286">&#9670;&nbsp;</a></span>Free()</h2>
 
@@ -180,8 +180,8 @@ template&lt;typename T_Functor &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad5769c5f4606bc694683ce062ecb2c3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5769c5f4606bc694683ce062ecb2c3b">&#9670;&nbsp;</a></span>operator()()</h2>
+<a id="a272880f27071eda0d4a744b893ce3893"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a272880f27071eda0d4a744b893ce3893">&#9670;&nbsp;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -214,7 +214,7 @@ template&lt;typename T_WorkerCfg , typename T_Acc &gt; </div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -244,8 +244,8 @@ template&lt;typename T_WorkerCfg , typename T_Acc &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/particles/filter/generic/Free.def</li>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/particles/filter/generic/<a class="el" href="filter_2generic_2_free_8hpp_source.html">Free.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/particles/filter/generic/Free.def</li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/particles/filter/generic/<a class="el" href="filter_2generic_2_free_8hpp_source.html">Free.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

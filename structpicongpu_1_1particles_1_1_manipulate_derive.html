@@ -96,12 +96,15 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>SrcFrameType</b> = t
 <tr class="memitem:a0319c78ced5fb1deba5a689a3c459005"><td class="memItemLeft" align="right" valign="top"><a id="a0319c78ced5fb1deba5a689a3c459005"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>DestFunctor</b> = typename bmpl::apply1&lt; T_Manipulator, DestSpeciesType &gt;::type</td></tr>
 <tr class="separator:a0319c78ced5fb1deba5a689a3c459005"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81d0d5c031e11a0b010624a711c885e7"><td class="memItemLeft" align="right" valign="top"><a id="a81d0d5c031e11a0b010624a711c885e7"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SrcFilter</b> = typename bmpl::apply1&lt; T_SrcFilter, SrcSpeciesType &gt;::type</td></tr>
+<tr class="separator:a81d0d5c031e11a0b010624a711c885e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41d18039d0e70380cdf0f6c192eda245"><td class="memItemLeft" align="right" valign="top"><a id="a41d18039d0e70380cdf0f6c192eda245"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>FilteredManipulator</b> = <a class="el" href="structpmacc_1_1functor_1_1_filtered.html">manipulators::IBinary</a>&lt; DestFunctor &gt;</td></tr>
 <tr class="separator:a41d18039d0e70380cdf0f6c192eda245"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1c9d235172c5a8f1d6eb5a470e3e58e"><td class="memItemLeft" align="right" valign="top"><a id="aa1c9d235172c5a8f1d6eb5a470e3e58e"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>SrcFilter</b> = <a class="el" href="structpmacc_1_1functor_1_1_interface.html">filter::IUnary</a>&lt; T_SrcFilter &gt;</td></tr>
-<tr class="separator:aa1c9d235172c5a8f1d6eb5a470e3e58e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41a923ab47fc1014a9f18bf1a78e4cab"><td class="memItemLeft" align="right" valign="top"><a id="a41a923ab47fc1014a9f18bf1a78e4cab"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>SrcFilterInterfaced</b> = <a class="el" href="structpmacc_1_1functor_1_1_interface.html">filter::IUnary</a>&lt; SrcFilter &gt;</td></tr>
+<tr class="separator:a41a923ab47fc1014a9f18bf1a78e4cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -132,7 +135,7 @@ struct picongpu::particles::ManipulateDerive&lt; T_Manipulator, T_SrcSpeciesType
   </dd>
 </dl>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/particles/<a class="el" href="_init_functors_8hpp_source.html">InitFunctors.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/particles/<a class="el" href="_init_functors_8hpp_source.html">InitFunctors.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

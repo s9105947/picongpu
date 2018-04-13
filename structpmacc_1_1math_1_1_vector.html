@@ -185,9 +185,16 @@ HDINLINE const type &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>
 template&lt;int shrinkedDim&gt; </td></tr>
 <tr class="memitem:a9c2f8c7a44749db99af0c678eee9a970"><td class="memTemplItemLeft" align="right" valign="top">HDINLINE <a class="el" href="structpmacc_1_1math_1_1_vector.html">Vector</a>&lt; type, shrinkedDim, Accessor, Navigator &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>shrink</b> (const int startIdx=0) const</td></tr>
 <tr class="separator:a9c2f8c7a44749db99af0c678eee9a970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acea48724a90cba7cca4fa0b36cee4502"><td class="memTemplParams" colspan="2">template&lt;int dimToRemove&gt; </td></tr>
+<tr class="memitem:acea48724a90cba7cca4fa0b36cee4502"><td class="memTemplItemLeft" align="right" valign="top">HDINLINE <a class="el" href="structpmacc_1_1math_1_1_vector.html">Vector</a>&lt; type, dim - 1, Accessor, Navigator &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structpmacc_1_1math_1_1_vector.html#acea48724a90cba7cca4fa0b36cee4502">remove</a> () const</td></tr>
+<tr class="memdesc:acea48724a90cba7cca4fa0b36cee4502"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a component.  <a href="#acea48724a90cba7cca4fa0b36cee4502">More...</a><br /></td></tr>
+<tr class="separator:acea48724a90cba7cca4fa0b36cee4502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac94e55f324ff5c2a741a2bbc344fe2b2"><td class="memItemLeft" align="right" valign="top">HDINLINE type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpmacc_1_1math_1_1_vector.html#ac94e55f324ff5c2a741a2bbc344fe2b2">productOfComponents</a> () const</td></tr>
 <tr class="memdesc:ac94e55f324ff5c2a741a2bbc344fe2b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns product of all components.  <a href="#ac94e55f324ff5c2a741a2bbc344fe2b2">More...</a><br /></td></tr>
 <tr class="separator:ac94e55f324ff5c2a741a2bbc344fe2b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a01104f7b05d156501e9eee29144826"><td class="memItemLeft" align="right" valign="top">HDINLINE type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpmacc_1_1math_1_1_vector.html#a5a01104f7b05d156501e9eee29144826">sumOfComponents</a> () const</td></tr>
+<tr class="memdesc:a5a01104f7b05d156501e9eee29144826"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns sum of all components.  <a href="#a5a01104f7b05d156501e9eee29144826">More...</a><br /></td></tr>
+<tr class="separator:a5a01104f7b05d156501e9eee29144826"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95b2a6f821a9e8af68e627a69e372bd7"><td class="memTemplParams" colspan="2">template&lt;typename T_OtherAccessor , typename T_OtherNavigator , template&lt; typename, int &gt; class T_OtherStorage&gt; </td></tr>
 <tr class="memitem:a95b2a6f821a9e8af68e627a69e372bd7"><td class="memTemplItemLeft" align="right" valign="top">HDINLINE <a class="el" href="structpmacc_1_1math_1_1_vector.html">This</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structpmacc_1_1math_1_1_vector.html#a95b2a6f821a9e8af68e627a69e372bd7">operator+=</a> (const <a class="el" href="structpmacc_1_1math_1_1_vector.html">Vector</a>&lt; type, dim, T_OtherAccessor, T_OtherNavigator, T_OtherStorage &gt; &amp;other)</td></tr>
 <tr class="separator:a95b2a6f821a9e8af68e627a69e372bd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -529,6 +536,75 @@ template&lt;typename T_Type, int T_dim, typename T_Accessor = StandardAccessor, 
 
 </div>
 </div>
+<a id="acea48724a90cba7cca4fa0b36cee4502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acea48724a90cba7cca4fa0b36cee4502">&#9670;&nbsp;</a></span>remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T_Type, int T_dim, typename T_Accessor = StandardAccessor, typename T_Navigator = StandardNavigator, template&lt; typename, int &gt; class T_Storage = detail::Vector_components&gt; </div>
+<div class="memtemplate">
+template&lt;int dimToRemove&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HDINLINE <a class="el" href="structpmacc_1_1math_1_1_vector.html">Vector</a>&lt;type, dim - 1, Accessor, Navigator&gt; <a class="el" href="structpmacc_1_1math_1_1_vector.html">pmacc::math::Vector</a>&lt; T_Type, T_dim, T_Accessor, T_Navigator, T_Storage &gt;::remove </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes a component. </p>
+<p class="">It is not allowed to call this method on a vector with the dimensionality of one.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">dimToRemove</td><td>index which shall be removed; range: [ 0; dim - 1 ] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>vector with <code>dim - 1</code> elements </dd></dl>
+
+</div>
+</div>
+<a id="a5a01104f7b05d156501e9eee29144826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a01104f7b05d156501e9eee29144826">&#9670;&nbsp;</a></span>sumOfComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T_Type, int T_dim, typename T_Accessor = StandardAccessor, typename T_Navigator = StandardNavigator, template&lt; typename, int &gt; class T_Storage = detail::Vector_components&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HDINLINE type <a class="el" href="structpmacc_1_1math_1_1_vector.html">pmacc::math::Vector</a>&lt; T_Type, T_dim, T_Accessor, T_Navigator, T_Storage &gt;::sumOfComponents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns sum of all components. </p>
+<dl class="section return"><dt>Returns</dt><dd>sum of components </dd></dl>
+
+</div>
+</div>
 <a id="a19dca1a6ff7dda67c7a10193291a4f39"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a19dca1a6ff7dda67c7a10193291a4f39">&#9670;&nbsp;</a></span>toString()</h2>
 
@@ -578,7 +654,7 @@ template&lt;typename T_Type, int T_dim, typename T_Accessor = StandardAccessor, 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/pmacc/math/vector/<a class="el" href="pmacc_2math_2vector_2vector_8hpp_source.html">Vector.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/pmacc/math/vector/<a class="el" href="pmacc_2math_2vector_2vector_8hpp_source.html">Vector.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

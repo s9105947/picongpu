@@ -72,14 +72,19 @@ $(function() {
 <div class="title">picongpu::DeviceHeapConfig Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>configure the CreationPolicy "Scatter"  
+ <a href="structpicongpu_1_1_device_heap_config.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a556dd61d311aef4bd13ca229d0d74e3e"><td class="memItemLeft" align="right" valign="top"><a id="a556dd61d311aef4bd13ca229d0d74e3e"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>pagesize</b> = boost::mpl::int_&lt; 2 *1024 *1024 &gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1_device_heap_config.html#a556dd61d311aef4bd13ca229d0d74e3e">pagesize</a> = boost::mpl::int_&lt; 2 *1024 *1024 &gt;</td></tr>
+<tr class="memdesc:a556dd61d311aef4bd13ca229d0d74e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">2MiB page can hold around 256 particle frames <br /></td></tr>
 <tr class="separator:a556dd61d311aef4bd13ca229d0d74e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a440cd228541e908d9f42df85463298e7"><td class="memItemLeft" align="right" valign="top"><a id="a440cd228541e908d9f42df85463298e7"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>accessblocks</b> = boost::mpl::int_&lt; 4 &gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1_device_heap_config.html#a440cd228541e908d9f42df85463298e7">accessblocks</a> = boost::mpl::int_&lt; 4 &gt;</td></tr>
+<tr class="memdesc:a440cd228541e908d9f42df85463298e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">accessblocks, regionsize and wastefactor are not conclusively investigated and might be performance sensitive for multiple particle species with heavily varying attributes (frame sizes) <br /></td></tr>
 <tr class="separator:a440cd228541e908d9f42df85463298e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e5dc516493652044efe73485d5da244"><td class="memItemLeft" align="right" valign="top"><a id="a6e5dc516493652044efe73485d5da244"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>regionsize</b> = boost::mpl::int_&lt; 8 &gt;</td></tr>
@@ -88,11 +93,14 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>regionsize</b> = boo
 using&#160;</td><td class="memItemRight" valign="bottom"><b>wastefactor</b> = boost::mpl::int_&lt; 2 &gt;</td></tr>
 <tr class="separator:af69d154ec5b215f730e220a1801bebb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab07eac72bf5bbd6b43c84a7bf2f654c"><td class="memItemLeft" align="right" valign="top"><a id="aab07eac72bf5bbd6b43c84a7bf2f654c"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>resetfreedpages</b> = boost::mpl::bool_&lt; true &gt;</td></tr>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1_device_heap_config.html#aab07eac72bf5bbd6b43c84a7bf2f654c">resetfreedpages</a> = boost::mpl::bool_&lt; true &gt;</td></tr>
+<tr class="memdesc:aab07eac72bf5bbd6b43c84a7bf2f654c"><td class="mdescLeft">&#160;</td><td class="mdescRight">resetfreedpages is used to minimize memory fragmentation with varying frame sizes <br /></td></tr>
 <tr class="separator:aab07eac72bf5bbd6b43c84a7bf2f654c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/param/mallocMC.param</li>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p class="">configure the CreationPolicy "Scatter" </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/param/<a class="el" href="malloc_m_c_8param.html">mallocMC.param</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

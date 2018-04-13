@@ -104,10 +104,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a25fed8753211ba793a60f404f376dae3"><td class="memItemLeft" align="right" valign="top">HINLINE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1particles_1_1manipulators_1_1generic_1_1_free.html#a25fed8753211ba793a60f404f376dae3">Free</a> (uint32_t currentStep)</td></tr>
 <tr class="memdesc:a25fed8753211ba793a60f404f376dae3"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <a href="#a25fed8753211ba793a60f404f376dae3">More...</a><br /></td></tr>
 <tr class="separator:a25fed8753211ba793a60f404f376dae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b1c2a9fbecd8b01d71398133b56363f"><td class="memTemplParams" colspan="2">template&lt;typename T_WorkerCfg , typename T_Acc &gt; </td></tr>
-<tr class="memitem:a4b1c2a9fbecd8b01d71398133b56363f"><td class="memTemplItemLeft" align="right" valign="top">HDINLINE <a class="el" href="structpicongpu_1_1particles_1_1manipulators_1_1generic_1_1acc_1_1_free.html">acc::Free</a>&lt; Functor &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1particles_1_1manipulators_1_1generic_1_1_free.html#a4b1c2a9fbecd8b01d71398133b56363f">operator()</a> (T_Acc const &amp;, <a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; simDim &gt; const &amp;, T_WorkerCfg const &amp;)</td></tr>
-<tr class="memdesc:a4b1c2a9fbecd8b01d71398133b56363f"><td class="mdescLeft">&#160;</td><td class="mdescRight">create device manipulator functor  <a href="#a4b1c2a9fbecd8b01d71398133b56363f">More...</a><br /></td></tr>
-<tr class="separator:a4b1c2a9fbecd8b01d71398133b56363f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc85514fd66fad864a1a4d3b7f50fd8c"><td class="memTemplParams" colspan="2">template&lt;typename T_WorkerCfg , typename T_Acc &gt; </td></tr>
+<tr class="memitem:adc85514fd66fad864a1a4d3b7f50fd8c"><td class="memTemplItemLeft" align="right" valign="top">HDINLINE <a class="el" href="structpicongpu_1_1particles_1_1manipulators_1_1generic_1_1acc_1_1_free.html">acc::Free</a>&lt; Functor &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1particles_1_1manipulators_1_1generic_1_1_free.html#adc85514fd66fad864a1a4d3b7f50fd8c">operator()</a> (T_Acc const &amp;, <a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; simDim &gt; const &amp;, T_WorkerCfg const &amp;) const</td></tr>
+<tr class="memdesc:adc85514fd66fad864a1a4d3b7f50fd8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">create device manipulator functor  <a href="#adc85514fd66fad864a1a4d3b7f50fd8c">More...</a><br /></td></tr>
+<tr class="separator:adc85514fd66fad864a1a4d3b7f50fd8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -143,7 +143,7 @@ struct picongpu::particles::manipulators::generic::Free&lt; T_Functor &gt;</h3>
   </table>
   </dd>
 </dl>
-<p>example for <code><a class="el" href="particle_8param.html" title="Configurations for particle manipulators. ">particle.param</a></code>: set in cell position to zero </p><div class="fragment"><div class="line"><span class="keyword">struct </span>FunctorInCellPositionZero</div><div class="line">{</div><div class="line">    <span class="keyword">template</span>&lt; <span class="keyword">typename</span> T_Particle &gt;</div><div class="line">    HDINLINE <span class="keywordtype">void</span> <a class="code" href="structpicongpu_1_1particles_1_1manipulators_1_1generic_1_1_free.html#a4b1c2a9fbecd8b01d71398133b56363f">operator()</a>( T_Particle &amp; particle )</div><div class="line">    {</div><div class="line">        particle[ position_ ] = <a class="code" href="structpmacc_1_1math_1_1_vector.html#aa0cf12e9f822955e63b48215fea91466">floatD_X::create</a>( 0.0 );</div><div class="line">    }</div><div class="line">    <span class="keyword">static</span> constexpr <span class="keywordtype">char</span> <span class="keyword">const</span> * name = <span class="stringliteral">&quot;inCellPositionZero&quot;</span>;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">using</span> InCellPositionZero = generic::Free&lt;</div><div class="line">   FunctorInCellPositionZero</div><div class="line">&gt;;</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p>example for <code><a class="el" href="particle_8param.html" title="Configurations for particle manipulators. ">particle.param</a></code>: set in cell position to zero </p><div class="fragment"><div class="line"><span class="keyword">struct </span>FunctorInCellPositionZero</div><div class="line">{</div><div class="line">    <span class="keyword">template</span>&lt; <span class="keyword">typename</span> T_Particle &gt;</div><div class="line">    HDINLINE <span class="keywordtype">void</span> <a class="code" href="structpicongpu_1_1particles_1_1manipulators_1_1generic_1_1_free.html#adc85514fd66fad864a1a4d3b7f50fd8c">operator()</a>( T_Particle &amp; particle )</div><div class="line">    {</div><div class="line">        particle[ position_ ] = <a class="code" href="structpmacc_1_1math_1_1_vector.html#aa0cf12e9f822955e63b48215fea91466">floatD_X::create</a>( 0.0 );</div><div class="line">    }</div><div class="line">    <span class="keyword">static</span> constexpr <span class="keywordtype">char</span> <span class="keyword">const</span> * name = <span class="stringliteral">&quot;inCellPositionZero&quot;</span>;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">using</span> InCellPositionZero = generic::Free&lt;</div><div class="line">   FunctorInCellPositionZero</div><div class="line">&gt;;</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a25fed8753211ba793a60f404f376dae3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a25fed8753211ba793a60f404f376dae3">&#9670;&nbsp;</a></span>Free()</h2>
 
@@ -181,8 +181,8 @@ template&lt;typename T_Functor &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4b1c2a9fbecd8b01d71398133b56363f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b1c2a9fbecd8b01d71398133b56363f">&#9670;&nbsp;</a></span>operator()()</h2>
+<a id="adc85514fd66fad864a1a4d3b7f50fd8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc85514fd66fad864a1a4d3b7f50fd8c">&#9670;&nbsp;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -215,7 +215,7 @@ template&lt;typename T_WorkerCfg , typename T_Acc &gt; </div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -245,8 +245,8 @@ template&lt;typename T_WorkerCfg , typename T_Acc &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/particles/manipulators/generic/Free.def</li>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/particles/manipulators/generic/<a class="el" href="manipulators_2generic_2_free_8hpp_source.html">Free.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/particles/manipulators/generic/Free.def</li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/particles/manipulators/generic/<a class="el" href="manipulators_2generic_2_free_8hpp_source.html">Free.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

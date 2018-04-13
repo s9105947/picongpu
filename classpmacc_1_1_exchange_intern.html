@@ -130,14 +130,16 @@ virtual <a class="el" href="classpmacc_1_1_device_buffer.html">DeviceBuffer</a>&
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a57ed3888ee5a0f8fdeeb7f9529cdf294"><td class="memItemLeft" align="right" valign="top"><a id="a57ed3888ee5a0f8fdeeb7f9529cdf294"></a>
-<a class="el" href="classpmacc_1_1_host_buffer_intern.html">HostBufferIntern</a>&lt; TYPE, DIM &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>hostBuffer</b></td></tr>
-<tr class="separator:a57ed3888ee5a0f8fdeeb7f9529cdf294"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3495f7a1400cf22889c8ea88918359f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classpmacc_1_1_device_buffer_intern.html">DeviceBufferIntern</a>&lt; TYPE, DIM &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpmacc_1_1_exchange_intern.html#a3495f7a1400cf22889c8ea88918359f2">deviceDoubleBuffer</a></td></tr>
-<tr class="separator:a3495f7a1400cf22889c8ea88918359f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e4021067e78fa568ccffca0da9c57c3"><td class="memItemLeft" align="right" valign="top"><a id="a9e4021067e78fa568ccffca0da9c57c3"></a>
-<a class="el" href="classpmacc_1_1_device_buffer_intern.html">DeviceBufferIntern</a>&lt; TYPE, DIM &gt; *&#160;</td><td class="memItemRight" valign="bottom"><b>deviceBuffer</b></td></tr>
-<tr class="separator:a9e4021067e78fa568ccffca0da9c57c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a247aa9e319f2fe0669e9e8143d610b8e"><td class="memItemLeft" align="right" valign="top"><a id="a247aa9e319f2fe0669e9e8143d610b8e"></a>
+std::unique_ptr&lt; <a class="el" href="classpmacc_1_1_host_buffer_intern.html">HostBufferIntern</a>&lt; TYPE, DIM &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>hostBuffer</b></td></tr>
+<tr class="separator:a247aa9e319f2fe0669e9e8143d610b8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab66881d4cba1721215cd545aee9d42e4"><td class="memItemLeft" align="right" valign="top"><a id="ab66881d4cba1721215cd545aee9d42e4"></a>
+std::unique_ptr&lt; <a class="el" href="classpmacc_1_1_device_buffer_intern.html">DeviceBufferIntern</a>&lt; TYPE, DIM &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpmacc_1_1_exchange_intern.html#ab66881d4cba1721215cd545aee9d42e4">deviceDoubleBuffer</a></td></tr>
+<tr class="memdesc:ab66881d4cba1721215cd545aee9d42e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This buffer is a vector which is used as message buffer for faster memcopy. <br /></td></tr>
+<tr class="separator:ab66881d4cba1721215cd545aee9d42e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c94020a322fe4d3ae1e273ab2678e82"><td class="memItemLeft" align="right" valign="top"><a id="a5c94020a322fe4d3ae1e273ab2678e82"></a>
+std::unique_ptr&lt; <a class="el" href="classpmacc_1_1_device_buffer_intern.html">DeviceBufferIntern</a>&lt; TYPE, DIM &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>deviceBuffer</b></td></tr>
+<tr class="separator:a5c94020a322fe4d3ae1e273ab2678e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classpmacc_1_1_exchange"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classpmacc_1_1_exchange')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classpmacc_1_1_exchange.html">pmacc::Exchange&lt; TYPE, DIM &gt;</a></td></tr>
 <tr class="memitem:a276733313b4e9e07b34f077a64b0e2f7 inherit pro_attribs_classpmacc_1_1_exchange"><td class="memItemLeft" align="right" valign="top"><a id="a276733313b4e9e07b34f077a64b0e2f7"></a>
 uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>exchange</b></td></tr>
@@ -260,34 +262,8 @@ template&lt;class TYPE, unsigned DIM&gt; </div>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a3495f7a1400cf22889c8ea88918359f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3495f7a1400cf22889c8ea88918359f2">&#9670;&nbsp;</a></span>deviceDoubleBuffer</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TYPE, unsigned DIM&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classpmacc_1_1_device_buffer_intern.html">DeviceBufferIntern</a>&lt;TYPE, DIM&gt;* <a class="el" href="classpmacc_1_1_exchange_intern.html">pmacc::ExchangeIntern</a>&lt; TYPE, DIM &gt;::deviceDoubleBuffer</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p class="">This buffer is a vector which is used as message buffer for faster memcopy </p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/pmacc/memory/buffers/<a class="el" href="_exchange_intern_8hpp_source.html">ExchangeIntern.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/pmacc/memory/buffers/<a class="el" href="_exchange_intern_8hpp_source.html">ExchangeIntern.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

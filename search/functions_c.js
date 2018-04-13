@@ -4,6 +4,7 @@ var searchData=
   ['map',['map',['../classpmacc_1_1_data_space_operations.html#a6e6ddf786b57d5b5baddcedd765d6963',1,'pmacc::DataSpaceOperations']]],
   ['mapcellidxtoinitialvoronoicell',['mapCellIdxToInitialVoronoiCell',['../structpicongpu_1_1plugins_1_1particle_merging_1_1_particle_merger_kernel.html#a4531f1fba864a0a8f86353dfab3b2789',1,'picongpu::plugins::particleMerging::ParticleMergerKernel']]],
   ['mappedbufferintern',['MappedBufferIntern',['../classpmacc_1_1_mapped_buffer_intern.html#a44138bd4cb877fd96e540e20d4d3deb5',1,'pmacc::MappedBufferIntern']]],
+  ['mappingdescription',['MappingDescription',['../classpmacc_1_1_mapping_description.html#adf9c3f338b23932ee993ac91f592eca9',1,'pmacc::MappingDescription']]],
   ['mapto1dnavigator',['MapTo1DNavigator',['../classpmacc_1_1cursor_1_1_map_to1_d_navigator.html#ab2b0d89b9aad70926480c6dfd056961c',1,'pmacc::cursor::MapTo1DNavigator']]],
   ['maptolookuptable',['MapToLookupTable',['../structpicongpu_1_1particles_1_1synchrotron_photons_1_1detail_1_1_map_to_lookup_table.html#a38f3f842edd0bb68e4908ea7add2f8dc',1,'picongpu::particles::synchrotronPhotons::detail::MapToLookupTable']]],
   ['mask',['Mask',['../classpmacc_1_1_mask.html#a6cb15d241e48f202e446b8fbc6d6eeb7',1,'pmacc::Mask::Mask()'],['../classpmacc_1_1_mask.html#ab3952dfe0ed1f808adad61f55ecc9763',1,'pmacc::Mask::Mask(ExchangeType ex)'],['../classpmacc_1_1_mask.html#a5aba88a2fd9111501843d5595cb187f3',1,'pmacc::Mask::Mask(uint32_t ex)']]],

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PIConGPU: /tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/param/speciesDefinition.param File Reference</title>
+<title>PIConGPU: /tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/param/speciesDefinition.param File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,21 +89,21 @@ Typedefs</h2></td></tr>
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="species_definition_8param.html#a01d6c77bb18cb353beb4f0c5e0711842">picongpu::DefaultParticleAttributes</a> = MakeSeq_t&lt; position&lt; position_pic &gt;, momentum, weighting &gt;</td></tr>
 <tr class="memdesc:a01d6c77bb18cb353beb4f0c5e0711842"><td class="mdescLeft">&#160;</td><td class="mdescRight">describe attributes of a particle <br /></td></tr>
 <tr class="separator:a01d6c77bb18cb353beb4f0c5e0711842"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99b59844e42865d0ab05f2d0a2a82f0a"><td class="memItemLeft" align="right" valign="top"><a id="a99b59844e42865d0ab05f2d0a2a82f0a"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::ParticleFlagsPhotons</b> = bmpl::vector&lt; particlePusher&lt; particles::pusher::Photon &gt;, shape&lt; UsedParticleShape &gt;, interpolation&lt; UsedField2Particle &gt;, massRatio&lt; MassRatioPhotons &gt;, chargeRatio&lt; ChargeRatioPhotons &gt; &gt;</td></tr>
-<tr class="separator:a99b59844e42865d0ab05f2d0a2a82f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0ec04efe01cc59bce308c2d34335815"><td class="memItemLeft" align="right" valign="top"><a id="ac0ec04efe01cc59bce308c2d34335815"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::ParticleFlagsPhotons</b> = MakeSeq_t&lt; particlePusher&lt; particles::pusher::Photon &gt;, shape&lt; UsedParticleShape &gt;, interpolation&lt; UsedField2Particle &gt;, massRatio&lt; MassRatioPhotons &gt;, chargeRatio&lt; ChargeRatioPhotons &gt; &gt;</td></tr>
+<tr class="separator:ac0ec04efe01cc59bce308c2d34335815"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac010f5e081f47e9742de843f6f73f590"><td class="memItemLeft" align="right" valign="top"><a id="ac010f5e081f47e9742de843f6f73f590"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::PIC_Photons</b> = Particles&lt; PMACC_CSTRING(&quot;ph&quot;), ParticleFlagsPhotons, DefaultParticleAttributes &gt;</td></tr>
 <tr class="separator:ac010f5e081f47e9742de843f6f73f590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31eae3712dc7f466abd4ffe59969c050"><td class="memItemLeft" align="right" valign="top"><a id="a31eae3712dc7f466abd4ffe59969c050"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::ParticleFlagsElectrons</b> = bmpl::vector&lt; particlePusher&lt; UsedParticlePusher &gt;, shape&lt; UsedParticleShape &gt;, interpolation&lt; UsedField2Particle &gt;, current&lt; UsedParticleCurrentSolver &gt;, massRatio&lt; MassRatioElectrons &gt;, chargeRatio&lt; ChargeRatioElectrons &gt; &gt;</td></tr>
-<tr class="separator:a31eae3712dc7f466abd4ffe59969c050"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f19c227dd4a91f68fe0f9d41ceed38a"><td class="memItemLeft" align="right" valign="top"><a id="a2f19c227dd4a91f68fe0f9d41ceed38a"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::ParticleFlagsElectrons</b> = MakeSeq_t&lt; particlePusher&lt; UsedParticlePusher &gt;, shape&lt; UsedParticleShape &gt;, interpolation&lt; UsedField2Particle &gt;, current&lt; UsedParticleCurrentSolver &gt;, massRatio&lt; MassRatioElectrons &gt;, chargeRatio&lt; ChargeRatioElectrons &gt; &gt;</td></tr>
+<tr class="separator:a2f19c227dd4a91f68fe0f9d41ceed38a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06fb1e6afb8d49a7eed41b561fb5445e"><td class="memItemLeft" align="right" valign="top"><a id="a06fb1e6afb8d49a7eed41b561fb5445e"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::PIC_Electrons</b> = Particles&lt; PMACC_CSTRING(&quot;e&quot;), ParticleFlagsElectrons, DefaultParticleAttributes &gt;</td></tr>
 <tr class="separator:a06fb1e6afb8d49a7eed41b561fb5445e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae93465517d6cdfc158c7fac4b2f30fc2"><td class="memItemLeft" align="right" valign="top"><a id="ae93465517d6cdfc158c7fac4b2f30fc2"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::ParticleFlagsIons</b> = bmpl::vector&lt; particlePusher&lt; UsedParticlePusher &gt;, shape&lt; UsedParticleShape &gt;, interpolation&lt; UsedField2Particle &gt;, current&lt; UsedParticleCurrentSolver &gt;, massRatio&lt; MassRatioIons &gt;, chargeRatio&lt; ChargeRatioIons &gt;, densityRatio&lt; DensityRatioIons &gt;, atomicNumbers&lt; ionization::atomicNumbers::Hydrogen_t &gt; &gt;</td></tr>
-<tr class="separator:ae93465517d6cdfc158c7fac4b2f30fc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60171f940112c6fcff032fb8df919c94"><td class="memItemLeft" align="right" valign="top"><a id="a60171f940112c6fcff032fb8df919c94"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::ParticleFlagsIons</b> = MakeSeq_t&lt; particlePusher&lt; UsedParticlePusher &gt;, shape&lt; UsedParticleShape &gt;, interpolation&lt; UsedField2Particle &gt;, current&lt; UsedParticleCurrentSolver &gt;, massRatio&lt; MassRatioIons &gt;, chargeRatio&lt; ChargeRatioIons &gt;, densityRatio&lt; DensityRatioIons &gt;, atomicNumbers&lt; ionization::atomicNumbers::Hydrogen_t &gt; &gt;</td></tr>
+<tr class="separator:a60171f940112c6fcff032fb8df919c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8de40a1423431ac51176e95c2791fb6"><td class="memItemLeft" align="right" valign="top"><a id="aa8de40a1423431ac51176e95c2791fb6"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::PIC_Ions</b> = Particles&lt; PMACC_CSTRING(&quot;i&quot;), ParticleFlagsIons, DefaultParticleAttributes &gt;</td></tr>
 <tr class="separator:aa8de40a1423431ac51176e95c2791fb6"><td class="memSeparator" colspan="2">&#160;</td></tr>

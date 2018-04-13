@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PIConGPU: PIConGPU - A Many GPGPU PIC Code</title>
+<title>PIConGPU: PIConGPU - Particle-in-Cell Simulations for the Exascale Era</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,13 +62,13 @@ $(function() {
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">PIConGPU - A Many GPGPU PIC Code </div>  </div>
+<div class="title">PIConGPU - Particle-in-Cell Simulations for the Exascale Era </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p class=""><a href="https://travis-ci.org/ComputationalRadiationPhysics/picongpu/branches"></a> <a href="https://travis-ci.org/ComputationalRadiationPhysics/picongpu/branches"></a> <a href="http://picongpu.readthedocs.io"></a> <a href="http://computationalradiationphysics.github.io/picongpu"></a> <a href="https://isocpp.org/"></a> <a href="https://www.gnu.org/licenses/gpl-3.0.html"></a> <a href="https://www.gnu.org/licenses/lgpl-3.0.html"></a></p>
 <p class=""><a href="http://www.youtube.com/watch?v=nwZuG-XtUDE"></a> <a href="http://www.youtube.com/watch?v=nwZuG-XtUDE"></a></p>
 <h2>Introduction </h2>
-<p class="">PIConGPU is a fully relativistic, many <a href="http://en.wikipedia.org/wiki/Graphics_processing_unit">GPGPU</a>, 3D3V particle-in-cell (<a href="http://en.wikipedia.org/wiki/Particle-in-cell">PIC</a>) code. The Particle-in-Cell algorithm is a central tool in plasma physics. It describes the dynamics of a plasma by computing the motion of electrons and ions in the plasma based on <a href="http://en.wikipedia.org/wiki/Maxwell%27s_equations">Maxwell's equations</a>.</p>
+<p class="">PIConGPU is a fully relativistic, <a href="https://en.wikipedia.org/wiki/Manycore_processor">manycore</a>, 3D3V particle-in-cell (<a href="http://en.wikipedia.org/wiki/Particle-in-cell">PIC</a>) code. The Particle-in-Cell algorithm is a central tool in plasma physics. It describes the dynamics of a plasma by computing the motion of electrons and ions in the plasma based on <a href="http://en.wikipedia.org/wiki/Maxwell%27s_equations">Maxwell's equations</a>.</p>
 <p class="">PIConGPU implements various numerical schemes to solve the PIC cycle. Its features for the electro-magnetic PIC algorithm include:</p><ul>
 <li>a central or Yee-lattice for fields</li>
 <li>particle pushers that solve the equation of motion for charged and neutral particles, e.g., the <em>Boris-* and the [*Vay-Pusher</em>](<a href="http://dx.doi.org/10.1063/1.2837054">http://dx.doi.org/10.1063/1.2837054</a>)</li>
@@ -85,10 +85,10 @@ $(function() {
 <li>online, far-field radiation diagnostics for coherent and incoherent radiation emitted by charged particles</li>
 <li>full restart and output capabilities via <a href="http://openPMD.org">openPMD</a>, including <a href="http://hdfgroup.org/">parallel HDF5</a> (via <a href="https://github.com/ComputationalRadiationPhysics/libSplash">libSplash</a>) and <a href="https://www.olcf.ornl.gov/center-projects/adios/">ADIOS</a>, allowing for extreme I/O scalability and massively parallel online-analysis</li>
 <li>2D and 3D live view and diagnostics tools</li>
-<li>a large selection of extensible <a href="https://github.com/ComputationalRadiationPhysics/picongpu/wiki/PIConGPU-Plugins">online-plugins</a></li>
+<li>a large selection of extensible <a href="http://picongpu.readthedocs.io/en/latest/usage/plugins.html">online-plugins</a></li>
 </ul>
-<p class="">Todays GPUs provide a computational performance of several <a href="http://en.wikipedia.org/wiki/FLOPS">TFLOP/s</a> at considerable lower invest and maintenance costs compared to multi CPU-based compute architectures of similar performance. The latest high-performance systems (<a href="http://www.top500.org/">TOP500</a>) are enhanced by accelerator hardware that boost their peak performance up to the multi-PFLOP/s level. With its outstanding performance and scalability to more than 18'000 GPUs, PIConGPU was one of the <b>finalists</b> of the 2013 <a href="http://sc13.supercomputing.org/content/acm-gordon-bell-prize">Gordon Bell Prize</a>.</p>
-<p class="">PIConGPU is developed and maintained by the <a href="http://www.hzdr.de/db/Cms?pNid=132&amp;pOid=30354">Computational Radiation Physics Group</a> at the <a href="http://www.hzdr.de/db/Cms?pNid=132">Institute for Radiation Physics</a> at <a href="http://www.hzdr.de/">HZDR</a> in close collaboration with the Center for Information Services and High Performance Computing (<a href="http://tu-dresden.de/die_tu_dresden/zentrale_einrichtungen/zih">ZIH</a>) of the Technical University Dresden (<a href="http://www.tu-dresden.de">TUD</a>). We are a member of the <a href="http://ccoe-dresden.de/">Dresden GPU Center of Excellence</a> that cooperates on a broad range of scientific GPU and manycore applications, workshops and teaching efforts.</p>
+<p class="">As one of our supported compute platforms, GPUs provide a computational performance of several <a href="http://en.wikipedia.org/wiki/FLOPS">TFLOP/s</a> at considerable lower invest and maintenance costs compared to multi CPU-based compute architectures of similar performance. The latest high-performance systems (<a href="http://www.top500.org/">TOP500</a>) are enhanced by accelerator hardware that boost their peak performance up to the multi-PFLOP/s level. With its outstanding performance and scalability to more than 18'000 GPUs, PIConGPU was one of the <b>finalists</b> of the 2013 <a href="http://sc13.supercomputing.org/content/acm-gordon-bell-prize">Gordon Bell Prize</a>.</p>
+<p class="">PIConGPU is developed and maintained by the <a href="https://www.hzdr.de/db/Cms?pNid=2097">Computational Radiation Physics Group</a> at the <a href="http://www.hzdr.de/db/Cms?pNid=132">Institute for Radiation Physics</a> at <a href="http://www.hzdr.de/">HZDR</a> in close collaboration with the Center for Information Services and High Performance Computing (<a href="http://tu-dresden.de/die_tu_dresden/zentrale_einrichtungen/zih">ZIH</a>) of the Technical University Dresden (<a href="http://www.tu-dresden.de">TUD</a>). We are a member of the <a href="http://ccoe-dresden.de/">Dresden GPU Center of Excellence</a> that cooperates on a broad range of scientific GPU and manycore applications, workshops and teaching efforts.</p>
 <h2>Attribution </h2>
 <p class="">PIConGPU is a <em>scientific project</em>. If you <b>present and/or publish</b> scientific results that used PIConGPU, you should set a <b>reference</b> to show your support.</p>
 <p class="">Our according <b>up-to-date publication</b> at <b>the time of your publication</b> should be inquired from:</p><ul>
@@ -105,7 +105,7 @@ $(function() {
 <p class="">See our notes in <a href="INSTALL.rst">INSTALL.rst</a>.</p>
 <h2>Users </h2>
 <p class="">Dear User, please be aware that this is an <b>open beta release</b>! We hereby emphasize that we are still actively developing PIConGPU at great speed and do, from time to time, break backwards compatibility.</p>
-<p class=""><a class="el" href="class_when.html">When</a> using this software, please stick to the <code>master</code> branch containing the latest <em>stable</em> release. It also contains a file <code>CHANGELOG.md</code> with the latest changes (and how to update your simulations). Read it first before updating between two versions! Also, we add a git <code>tag</code> according to a version number for each release in <code>master</code>.</p>
+<p class="">When using this software, please stick to the <code>master</code> branch containing the latest <em>stable</em> release. It also contains a file <code>CHANGELOG.md</code> with the latest changes (and how to update your simulations). Read it first before updating between two versions! Also, we add a git <code>tag</code> according to a version number for each release in <code>master</code>.</p>
 <p class="">For any questions regarding the usage of PIConGPU please <b>do not</b> contact the developers and maintainers directly.</p>
 <p class="">Instead, please sign up to our <b>PIConGPU-Users</b> mailing list so we can distribute and archive user questions: <a href="https://cg.hzdr.de/Lists/picongpu-users/List.html">Subscribe (select "Feed" on bottom left)</a>.</p>
 <p class="">Before you post a question, browse the PIConGPU <a href="https://github.com/ComputationalRadiationPhysics/picongpu/search?l=markdown">documentation</a>, <a href="https://github.com/ComputationalRadiationPhysics/picongpu/wiki">wiki</a>, <a href="https://github.com/ComputationalRadiationPhysics/picongpu/issues">issue tracker</a> and the <a href="https://cg.hzdr.de/Lists/picongpu-users/List.html">mailing list history</a> to see if your question has been answered, already.</p>
@@ -124,7 +124,7 @@ $(function() {
 <h3>Scientific Supervision</h3>
 <ul>
 <li>Dr. Michael Bussmann</li>
-<li>Dr.-Ing. Guido Juckeland</li>
+<li>Axel Huebl</li>
 </ul>
 <h3>Maintainers* and core developers</h3>
 <ul>
@@ -134,12 +134,14 @@ $(function() {
 <li>Axel Huebl*</li>
 <li>Alexander Matthes</li>
 <li>Richard Pausch*</li>
+<li>Sophie Rudat</li>
 <li>Sebastian Starke</li>
+<li>Dr. Klaus Steiniger</li>
 <li>Rene Widera*</li>
 </ul>
 <h3>Former Members, Contributions and Thanks</h3>
 <p class="">The PIConGPU Team expresses its gratitude to:</p>
-<p class="">Florian Berninger, Heiko Burau, Robert Dietrich, Carlchristian Eckert, Wen Fu, Ph.D., Alexander Grund, Anton Helm, Wolfgang Hoehnig, Maximilian Knespel, Dr. Remi Lehe, Felix Schmitt, Benjamin Schneider, Joseph Schuchart, Conrad Schumann, Klaus Steiniger, Stefan Tietze, Marija Vranic, Ph.D., Benjamin Worpitz, Erik Zenker, Alexander Matthes</p>
+<p class="">Florian Berninger, Heiko Burau, Robert Dietrich, Carlchristian Eckert, Wen Fu, Ph.D., Alexander Grund, Sebastian Hahn, Anton Helm, Wolfgang Hoehnig, Dr.-Ing. Guido Juckeland, Jeffrey Kelling, Maximilian Knespel, Dr. Remi Lehe, Felix Schmitt, Benjamin Schneider, Joseph Schuchart, Conrad Schumann, Stefan Tietze, Marija Vranic, Ph.D., Benjamin Worpitz, and Erik Zenker.</p>
 <p class="">Kudos to everyone, mentioned or unmentioned, who contributed further in any way!</p>
 <hr/>
 <div class="image">

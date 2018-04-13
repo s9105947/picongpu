@@ -108,10 +108,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a33295e1fb47e8c0599477f3e8bf7e9d2"><td class="memItemLeft" align="right" valign="top">HINLINE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1particles_1_1manipulators_1_1unary_1_1_free_total_cell_offset.html#a33295e1fb47e8c0599477f3e8bf7e9d2">FreeTotalCellOffset</a> (uint32_t currentStep)</td></tr>
 <tr class="memdesc:a33295e1fb47e8c0599477f3e8bf7e9d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor  <a href="#a33295e1fb47e8c0599477f3e8bf7e9d2">More...</a><br /></td></tr>
 <tr class="separator:a33295e1fb47e8c0599477f3e8bf7e9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29dafd73e86733646840ea22b4fe5c3b"><td class="memTemplParams" colspan="2">template&lt;typename T_WorkerCfg , typename T_Acc &gt; </td></tr>
-<tr class="memitem:a29dafd73e86733646840ea22b4fe5c3b"><td class="memTemplItemLeft" align="right" valign="top">HDINLINE auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1particles_1_1manipulators_1_1unary_1_1_free_total_cell_offset.html#a29dafd73e86733646840ea22b4fe5c3b">operator()</a> (T_Acc const &amp;acc, <a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; simDim &gt; const &amp;localSupercellOffset, T_WorkerCfg const &amp;workerCfg) -&gt; <a class="el" href="structpicongpu_1_1particles_1_1manipulators_1_1unary_1_1acc_1_1_free_total_cell_offset.html">acc::FreeTotalCellOffset</a>&lt; Functor &gt;</td></tr>
-<tr class="memdesc:a29dafd73e86733646840ea22b4fe5c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">create functor for the accelerator  <a href="#a29dafd73e86733646840ea22b4fe5c3b">More...</a><br /></td></tr>
-<tr class="separator:a29dafd73e86733646840ea22b4fe5c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3839fa9f990efd8738b2e4190a067873"><td class="memTemplParams" colspan="2">template&lt;typename T_WorkerCfg , typename T_Acc &gt; </td></tr>
+<tr class="memitem:a3839fa9f990efd8738b2e4190a067873"><td class="memTemplItemLeft" align="right" valign="top">HDINLINE auto&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1particles_1_1manipulators_1_1unary_1_1_free_total_cell_offset.html#a3839fa9f990efd8738b2e4190a067873">operator()</a> (T_Acc const &amp;acc, <a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; simDim &gt; const &amp;localSupercellOffset, T_WorkerCfg const &amp;workerCfg) const -&gt; <a class="el" href="structpicongpu_1_1particles_1_1manipulators_1_1unary_1_1acc_1_1_free_total_cell_offset.html">acc::FreeTotalCellOffset</a>&lt; Functor &gt;</td></tr>
+<tr class="memdesc:a3839fa9f990efd8738b2e4190a067873"><td class="mdescLeft">&#160;</td><td class="mdescRight">create functor for the accelerator  <a href="#a3839fa9f990efd8738b2e4190a067873">More...</a><br /></td></tr>
+<tr class="separator:a3839fa9f990efd8738b2e4190a067873"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -147,7 +147,7 @@ struct picongpu::particles::manipulators::unary::FreeTotalCellOffset&lt; T_Funct
   </table>
   </dd>
 </dl>
-<p>example for <code><a class="el" href="particle_8param.html" title="Configurations for particle manipulators. ">particle.param</a></code>: set a user-defined species attribute y0 (type: uint32_t) to the current total y-cell index </p><div class="fragment"><div class="line"><span class="keyword">struct </span>FunctorSaveYcell</div><div class="line">{</div><div class="line">    <span class="keyword">template</span>&lt; <span class="keyword">typename</span> T_Particle &gt;</div><div class="line">    HDINLINE <span class="keywordtype">void</span> <a class="code" href="structpicongpu_1_1particles_1_1manipulators_1_1unary_1_1_free_total_cell_offset.html#a29dafd73e86733646840ea22b4fe5c3b">operator()</a>(</div><div class="line">       <a class="code" href="classpmacc_1_1_data_space.html">DataSpace&lt; simDim &gt;</a> <span class="keyword">const</span> &amp; particleOffsetToTotalOrigin,</div><div class="line">       T_Particle &amp; particle</div><div class="line">    )</div><div class="line">    {</div><div class="line">        particle[ y0_ ] = particleOffsetToTotalOrigin.y();</div><div class="line">    }</div><div class="line">    <span class="keyword">static</span> constexpr <span class="keywordtype">char</span> <span class="keyword">const</span> * name = <span class="stringliteral">&quot;saveYcell&quot;</span>;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">using</span> SaveYcell = unary::FreeTotalCellOffset&lt;</div><div class="line">   FunctorSaveYcell</div><div class="line">&gt;;</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p>example for <code><a class="el" href="particle_8param.html" title="Configurations for particle manipulators. ">particle.param</a></code>: set a user-defined species attribute y0 (type: uint32_t) to the current total y-cell index </p><div class="fragment"><div class="line"><span class="keyword">struct </span>FunctorSaveYcell</div><div class="line">{</div><div class="line">    <span class="keyword">template</span>&lt; <span class="keyword">typename</span> T_Particle &gt;</div><div class="line">    HDINLINE <span class="keywordtype">void</span> <a class="code" href="structpicongpu_1_1particles_1_1manipulators_1_1unary_1_1_free_total_cell_offset.html#a3839fa9f990efd8738b2e4190a067873">operator()</a>(</div><div class="line">       <a class="code" href="classpmacc_1_1_data_space.html">DataSpace&lt; simDim &gt;</a> <span class="keyword">const</span> &amp; particleOffsetToTotalOrigin,</div><div class="line">       T_Particle &amp; particle</div><div class="line">    )</div><div class="line">    {</div><div class="line">        particle[ y0_ ] = particleOffsetToTotalOrigin.y();</div><div class="line">    }</div><div class="line">    <span class="keyword">static</span> constexpr <span class="keywordtype">char</span> <span class="keyword">const</span> * name = <span class="stringliteral">&quot;saveYcell&quot;</span>;</div><div class="line">};</div><div class="line"></div><div class="line"><span class="keyword">using</span> SaveYcell = unary::FreeTotalCellOffset&lt;</div><div class="line">   FunctorSaveYcell</div><div class="line">&gt;;</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a33295e1fb47e8c0599477f3e8bf7e9d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a33295e1fb47e8c0599477f3e8bf7e9d2">&#9670;&nbsp;</a></span>FreeTotalCellOffset()</h2>
 
@@ -185,8 +185,8 @@ template&lt;typename T_Functor &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a29dafd73e86733646840ea22b4fe5c3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29dafd73e86733646840ea22b4fe5c3b">&#9670;&nbsp;</a></span>operator()()</h2>
+<a id="a3839fa9f990efd8738b2e4190a067873"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3839fa9f990efd8738b2e4190a067873">&#9670;&nbsp;</a></span>operator()()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,7 +219,7 @@ template&lt;typename T_WorkerCfg , typename T_Acc &gt; </div>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td> -&gt; <a class="el" href="structpicongpu_1_1particles_1_1manipulators_1_1unary_1_1acc_1_1_free_total_cell_offset.html">acc::FreeTotalCellOffset</a>&lt; Functor &gt;
+          <td></td><td> const -&gt; <a class="el" href="structpicongpu_1_1particles_1_1manipulators_1_1unary_1_1acc_1_1_free_total_cell_offset.html">acc::FreeTotalCellOffset</a>&lt; Functor &gt;
         </td>
         </tr>
       </table>
@@ -250,8 +250,8 @@ template&lt;typename T_WorkerCfg , typename T_Acc &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following files:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/particles/manipulators/unary/FreeTotalCellOffset.def</li>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/particles/manipulators/unary/<a class="el" href="manipulators_2unary_2_free_total_cell_offset_8hpp_source.html">FreeTotalCellOffset.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/particles/manipulators/unary/FreeTotalCellOffset.def</li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/particles/manipulators/unary/<a class="el" href="manipulators_2unary_2_free_total_cell_offset_8hpp_source.html">FreeTotalCellOffset.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -170,13 +170,13 @@ template&lt;typename T_ParBox , typename T_BinBox , typename T_Mapping , typenam
   </tr>
 </table>
 </div><div class="memdoc">
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000028">Todo:</a></b></dt><dd>: we can't use 64bit type on this place (NVIDIA BUG?) COMPILER ERROR: ptxas /tmp/tmpxft_00005da6_00000000-2_main.ptx, line 4246; error : Global state space expected for instruction 'atom' I think this is a problem with extern shared mem and atmic (only on TESLA) NEXT BUG: don't do uint32_t w=__float2uint_rn(weighting); and use w for atomic, this create wrong results</dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000033">Todo:</a></b></dt><dd>: we can't use 64bit type on this place (NVIDIA BUG?) COMPILER ERROR: ptxas /tmp/tmpxft_00005da6_00000000-2_main.ptx, line 4246; error : Global state space expected for instruction 'atom' I think this is a problem with extern shared mem and atmic (only on TESLA) NEXT BUG: don't do uint32_t w=__float2uint_rn(weighting); and use w for atomic, this create wrong results</dd></dl>
 <p class="">uses a normed float weighting to avoid an overflow of the floating point result for the reduced weighting if the particle weighting is very large</p>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/plugins/<a class="el" href="_bin_energy_particles_8hpp_source.html">BinEnergyParticles.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/plugins/<a class="el" href="_bin_energy_particles_8hpp_source.html">BinEnergyParticles.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

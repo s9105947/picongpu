@@ -176,7 +176,7 @@ template&lt;typename ParBox , typename DBox , typename Mapping , typename T_Acc 
 <li>There are as many Blocks of threads as there are directions for which radiation needs to be calculated. (A block of threads shares shared memory)</li>
 <li>The number of threads per block is equal to the number of cells per super cells which is also equal to the number of particles per frame</li>
 </ul>
-<p class="">The procedure starts with calculating unique ids for the threads and initializing the shared memory. Then a loop over all super cells starts. Every thread loads a particle from that super cell and calculates its retarded time and its real amplitude (both is dependent of the direction). For every <a class="el" href="class_particle.html">Particle</a> exists therefor a unique space within the shared memory. After that, a thread calculates for a specific frequency the emitted radiation of all particles. </p><dl class="params"><dt>Parameters</dt><dd>
+<p class="">The procedure starts with calculating unique ids for the threads and initializing the shared memory. Then a loop over all super cells starts. Every thread loads a particle from that super cell and calculates its retarded time and its real amplitude (both is dependent of the direction). For every <a class="el" href="classpicongpu_1_1_particle.html">Particle</a> exists therefor a unique space within the shared memory. After that, a thread calculates for a specific frequency the emitted radiation of all particles. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pb</td><td></td></tr>
     <tr><td class="paramname">radiation</td><td></td></tr>
@@ -188,13 +188,13 @@ template&lt;typename ParBox , typename DBox , typename Mapping , typename T_Acc 
   </table>
   </dd>
 </dl>
-<p class="">calculate radiated <a class="el" href="class_amplitude.html" title="class to store 3 complex numbers for the radiated amplitude ">Amplitude</a></p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000042">Todo:</a></b></dt><dd>please add a namespace for <a class="el" href="class_particle.html">Particle</a> class </dd></dl>
+<p class="">calculate radiated <a class="el" href="classpicongpu_1_1_amplitude.html" title="class to store 3 complex numbers for the radiated amplitude ">Amplitude</a></p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000047">Todo:</a></b></dt><dd>please add a namespace for <a class="el" href="classpicongpu_1_1_particle.html">Particle</a> class </dd></dl>
 
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/plugins/radiation/Radiation.kernel</li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/plugins/radiation/Radiation.kernel</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -101,8 +101,8 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpmacc_1_1_host_buffer.html#aec3748418ebc8db48459be8265e937ae">~HostBuffer</a> ()</td></tr>
 <tr class="memdesc:aec3748418ebc8db48459be8265e937ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:aec3748418ebc8db48459be8265e937ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e6d65cc75c0c731c01dd06f91d330aa"><td class="memItemLeft" align="right" valign="top"><a id="a2e6d65cc75c0c731c01dd06f91d330aa"></a>
-HINLINE <a class="el" href="classpmacc_1_1container_1_1_host_buffer.html">container::HostBuffer</a>&lt; TYPE, DIM &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cartBuffer</b> ()</td></tr>
+<tr class="memitem:a2e6d65cc75c0c731c01dd06f91d330aa"><td class="memItemLeft" align="right" valign="top">HINLINE <a class="el" href="classpmacc_1_1container_1_1_host_buffer.html">container::HostBuffer</a>&lt; TYPE, DIM &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpmacc_1_1_host_buffer.html#a2e6d65cc75c0c731c01dd06f91d330aa">cartBuffer</a> ()</td></tr>
+<tr class="memdesc:a2e6d65cc75c0c731c01dd06f91d330aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conversion to cuSTL <a class="el" href="classpmacc_1_1_host_buffer.html" title="Interface for a DIM-dimensional Buffer of type TYPE on the host. ">HostBuffer</a>.  <a href="#a2e6d65cc75c0c731c01dd06f91d330aa">More...</a><br /></td></tr>
 <tr class="separator:a2e6d65cc75c0c731c01dd06f91d330aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classpmacc_1_1_buffer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classpmacc_1_1_buffer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classpmacc_1_1_buffer.html">pmacc::Buffer&lt; TYPE, DIM &gt;</a></td></tr>
 <tr class="memitem:a46d5ebf9fcfc97e12d2fd505defaf85c inherit pub_methods_classpmacc_1_1_buffer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classpmacc_1_1_buffer.html#a46d5ebf9fcfc97e12d2fd505defaf85c">Buffer</a> (<a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; DIM &gt; size, <a class="el" href="classpmacc_1_1_data_space.html">DataSpace</a>&lt; DIM &gt; physicalMemorySize)</td></tr>
@@ -234,6 +234,36 @@ template&lt;class TYPE, unsigned DIM&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2e6d65cc75c0c731c01dd06f91d330aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e6d65cc75c0c731c01dd06f91d330aa">&#9670;&nbsp;</a></span>cartBuffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TYPE, unsigned DIM&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HINLINE <a class="el" href="classpmacc_1_1container_1_1_host_buffer.html">container::HostBuffer</a>&lt;TYPE, DIM&gt; <a class="el" href="classpmacc_1_1_host_buffer.html">pmacc::HostBuffer</a>&lt; TYPE, DIM &gt;::cartBuffer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Conversion to cuSTL <a class="el" href="classpmacc_1_1_host_buffer.html" title="Interface for a DIM-dimensional Buffer of type TYPE on the host. ">HostBuffer</a>. </p>
+<p class="">Returns a cuSTL <a class="el" href="classpmacc_1_1_host_buffer.html" title="Interface for a DIM-dimensional Buffer of type TYPE on the host. ">HostBuffer</a> with reference to the same data. </p>
+
+</div>
+</div>
 <a id="a03ebf7cd197c983d9c7b50b8abc463e0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a03ebf7cd197c983d9c7b50b8abc463e0">&#9670;&nbsp;</a></span>copyFrom()</h2>
 
@@ -268,7 +298,7 @@ template&lt;class TYPE, unsigned DIM&gt; </div>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; TYPE, DIM &gt;</a>, <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; float_32, DIM &gt;</a>, <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; ValueType, DIM &gt;</a>, <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; pmacc::Frame, DIM &gt;</a>, <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; picongpu::SglParticle&lt; pmacc::math::Vector &gt;, DIM &gt;</a>, <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; float_64, DIM &gt;</a>, <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; Type, DIM &gt;</a>, <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; Amplitude, DIM &gt;</a>, <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; pmacc::math::Vector, DIM &gt;</a>, <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; pmacc::memory::Array, DIM &gt;</a>, <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; pmacc::ExchangeMemoryIndex, DIM &gt;</a>, <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; char, DIM &gt;</a>, <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; BORDERTYPE, DIM &gt;</a>, <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; pmacc::SuperCell, DIM &gt;</a>, and <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; float_X, DIM &gt;</a>.</p>
+<p>Implemented in <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; TYPE, DIM &gt;</a>, and <a class="el" href="classpmacc_1_1_host_buffer_intern.html#a7693512f84532e1672bf52b585f11569">pmacc::HostBufferIntern&lt; Type, DIM &gt;</a>.</p>
 
 </div>
 </div>
@@ -303,8 +333,8 @@ template&lt;class TYPE, unsigned DIM&gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/pmacc/eventSystem/tasks/<a class="el" href="_factory_8hpp_source.html">Factory.hpp</a></li>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/pmacc/memory/buffers/<a class="el" href="memory_2buffers_2_host_buffer_8hpp_source.html">HostBuffer.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/pmacc/eventSystem/tasks/<a class="el" href="_factory_8hpp_source.html">Factory.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/pmacc/memory/buffers/<a class="el" href="memory_2buffers_2_host_buffer_8hpp_source.html">HostBuffer.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['particle_2eparam',['particle.param',['../particle_8param.html',1,'']]],
-  ['pusher_2eparam',['pusher.param',['../pusher_8param.html',1,'']]]
+  ['mallocmc_2eparam',['mallocMC.param',['../malloc_m_c_8param.html',1,'']]],
+  ['memory_2eparam',['memory.param',['../memory_8param.html',1,'']]]
 ];

@@ -81,12 +81,12 @@ Public Types</h2></td></tr>
 <tr class="memitem:a80a13be867522c40f91bd18e06fbe4cf"><td class="memItemLeft" align="right" valign="top"><a id="a80a13be867522c40f91bd18e06fbe4cf"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>AssignmentFunction</b> = typename T_ParticleShape::ChargeAssignment</td></tr>
 <tr class="separator:a80a13be867522c40f91bd18e06fbe4cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf64883769ed8b6f4f86bf4a133b5fa4"><td class="memItemLeft" align="right" valign="top"><a id="acf64883769ed8b6f4f86bf4a133b5fa4"></a>
-typedef <a class="el" href="structpmacc_1_1math_1_1_c_t_1_1make___int.html">pmacc::math::CT::make_Int</a>&lt; simDim, lowerMargin &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>LowerMargin</b></td></tr>
-<tr class="separator:acf64883769ed8b6f4f86bf4a133b5fa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7de240c8534001bc8e03c53c6621faf2"><td class="memItemLeft" align="right" valign="top"><a id="a7de240c8534001bc8e03c53c6621faf2"></a>
-typedef <a class="el" href="structpmacc_1_1math_1_1_c_t_1_1make___int.html">pmacc::math::CT::make_Int</a>&lt; simDim, upperMargin &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>UpperMargin</b></td></tr>
-<tr class="separator:a7de240c8534001bc8e03c53c6621faf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a081e800ac8e22bbd55765a2c17521c3b"><td class="memItemLeft" align="right" valign="top"><a id="a081e800ac8e22bbd55765a2c17521c3b"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>LowerMargin</b> = typename <a class="el" href="structpmacc_1_1math_1_1_c_t_1_1make___int.html">pmacc::math::CT::make_Int</a>&lt; simDim, lowerMargin &gt;::type</td></tr>
+<tr class="separator:a081e800ac8e22bbd55765a2c17521c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56c28db1341e7246f0e5ca1f63ffb61b"><td class="memItemLeft" align="right" valign="top"><a id="a56c28db1341e7246f0e5ca1f63ffb61b"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>UpperMargin</b> = typename <a class="el" href="structpmacc_1_1math_1_1_c_t_1_1make___int.html">pmacc::math::CT::make_Int</a>&lt; simDim, upperMargin &gt;::type</td></tr>
+<tr class="separator:a56c28db1341e7246f0e5ca1f63ffb61b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -243,14 +243,14 @@ template&lt;class FrameType , class TVecSuperCell , class BoxTmp , typename T_Ac
 <p class="">Shift to the cell the particle belongs to range of particleCell: [DataSpace&lt;simDim&gt;::create(0), TVecSuperCell]</p>
 <p class="">for the current cell i the multi dimensional index currentCell is only positive: allowed range = [DataSpace&lt;simDim&gt;::create(0), LowerMargin+UpperMargin]</p>
 <p class="">calculate the offset between the current cell i with simDim index currentCell and the cell of the particle (particleCell) in cells</p>
-<p class="">assign particle contribution component-wise to the lower left corner of the cell i </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000022">Todo:</a></b></dt><dd>take care of non-yee cells </dd></dl>
+<p class="">assign particle contribution component-wise to the lower left corner of the cell i </p><dl class="todo"><dt><b><a class="el" href="todo.html#_todo000027">Todo:</a></b></dt><dd>take care of non-yee cells </dd></dl>
 <p class="">add contribution of the particle times the generic attribute to cell i note: the .x() is used because <a class="el" href="classpicongpu_1_1_field_tmp.html" title="Tmp (at the moment: scalar) field for plugins and tmp data like &quot;gridded&quot; particle data (charge densi...">FieldTmp</a> is a scalar field with only one "x" component</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/particles/particleToGrid/<a class="el" href="_compute_grid_value_per_frame_8def.html">ComputeGridValuePerFrame.def</a></li>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/particles/particleToGrid/<a class="el" href="_compute_grid_value_per_frame_8hpp_source.html">ComputeGridValuePerFrame.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/particles/particleToGrid/<a class="el" href="_compute_grid_value_per_frame_8def.html">ComputeGridValuePerFrame.def</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/particles/particleToGrid/<a class="el" href="_compute_grid_value_per_frame_8hpp_source.html">ComputeGridValuePerFrame.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

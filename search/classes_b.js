@@ -1,8 +1,7 @@
 var searchData=
 [
   ['larmorpower',['LarmorPower',['../structpicongpu_1_1particles_1_1particle_to_grid_1_1derived_attributes_1_1_larmor_power.html',1,'picongpu::particles::particleToGrid::derivedAttributes']]],
-  ['lasermanipulator',['LaserManipulator',['../classpicongpu_1_1_laser_manipulator.html',1,'picongpu']]],
-  ['laserphysics',['LaserPhysics',['../classpicongpu_1_1_laser_physics.html',1,'picongpu']]],
+  ['laserphysics',['LaserPhysics',['../structpicongpu_1_1fields_1_1_laser_physics.html',1,'picongpu::fields']]],
   ['line',['Line',['../structpicongpu_1_1current_solver_1_1_line.html',1,'picongpu::currentSolver']]],
   ['linearexponentialimpl',['LinearExponentialImpl',['../structpicongpu_1_1density_profiles_1_1_linear_exponential_impl.html',1,'picongpu::densityProfiles']]],
   ['linearinherit',['LinearInherit',['../structpmacc_1_1_linear_inherit.html',1,'pmacc']]],

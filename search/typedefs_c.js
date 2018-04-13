@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['solver',['Solver',['../field_solver_8param.html#a6037098f4675d0b292ce7d52c636b391',1,'picongpu::fields']]],
-  ['spatialaveragebox',['spatialAverageBox',['../flylite_8param.html#a70788cf7af9273c001f0235a4fe3044e',1,'picongpu::flylite']]]
+  ['pagesize',['pagesize',['../structpicongpu_1_1_device_heap_config.html#a556dd61d311aef4bd13ca229d0d74e3e',1,'picongpu::DeviceHeapConfig']]]
 ];

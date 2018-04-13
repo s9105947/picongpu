@@ -87,18 +87,18 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>SpeciesType</b> = pm
 <tr class="memitem:a19ca76b5b66e1764919fb3db6006b2a6"><td class="memItemLeft" align="right" valign="top"><a id="a19ca76b5b66e1764919fb3db6006b2a6"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>FrameType</b> = typename SpeciesType::FrameType</td></tr>
 <tr class="separator:a19ca76b5b66e1764919fb3db6006b2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9822761043c582cb52c944c32f524ff"><td class="memItemLeft" align="right" valign="top"><a id="aa9822761043c582cb52c944c32f524ff"></a>
-typedef bmpl::apply1&lt; T_DensityFunctor, SpeciesType &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>UserDensityFunctor</b></td></tr>
-<tr class="separator:aa9822761043c582cb52c944c32f524ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6478c98ee9bd2e3b92931bf474d65ba5"><td class="memItemLeft" align="right" valign="top"><a id="a6478c98ee9bd2e3b92931bf474d65ba5"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>UserDensityFunctor</b> = typename bmpl::apply1&lt; T_DensityFunctor, SpeciesType &gt;::type</td></tr>
+<tr class="separator:a6478c98ee9bd2e3b92931bf474d65ba5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92d37f71573957896c6a2dc703d0b2bd"><td class="memItemLeft" align="right" valign="top"><a id="a92d37f71573957896c6a2dc703d0b2bd"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>DensityFunctor</b> = <a class="el" href="structpicongpu_1_1density_profiles_1_1_i_profile.html">densityProfiles::IProfile</a>&lt; UserDensityFunctor &gt;</td></tr>
 <tr class="separator:a92d37f71573957896c6a2dc703d0b2bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7662ad5d958ff2a6525daed18e0ad692"><td class="memItemLeft" align="right" valign="top"><a id="a7662ad5d958ff2a6525daed18e0ad692"></a>
-typedef bmpl::apply1&lt; T_PositionFunctor, SpeciesType &gt;::type&#160;</td><td class="memItemRight" valign="bottom"><b>UserPositionFunctor</b></td></tr>
-<tr class="separator:a7662ad5d958ff2a6525daed18e0ad692"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bd7ebbf96cb1c817f7880703f7e687f"><td class="memItemLeft" align="right" valign="top"><a id="a3bd7ebbf96cb1c817f7880703f7e687f"></a>
-typedef <a class="el" href="structpmacc_1_1functor_1_1_filtered.html">manipulators::IUnary</a>&lt; UserPositionFunctor &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>PositionFunctor</b></td></tr>
-<tr class="separator:a3bd7ebbf96cb1c817f7880703f7e687f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90fd34264b957c8402d5db2e80cfdef0"><td class="memItemLeft" align="right" valign="top"><a id="a90fd34264b957c8402d5db2e80cfdef0"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>UserPositionFunctor</b> = typename bmpl::apply1&lt; T_PositionFunctor, SpeciesType &gt;::type</td></tr>
+<tr class="separator:a90fd34264b957c8402d5db2e80cfdef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a6605db106efac9d56c6df7a0d7af86"><td class="memItemLeft" align="right" valign="top"><a id="a0a6605db106efac9d56c6df7a0d7af86"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>PositionFunctor</b> = <a class="el" href="structpmacc_1_1functor_1_1_filtered.html">manipulators::IUnary</a>&lt; UserPositionFunctor &gt;</td></tr>
+<tr class="separator:a0a6605db106efac9d56c6df7a0d7af86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -122,7 +122,7 @@ struct picongpu::particles::CreateDensity&lt; T_DensityFunctor, T_PositionFuncto
   </dd>
 </dl>
 </div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/particles/<a class="el" href="_init_functors_8hpp_source.html">InitFunctors.hpp</a></li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/particles/<a class="el" href="_init_functors_8hpp_source.html">InitFunctors.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

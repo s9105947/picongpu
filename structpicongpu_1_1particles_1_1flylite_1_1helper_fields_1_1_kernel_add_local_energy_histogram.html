@@ -159,8 +159,8 @@ template&lt;typename T_ParBox , typename T_LocalEnergyHistogramBox , typename T_
 </div><div class="memdoc">
 
 <p>Functor. </p>
-<p class="">The functor is executed frame-list wise, meaning locally per supercell. All particles of a supercell generate a shared memory histogram and write that back into global memory. <a class="el" href="classpicongpu_1_1_particles.html" title="particle species ">Particles</a> outside of the range of the histogram are ignored and not counted.</p>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000008">Todo:</a></b></dt><dd>In case the local averging in flylite shall be larger then a supercell (in multiples of integers), the results need to be merged.</dd></dl>
+<p class="">The functor is executed frame-list-wise, meaning locally per supercell. All particles of a supercell generate a shared memory histogram and write that back into global memory. <a class="el" href="classpicongpu_1_1_particles.html" title="particle species ">Particles</a> outside of the range of the histogram are ignored and not counted.</p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000013">Todo:</a></b></dt><dd>In case the local averging in flylite shall be larger then a supercell (in multiples of integers), the results need to be merged.</dd></dl>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
     <tr><td class="paramname">T_ParBox</td><td><a class="el" href="classpmacc_1_1_particles_box.html" title="A DIM-dimensional Box holding frames with particle data. ">pmacc::ParticlesBox</a>, particle box type </td></tr>
@@ -183,7 +183,7 @@ template&lt;typename T_ParBox , typename T_LocalEnergyHistogramBox , typename T_
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>/tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/particles/flylite/helperFields/LocalEnergyHistogram.kernel</li>
+<li>/tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/particles/flylite/helperFields/LocalEnergyHistogram.kernel</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

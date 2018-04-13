@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.15"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PIConGPU: /tmp/tmp.zPmyXlhei3/picongpu/include/picongpu/param/laser.param File Reference</title>
+<title>PIConGPU: /tmp/tmp.XvlqRBNgNg/picongpu/include/picongpu/param/laser.param File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,10 +66,9 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">laser.param File Reference</div>  </div>
 </div><!--header-->
@@ -77,613 +76,52 @@ $(function() {
 
 <p>Configure laser profiles.  
 <a href="#details">More...</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacepicongpu_1_1laser_plane_wave"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_plane_wave.html">picongpu::laserPlaneWave</a></td></tr>
-<tr class="memdesc:namespacepicongpu_1_1laser_plane_wave"><td class="mdescLeft">&#160;</td><td class="mdescRight">plane wave (use periodic boundaries!) <br /></td></tr>
+<div class="textblock"><code>#include &quot;picongpu/fields/laserProfiles/profiles.def&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1fields_1_1laser_profiles_1_1_gaussian_beam_param.html">picongpu::fields::laserProfiles::GaussianBeamParam</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacepicongpu_1_1laser_wavepacket"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_wavepacket.html">picongpu::laserWavepacket</a></td></tr>
-<tr class="memdesc:namespacepicongpu_1_1laser_wavepacket"><td class="mdescLeft">&#160;</td><td class="mdescRight">not focusing wavepaket with spacial gaussian envelope <br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1fields_1_1laser_profiles_1_1_pulse_front_tilt_param.html">picongpu::fields::laserProfiles::PulseFrontTiltParam</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacepicongpu_1_1laser_polynom"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_polynom.html">picongpu::laserPolynom</a></td></tr>
-<tr class="memdesc:namespacepicongpu_1_1laser_polynom"><td class="mdescLeft">&#160;</td><td class="mdescRight">not focusing polynomial laser pulse <br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1fields_1_1laser_profiles_1_1_wavepacket_param.html">picongpu::fields::laserProfiles::WavepacketParam</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacepicongpu_1_1laser_exp_ramp_with_prepulse"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_exp_ramp_with_prepulse.html">picongpu::laserExpRampWithPrepulse</a></td></tr>
-<tr class="memdesc:namespacepicongpu_1_1laser_exp_ramp_with_prepulse"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wavepacket with spatial Gaussian envelope and adjustable temporal shape. <br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1fields_1_1laser_profiles_1_1_exp_ramp_with_prepulse_param.html">picongpu::fields::laserProfiles::ExpRampWithPrepulseParam</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Based on a wavepacket with Gaussian spatial envelope.  <a href="structpicongpu_1_1fields_1_1laser_profiles_1_1_exp_ramp_with_prepulse_param.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacepicongpu_1_1laser_none"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_none.html">picongpu::laserNone</a></td></tr>
-<tr class="memdesc:namespacepicongpu_1_1laser_none"><td class="mdescLeft">&#160;</td><td class="mdescRight">No Laser initialization. <br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1fields_1_1laser_profiles_1_1_polynom_param.html">picongpu::fields::laserProfiles::PolynomParam</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Based on a wavepacket with Gaussian spatial envelope.  <a href="structpicongpu_1_1fields_1_1laser_profiles_1_1_polynom_param.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpicongpu_1_1fields_1_1laser_profiles_1_1_plane_wave_param.html">picongpu::fields::laserProfiles::PlaneWaveParam</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:ad56266419448d7e55418138499578a49"><td class="memItemLeft" align="right" valign="top"><a id="ad56266419448d7e55418138499578a49"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#ad56266419448d7e55418138499578a49">picongpu::laserGaussianBeam::PolarisationType</a> { <b>LINEAR_X</b> = 1u, 
-<b>LINEAR_Z</b> = 2u, 
-<b>CIRCULAR</b> = 4u
- }</td></tr>
-<tr class="memdesc:ad56266419448d7e55418138499578a49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available polarisation types. <br /></td></tr>
-<tr class="separator:ad56266419448d7e55418138499578a49"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7cc5e312c1cb54fca8b7d1f8a75af40"><td class="memItemLeft" align="right" valign="top"><a id="ab7cc5e312c1cb54fca8b7d1f8a75af40"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#ab7cc5e312c1cb54fca8b7d1f8a75af40">picongpu::laserPulseFrontTilt::PolarisationType</a> { <b>LINEAR_X</b> = 1u, 
-<b>LINEAR_Z</b> = 2u, 
-<b>CIRCULAR</b> = 4u
- }</td></tr>
-<tr class="memdesc:ab7cc5e312c1cb54fca8b7d1f8a75af40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available polarisation types. <br /></td></tr>
-<tr class="separator:ab7cc5e312c1cb54fca8b7d1f8a75af40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc82e706043e3f54e165689030688a24"><td class="memItemLeft" align="right" valign="top"><a id="afc82e706043e3f54e165689030688a24"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_plane_wave.html#afc82e706043e3f54e165689030688a24">picongpu::laserPlaneWave::PolarisationType</a> { <b>LINEAR_X</b> = 1u, 
-<b>LINEAR_Z</b> = 2u, 
-<b>CIRCULAR</b> = 4u
- }</td></tr>
-<tr class="memdesc:afc82e706043e3f54e165689030688a24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available polarisation types. <br /></td></tr>
-<tr class="separator:afc82e706043e3f54e165689030688a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a940953c7f6ce45057ee69eb0b854831b"><td class="memItemLeft" align="right" valign="top"><a id="a940953c7f6ce45057ee69eb0b854831b"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_wavepacket.html#a940953c7f6ce45057ee69eb0b854831b">picongpu::laserWavepacket::PolarisationType</a> { <b>LINEAR_X</b> = 1u, 
-<b>LINEAR_Z</b> = 2u, 
-<b>CIRCULAR</b> = 4u
- }</td></tr>
-<tr class="memdesc:a940953c7f6ce45057ee69eb0b854831b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available polarisation types. <br /></td></tr>
-<tr class="separator:a940953c7f6ce45057ee69eb0b854831b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70e79590b86f01774c1c280712fae537"><td class="memItemLeft" align="right" valign="top"><a id="a70e79590b86f01774c1c280712fae537"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_exp_ramp_with_prepulse.html#a70e79590b86f01774c1c280712fae537">picongpu::laserExpRampWithPrepulse::PolarisationType</a> { <b>LINEAR_X</b> = 1u, 
-<b>LINEAR_Z</b> = 2u, 
-<b>CIRCULAR</b> = 4u
- }</td></tr>
-<tr class="memdesc:a70e79590b86f01774c1c280712fae537"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available polarisation types. <br /></td></tr>
-<tr class="separator:a70e79590b86f01774c1c280712fae537"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ae0ed38e193d8328d6964eb2e6596a1c1"><td class="memItemLeft" align="right" valign="top"><a id="ae0ed38e193d8328d6964eb2e6596a1c1"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#ae0ed38e193d8328d6964eb2e6596a1c1">picongpu::fields::laserProfiles::Selected</a> = None&lt;&gt;</td></tr>
+<tr class="memdesc:ae0ed38e193d8328d6964eb2e6596a1c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">currently selected laser profile <br /></td></tr>
+<tr class="separator:ae0ed38e193d8328d6964eb2e6596a1c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a7cbc5dd0f27b126c2cfbf6e32aeebae9"><td class="memItemLeft" align="right" valign="top"><a id="a7cbc5dd0f27b126c2cfbf6e32aeebae9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::laserGaussianBeam::PMACC_CONST_VECTOR</b> (float_X, MODENUMBER+1, LAGUERREMODES, 1.0)</td></tr>
-<tr class="separator:a7cbc5dd0f27b126c2cfbf6e32aeebae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a7af720a81f32978d619a48701bffbcf3"><td class="memItemLeft" align="right" valign="top">constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a7af720a81f32978d619a48701bffbcf3">picongpu::laser::initPlaneY</a> = 0</td></tr>
-<tr class="memdesc:a7af720a81f32978d619a48701bffbcf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">cell from top where the laser is initialized  <a href="laser_8param.html#a7af720a81f32978d619a48701bffbcf3">More...</a><br /></td></tr>
-<tr class="separator:a7af720a81f32978d619a48701bffbcf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f6bc36c5ee191ef6f4e875e789c1886"><td class="memItemLeft" align="right" valign="top"><a id="a4f6bc36c5ee191ef6f4e875e789c1886"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a4f6bc36c5ee191ef6f4e875e789c1886">picongpu::laserGaussianBeam::SI::WAVE_LENGTH_SI</a> = 0.8e-6</td></tr>
-<tr class="memdesc:a4f6bc36c5ee191ef6f4e875e789c1886"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: meter <br /></td></tr>
-<tr class="separator:a4f6bc36c5ee191ef6f4e875e789c1886"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15f19b1c1f6f9b07327a149ec7ab4be9"><td class="memItemLeft" align="right" valign="top"><a id="a15f19b1c1f6f9b07327a149ec7ab4be9"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a15f19b1c1f6f9b07327a149ec7ab4be9">picongpu::laserGaussianBeam::SI::UNITCONV_A0_to_Amplitude_SI</a> = -2.0 * PI / WAVE_LENGTH_SI * ::picongpu::SI::ELECTRON_MASS_SI * ::picongpu::SI::SPEED_OF_LIGHT_SI * ::picongpu::SI::SPEED_OF_LIGHT_SI / ::picongpu::SI::ELECTRON_CHARGE_SI</td></tr>
-<tr class="memdesc:a15f19b1c1f6f9b07327a149ec7ab4be9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert the normalized laser strength parameter a0 to Volt per meter. <br /></td></tr>
-<tr class="separator:a15f19b1c1f6f9b07327a149ec7ab4be9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1da5d21ffa2c3a7725d7e2603666fec"><td class="memItemLeft" align="right" valign="top">constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#af1da5d21ffa2c3a7725d7e2603666fec">picongpu::laserGaussianBeam::SI::AMPLITUDE_SI</a> = 1.738e13</td></tr>
-<tr class="memdesc:af1da5d21ffa2c3a7725d7e2603666fec"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: W / m^2  <a href="laser_8param.html#af1da5d21ffa2c3a7725d7e2603666fec">More...</a><br /></td></tr>
-<tr class="separator:af1da5d21ffa2c3a7725d7e2603666fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4042c8430040efe6180067d4969c4cff"><td class="memItemLeft" align="right" valign="top">constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a4042c8430040efe6180067d4969c4cff">picongpu::laserGaussianBeam::SI::PULSE_LENGTH_SI</a> = 10.615e-15 / 4.0</td></tr>
-<tr class="memdesc:a4042c8430040efe6180067d4969c4cff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pulse length: sigma of std.  <a href="laser_8param.html#a4042c8430040efe6180067d4969c4cff">More...</a><br /></td></tr>
-<tr class="separator:a4042c8430040efe6180067d4969c4cff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2369dd994c98a6e5270cc9bbd5d794be"><td class="memItemLeft" align="right" valign="top">constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a2369dd994c98a6e5270cc9bbd5d794be">picongpu::laserGaussianBeam::SI::W0_SI</a> = 5.0e-6 / 1.17741</td></tr>
-<tr class="memdesc:a2369dd994c98a6e5270cc9bbd5d794be"><td class="mdescLeft">&#160;</td><td class="mdescRight">beam waist: distance from the axis where the pulse intensity (E^2) decreases to its 1/e^2-th part, at the focus position of the laser W0_SI = FWHM_of_Intensity / sqrt{ 2* ln(2) } [ 1.17741 ]  <a href="laser_8param.html#a2369dd994c98a6e5270cc9bbd5d794be">More...</a><br /></td></tr>
-<tr class="separator:a2369dd994c98a6e5270cc9bbd5d794be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaec8b7c83e77b08efccf788bf8c2a111"><td class="memItemLeft" align="right" valign="top"><a id="aaec8b7c83e77b08efccf788bf8c2a111"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#aaec8b7c83e77b08efccf788bf8c2a111">picongpu::laserGaussianBeam::SI::FOCUS_POS_SI</a> = 4.62e-5</td></tr>
-<tr class="memdesc:aaec8b7c83e77b08efccf788bf8c2a111"><td class="mdescLeft">&#160;</td><td class="mdescRight">the distance to the laser focus in y-direction unit: meter <br /></td></tr>
-<tr class="separator:aaec8b7c83e77b08efccf788bf8c2a111"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c3ae486bc8562bed6c858900602e0c3"><td class="memItemLeft" align="right" valign="top">constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a4c3ae486bc8562bed6c858900602e0c3">picongpu::laserGaussianBeam::PULSE_INIT</a> = 20.0</td></tr>
-<tr class="memdesc:a4c3ae486bc8562bed6c858900602e0c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The laser pulse will be initialized PULSE_INIT times of the PULSE_LENGTH.  <a href="laser_8param.html#a4c3ae486bc8562bed6c858900602e0c3">More...</a><br /></td></tr>
-<tr class="separator:a4c3ae486bc8562bed6c858900602e0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebc5df405e5531c5d4e9a3f763d1bccf"><td class="memItemLeft" align="right" valign="top">constexpr float_X&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#aebc5df405e5531c5d4e9a3f763d1bccf">picongpu::laserGaussianBeam::LASER_PHASE</a> = 0.0</td></tr>
-<tr class="memdesc:aebc5df405e5531c5d4e9a3f763d1bccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">laser phase shift (no shift: 0.0)  <a href="laser_8param.html#aebc5df405e5531c5d4e9a3f763d1bccf">More...</a><br /></td></tr>
-<tr class="separator:aebc5df405e5531c5d4e9a3f763d1bccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fe59c045a9afc4040a1c24fdbfd2be8"><td class="memItemLeft" align="right" valign="top"><a id="a6fe59c045a9afc4040a1c24fdbfd2be8"></a>
-constexpr uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a6fe59c045a9afc4040a1c24fdbfd2be8">picongpu::laserGaussianBeam::MODENUMBER</a> = 0</td></tr>
-<tr class="memdesc:a6fe59c045a9afc4040a1c24fdbfd2be8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use only the 0th Laguerremode for a standard Gaussian. <br /></td></tr>
-<tr class="separator:a6fe59c045a9afc4040a1c24fdbfd2be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a812881419c4c219da18a281ceb8d6c2b"><td class="memItemLeft" align="right" valign="top"><a id="a812881419c4c219da18a281ceb8d6c2b"></a>
-constexpr PolarisationType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a812881419c4c219da18a281ceb8d6c2b">picongpu::laserGaussianBeam::Polarisation</a> = CIRCULAR</td></tr>
-<tr class="memdesc:a812881419c4c219da18a281ceb8d6c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polarization selection. <br /></td></tr>
-<tr class="separator:a812881419c4c219da18a281ceb8d6c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab59310435b3dfeb8eac3be69f6d19c64"><td class="memItemLeft" align="right" valign="top"><a id="ab59310435b3dfeb8eac3be69f6d19c64"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#ab59310435b3dfeb8eac3be69f6d19c64">picongpu::laserPulseFrontTilt::SI::WAVE_LENGTH_SI</a> = 0.8e-6</td></tr>
-<tr class="memdesc:ab59310435b3dfeb8eac3be69f6d19c64"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: meter <br /></td></tr>
-<tr class="separator:ab59310435b3dfeb8eac3be69f6d19c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22b7ec880a0292a1579261d21dc1a98d"><td class="memItemLeft" align="right" valign="top"><a id="a22b7ec880a0292a1579261d21dc1a98d"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a22b7ec880a0292a1579261d21dc1a98d">picongpu::laserPulseFrontTilt::SI::UNITCONV_A0_to_Amplitude_SI</a> = -2.0 * PI / WAVE_LENGTH_SI * ::picongpu::SI::ELECTRON_MASS_SI * ::picongpu::SI::SPEED_OF_LIGHT_SI * ::picongpu::SI::SPEED_OF_LIGHT_SI / ::picongpu::SI::ELECTRON_CHARGE_SI</td></tr>
-<tr class="memdesc:a22b7ec880a0292a1579261d21dc1a98d"><td class="mdescLeft">&#160;</td><td class="mdescRight">UNITCONV. <br /></td></tr>
-<tr class="separator:a22b7ec880a0292a1579261d21dc1a98d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21d09437d583589326c81ff55c6d1e3f"><td class="memItemLeft" align="right" valign="top"><a id="a21d09437d583589326c81ff55c6d1e3f"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a21d09437d583589326c81ff55c6d1e3f">picongpu::laserPulseFrontTilt::SI::AMPLITUDE_SI</a> = 1.738e13</td></tr>
-<tr class="memdesc:a21d09437d583589326c81ff55c6d1e3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: Volt / meter <br /></td></tr>
-<tr class="separator:a21d09437d583589326c81ff55c6d1e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb0a8b9b3766fe5f12a6343803619e29"><td class="memItemLeft" align="right" valign="top">constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#acb0a8b9b3766fe5f12a6343803619e29">picongpu::laserPulseFrontTilt::SI::PULSE_LENGTH_SI</a> = 10.615e-15 / 4.0</td></tr>
-<tr class="memdesc:acb0a8b9b3766fe5f12a6343803619e29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pulse length: sigma of std.  <a href="laser_8param.html#acb0a8b9b3766fe5f12a6343803619e29">More...</a><br /></td></tr>
-<tr class="separator:acb0a8b9b3766fe5f12a6343803619e29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a088421a45f818459872a2e8fc53bcc74"><td class="memItemLeft" align="right" valign="top"><a id="a088421a45f818459872a2e8fc53bcc74"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a088421a45f818459872a2e8fc53bcc74">picongpu::laserPulseFrontTilt::SI::W0_SI</a> = 5.0e-6 / 1.17741</td></tr>
-<tr class="memdesc:a088421a45f818459872a2e8fc53bcc74"><td class="mdescLeft">&#160;</td><td class="mdescRight">beam waist: distance from the axis where the pulse intensity (E^2) decreases to its 1/e^2-th part, at the focus position of the laser W0_SI = FWHM_of_Intensity / sqrt{ 2* ln(2) } [ 1.17741 ] unit: meter <br /></td></tr>
-<tr class="separator:a088421a45f818459872a2e8fc53bcc74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61de84bbc5a49918f0bfd1875cb29a4c"><td class="memItemLeft" align="right" valign="top"><a id="a61de84bbc5a49918f0bfd1875cb29a4c"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a61de84bbc5a49918f0bfd1875cb29a4c">picongpu::laserPulseFrontTilt::SI::FOCUS_POS_SI</a> = 4.62e-5</td></tr>
-<tr class="memdesc:a61de84bbc5a49918f0bfd1875cb29a4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">the distance to the laser focus in y-direction unit: meter <br /></td></tr>
-<tr class="separator:a61de84bbc5a49918f0bfd1875cb29a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92d1f832b9e24704b6b0514b06850850"><td class="memItemLeft" align="right" valign="top"><a id="a92d1f832b9e24704b6b0514b06850850"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a92d1f832b9e24704b6b0514b06850850">picongpu::laserPulseFrontTilt::SI::TILT_X_SI</a> = 0</td></tr>
-<tr class="memdesc:a92d1f832b9e24704b6b0514b06850850"><td class="mdescLeft">&#160;</td><td class="mdescRight">the tilt angle between laser propagation in y-direction and laser axis in x-direction (0 degree == no tilt) unit: degree <br /></td></tr>
-<tr class="separator:a92d1f832b9e24704b6b0514b06850850"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fc9401bfc79ad94ae3c55c027e6e8da"><td class="memItemLeft" align="right" valign="top"><a id="a3fc9401bfc79ad94ae3c55c027e6e8da"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a3fc9401bfc79ad94ae3c55c027e6e8da">picongpu::laserPulseFrontTilt::PULSE_INIT</a> = 20.0</td></tr>
-<tr class="memdesc:a3fc9401bfc79ad94ae3c55c027e6e8da"><td class="mdescLeft">&#160;</td><td class="mdescRight">The laser pulse will be initialized PULSE_INIT times of the PULSE_LENGTH unit: none. <br /></td></tr>
-<tr class="separator:a3fc9401bfc79ad94ae3c55c027e6e8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6089b83aeb52f6ddb6f10cea43f7d1aa"><td class="memItemLeft" align="right" valign="top">constexpr float_X&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a6089b83aeb52f6ddb6f10cea43f7d1aa">picongpu::laserPulseFrontTilt::LASER_PHASE</a> = 0.0</td></tr>
-<tr class="memdesc:a6089b83aeb52f6ddb6f10cea43f7d1aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">laser phase shift (no shift: 0.0)  <a href="laser_8param.html#a6089b83aeb52f6ddb6f10cea43f7d1aa">More...</a><br /></td></tr>
-<tr class="separator:a6089b83aeb52f6ddb6f10cea43f7d1aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26b5ec7a853ed50cd9dda85fe6384507"><td class="memItemLeft" align="right" valign="top"><a id="a26b5ec7a853ed50cd9dda85fe6384507"></a>
-constexpr PolarisationType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a26b5ec7a853ed50cd9dda85fe6384507">picongpu::laserPulseFrontTilt::Polarisation</a> = LINEAR_X</td></tr>
-<tr class="memdesc:a26b5ec7a853ed50cd9dda85fe6384507"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polarization selection. <br /></td></tr>
-<tr class="separator:a26b5ec7a853ed50cd9dda85fe6384507"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7ce99696c7fa405780f0df5dfa47610"><td class="memItemLeft" align="right" valign="top"><a id="ac7ce99696c7fa405780f0df5dfa47610"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#ac7ce99696c7fa405780f0df5dfa47610">picongpu::laserPlaneWave::SI::WAVE_LENGTH_SI</a> = 0.8e-6</td></tr>
-<tr class="memdesc:ac7ce99696c7fa405780f0df5dfa47610"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: meter <br /></td></tr>
-<tr class="separator:ac7ce99696c7fa405780f0df5dfa47610"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4066c1b7e948739dc75aec64b650b59"><td class="memItemLeft" align="right" valign="top"><a id="ad4066c1b7e948739dc75aec64b650b59"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#ad4066c1b7e948739dc75aec64b650b59">picongpu::laserPlaneWave::SI::UNITCONV_A0_to_Amplitude_SI</a> = -2.0 * PI / WAVE_LENGTH_SI * ::picongpu::SI::ELECTRON_MASS_SI * ::picongpu::SI::SPEED_OF_LIGHT_SI * ::picongpu::SI::SPEED_OF_LIGHT_SI / ::picongpu::SI::ELECTRON_CHARGE_SI</td></tr>
-<tr class="memdesc:ad4066c1b7e948739dc75aec64b650b59"><td class="mdescLeft">&#160;</td><td class="mdescRight">UNITCONV. <br /></td></tr>
-<tr class="separator:ad4066c1b7e948739dc75aec64b650b59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a0a33dc88480cf654b37f1bedcf3c4c"><td class="memItemLeft" align="right" valign="top">constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a5a0a33dc88480cf654b37f1bedcf3c4c">picongpu::laserPlaneWave::SI::_A0</a> = 1.5</td></tr>
-<tr class="memdesc:a5a0a33dc88480cf654b37f1bedcf3c4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: W / m^2  <a href="laser_8param.html#a5a0a33dc88480cf654b37f1bedcf3c4c">More...</a><br /></td></tr>
-<tr class="separator:a5a0a33dc88480cf654b37f1bedcf3c4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa452970d79571e29276f235e1e783996"><td class="memItemLeft" align="right" valign="top"><a id="aa452970d79571e29276f235e1e783996"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#aa452970d79571e29276f235e1e783996">picongpu::laserPlaneWave::SI::AMPLITUDE_SI</a> = _A0 * UNITCONV_A0_to_Amplitude_SI</td></tr>
-<tr class="memdesc:aa452970d79571e29276f235e1e783996"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: Volt /meter <br /></td></tr>
-<tr class="separator:aa452970d79571e29276f235e1e783996"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7b255139a1bd507a9677dd071684e1b"><td class="memItemLeft" align="right" valign="top">constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#af7b255139a1bd507a9677dd071684e1b">picongpu::laserPlaneWave::SI::LASER_NOFOCUS_CONSTANT_SI</a> = 13.34e-15</td></tr>
-<tr class="memdesc:af7b255139a1bd507a9677dd071684e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: Volt /meter  <a href="laser_8param.html#af7b255139a1bd507a9677dd071684e1b">More...</a><br /></td></tr>
-<tr class="separator:af7b255139a1bd507a9677dd071684e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa600dd7870123c93449b5a11405a2807"><td class="memItemLeft" align="right" valign="top">constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#aa600dd7870123c93449b5a11405a2807">picongpu::laserPlaneWave::SI::PULSE_LENGTH_SI</a> = 10.615e-15 / 4.0</td></tr>
-<tr class="memdesc:aa600dd7870123c93449b5a11405a2807"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pulse length: sigma of std.  <a href="laser_8param.html#aa600dd7870123c93449b5a11405a2807">More...</a><br /></td></tr>
-<tr class="separator:aa600dd7870123c93449b5a11405a2807"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa1a3c47457cf54f847df120674b476f"><td class="memItemLeft" align="right" valign="top"><a id="aaa1a3c47457cf54f847df120674b476f"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_plane_wave.html#aaa1a3c47457cf54f847df120674b476f">picongpu::laserPlaneWave::RAMP_INIT</a> = 20.6146</td></tr>
-<tr class="memdesc:aaa1a3c47457cf54f847df120674b476f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The laser pulse will be initialized half of PULSE_INIT times of the PULSE_LENGTH before and after the plateau unit: none. <br /></td></tr>
-<tr class="separator:aaa1a3c47457cf54f847df120674b476f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accbed2b09865c452e044f9d7529daffc"><td class="memItemLeft" align="right" valign="top">constexpr float_X&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_plane_wave.html#accbed2b09865c452e044f9d7529daffc">picongpu::laserPlaneWave::LASER_PHASE</a> = 0.0</td></tr>
-<tr class="memdesc:accbed2b09865c452e044f9d7529daffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">laser phase shift (no shift: 0.0)  <a href="namespacepicongpu_1_1laser_plane_wave.html#accbed2b09865c452e044f9d7529daffc">More...</a><br /></td></tr>
-<tr class="separator:accbed2b09865c452e044f9d7529daffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a841e5a61ac8c6728fd41f1a25205509c"><td class="memItemLeft" align="right" valign="top"><a id="a841e5a61ac8c6728fd41f1a25205509c"></a>
-constexpr PolarisationType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_plane_wave.html#a841e5a61ac8c6728fd41f1a25205509c">picongpu::laserPlaneWave::Polarisation</a> = LINEAR_X</td></tr>
-<tr class="memdesc:a841e5a61ac8c6728fd41f1a25205509c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polarization selection. <br /></td></tr>
-<tr class="separator:a841e5a61ac8c6728fd41f1a25205509c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb6bfef742a8c2eae78e3107f24a717e"><td class="memItemLeft" align="right" valign="top"><a id="aeb6bfef742a8c2eae78e3107f24a717e"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#aeb6bfef742a8c2eae78e3107f24a717e">picongpu::laserWavepacket::SI::WAVE_LENGTH_SI</a> = 0.8e-6</td></tr>
-<tr class="memdesc:aeb6bfef742a8c2eae78e3107f24a717e"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: meter <br /></td></tr>
-<tr class="separator:aeb6bfef742a8c2eae78e3107f24a717e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a967cdea94f5ceba9d5e2857627ca1649"><td class="memItemLeft" align="right" valign="top"><a id="a967cdea94f5ceba9d5e2857627ca1649"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a967cdea94f5ceba9d5e2857627ca1649">picongpu::laserWavepacket::SI::UNITCONV_A0_to_Amplitude_SI</a> = -2.0 * PI / WAVE_LENGTH_SI * ::picongpu::SI::ELECTRON_MASS_SI * ::picongpu::SI::SPEED_OF_LIGHT_SI * ::picongpu::SI::SPEED_OF_LIGHT_SI / ::picongpu::SI::ELECTRON_CHARGE_SI</td></tr>
-<tr class="memdesc:a967cdea94f5ceba9d5e2857627ca1649"><td class="mdescLeft">&#160;</td><td class="mdescRight">UNITCONV. <br /></td></tr>
-<tr class="separator:a967cdea94f5ceba9d5e2857627ca1649"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e31a4b9f4a13e63073f811c4f892396"><td class="memItemLeft" align="right" valign="top">constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a3e31a4b9f4a13e63073f811c4f892396">picongpu::laserWavepacket::SI::AMPLITUDE_SI</a> = 1.738e13</td></tr>
-<tr class="memdesc:a3e31a4b9f4a13e63073f811c4f892396"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: W / m^2  <a href="laser_8param.html#a3e31a4b9f4a13e63073f811c4f892396">More...</a><br /></td></tr>
-<tr class="separator:a3e31a4b9f4a13e63073f811c4f892396"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46dc2d6755c16ef0f3c40d3bef5eaef3"><td class="memItemLeft" align="right" valign="top"><a id="a46dc2d6755c16ef0f3c40d3bef5eaef3"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a46dc2d6755c16ef0f3c40d3bef5eaef3">picongpu::laserWavepacket::SI::LASER_NOFOCUS_CONSTANT_SI</a> = 7.0 * WAVE_LENGTH_SI / ::picongpu::SI::SPEED_OF_LIGHT_SI</td></tr>
-<tr class="memdesc:a46dc2d6755c16ef0f3c40d3bef5eaef3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The profile of the test Lasers 0 and 2 can be stretched by a constant area between the up and downramp unit: seconds. <br /></td></tr>
-<tr class="separator:a46dc2d6755c16ef0f3c40d3bef5eaef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3171d9846b79951900b8b6c96e984642"><td class="memItemLeft" align="right" valign="top">constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a3171d9846b79951900b8b6c96e984642">picongpu::laserWavepacket::SI::PULSE_LENGTH_SI</a> = 10.615e-15 / 4.0</td></tr>
-<tr class="memdesc:a3171d9846b79951900b8b6c96e984642"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pulse length: sigma of std.  <a href="laser_8param.html#a3171d9846b79951900b8b6c96e984642">More...</a><br /></td></tr>
-<tr class="separator:a3171d9846b79951900b8b6c96e984642"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca0a36a982ad3130c7551d06bb1c2a14"><td class="memItemLeft" align="right" valign="top"><a id="aca0a36a982ad3130c7551d06bb1c2a14"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#aca0a36a982ad3130c7551d06bb1c2a14">picongpu::laserWavepacket::SI::W0_X_SI</a> = 4.246e-6</td></tr>
-<tr class="memdesc:aca0a36a982ad3130c7551d06bb1c2a14"><td class="mdescLeft">&#160;</td><td class="mdescRight">beam waist: distance from the axis where the pulse intensity (E^2) decreases to its 1/e^2-th part, WO_X_SI is this distance in x-direction W0_Z_SI is this distance in z-direction if both values are equal, the laser has a circular shape in x-z W0_SI = FWHM_of_Intensity / sqrt{ 2* ln(2) } [ 1.17741 ] unit: meter <br /></td></tr>
-<tr class="separator:aca0a36a982ad3130c7551d06bb1c2a14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32d38c801ff20eef8700674c1e418821"><td class="memItemLeft" align="right" valign="top"><a id="a32d38c801ff20eef8700674c1e418821"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::laserWavepacket::SI::W0_Z_SI</b> = W0_X_SI</td></tr>
-<tr class="separator:a32d38c801ff20eef8700674c1e418821"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1233517c3f5dc10005893842d19d4dc9"><td class="memItemLeft" align="right" valign="top"><a id="a1233517c3f5dc10005893842d19d4dc9"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_wavepacket.html#a1233517c3f5dc10005893842d19d4dc9">picongpu::laserWavepacket::RAMP_INIT</a> = 20.0</td></tr>
-<tr class="memdesc:a1233517c3f5dc10005893842d19d4dc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The laser pulse will be initialized half of PULSE_INIT times of the PULSE_LENGTH before plateau and half at the end of the plateau unit: none. <br /></td></tr>
-<tr class="separator:a1233517c3f5dc10005893842d19d4dc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3e2d3457a4a91a630739d353e2a52ca"><td class="memItemLeft" align="right" valign="top">constexpr float_X&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_wavepacket.html#aa3e2d3457a4a91a630739d353e2a52ca">picongpu::laserWavepacket::LASER_PHASE</a> = 0.0</td></tr>
-<tr class="memdesc:aa3e2d3457a4a91a630739d353e2a52ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">laser phase shift (no shift: 0.0)  <a href="namespacepicongpu_1_1laser_wavepacket.html#aa3e2d3457a4a91a630739d353e2a52ca">More...</a><br /></td></tr>
-<tr class="separator:aa3e2d3457a4a91a630739d353e2a52ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefe932d794f1f5430565f1303b9e8b64"><td class="memItemLeft" align="right" valign="top"><a id="aefe932d794f1f5430565f1303b9e8b64"></a>
-constexpr PolarisationType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_wavepacket.html#aefe932d794f1f5430565f1303b9e8b64">picongpu::laserWavepacket::Polarisation</a> = LINEAR_X</td></tr>
-<tr class="memdesc:aefe932d794f1f5430565f1303b9e8b64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polarization selection. <br /></td></tr>
-<tr class="separator:aefe932d794f1f5430565f1303b9e8b64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0771f435d623c94a7306a426e9e8e68"><td class="memItemLeft" align="right" valign="top"><a id="ac0771f435d623c94a7306a426e9e8e68"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#ac0771f435d623c94a7306a426e9e8e68">picongpu::laserPolynom::SI::WAVE_LENGTH_SI</a> = 0.8e-6</td></tr>
-<tr class="memdesc:ac0771f435d623c94a7306a426e9e8e68"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: meter <br /></td></tr>
-<tr class="separator:ac0771f435d623c94a7306a426e9e8e68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88729b49cddf0c205a5dec33a316e118"><td class="memItemLeft" align="right" valign="top"><a id="a88729b49cddf0c205a5dec33a316e118"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a88729b49cddf0c205a5dec33a316e118">picongpu::laserPolynom::SI::UNITCONV_A0_to_Amplitude_SI</a> = -2.0 * PI / WAVE_LENGTH_SI * ::picongpu::SI::ELECTRON_MASS_SI * ::picongpu::SI::SPEED_OF_LIGHT_SI * ::picongpu::SI::SPEED_OF_LIGHT_SI / ::picongpu::SI::ELECTRON_CHARGE_SI</td></tr>
-<tr class="memdesc:a88729b49cddf0c205a5dec33a316e118"><td class="mdescLeft">&#160;</td><td class="mdescRight">UNITCONV. <br /></td></tr>
-<tr class="separator:a88729b49cddf0c205a5dec33a316e118"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a276d2a3c03151d79acb30d990559b195"><td class="memItemLeft" align="right" valign="top">constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a276d2a3c03151d79acb30d990559b195">picongpu::laserPolynom::SI::AMPLITUDE_SI</a> = 1.738e13</td></tr>
-<tr class="memdesc:a276d2a3c03151d79acb30d990559b195"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: W / m^2  <a href="laser_8param.html#a276d2a3c03151d79acb30d990559b195">More...</a><br /></td></tr>
-<tr class="separator:a276d2a3c03151d79acb30d990559b195"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17438eafad0dbf5fd1fa63d874c6d6d6"><td class="memItemLeft" align="right" valign="top"><a id="a17438eafad0dbf5fd1fa63d874c6d6d6"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a17438eafad0dbf5fd1fa63d874c6d6d6">picongpu::laserPolynom::SI::PULSE_LENGTH_SI</a> = 4.0e-15</td></tr>
-<tr class="memdesc:a17438eafad0dbf5fd1fa63d874c6d6d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pulse length: PULSE_LENGTH_SI = total length of polynamial laser pulse Rise time = 0.5 * PULSE_LENGTH_SI Fall time = 0.5 * PULSE_LENGTH_SI in order to compare to a gaussian pulse: rise time = sqrt{2} * T_{FWHM} unit: seconds. <br /></td></tr>
-<tr class="separator:a17438eafad0dbf5fd1fa63d874c6d6d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d665695dcaf4370b35b25b38d69532c"><td class="memItemLeft" align="right" valign="top"><a id="a3d665695dcaf4370b35b25b38d69532c"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a3d665695dcaf4370b35b25b38d69532c">picongpu::laserPolynom::SI::W0x_SI</a> = 4.246e-6</td></tr>
-<tr class="memdesc:a3d665695dcaf4370b35b25b38d69532c"><td class="mdescLeft">&#160;</td><td class="mdescRight">beam waist: distance from the axis where the pulse intensity (E^2) decreases to its 1/e^2-th part, at the focus position of the laser unit: meter <br /></td></tr>
-<tr class="separator:a3d665695dcaf4370b35b25b38d69532c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3477ebc0ea327b09f85dd79944e36682"><td class="memItemLeft" align="right" valign="top"><a id="a3477ebc0ea327b09f85dd79944e36682"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::laserPolynom::SI::W0z_SI</b> = W0x_SI</td></tr>
-<tr class="separator:a3477ebc0ea327b09f85dd79944e36682"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2a752541ab194d91cf463e90710ca40"><td class="memItemLeft" align="right" valign="top">constexpr float_X&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_polynom.html#ad2a752541ab194d91cf463e90710ca40">picongpu::laserPolynom::LASER_PHASE</a> = 0.0</td></tr>
-<tr class="memdesc:ad2a752541ab194d91cf463e90710ca40"><td class="mdescLeft">&#160;</td><td class="mdescRight">laser phase shift (no shift: 0.0)  <a href="namespacepicongpu_1_1laser_polynom.html#ad2a752541ab194d91cf463e90710ca40">More...</a><br /></td></tr>
-<tr class="separator:ad2a752541ab194d91cf463e90710ca40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae43ec4c9a0a6e35900ef96ad525560f2"><td class="memItemLeft" align="right" valign="top"><a id="ae43ec4c9a0a6e35900ef96ad525560f2"></a>
-constexpr float_X&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::laserExpRampWithPrepulse::INT_RATIO_PREPULSE</b> = 0.</td></tr>
-<tr class="separator:ae43ec4c9a0a6e35900ef96ad525560f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e9d288528dc4a2b01a108963bb3893c"><td class="memItemLeft" align="right" valign="top"><a id="a4e9d288528dc4a2b01a108963bb3893c"></a>
-constexpr float_X&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::laserExpRampWithPrepulse::INT_RATIO_POINT_1</b> = 1.e-8</td></tr>
-<tr class="separator:a4e9d288528dc4a2b01a108963bb3893c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f6929fd67c7d83d030cbff39fbf33d4"><td class="memItemLeft" align="right" valign="top"><a id="a7f6929fd67c7d83d030cbff39fbf33d4"></a>
-constexpr float_X&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::laserExpRampWithPrepulse::INT_RATIO_POINT_2</b> = 1.e-4</td></tr>
-<tr class="separator:a7f6929fd67c7d83d030cbff39fbf33d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab01a43d248cec9f6be27a87547419724"><td class="memItemLeft" align="right" valign="top"><a id="ab01a43d248cec9f6be27a87547419724"></a>
-constexpr float_X&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::laserExpRampWithPrepulse::INT_RATIO_POINT_3</b> = 1.e-4</td></tr>
-<tr class="separator:ab01a43d248cec9f6be27a87547419724"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fe85c2cdf2cdc566bf01e537147bee5"><td class="memItemLeft" align="right" valign="top"><a id="a9fe85c2cdf2cdc566bf01e537147bee5"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::laserExpRampWithPrepulse::SI::TIME_PREPULSE_SI</b> = -950.0e-15</td></tr>
-<tr class="separator:a9fe85c2cdf2cdc566bf01e537147bee5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a746100241ce046cc51516acbcea1bbd9"><td class="memItemLeft" align="right" valign="top"><a id="a746100241ce046cc51516acbcea1bbd9"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::laserExpRampWithPrepulse::SI::TIME_PEAKPULSE_SI</b> = 0.0e-15</td></tr>
-<tr class="separator:a746100241ce046cc51516acbcea1bbd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc18e7347270973f2db8759b7134c313"><td class="memItemLeft" align="right" valign="top"><a id="abc18e7347270973f2db8759b7134c313"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::laserExpRampWithPrepulse::SI::TIME_POINT_1_SI</b> = -1000.0e-15</td></tr>
-<tr class="separator:abc18e7347270973f2db8759b7134c313"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef0b87ba756c4079d6ce0b5bc20190df"><td class="memItemLeft" align="right" valign="top"><a id="aef0b87ba756c4079d6ce0b5bc20190df"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::laserExpRampWithPrepulse::SI::TIME_POINT_2_SI</b> = -300.0e-15</td></tr>
-<tr class="separator:aef0b87ba756c4079d6ce0b5bc20190df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7d60407dff5264e50ef0c361b8d1941"><td class="memItemLeft" align="right" valign="top"><a id="aa7d60407dff5264e50ef0c361b8d1941"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::laserExpRampWithPrepulse::SI::TIME_POINT_3_SI</b> = -100.0e-15</td></tr>
-<tr class="separator:aa7d60407dff5264e50ef0c361b8d1941"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe30b6096b48e35e2ccf71d0f3b27295"><td class="memItemLeft" align="right" valign="top"><a id="afe30b6096b48e35e2ccf71d0f3b27295"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#afe30b6096b48e35e2ccf71d0f3b27295">picongpu::laserExpRampWithPrepulse::SI::WAVE_LENGTH_SI</a> = 0.8e-6</td></tr>
-<tr class="memdesc:afe30b6096b48e35e2ccf71d0f3b27295"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: meter <br /></td></tr>
-<tr class="separator:afe30b6096b48e35e2ccf71d0f3b27295"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0edc647fc57a4259a97a02b5a926b56"><td class="memItemLeft" align="right" valign="top"><a id="ac0edc647fc57a4259a97a02b5a926b56"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#ac0edc647fc57a4259a97a02b5a926b56">picongpu::laserExpRampWithPrepulse::SI::UNITCONV_A0_to_Amplitude_SI</a> = -2.0 * PI / WAVE_LENGTH_SI * ::picongpu::SI::ELECTRON_MASS_SI * ::picongpu::SI::SPEED_OF_LIGHT_SI * ::picongpu::SI::SPEED_OF_LIGHT_SI / ::picongpu::SI::ELECTRON_CHARGE_SI</td></tr>
-<tr class="memdesc:ac0edc647fc57a4259a97a02b5a926b56"><td class="mdescLeft">&#160;</td><td class="mdescRight">UNITCONV. <br /></td></tr>
-<tr class="separator:ac0edc647fc57a4259a97a02b5a926b56"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad170c656036a6cacd25e4973166603c7"><td class="memItemLeft" align="right" valign="top">constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#ad170c656036a6cacd25e4973166603c7">picongpu::laserExpRampWithPrepulse::SI::_A0</a> = 20.</td></tr>
-<tr class="memdesc:ad170c656036a6cacd25e4973166603c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: W / m^2  <a href="laser_8param.html#ad170c656036a6cacd25e4973166603c7">More...</a><br /></td></tr>
-<tr class="separator:ad170c656036a6cacd25e4973166603c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7ccf96866990fe438bbdcb2ae528b40"><td class="memItemLeft" align="right" valign="top"><a id="ac7ccf96866990fe438bbdcb2ae528b40"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#ac7ccf96866990fe438bbdcb2ae528b40">picongpu::laserExpRampWithPrepulse::SI::AMPLITUDE_SI</a> = _A0 * UNITCONV_A0_to_Amplitude_SI</td></tr>
-<tr class="memdesc:ac7ccf96866990fe438bbdcb2ae528b40"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: Volt /meter <br /></td></tr>
-<tr class="separator:ac7ccf96866990fe438bbdcb2ae528b40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebf498edacb49021f8738a797c4259ad"><td class="memItemLeft" align="right" valign="top">constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#aebf498edacb49021f8738a797c4259ad">picongpu::laserExpRampWithPrepulse::SI::LASER_NOFOCUS_CONSTANT_SI</a> = 0.0 * WAVE_LENGTH_SI / ::picongpu::SI::SPEED_OF_LIGHT_SI</td></tr>
-<tr class="memdesc:aebf498edacb49021f8738a797c4259ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: Volt /meter  <a href="laser_8param.html#aebf498edacb49021f8738a797c4259ad">More...</a><br /></td></tr>
-<tr class="separator:aebf498edacb49021f8738a797c4259ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fea85491db3047c2c92a5c2ccb2fc94"><td class="memItemLeft" align="right" valign="top">constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a9fea85491db3047c2c92a5c2ccb2fc94">picongpu::laserExpRampWithPrepulse::SI::PULSE_LENGTH_SI</a> = 3.0e-14 / 2.35482</td></tr>
-<tr class="memdesc:a9fea85491db3047c2c92a5c2ccb2fc94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pulse length: sigma of std.  <a href="laser_8param.html#a9fea85491db3047c2c92a5c2ccb2fc94">More...</a><br /></td></tr>
-<tr class="separator:a9fea85491db3047c2c92a5c2ccb2fc94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae78f91567125286b59f65ee20d0f1844"><td class="memItemLeft" align="right" valign="top"><a id="ae78f91567125286b59f65ee20d0f1844"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#ae78f91567125286b59f65ee20d0f1844">picongpu::laserExpRampWithPrepulse::SI::W0_X_SI</a> = 2.5 * WAVE_LENGTH_SI</td></tr>
-<tr class="memdesc:ae78f91567125286b59f65ee20d0f1844"><td class="mdescLeft">&#160;</td><td class="mdescRight">beam waist: distance from the axis where the pulse intensity (E^2) decreases to its 1/e^2-th part, WO_X_SI is this distance in x-direction W0_Z_SI is this distance in z-direction if both values are equal, the laser has a circular shape in x-z W0_SI = FWHM_of_Intensity / sqrt{ 2* ln(2) } [ 1.17741 ] unit: meter <br /></td></tr>
-<tr class="separator:ae78f91567125286b59f65ee20d0f1844"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae431413e2117c3cd44ec08438b2e7f7"><td class="memItemLeft" align="right" valign="top"><a id="aae431413e2117c3cd44ec08438b2e7f7"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::laserExpRampWithPrepulse::SI::W0_Z_SI</b> = W0_X_SI</td></tr>
-<tr class="separator:aae431413e2117c3cd44ec08438b2e7f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08788dac6ffcf7675cf8d655c38f71a7"><td class="memItemLeft" align="right" valign="top"><a id="a08788dac6ffcf7675cf8d655c38f71a7"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_exp_ramp_with_prepulse.html#a08788dac6ffcf7675cf8d655c38f71a7">picongpu::laserExpRampWithPrepulse::RAMP_INIT</a> = 16.0</td></tr>
-<tr class="memdesc:a08788dac6ffcf7675cf8d655c38f71a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The laser pulse will be initialized half of PULSE_INIT times of the PULSE_LENGTH before plateau and half at the end of the plateau unit: none. <br /></td></tr>
-<tr class="separator:a08788dac6ffcf7675cf8d655c38f71a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06ab54a1a0b538942e57164d2241091e"><td class="memItemLeft" align="right" valign="top">constexpr float_X&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_exp_ramp_with_prepulse.html#a06ab54a1a0b538942e57164d2241091e">picongpu::laserExpRampWithPrepulse::LASER_PHASE</a> = 0.0</td></tr>
-<tr class="memdesc:a06ab54a1a0b538942e57164d2241091e"><td class="mdescLeft">&#160;</td><td class="mdescRight">laser phase shift (no shift: 0.0)  <a href="namespacepicongpu_1_1laser_exp_ramp_with_prepulse.html#a06ab54a1a0b538942e57164d2241091e">More...</a><br /></td></tr>
-<tr class="separator:a06ab54a1a0b538942e57164d2241091e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a120cc7e59dabf6ef3bd72cfb64a6effa"><td class="memItemLeft" align="right" valign="top"><a id="a120cc7e59dabf6ef3bd72cfb64a6effa"></a>
-constexpr PolarisationType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacepicongpu_1_1laser_exp_ramp_with_prepulse.html#a120cc7e59dabf6ef3bd72cfb64a6effa">picongpu::laserExpRampWithPrepulse::Polarisation</a> = LINEAR_X</td></tr>
-<tr class="memdesc:a120cc7e59dabf6ef3bd72cfb64a6effa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polarization selection. <br /></td></tr>
-<tr class="separator:a120cc7e59dabf6ef3bd72cfb64a6effa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b918ad7af655eeabb9b50b7af34a678"><td class="memItemLeft" align="right" valign="top"><a id="a7b918ad7af655eeabb9b50b7af34a678"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a7b918ad7af655eeabb9b50b7af34a678">picongpu::laserNone::SI::WAVE_LENGTH_SI</a> = 0.0</td></tr>
-<tr class="memdesc:a7b918ad7af655eeabb9b50b7af34a678"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: meter <br /></td></tr>
-<tr class="separator:a7b918ad7af655eeabb9b50b7af34a678"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f201b7db64e502c50db4d8256d72f40"><td class="memItemLeft" align="right" valign="top"><a id="a3f201b7db64e502c50db4d8256d72f40"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="laser_8param.html#a3f201b7db64e502c50db4d8256d72f40">picongpu::laserNone::SI::AMPLITUDE_SI</a> = 0.0</td></tr>
-<tr class="memdesc:a3f201b7db64e502c50db4d8256d72f40"><td class="mdescLeft">&#160;</td><td class="mdescRight">unit: Volt /meter <br /></td></tr>
-<tr class="separator:a3f201b7db64e502c50db4d8256d72f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad206353e16fcccae972ac6f0c3ea5968"><td class="memItemLeft" align="right" valign="top"><a id="ad206353e16fcccae972ac6f0c3ea5968"></a>
-constexpr float_64&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::laserNone::SI::PULSE_LENGTH_SI</b> = 0.0</td></tr>
-<tr class="separator:ad206353e16fcccae972ac6f0c3ea5968"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b2d63fecb85ebbc1d3eff279cefc64"><td class="memItemLeft" align="right" valign="top"><a id="a16b2d63fecb85ebbc1d3eff279cefc64"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>picongpu::fields::laserProfiles::gaussianBeam::PMACC_CONST_VECTOR</b> (float_X, MODENUMBER+1, LAGUERREMODES, 1.0)</td></tr>
+<tr class="separator:a16b2d63fecb85ebbc1d3eff279cefc64"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p class="">Configure laser profiles. </p>
-</div><h2 class="groupheader">Variable Documentation</h2>
-<a id="file_a5a0a33dc88480cf654b37f1bedcf3c4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a5a0a33dc88480cf654b37f1bedcf3c4c">&#9670;&nbsp;</a></span>_A0 <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float_64 picongpu::laserPlaneWave::SI::_A0 = 1.5</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>unit: W / m^2 </p>
-<p class="">unit: none </p>
-
-</div>
-</div>
-<a id="file_ad170c656036a6cacd25e4973166603c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_ad170c656036a6cacd25e4973166603c7">&#9670;&nbsp;</a></span>_A0 <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float_64 picongpu::laserExpRampWithPrepulse::SI::_A0 = 20.</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>unit: W / m^2 </p>
-<p class="">unit: none </p>
-
-</div>
-</div>
-<a id="file_af1da5d21ffa2c3a7725d7e2603666fec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_af1da5d21ffa2c3a7725d7e2603666fec">&#9670;&nbsp;</a></span>AMPLITUDE_SI <span class="overload">[1/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float_64 picongpu::laserGaussianBeam::SI::AMPLITUDE_SI = 1.738e13</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>unit: W / m^2 </p>
-<p class="">unit: none unit: Volt / meter unit: Volt / meter </p>
-
-</div>
-</div>
-<a id="file_a3e31a4b9f4a13e63073f811c4f892396"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a3e31a4b9f4a13e63073f811c4f892396">&#9670;&nbsp;</a></span>AMPLITUDE_SI <span class="overload">[2/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float_64 picongpu::laserWavepacket::SI::AMPLITUDE_SI = 1.738e13</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>unit: W / m^2 </p>
-<p class="">unit: none unit: Volt /meter unit: Volt /meter </p>
-
-</div>
-</div>
-<a id="file_a276d2a3c03151d79acb30d990559b195"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a276d2a3c03151d79acb30d990559b195">&#9670;&nbsp;</a></span>AMPLITUDE_SI <span class="overload">[3/3]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float_64 picongpu::laserPolynom::SI::AMPLITUDE_SI = 1.738e13</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>unit: W / m^2 </p>
-<p class="">unit: none unit: Volt /meter unit: Volt /meter </p>
-
-</div>
-</div>
-<a id="file_a7af720a81f32978d619a48701bffbcf3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a7af720a81f32978d619a48701bffbcf3">&#9670;&nbsp;</a></span>initPlaneY</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr uint32_t picongpu::laser::initPlaneY = 0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>cell from top where the laser is initialized </p>
-<p class="">if <code>initPlaneY == 0</code> than the absorber are disabled. if <code>initPlaneY &gt; absorbercells negative Y</code> the negative absorber in y direction is enabled</p>
-<p class="">valid ranges:</p><ul>
-<li>initPlaneY == 0</li>
-<li>absorber cells negative Y &lt; initPlaneY &lt; cells in y direction of the top gpu </li>
+<p class="">All laser propagate in y direction.</p>
+<p class="">Available profiles:</p><ul>
+<li>None : no laser init</li>
+<li>GaussianBeam : Gaussian beam (focusing)</li>
+<li>PulseFrontTilt : Gaussian beam with a tilted pulse envelope in 'x' direction</li>
+<li>PlaneWave : a plane wave (Gaussian in time)</li>
+<li>Wavepacket : wavepacket (Gaussian in time and space, not focusing)</li>
+<li>Polynom : a polynomial laser envelope</li>
+<li>ExpRampWithPrepulse : wavepacket with exponential upramps and prepulse</li>
 </ul>
-
-</div>
-</div>
-<a id="file_af7b255139a1bd507a9677dd071684e1b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_af7b255139a1bd507a9677dd071684e1b">&#9670;&nbsp;</a></span>LASER_NOFOCUS_CONSTANT_SI <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float_64 picongpu::laserPlaneWave::SI::LASER_NOFOCUS_CONSTANT_SI = 13.34e-15</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>unit: Volt /meter </p>
-<p class="">The profile of the test Lasers 0 and 2 can be stretched by a constant area between the up and downramp unit: seconds </p>
-
-</div>
-</div>
-<a id="file_aebf498edacb49021f8738a797c4259ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_aebf498edacb49021f8738a797c4259ad">&#9670;&nbsp;</a></span>LASER_NOFOCUS_CONSTANT_SI <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float_64 picongpu::laserExpRampWithPrepulse::SI::LASER_NOFOCUS_CONSTANT_SI = 0.0 * WAVE_LENGTH_SI / ::picongpu::SI::SPEED_OF_LIGHT_SI</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>unit: Volt /meter </p>
-<p class="">The profile of the test Lasers 0 and 2 can be stretched by a constant area between the up and downramp unit: seconds </p>
-
-</div>
-</div>
-<a id="file_aebc5df405e5531c5d4e9a3f763d1bccf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_aebc5df405e5531c5d4e9a3f763d1bccf">&#9670;&nbsp;</a></span>LASER_PHASE <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float_X picongpu::laserGaussianBeam::LASER_PHASE = 0.0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>laser phase shift (no shift: 0.0) </p>
-<p class="">sin(omega*time + laser_phase): starts with phase=0 at center &ndash;&gt; E-field=0 at center</p>
-<p class="">unit: rad, periodic in 2*pi </p>
-
-</div>
-</div>
-<a id="file_a6089b83aeb52f6ddb6f10cea43f7d1aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a6089b83aeb52f6ddb6f10cea43f7d1aa">&#9670;&nbsp;</a></span>LASER_PHASE <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float_X picongpu::laserPulseFrontTilt::LASER_PHASE = 0.0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>laser phase shift (no shift: 0.0) </p>
-<p class="">sin(omega*time + laser_phase): starts with phase=0 at center &ndash;&gt; E-field=0 at center</p>
-<p class="">unit: rad, periodic in 2*pi </p>
-
-</div>
-</div>
-<a id="file_a4c3ae486bc8562bed6c858900602e0c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a4c3ae486bc8562bed6c858900602e0c3">&#9670;&nbsp;</a></span>PULSE_INIT</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float_64 picongpu::laserGaussianBeam::PULSE_INIT = 20.0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>The laser pulse will be initialized PULSE_INIT times of the PULSE_LENGTH. </p>
-<p class="">unit: none </p>
-
-</div>
-</div>
-<a id="file_a4042c8430040efe6180067d4969c4cff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a4042c8430040efe6180067d4969c4cff">&#9670;&nbsp;</a></span>PULSE_LENGTH_SI <span class="overload">[1/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float_64 picongpu::laserGaussianBeam::SI::PULSE_LENGTH_SI = 10.615e-15 / 4.0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pulse length: sigma of std. </p>
-<p class="">gauss for intensity (E^2) PULSE_LENGTH_SI = FWHM_of_Intensity / [ 2*sqrt{ 2* ln(2) } ] [ 2.354820045 ] Info: FWHM_of_Intensity = FWHM_Illumination = what a experimentalist calls "pulse duration"</p>
-<p class="">unit: seconds (1 sigma) </p>
-
-</div>
-</div>
-<a id="file_acb0a8b9b3766fe5f12a6343803619e29"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_acb0a8b9b3766fe5f12a6343803619e29">&#9670;&nbsp;</a></span>PULSE_LENGTH_SI <span class="overload">[2/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float_64 picongpu::laserPulseFrontTilt::SI::PULSE_LENGTH_SI = 10.615e-15 / 4.0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pulse length: sigma of std. </p>
-<p class="">gauss for intensity (E^2) PULSE_LENGTH_SI = FWHM_of_Intensity / [ 2*sqrt{ 2* ln(2) } ] [ 2.354820045 ] Info: FWHM_of_Intensity = FWHM_Illumination = what a experimentalist calls "pulse duration" unit: seconds (1 sigma) </p>
-
-</div>
-</div>
-<a id="file_aa600dd7870123c93449b5a11405a2807"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_aa600dd7870123c93449b5a11405a2807">&#9670;&nbsp;</a></span>PULSE_LENGTH_SI <span class="overload">[3/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float_64 picongpu::laserPlaneWave::SI::PULSE_LENGTH_SI = 10.615e-15 / 4.0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pulse length: sigma of std. </p>
-<p class="">gauss for intensity (E^2) PULSE_LENGTH_SI = FWHM_of_Intensity / [ 2*sqrt{ 2* ln(2) } ] [ 2.354820045 ] Info: FWHM_of_Intensity = FWHM_Illumination = what a experimentalist calls "pulse duration" unit: seconds (1 sigma) </p>
-
-</div>
-</div>
-<a id="file_a3171d9846b79951900b8b6c96e984642"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a3171d9846b79951900b8b6c96e984642">&#9670;&nbsp;</a></span>PULSE_LENGTH_SI <span class="overload">[4/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float_64 picongpu::laserWavepacket::SI::PULSE_LENGTH_SI = 10.615e-15 / 4.0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pulse length: sigma of std. </p>
-<p class="">gauss for intensity (E^2) PULSE_LENGTH_SI = FWHM_of_Intensity / [ 2*sqrt{ 2* ln(2) } ] [ 2.354820045 ] Info: FWHM_of_Intensity = FWHM_Illumination = what a experimentalist calls "pulse duration" unit: seconds (1 sigma) </p>
-
-</div>
-</div>
-<a id="file_a9fea85491db3047c2c92a5c2ccb2fc94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a9fea85491db3047c2c92a5c2ccb2fc94">&#9670;&nbsp;</a></span>PULSE_LENGTH_SI <span class="overload">[5/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float_64 picongpu::laserExpRampWithPrepulse::SI::PULSE_LENGTH_SI = 3.0e-14 / 2.35482</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Pulse length: sigma of std. </p>
-<p class="">gauss for intensity (E^2) PULSE_LENGTH_SI = FWHM_of_Intensity / [ 2*sqrt{ 2* ln(2) } ] [ 2.354820045 ] Info: FWHM_of_Intensity = FWHM_Illumination = what a experimentalist calls "pulse duration" unit: seconds (1 sigma) </p>
-
-</div>
-</div>
-<a id="file_a2369dd994c98a6e5270cc9bbd5d794be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#file_a2369dd994c98a6e5270cc9bbd5d794be">&#9670;&nbsp;</a></span>W0_SI</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr float_64 picongpu::laserGaussianBeam::SI::W0_SI = 5.0e-6 / 1.17741</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>beam waist: distance from the axis where the pulse intensity (E^2) decreases to its 1/e^2-th part, at the focus position of the laser W0_SI = FWHM_of_Intensity / sqrt{ 2* ln(2) } [ 1.17741 ] </p>
-<p class="">unit: meter </p>
-
-</div>
-</div>
-</div><!-- contents -->
+<p class="">In the end, this file needs to define a <code>Selected</code> class in namespace <code>picongpu::fields::laserProfiles</code>. A typical profile consists of a laser profile class and its parameters. For example:</p>
+<div class="fragment"><div class="line"><span class="keyword">using</span> <a class="code" href="laser_8param.html#ae0ed38e193d8328d6964eb2e6596a1c1">Selected</a> = GaussianBeam&lt; GaussianBeamParam &gt;;</div></div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
