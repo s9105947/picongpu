@@ -1,0 +1,14 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node347 [label="StateType *",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node347 -> Node0 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="pmacc::random::Random\l\< T_Distribution, T_RNGMethod,\l T_RNGStatePtrOrHandle \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1random_1_1_random.html",tooltip="Random Number Generator."];
+  Node320 [label="T_Distribution",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node320 -> Node0 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node320 -> Node322 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node322 [label="pmacc::random::Random\l\< T_Distribution, T_RNGMethod,\l T_RNGState * \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1random_1_1_random_3_01_t___distribution_00_01_t___r_n_g_method_00_01_t___r_n_g_state_01_5_01_4.html",tooltip="Specialization when the state is a pointer."];
+}

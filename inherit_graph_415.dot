@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="picongpu::PluginController\l::TupleSpeciesPlugin::IsEligible\l\< T_TupleVector \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1_plugin_controller_1_1_tuple_species_plugin_1_1_is_eligible.html",tooltip="Check the combination Species+Plugin in the Tuple."];
+}

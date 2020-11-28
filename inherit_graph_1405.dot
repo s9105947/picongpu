@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="pmacc::traits::HasIdentifier\l\< pmacc::Frame\< T_CreatePairOperator,\l T_ParticleDescription \>, T_IdentifierName \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1traits_1_1_has_identifier_3_01pmacc_1_1_frame_3_01_t___create_pair_operator_00_016a42f1191d1e7f74ff82d0a61d099aae.html",tooltip=" "];
+}

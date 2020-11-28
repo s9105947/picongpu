@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="pmacc::test::memory\l::HostBufferIntern::\lResetTest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1test_1_1memory_1_1_host_buffer_intern_1_1_reset_test.html",tooltip="Checks if the HostBufferIntern is reseted correctly to zero."];
+}

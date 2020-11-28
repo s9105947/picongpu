@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="picongpu::traits::GetSpecies\lFlagName\< T_Species, T_Flag,\l false \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1traits_1_1_get_species_flag_name_3_01_t___species_00_01_t___flag_00_01false_01_4.html",tooltip=" "];
+}

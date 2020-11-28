@@ -1,0 +1,16 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1373 [label="false_type",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1373 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="picongpu::traits::is\l_laser_none\< typename \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1traits_1_1is__laser__none.html",tooltip=" "];
+  Node1373 -> Node1375 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1375 [label="picongpu::traits::is\l_laser_planewave\< typename \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1traits_1_1is__laser__planewave.html",tooltip=" "];
+  Node1373 -> Node1376 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1376 [label="picongpu::traits::IsField\lDomainBound\< fields::maxwellSolver\l::yeePML::FieldB \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1traits_1_1_is_field_domain_bound_3_01fields_1_1maxwell_solver_1_1yee_p_m_l_1_1_field_b_01_4.html",tooltip="Field domain boundness trait for output and checkpointing: PML fields are not domain-bound."];
+  Node1373 -> Node1377 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1377 [label="picongpu::traits::IsField\lDomainBound\< fields::maxwellSolver\l::yeePML::FieldE \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1traits_1_1_is_field_domain_bound_3_01fields_1_1maxwell_solver_1_1yee_p_m_l_1_1_field_e_01_4.html",tooltip="Field domain boundness trait for output and checkpointing: PML fields are not domain-bound."];
+}

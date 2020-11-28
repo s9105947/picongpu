@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="pmacc::TypeToAliasPair\l\< T_Alias\< T_Type, pmacc\l::pmacc_isAlias \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1_type_to_alias_pair_3_01_t___alias_3_01_t___type_00_01pmacc_1_1pmacc__is_alias_01_4_01_4.html",tooltip="specialisation if T_Type is a pmacc alias"];
+}

@@ -1,0 +1,12 @@
+digraph "pmacc::functor::Interface&lt; T_UserFunctor, T_numArguments, T_ReturnType &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pmacc::functor::Interface\l\< T_UserFunctor, T_numArguments,\l T_ReturnType \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Interface for a user functor."];
+  Node2 -> Node1 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="T_UserFunctor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pmacc::functor::Filtered\l\< T_FilterOperator, filter\l::Interface\< T_Filter, 1u\l \>, Interface\< T_Functor, T\l_numFunctorArguments, void \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1functor_1_1_filtered_3_01_t___filter_operator_00_01filter_1_1_interface_3_01_t___bdfa8dbdd55fb04fe29d2102e926af65.html",tooltip="specialization of Filtered (with unary filter)"];
+}

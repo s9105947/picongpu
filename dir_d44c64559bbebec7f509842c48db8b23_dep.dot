@@ -1,0 +1,13 @@
+digraph "/tmp/tmp.I3T9wAlo9k/picongpu/include" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_d44c64559bbebec7f509842c48db8b23 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_d44c64559bbebec7f509842c48db8b23.html"];
+    dir_d44c64559bbebec7f509842c48db8b23 [shape=plaintext label="include"];
+    dir_8505a181d666da3b7d5287111232d04c [shape=box label="mpiInfo" color="black" fillcolor="white" style="filled" URL="dir_8505a181d666da3b7d5287111232d04c.html"];
+    dir_0f3240c9f2097d0f33ffb742f7982ee4 [shape=box label="picongpu" color="red" fillcolor="white" style="filled" URL="dir_0f3240c9f2097d0f33ffb742f7982ee4.html"];
+    dir_25029e4ec4a63cd3494f9c7166d3b243 [shape=box label="pmacc" color="red" fillcolor="white" style="filled" URL="dir_25029e4ec4a63cd3494f9c7166d3b243.html"];
+  }
+  dir_0f3240c9f2097d0f33ffb742f7982ee4->dir_25029e4ec4a63cd3494f9c7166d3b243 [headlabel="1", labeldistance=1.5 headhref="dir_000002_000034.html"];
+}

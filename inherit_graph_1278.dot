@@ -1,0 +1,14 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="pmacc::private_Box\l::Box\< PitchedBox\< TYPE,\l DIM1 \> ::Dim, PitchedBox\l\< TYPE, DIM1 \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1private___box_1_1_box.html",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="pmacc::DataBox\< PitchedBox\l\< TYPE, DIM1 \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_data_box.html",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pmacc::VectorDataBox\l\< TYPE \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_vector_data_box.html",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pmacc::TileDataBox\l\< TYPE \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_tile_data_box.html",tooltip="Specifies a one-dimensional DataBox for more convenient usage."];
+}

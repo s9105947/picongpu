@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="pmacc::particles::operations\l::detail::Particle\< T_FrameType2,\l T_ValueTypeSeq2 \>\>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1particles_1_1operations_1_1detail_1_1_assign_3_01pmacc_1_1_particle_3_01_t___frame469a03dba8d4287888d3095172ee54c.html",tooltip="Assign common attributes of two particle species."];
+}

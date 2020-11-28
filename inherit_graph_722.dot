@@ -1,0 +1,10 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="pmacc::algorithms::\lmath::bessel::Cbesselj0Base\l\< double, pmacc::algorithms\l::math::bessel::aDouble_t,\l pmacc::algorithms::math::bessel\l::bDouble_t, pmacc::algorithms\l::math::bessel::a1Double_t, pmacc\l::algorithms::math::bessel::b1Double_t \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1algorithms_1_1math_1_1bessel_1_1_cbesselj0_base.html",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="pmacc::algorithms::\lmath::bessel::J0\< pmacc\l::math::Complex\< double \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1algorithms_1_1math_1_1bessel_1_1_j0_3_01pmacc_1_1math_1_1_complex_3_01double_01_4_01_4.html",tooltip=" "];
+}

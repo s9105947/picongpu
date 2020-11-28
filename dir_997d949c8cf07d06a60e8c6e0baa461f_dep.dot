@@ -1,0 +1,11 @@
+digraph "/tmp/tmp.I3T9wAlo9k/picongpu/include/picongpu/particles/flylite/helperFields" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_e31077acfa5864a39c7fe450d9090216 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="flylite" fontname="Helvetica", fontsize="10", URL="dir_e31077acfa5864a39c7fe450d9090216.html"]
+  dir_997d949c8cf07d06a60e8c6e0baa461f [shape=box, label="helperFields", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_997d949c8cf07d06a60e8c6e0baa461f.html"];
+  }
+  dir_5cfede4be71155a80ba519f9359717a3 [shape=box label="particleToGrid" fillcolor="white" style="filled" color="red" URL="dir_5cfede4be71155a80ba519f9359717a3.html"];
+  dir_997d949c8cf07d06a60e8c6e0baa461f->dir_5cfede4be71155a80ba519f9359717a3 [headlabel="1", labeldistance=1.5 headhref="dir_000049_000066.html"];
+}

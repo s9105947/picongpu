@@ -1,0 +1,29 @@
+digraph "picongpu::hdf5::ThreadParams"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="picongpu::hdf5::ThreadParams",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cellDescription" ,fontname="Helvetica"];
+  Node2 [label="pmacc::MappingDescription\l\< DIM, SuperCellSize_ \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_mapping_description.html",tooltip="Abstracts logical block information from block variables."];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" window" ,fontname="Helvetica"];
+  Node3 [label="picongpu::Window",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1_window.html",tooltip="Window describes sizes and offsets."];
+  Node4 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" globalDimensions\nlocalDimensions" ,fontname="Helvetica"];
+  Node4 [label="pmacc::Selection\< simDim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_selection.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" offset\nsize" ,fontname="Helvetica"];
+  Node5 [label="pmacc::DataSpace\< DIM \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_data_space.html",tooltip=" "];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="pmacc::math::Vector\l\< int, T_Dim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1math_1_1_vector.html",tooltip=" "];
+  Node7 -> Node6 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="pmacc::math::detail\l::Vector_components\l\< int, T_dim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1math_1_1detail_1_1_vector__components.html",tooltip=" "];
+  Node8 -> Node6 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="pmacc::math::StandardAccessor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1math_1_1_standard_accessor.html",tooltip=" "];
+  Node9 -> Node6 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="pmacc::math::StandardNavigator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1math_1_1_standard_navigator.html",tooltip=" "];
+  Node10 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gridLayout" ,fontname="Helvetica"];
+  Node10 [label="pmacc::GridLayout\<\l simDim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_grid_layout.html",tooltip=" "];
+  Node11 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" localWindowToDomainOffset" ,fontname="Helvetica"];
+  Node11 [label="pmacc::DataSpace\< simDim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_data_space.html",tooltip=" "];
+  Node6 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

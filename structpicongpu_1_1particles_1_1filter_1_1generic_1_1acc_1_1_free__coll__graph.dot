@@ -1,0 +1,9 @@
+digraph "picongpu::particles::filter::generic::acc::Free&lt; T_Functor &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="picongpu::particles\l::filter::generic::acc\l::Free\< T_Functor \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="wrapper for the user filter on the accelerator"];
+  Node2 -> Node1 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="T_Functor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

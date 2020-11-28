@@ -1,0 +1,10 @@
+digraph "pmacc::container::CartBuffer&lt; Type, T_dim, Allocator, Copier, Assigner &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pmacc::container::CartBuffer\l\< Type, T_dim, Allocator,\l Copier, Assigner \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Implementation of a box-shaped (cartesian) container type."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="boost::mpl::apply::\ltype\< bmpl::vector\<\l bmpl::_1, bmpl::_2 \>\l, bmpl::int_\< T_dim \>,\l CartBuffer\< Type, T_dim,\l allocator::EmptyAllocator,\l mpl::void_, bmpl::vector\<\l bmpl::_1, bmpl::_2 \> \> \>",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+}

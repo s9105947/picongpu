@@ -1,0 +1,20 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node122 [label="vector",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node122 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="picongpu::plugins::\lmulti::Option\< float_64 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1plugins_1_1multi_1_1_option.html",tooltip=" "];
+  Node122 -> Node124 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node124 [label="picongpu::plugins::\lmulti::Option\< float_X \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1plugins_1_1multi_1_1_option.html",tooltip=" "];
+  Node122 -> Node125 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node125 [label="picongpu::plugins::\lmulti::Option\< int \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1plugins_1_1multi_1_1_option.html",tooltip=" "];
+  Node122 -> Node126 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node126 [label="picongpu::plugins::\lmulti::Option\< std::\lstring \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1plugins_1_1multi_1_1_option.html",tooltip=" "];
+  Node122 -> Node127 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node127 [label="picongpu::plugins::\lmulti::Option\< uint32_t \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1plugins_1_1multi_1_1_option.html",tooltip=" "];
+  Node122 -> Node128 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node128 [label="picongpu::plugins::\lmulti::Option\< T_ValueType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1plugins_1_1multi_1_1_option.html",tooltip="multi option storage"];
+}

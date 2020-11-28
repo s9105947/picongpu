@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="pmacc::algorithms::\lprecisionCast::TypeCast\l\< int, pmacc::DataSpace\l\< T_Dim \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1algorithms_1_1precision_cast_1_1_type_cast_3_01int_00_01pmacc_1_1_data_space_3_01_t___dim_01_4_01_4.html",tooltip=" "];
+}

@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="pmacc::traits::GetComponents\lType\< picongpu::fields::\lmaxwellSolver::yeePML::NodeValues,\l false \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1traits_1_1_get_components_type_3_01picongpu_1_1fields_1_1maxwell_solver_1_1yee_p_5045e48c666e1ca1205576ba46425574.html",tooltip="Node value traits for checkpointing."];
+}

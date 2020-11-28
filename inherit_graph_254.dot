@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="picongpu::particlePusher\lReducedLandauLifshitz\l::Push\< Velocity, Gamma\l \>::DiffEquation\< T_Var,\l T_Time, T_FieldEFunc, T\l_FieldBFunc, T_Pos, T_Mom,\l T_Mass, T_Charge, T_Weighting,\l T_Velocity, T_Gamma \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1particle_pusher_reduced_landau_lifshitz_1_1_push_1_1_diff_equation.html",tooltip=" "];
+}

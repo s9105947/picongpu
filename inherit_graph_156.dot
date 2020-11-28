@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="picongpu::FunctorBlock\l\< Species, SuperCellSize,\l float_PS, num_pbins, r\l_dir, T_Filter, T_numWorkers \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1_functor_block.html",tooltip="Functor to Run For Each SuperCell."];
+}

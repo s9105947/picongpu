@@ -1,0 +1,22 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node289 [label="T_Unitless",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node289 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="picongpu::fields::laserProfiles\l::acc::ExpRampWithPrepulse\l\< T_Unitless \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1fields_1_1laser_profiles_1_1acc_1_1_exp_ramp_with_prepulse.html",tooltip=" "];
+  Node289 -> Node291 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node291 [label="picongpu::fields::laserProfiles\l::acc::GaussianBeam\< T_Unitless \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1fields_1_1laser_profiles_1_1acc_1_1_gaussian_beam.html",tooltip=" "];
+  Node289 -> Node292 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node292 [label="picongpu::fields::laserProfiles\l::acc::None\< T_Unitless \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1fields_1_1laser_profiles_1_1acc_1_1_none.html",tooltip=" "];
+  Node289 -> Node293 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node293 [label="picongpu::fields::laserProfiles\l::acc::PlaneWave\< T_Unitless \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1fields_1_1laser_profiles_1_1acc_1_1_plane_wave.html",tooltip=" "];
+  Node289 -> Node294 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node294 [label="picongpu::fields::laserProfiles\l::acc::Polynom\< T_Unitless \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1fields_1_1laser_profiles_1_1acc_1_1_polynom.html",tooltip=" "];
+  Node289 -> Node295 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node295 [label="picongpu::fields::laserProfiles\l::acc::PulseFrontTilt\< T_Unitless \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1fields_1_1laser_profiles_1_1acc_1_1_pulse_front_tilt.html",tooltip=" "];
+  Node289 -> Node296 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node296 [label="picongpu::fields::laserProfiles\l::acc::Wavepacket\< T_Unitless \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1fields_1_1laser_profiles_1_1acc_1_1_wavepacket.html",tooltip=" "];
+}

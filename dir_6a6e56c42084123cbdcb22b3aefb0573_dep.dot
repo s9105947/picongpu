@@ -1,0 +1,16 @@
+digraph "/tmp/tmp.I3T9wAlo9k/picongpu/include/pmacc/math" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_25029e4ec4a63cd3494f9c7166d3b243 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="pmacc" fontname="Helvetica", fontsize="10", URL="dir_25029e4ec4a63cd3494f9c7166d3b243.html"]
+  subgraph clusterdir_6a6e56c42084123cbdcb22b3aefb0573 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_6a6e56c42084123cbdcb22b3aefb0573.html"];
+    dir_6a6e56c42084123cbdcb22b3aefb0573 [shape=plaintext label="math"];
+    dir_585a2c4db57723d1ed41810fdf196f20 [shape=box label="complex" color="black" fillcolor="white" style="filled" URL="dir_585a2c4db57723d1ed41810fdf196f20.html"];
+    dir_6d264dcb7ff31695947ba9ab14ff8e20 [shape=box label="RungeKutta" color="black" fillcolor="white" style="filled" URL="dir_6d264dcb7ff31695947ba9ab14ff8e20.html"];
+    dir_7d0e348bd4d9256fca1feb965a729276 [shape=box label="vector" color="red" fillcolor="white" style="filled" URL="dir_7d0e348bd4d9256fca1feb965a729276.html"];
+  }
+  }
+  dir_6a6e56c42084123cbdcb22b3aefb0573->dir_585a2c4db57723d1ed41810fdf196f20 [headlabel="2", labeldistance=1.5 headhref="dir_000097_000112.html"];
+}

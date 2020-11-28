@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="pmacc::random::distributions\l::detail::Uniform\< T_Type,\l T_RNGMethod, T_SFINAE \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1random_1_1distributions_1_1detail_1_1_uniform.html",tooltip="Only this must be specialized for different types."];
+}

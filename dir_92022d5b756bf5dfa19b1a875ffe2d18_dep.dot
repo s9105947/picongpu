@@ -1,0 +1,11 @@
+digraph "/tmp/tmp.I3T9wAlo9k/picongpu/include/picongpu/particles/bremsstrahlung" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a475bf9030c01e37ca980af240402fd6 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="particles" fontname="Helvetica", fontsize="10", URL="dir_a475bf9030c01e37ca980af240402fd6.html"]
+  dir_92022d5b756bf5dfa19b1a875ffe2d18 [shape=box, label="bremsstrahlung", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_92022d5b756bf5dfa19b1a875ffe2d18.html"];
+  }
+  dir_5cfede4be71155a80ba519f9359717a3 [shape=box label="particleToGrid" fillcolor="white" style="filled" color="red" URL="dir_5cfede4be71155a80ba519f9359717a3.html"];
+  dir_92022d5b756bf5dfa19b1a875ffe2d18->dir_5cfede4be71155a80ba519f9359717a3 [headlabel="1", labeldistance=1.5 headhref="dir_000039_000066.html"];
+}

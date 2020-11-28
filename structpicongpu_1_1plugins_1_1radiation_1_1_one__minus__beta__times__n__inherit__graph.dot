@@ -1,0 +1,9 @@
+digraph "picongpu::plugins::radiation::One_minus_beta_times_n"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="picongpu::plugins::\lradiation::One_minus\l_beta_times_n",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="picongpu::plugins::\lradiation::NyquistLowPass",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1plugins_1_1radiation_1_1_nyquist_low_pass.html",tooltip=" "];
+}

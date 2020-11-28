@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="picongpu::particles\l::filter::generic::FreeRng\l\< T_Functor, T_Distribution\l \>::apply\< T_SpeciesType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1particles_1_1filter_1_1generic_1_1_free_rng_1_1apply.html",tooltip=" "];
+}

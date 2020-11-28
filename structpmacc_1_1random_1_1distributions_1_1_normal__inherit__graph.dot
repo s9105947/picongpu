@@ -1,0 +1,9 @@
+digraph "pmacc::random::distributions::Normal&lt; T_Type, T_RNGMethod &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="pmacc::random::distributions\l::Normal\< T_Type, T_RNGMethod \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Returns a random, normal distributed value of the given type."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pmacc::random::distributions\l::detail::Normal\< T_Type,\l methods::RngPlaceholder \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1random_1_1distributions_1_1detail_1_1_normal.html",tooltip=" "];
+}

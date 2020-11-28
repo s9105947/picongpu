@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="pmacc::algorithms::\lpromoteType::promoteType\l\< PromoteToType, ::pmacc\l::math::Vector\< OldType,\l dim \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1algorithms_1_1promote_type_1_1promote_type_3_01_promote_to_type_00_01_1_1pmacc_1_ef5b46d4551a7134f0ee9e9f6d66ab7f.html",tooltip=" "];
+}

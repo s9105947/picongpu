@@ -1,0 +1,37 @@
+digraph "picongpu::MySimulation"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="picongpu::MySimulation",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Global simulation controller class."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pmacc::SimulationHelper\l\< simDim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_simulation_helper.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pmacc::IPlugin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_i_plugin.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pmacc::INotify",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_i_notify.html",tooltip=" "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" synchrotronFunctions" ,fontname="Helvetica"];
+  Node5 [label="picongpu::particles\l::synchrotronPhotons\l::SynchrotronFunctions",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1particles_1_1synchrotron_photons_1_1_synchrotron_functions.html",tooltip="Lookup table for synchrotron functions."];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cellDescription" ,fontname="Helvetica"];
+  Node6 [label="pmacc::MappingDescription\l\< DIM, SuperCellSize_ \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_mapping_description.html",tooltip="Abstracts logical block information from block variables."];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gridSizeLocal" ,fontname="Helvetica"];
+  Node7 [label="pmacc::DataSpace\< simDim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_data_space.html",tooltip=" "];
+  Node8 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="pmacc::math::Vector\l\< int, T_Dim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1math_1_1_vector.html",tooltip=" "];
+  Node9 -> Node8 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="pmacc::math::detail\l::Vector_components\l\< int, T_dim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1math_1_1detail_1_1_vector__components.html",tooltip=" "];
+  Node10 -> Node8 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="pmacc::math::StandardAccessor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1math_1_1_standard_accessor.html",tooltip=" "];
+  Node11 -> Node8 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="pmacc::math::StandardNavigator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1math_1_1_standard_navigator.html",tooltip=" "];
+  Node12 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" initialiserController" ,fontname="Helvetica"];
+  Node12 [label="picongpu::IInitPlugin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_i_init_plugin.html",tooltip=" "];
+  Node13 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="picongpu::ILightweightPlugin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_i_lightweight_plugin.html",tooltip="Interface for a lightweight simulation plugin without checkpoint/restart capabilities."];
+  Node14 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="picongpu::ISimulationPlugin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_i_simulation_plugin.html",tooltip="Interface for a simulation plugin in PIConGPU which has a MappingDesc."];
+  Node3 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" myFieldSolver" ,fontname="Helvetica"];
+  Node15 [label="picongpu::fields::maxwell\lSolver::Yee\< T_CurrentInterpolation,\l CurlE, CurlB \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1fields_1_1maxwell_solver_1_1_yee.html",tooltip=" "];
+}

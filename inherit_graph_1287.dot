@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="pmacc::random::distributions\l::detail::Uniform\< T_Type,\l T_RNGMethod, typename bmpl\l::if_c\< boost::is_integral\<\l T_Type \>::value &&sizeof(T_Type)\l==8, void, T_Type \>::type \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1random_1_1distributions_1_1detail_1_1_uniform_3_01_t___type_00_01_t___r_n_g_method57978c427758fa53877a878e9591279d.html",tooltip="Returns a random, uniformly distributed (up to) 64 bit integral value."];
+}

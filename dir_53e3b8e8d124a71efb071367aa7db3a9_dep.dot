@@ -1,0 +1,13 @@
+digraph "/tmp/tmp.I3T9wAlo9k/picongpu/include/picongpu/param" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_0f3240c9f2097d0f33ffb742f7982ee4 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="picongpu" fontname="Helvetica", fontsize="10", URL="dir_0f3240c9f2097d0f33ffb742f7982ee4.html"]
+  dir_53e3b8e8d124a71efb071367aa7db3a9 [shape=box, label="param", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_53e3b8e8d124a71efb071367aa7db3a9.html"];
+  }
+  dir_a475bf9030c01e37ca980af240402fd6 [shape=box label="particles" fillcolor="white" style="filled" color="red" URL="dir_a475bf9030c01e37ca980af240402fd6.html"];
+  dir_25029e4ec4a63cd3494f9c7166d3b243 [shape=box label="pmacc" fillcolor="white" style="filled" color="red" URL="dir_25029e4ec4a63cd3494f9c7166d3b243.html"];
+  dir_53e3b8e8d124a71efb071367aa7db3a9->dir_a475bf9030c01e37ca980af240402fd6 [headlabel="4", labeldistance=1.5 headhref="dir_000036_000022.html"];
+  dir_53e3b8e8d124a71efb071367aa7db3a9->dir_25029e4ec4a63cd3494f9c7166d3b243 [headlabel="1", labeldistance=1.5 headhref="dir_000036_000034.html"];
+}

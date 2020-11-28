@@ -1,0 +1,18 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1740 [label="apply1",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1740 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="picongpu::particles\l::traits::GenerateSolversIf\lSpeciesEligible\< T_Solver,\l T_SeqSpecies, T_Eligible\l \>::Op\< T_Species \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1particles_1_1traits_1_1_generate_solvers_if_species_eligible_1_1_op.html",tooltip=" "];
+  Node1740 -> Node1742 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1742 [label="picongpu::PluginController\l::TupleSpeciesPlugin::Apply\l\< T_TupleVector \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1_plugin_controller_1_1_tuple_species_plugin_1_1_apply.html",tooltip="apply the 1st vector component to the 2nd"];
+  Node1740 -> Node1743 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1743 [label="pmacc::meta::ForEach\l\< T_MPLSeq, T_Functor,\l T_Accessor \>::ReplacePlaceholder\< X \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1meta_1_1_for_each_1_1_replace_placeholder.html",tooltip=" "];
+  Node1740 -> Node1744 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1744 [label="pmacc::OperateOnSeq\l\< T_MPLSeq, T_UnaryOperator,\l T_Accessor \>::Op\< X \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1_operate_on_seq_1_1_op.html",tooltip=" "];
+  Node1740 -> Node1745 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1745 [label="pmacc::SeqToMap\< T\l_MPLSeq, T_UnaryOperator,\l T_Accessor \>::Op\< X \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1_seq_to_map_1_1_op.html",tooltip=" "];
+}

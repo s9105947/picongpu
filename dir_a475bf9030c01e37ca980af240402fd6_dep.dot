@@ -1,0 +1,31 @@
+digraph "/tmp/tmp.I3T9wAlo9k/picongpu/include/picongpu/particles" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_0f3240c9f2097d0f33ffb742f7982ee4 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="picongpu" fontname="Helvetica", fontsize="10", URL="dir_0f3240c9f2097d0f33ffb742f7982ee4.html"]
+  subgraph clusterdir_a475bf9030c01e37ca980af240402fd6 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_a475bf9030c01e37ca980af240402fd6.html"];
+    dir_a475bf9030c01e37ca980af240402fd6 [shape=plaintext label="particles"];
+    dir_b4a90a6f4dee0f2d4b762b0eeddad8da [shape=box label="access" color="black" fillcolor="white" style="filled" URL="dir_b4a90a6f4dee0f2d4b762b0eeddad8da.html"];
+    dir_34feea354ac281ccb3be6a2c7b001047 [shape=box label="boundary" color="black" fillcolor="white" style="filled" URL="dir_34feea354ac281ccb3be6a2c7b001047.html"];
+    dir_92022d5b756bf5dfa19b1a875ffe2d18 [shape=box label="bremsstrahlung" color="black" fillcolor="white" style="filled" URL="dir_92022d5b756bf5dfa19b1a875ffe2d18.html"];
+    dir_4bd519a21632b271122bc80fe265717e [shape=box label="creation" color="black" fillcolor="white" style="filled" URL="dir_4bd519a21632b271122bc80fe265717e.html"];
+    dir_7f9e1a5955aafe4d7ffbc989e607a784 [shape=box label="densityProfiles" color="black" fillcolor="white" style="filled" URL="dir_7f9e1a5955aafe4d7ffbc989e607a784.html"];
+    dir_aa3336165d4073644ede7f9bd47c0ee2 [shape=box label="filter" color="red" fillcolor="white" style="filled" URL="dir_aa3336165d4073644ede7f9bd47c0ee2.html"];
+    dir_e31077acfa5864a39c7fe450d9090216 [shape=box label="flylite" color="red" fillcolor="white" style="filled" URL="dir_e31077acfa5864a39c7fe450d9090216.html"];
+    dir_d68d558323d08d073827e2611d79d019 [shape=box label="functor" color="red" fillcolor="white" style="filled" URL="dir_d68d558323d08d073827e2611d79d019.html"];
+    dir_80ebaa6f7816bd1d041fe2a40ede0ef0 [shape=box label="interpolationMemoryPolicy" color="black" fillcolor="white" style="filled" URL="dir_80ebaa6f7816bd1d041fe2a40ede0ef0.html"];
+    dir_03bab2c8254aa3e4e97d33b23811d5c8 [shape=box label="ionization" color="red" fillcolor="white" style="filled" URL="dir_03bab2c8254aa3e4e97d33b23811d5c8.html"];
+    dir_4b949f0916b02188b262958894a89397 [shape=box label="manipulators" color="red" fillcolor="white" style="filled" URL="dir_4b949f0916b02188b262958894a89397.html"];
+    dir_5cfede4be71155a80ba519f9359717a3 [shape=box label="particleToGrid" color="red" fillcolor="white" style="filled" URL="dir_5cfede4be71155a80ba519f9359717a3.html"];
+    dir_af2c1329eeb2ec3523d1f9d979673bd9 [shape=box label="pusher" color="black" fillcolor="white" style="filled" URL="dir_af2c1329eeb2ec3523d1f9d979673bd9.html"];
+    dir_005d62ce10b0b5bdadaa67c46e9b4298 [shape=box label="shapes" color="black" fillcolor="white" style="filled" URL="dir_005d62ce10b0b5bdadaa67c46e9b4298.html"];
+    dir_f1f5b629eb012f318a512dbc6d311d90 [shape=box label="startPosition" color="red" fillcolor="white" style="filled" URL="dir_f1f5b629eb012f318a512dbc6d311d90.html"];
+    dir_eedb8cea3493bb1a2aa4ee87ff57908e [shape=box label="synchrotronPhotons" color="black" fillcolor="white" style="filled" URL="dir_eedb8cea3493bb1a2aa4ee87ff57908e.html"];
+    dir_d4fe5adf51fd890aa34f312d0faa737a [shape=box label="traits" color="black" fillcolor="white" style="filled" URL="dir_d4fe5adf51fd890aa34f312d0faa737a.html"];
+  }
+  }
+  dir_e31077acfa5864a39c7fe450d9090216->dir_5cfede4be71155a80ba519f9359717a3 [headlabel="1", labeldistance=1.5 headhref="dir_000048_000066.html"];
+  dir_92022d5b756bf5dfa19b1a875ffe2d18->dir_5cfede4be71155a80ba519f9359717a3 [headlabel="1", labeldistance=1.5 headhref="dir_000039_000066.html"];
+}

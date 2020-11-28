@@ -1,0 +1,12 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="picongpu::currentSolver\l::emz::BaseMethods\< Particle\lAssign \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1current_solver_1_1emz_1_1_base_methods.html",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="picongpu::currentSolver\l::emz::DepositCurrent\l\< ParticleAssign, T_begin,\l T_end, DIM2 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1current_solver_1_1emz_1_1_deposit_current_3_01_particle_assign_00_01_t__begin_00_01_t__end_00_01_d_i_m2_01_4.html",tooltip=" "];
+  Node0 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="picongpu::currentSolver\l::emz::DepositCurrent\l\< ParticleAssign, T_begin,\l T_end, DIM3 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1current_solver_1_1emz_1_1_deposit_current_3_01_particle_assign_00_01_t__begin_00_01_t__end_00_01_d_i_m3_01_4.html",tooltip=" "];
+}

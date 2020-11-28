@@ -1,0 +1,26 @@
+digraph "picongpu::plugins::multi::ISlave"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="picongpu::plugins::\lmulti::ISlave",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Interface for a slave plugin."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pmacc::INotify",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_i_notify.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="picongpu::BinEnergyParticles\l\< ParticlesType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_bin_energy_particles.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="picongpu::CalcEmittance\l\< ParticlesType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_calc_emittance.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="picongpu::EnergyParticles\l\< ParticlesType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_energy_particles.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="picongpu::IIOBackend",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_i_i_o_backend.html",tooltip="Interface for IO-backends with restart capability."];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="picongpu::adios::ADIOSWriter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1adios_1_1_a_d_i_o_s_writer.html",tooltip="Writes simulation data to adios files."];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="picongpu::hdf5::HDF5Writer",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1hdf5_1_1_h_d_f5_writer.html",tooltip="Writes simulation data to hdf5 files using libSplash."];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="picongpu::ParticleCalorimeter\l\< ParticlesType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_particle_calorimeter.html",tooltip="Virtual particle calorimeter plugin."];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="picongpu::PhaseSpace\l\< T_AssignmentFunction,\l T_Species \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_phase_space.html",tooltip=" "];
+}

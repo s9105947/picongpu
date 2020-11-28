@@ -1,0 +1,10 @@
+digraph "picongpu::particles::traits::SpeciesEligibleForSolver&lt; T_Species, particleToGrid::derivedAttributes::EnergyDensity &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="picongpu::particles\l::traits::SpeciesEligibleFor\lSolver\< T_Species, particleToGrid\l::derivedAttributes::EnergyDensity \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="picongpu::particles\l::traits::SpeciesEligibleFor\lSolver\< T_Species, particleToGrid\l::derivedAttributes::EnergyDensityCutoff\l\< T_ParamClass \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1particles_1_1traits_1_1_species_eligible_for_solver_3_01_t___species_00_01part90238ac42e600b526648202e2c74fb86.html",tooltip=" "];
+}

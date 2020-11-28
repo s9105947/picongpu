@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zero',['zero',['../classpicongpu_1_1_amplitude.html#a62b52f7fc08443d091cce8a4a251ecf1',1,'picongpu::Amplitude']]]
+  ['zero_4357',['zero',['../classpicongpu_1_1plugins_1_1radiation_1_1_amplitude.html#abdbe737223d3f11b4ebf4b5a397252cd',1,'picongpu::plugins::radiation::Amplitude']]]
 ];

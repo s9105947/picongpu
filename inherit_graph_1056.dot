@@ -1,0 +1,18 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1004 [label="InheritLinearly",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node1004 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="pmacc::InheritLinearly\l\< T_FrameType::MethodsList \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1_inherit_linearly.html",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="pmacc::Particle\< T\l_FrameType, T_ValueTypeSeq \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1_particle.html",tooltip="A single particle of a."];
+  Node1004 -> Node1007 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1007 [label="pmacc::InheritLinearly\l\< T_Map, NativeData \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1_inherit_linearly.html",tooltip=" "];
+  Node1007 -> Node1008 [dir="back",color="darkgreen",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1008 [label="pmacc::math::MapTuple\l\< T_Map, T_PodType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1math_1_1_map_tuple.html",tooltip=" "];
+  Node1004 -> Node1009 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1009 [label="pmacc::InheritLinearly\l\< T_Sequence, T_Accessor \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1_inherit_linearly.html",tooltip="type which inherits from multiple classes"];
+}

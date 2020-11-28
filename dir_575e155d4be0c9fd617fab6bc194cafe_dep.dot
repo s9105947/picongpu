@@ -1,0 +1,14 @@
+digraph "/tmp/tmp.I3T9wAlo9k/picongpu/include/picongpu/particles/ionization/byCollision" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_03bab2c8254aa3e4e97d33b23811d5c8 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="ionization" fontname="Helvetica", fontsize="10", URL="dir_03bab2c8254aa3e4e97d33b23811d5c8.html"]
+  subgraph clusterdir_575e155d4be0c9fd617fab6bc194cafe {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_575e155d4be0c9fd617fab6bc194cafe.html"];
+    dir_575e155d4be0c9fd617fab6bc194cafe [shape=plaintext label="byCollision"];
+    dir_c24c202be9737ba5351ca0b9a87b6f85 [shape=box label="ThomasFermi" color="black" fillcolor="white" style="filled" URL="dir_c24c202be9737ba5351ca0b9a87b6f85.html"];
+  }
+  }
+  dir_575e155d4be0c9fd617fab6bc194cafe->dir_c24c202be9737ba5351ca0b9a87b6f85 [headlabel="1", labeldistance=1.5 headhref="dir_000057_000059.html"];
+}

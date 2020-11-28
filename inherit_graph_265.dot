@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="picongpu::particles\l::bremsstrahlung::ScaledSpectrum",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1particles_1_1bremsstrahlung_1_1_scaled_spectrum.html",tooltip="Generates and holds the lookup tables for the scaled differential cross section and the stopping powe..."];
+}

@@ -1,0 +1,15 @@
+digraph "picongpu::fields::EMFieldBase"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="picongpu::fields::EMFieldBase",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Base class for implementation inheritance in classes for the electromagnetic fields."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pmacc::SimulationFieldHelper\l\< MappingDesc \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_simulation_field_helper.html",tooltip=" "];
+  Node3 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pmacc::ISimulationData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_i_simulation_data.html",tooltip="Interface for simulation data which should be registered at DataConnector for file output,..."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="picongpu::FieldB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_field_b.html",tooltip="Representation of the magnetic field."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="picongpu::FieldE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_field_e.html",tooltip="Representation of the electric field."];
+}

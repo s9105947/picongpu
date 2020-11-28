@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="pmacc::test::particles\l::memory::TestNumParticlesLast\lFrame\< T_SuperCell \>::FrameTypeDummy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1test_1_1particles_1_1memory_1_1_test_num_particles_last_frame_1_1_frame_type_dummy.html",tooltip=" "];
+}

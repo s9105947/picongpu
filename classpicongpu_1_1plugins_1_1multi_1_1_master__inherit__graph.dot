@@ -1,0 +1,13 @@
+digraph "picongpu::plugins::multi::Master&lt; T_Slave &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="picongpu::plugins::\lmulti::Master\< T_Slave \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Master class to create multi plugins."];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="picongpu::ISimulationPlugin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_i_simulation_plugin.html",tooltip="Interface for a simulation plugin in PIConGPU which has a MappingDesc."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pmacc::IPlugin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_i_plugin.html",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pmacc::INotify",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_i_notify.html",tooltip=" "];
+}

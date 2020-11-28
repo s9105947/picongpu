@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="picongpu::particles\l::traits::SpeciesEligibleFor\lSolver\< T_Species, BinEnergyParticles\l\< T_UnspecifiedSpecies \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1particles_1_1traits_1_1_species_eligible_for_solver_3_01_t___species_00_01_bin0f45bbc6795c27dee2e50b24ad311bbb.html",tooltip=" "];
+}

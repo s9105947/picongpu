@@ -1,0 +1,19 @@
+digraph "picongpu::IInitPlugin"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="picongpu::IInitPlugin",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="picongpu::ILightweightPlugin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_i_lightweight_plugin.html",tooltip="Interface for a lightweight simulation plugin without checkpoint/restart capabilities."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="picongpu::ISimulationPlugin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_i_simulation_plugin.html",tooltip="Interface for a simulation plugin in PIConGPU which has a MappingDesc."];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pmacc::IPlugin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_i_plugin.html",tooltip=" "];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pmacc::INotify",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_i_notify.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="picongpu::InitialiserController",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_initialiser_controller.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="picongpu::InitPluginNone",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_init_plugin_none.html",tooltip=" "];
+}

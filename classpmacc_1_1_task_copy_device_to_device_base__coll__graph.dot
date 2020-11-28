@@ -1,0 +1,19 @@
+digraph "pmacc::TaskCopyDeviceToDeviceBase&lt; TYPE, DIM &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="pmacc::TaskCopyDeviceToDevice\lBase\< TYPE, DIM \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pmacc::StreamTask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_stream_task.html",tooltip="Abstract base class for all tasks which depend on cuda streams."];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pmacc::ITask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_i_task.html",tooltip="Abstract base class for all tasks."];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pmacc::EventNotify",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_event_notify.html",tooltip="Implements an observable."];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pmacc::IEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_i_event.html",tooltip="Interface for an observer."];
+  Node6 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" stream" ,fontname="Helvetica"];
+  Node6 [label="pmacc::EventStream",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_event_stream.html",tooltip="Wrapper for a single cuda stream."];
+  Node7 -> Node2 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cudaEvent" ,fontname="Helvetica"];
+  Node7 [label="pmacc::CudaEventHandle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_cuda_event_handle.html",tooltip="handle to CudaEvent"];
+}

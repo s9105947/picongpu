@@ -1,0 +1,9 @@
+digraph "picongpu::traits::FieldPosition&lt; fields::cellType::Centered, FieldB, T_simDim &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="picongpu::traits::FieldPosition\l\< fields::cellType::Centered,\l FieldB, T_simDim \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="position (floatD_X in case of T_simDim == simDim) in cell for B_x, B_y, B_z"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="picongpu::traits::FieldPosition\l\< fields::cellType::Centered,\l FieldE, T_simDim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1traits_1_1_field_position_3_01fields_1_1cell_type_1_1_centered_00_01_field_e_00_01_t__sim_dim_01_4.html",tooltip="position (floatD_X in case of T_simDim == simDim) in cell for E_x, E_y, E_z"];
+}

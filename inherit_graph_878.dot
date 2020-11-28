@@ -1,0 +1,30 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node212 [label="type",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node212 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="pmacc::container::CartBuffer\l\< float_PS, T_dim, allocator\l::DeviceMemAllocator\< float\l_PS, T_dim \>, copier::D2DCopier\l\< T_dim \>, assigner::DeviceMemAssigner\<\> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1container_1_1_cart_buffer.html",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="pmacc::container::Device\lBuffer\< float_PS, 2 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1container_1_1_device_buffer.html",tooltip=" "];
+  Node212 -> Node215 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node215 [label="pmacc::container::CartBuffer\l\< Type, dim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1container_1_1_cart_buffer.html",tooltip=" "];
+  Node215 -> Node216 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node216 [label="pmacc::container::Pseudo\lBuffer\< Type, dim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1container_1_1_pseudo_buffer.html",tooltip=" "];
+  Node212 -> Node217 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node217 [label="pmacc::container::CartBuffer\l\< Type, T_dim, allocator\l::DeviceMemAllocator\< Type,\l T_dim \>, copier::D2DCopier\l\< T_dim \>, assigner::DeviceMemAssigner\<\> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1container_1_1_cart_buffer.html",tooltip=" "];
+  Node217 -> Node218 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node218 [label="pmacc::container::Device\lBuffer\< Type, T_dim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1container_1_1_device_buffer.html",tooltip="typedef version of a CartBuffer for a GPU."];
+  Node212 -> Node219 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node219 [label="pmacc::container::CartBuffer\l\< Type, T_dim, allocator\l::HostMemAllocator\< Type,\l T_dim \>, copier::H2HCopier\l\< T_dim \>, assigner::HostMemAssigner\<\> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1container_1_1_cart_buffer.html",tooltip=" "];
+  Node219 -> Node220 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node220 [label="pmacc::container::HostBuffer\l\< Type, T_dim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1container_1_1_host_buffer.html",tooltip="typedef version of a CartBuffer for a CPU."];
+  Node212 -> Node221 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node221 [label="pmacc::container::CartBuffer\l\< Vector\< float_X, 3 \>, T\l_dim, allocator::DeviceMemAllocator\l\< Vector\< float_X, 3 \>, T_dim \>,\l copier::D2DCopier\< T_dim \>, assigner\l::DeviceMemAssigner\<\> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1container_1_1_cart_buffer.html",tooltip=" "];
+  Node221 -> Node222 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node222 [label="pmacc::container::Device\lBuffer\< Vector\< float\l_X, 3 \>, simDim-1 \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1container_1_1_device_buffer.html",tooltip=" "];
+  Node212 -> Node223 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node223 [label="pmacc::container::CartBuffer\l\< Type, T_dim, Allocator,\l Copier, Assigner \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1container_1_1_cart_buffer.html",tooltip="Implementation of a box-shaped (cartesian) container type."];
+}

@@ -1,0 +1,16 @@
+digraph "/tmp/tmp.I3T9wAlo9k/picongpu/include/picongpu/particles/ionization" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_a475bf9030c01e37ca980af240402fd6 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="particles" fontname="Helvetica", fontsize="10", URL="dir_a475bf9030c01e37ca980af240402fd6.html"]
+  subgraph clusterdir_03bab2c8254aa3e4e97d33b23811d5c8 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_03bab2c8254aa3e4e97d33b23811d5c8.html"];
+    dir_03bab2c8254aa3e4e97d33b23811d5c8 [shape=plaintext label="ionization"];
+    dir_575e155d4be0c9fd617fab6bc194cafe [shape=box label="byCollision" color="red" fillcolor="white" style="filled" URL="dir_575e155d4be0c9fd617fab6bc194cafe.html"];
+    dir_913891e9dfe3dbafb34cd412af50801a [shape=box label="byField" color="red" fillcolor="white" style="filled" URL="dir_913891e9dfe3dbafb34cd412af50801a.html"];
+    dir_96af69bb850e6fe5e00ae9ab7c581dc7 [shape=box label="None" color="black" fillcolor="white" style="filled" URL="dir_96af69bb850e6fe5e00ae9ab7c581dc7.html"];
+  }
+  }
+  dir_913891e9dfe3dbafb34cd412af50801a->dir_96af69bb850e6fe5e00ae9ab7c581dc7 [headlabel="1", labeldistance=1.5 headhref="dir_000058_000063.html"];
+}

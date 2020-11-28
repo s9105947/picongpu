@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="pmacc::particles::traits\l::ResolveAliasFromSpecies\l\< T_SpeciesType, T_Alias \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1particles_1_1traits_1_1_resolve_alias_from_species.html",tooltip="Resolves a custom alias in the flag list of a particle species."];
+}

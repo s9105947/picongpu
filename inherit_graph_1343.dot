@@ -1,0 +1,44 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node946 [label="pmacc::ISimulationData",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_i_simulation_data.html",tooltip="Interface for simulation data which should be registered at DataConnector for file output,..."];
+  Node946 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="picongpu::FieldJ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_field_j.html",tooltip="Representation of the current density field."];
+  Node946 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="picongpu::fields::EMFieldBase",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1fields_1_1_e_m_field_base.html",tooltip="Base class for implementation inheritance in classes for the electromagnetic fields."];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="picongpu::FieldB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_field_b.html",tooltip="Representation of the magnetic field."];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="picongpu::FieldE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_field_e.html",tooltip="Representation of the electric field."];
+  Node946 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="picongpu::fields::maxwell\lSolver::yeePML::Field",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1fields_1_1maxwell_solver_1_1yee_p_m_l_1_1_field.html",tooltip="Base class for implementation inheritance in classes for the electromagnetic fields in PML."];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="picongpu::fields::maxwell\lSolver::yeePML::FieldB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1fields_1_1maxwell_solver_1_1yee_p_m_l_1_1_field_b.html",tooltip="Representation of the additinal magnetic field components in PML."];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="picongpu::fields::maxwell\lSolver::yeePML::FieldE",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1fields_1_1maxwell_solver_1_1yee_p_m_l_1_1_field_e.html",tooltip="Representation of the additinal electric field components in PML."];
+  Node946 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="picongpu::FieldTmp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_field_tmp.html",tooltip="Representation of the temporary scalar field for plugins and temporary particle data mapped to grid (..."];
+  Node946 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="picongpu::Particles\l\< T_Name, T_Flags, T\l_Attributes \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1_particles.html",tooltip="particle species"];
+  Node946 -> Node947 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node947 [label="picongpu::particles\l::flylite::helperFields\l::LocalDensity",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1particles_1_1flylite_1_1helper_fields_1_1_local_density.html",tooltip=" "];
+  Node946 -> Node948 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node948 [label="picongpu::particles\l::flylite::helperFields\l::LocalEnergyHistogram",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1particles_1_1flylite_1_1helper_fields_1_1_local_energy_histogram.html",tooltip=" "];
+  Node946 -> Node949 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node949 [label="picongpu::particles\l::flylite::helperFields\l::LocalRateMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpicongpu_1_1particles_1_1flylite_1_1helper_fields_1_1_local_rate_matrix.html",tooltip=" "];
+  Node946 -> Node950 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node950 [label="pmacc::MallocMCBuffer\l\< T_DeviceHeap \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_malloc_m_c_buffer.html",tooltip=" "];
+  Node946 -> Node951 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node951 [label="pmacc::random::RNGProvider\l\< T_dim, T_RNGMethod \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1random_1_1_r_n_g_provider.html",tooltip="Provider of a per cell random number generator."];
+  Node0 [label="pmacc::SimulationFieldHelper\l\< MappingDesc \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_simulation_field_helper.html",tooltip=" "];
+  Node0 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="pmacc::ParticlesBase\l\< ParticleDescription\l\< T_Name, SuperCellSize,\l T_Attributes, T_Flags,\l bmpl::if_\< bmpl::contains\l\< T_Flags, GetKeyFromAlias\l\< T_Flags, boundaryCondition\l\< \> \>::type \>, pmacc::traits\l::Resolve\< GetKeyFromAlias\< T\l_Flags, boundaryCondition\< \> \>\l::type \>::type, pmacc::HandleGuardRegion\l\< pmacc::particles::policies::ExchangeParticles,\l particles::boundary::CallPluginsAndDeleteParticles\l \> \>::type \>, MappingDesc, DeviceHeap \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_particles_base.html",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

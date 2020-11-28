@@ -1,0 +1,38 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node319 [label="T_Filter",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node319 -> Node318 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node318 [label="pmacc::functor::acc\l::Filtered\< T_FilterOperator,\l T_Filter, T_Functor \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1functor_1_1acc_1_1_filtered.html",tooltip="interface to combine a filter and a functor on the accelerator"];
+  Node308 [label="T_Functor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node308 -> Node309 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node309 [label="pmacc::functor::Interface\l\< T_Functor, T_numFunctorArguments,\l void \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1functor_1_1_interface.html",tooltip=" "];
+  Node309 -> Node288 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node288 [label="pmacc::functor::Filtered\l\< T_FilterOperator, filter\l::Interface\< T_Filter, 1u\l \>, Interface\< T_Functor, T\l_numFunctorArguments, void \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1functor_1_1_filtered_3_01_t___filter_operator_00_01filter_1_1_interface_3_01_t___bdfa8dbdd55fb04fe29d2102e926af65.html",tooltip="specialization of Filtered (with unary filter)"];
+  Node308 -> Node310 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node310 [label="picongpu::particles\l::filter::generic::acc\l::Free\< T_Functor \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1particles_1_1filter_1_1generic_1_1acc_1_1_free.html",tooltip="wrapper for the user filter on the accelerator"];
+  Node308 -> Node311 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node311 [label="picongpu::particles\l::filter::generic::acc\l::FreeRng\< T_Functor,\l T_RngType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1particles_1_1filter_1_1generic_1_1acc_1_1_free_rng.html",tooltip=" "];
+  Node308 -> Node312 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node312 [label="picongpu::particles\l::filter::generic::acc\l::FreeTotalCellOffset\l\< T_Functor \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1particles_1_1filter_1_1generic_1_1acc_1_1_free_total_cell_offset.html",tooltip=" "];
+  Node308 -> Node313 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node313 [label="picongpu::particles\l::manipulators::generic\l::acc::Free\< T_Functor \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1particles_1_1manipulators_1_1generic_1_1acc_1_1_free.html",tooltip="wrapper for the user manipulator functor on the accelerator"];
+  Node308 -> Node314 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node314 [label="picongpu::particles\l::manipulators::generic\l::acc::FreeRng\< T_Functor,\l T_RngType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1particles_1_1manipulators_1_1generic_1_1acc_1_1_free_rng.html",tooltip=" "];
+  Node308 -> Node315 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node315 [label="picongpu::particles\l::manipulators::unary\l::acc::FreeTotalCellOffset\l\< T_Functor \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1particles_1_1manipulators_1_1unary_1_1acc_1_1_free_total_cell_offset.html",tooltip=" "];
+  Node308 -> Node316 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node316 [label="picongpu::particles\l::startPosition::generic\l::acc::Free\< T_Functor \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1particles_1_1start_position_1_1generic_1_1acc_1_1_free.html",tooltip="wrapper for the user functor on the accelerator"];
+  Node308 -> Node317 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node317 [label="picongpu::particles\l::startPosition::generic\l::acc::FreeRng\< T_Functor,\l T_RngType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1particles_1_1start_position_1_1generic_1_1acc_1_1_free_rng.html",tooltip=" "];
+  Node308 -> Node318 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node285 [label="T_UserFunctor",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled",tooltip=" "];
+  Node285 -> Node0 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 [label="pmacc::functor::acc\l::Interface\< T_UserFunctor,\l T_numArguments, T_ReturnType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1functor_1_1acc_1_1_interface.html",tooltip="functor interface used on the accelerator side"];
+  Node285 -> Node287 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node287 [label="pmacc::functor::Interface\l\< T_UserFunctor, T_numArguments,\l T_ReturnType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpmacc_1_1functor_1_1_interface.html",tooltip="Interface for a user functor."];
+  Node287 -> Node288 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+}

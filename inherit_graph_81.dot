@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="picongpu::DifferenceToLower\l\< T_dim \>::GetDifference\l\< T_direction, false \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1_difference_to_lower_1_1_get_difference_3_01_t__direction_00_01false_01_4.html",tooltip="special case for direction >= simulation dimensions"];
+}

@@ -1,0 +1,24 @@
+digraph "pmacc::MultiGridBuffer&lt; Type_, DIM, BufferNames, BORDERTYPE &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="pmacc::MultiGridBuffer\l\< Type_, DIM, BufferNames,\l BORDERTYPE \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="GridBuffer represents a DIM-dimensional buffer which exists on the host as well as on the device."];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" blobHostBuffer" ,fontname="Helvetica"];
+  Node2 [label="pmacc::HostBufferIntern\l\< Type, DIM \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_host_buffer_intern.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pmacc::HostBuffer\<\l Type, DIM \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_host_buffer.html",tooltip=" "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" gridBuffers" ,fontname="Helvetica"];
+  Node4 [label="pmacc::GridBuffer\<\l TYPE, DIM, BORDERTYPE \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_grid_buffer.html",tooltip="GridBuffer represents a DIM-dimensional buffer which exists on the host as well as on the device."];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pmacc::HostDeviceBuffer\l\< TYPE, DIM \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_host_device_buffer.html",tooltip=" "];
+  Node6 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sendMask\nreceiveMask" ,fontname="Helvetica"];
+  Node6 [label="pmacc::Mask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_mask.html",tooltip="Mask is used to describe in which directions data must be sent/received or where a grid node has neig..."];
+  Node7 -> Node4 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" sendEvents\nreceiveEvents" ,fontname="Helvetica"];
+  Node7 [label="pmacc::EventTask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_event_task.html",tooltip="EventTask is used for task-synchronization in the event system."];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" blobDeviceBuffer" ,fontname="Helvetica"];
+  Node8 [label="pmacc::DeviceBufferIntern\l\< Type, DIM \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_device_buffer_intern.html",tooltip=" "];
+  Node9 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="pmacc::DeviceBuffer\l\< Type, DIM \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_device_buffer.html",tooltip=" "];
+}

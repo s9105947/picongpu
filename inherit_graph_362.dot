@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="picongpu::particles\l::particleToGrid::detail\l::GetAttributeShape\< T\l_Species, derivedAttributes\l::MacroCounter \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1particles_1_1particle_to_grid_1_1detail_1_1_get_attribute_shape_3_01_t___speci399988cef4a3c87e51b2c3fd4444a9f0.html",tooltip=" "];
+}

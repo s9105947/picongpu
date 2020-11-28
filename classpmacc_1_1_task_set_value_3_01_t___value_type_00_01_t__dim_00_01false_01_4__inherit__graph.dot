@@ -1,0 +1,17 @@
+digraph "pmacc::TaskSetValue&lt; T_ValueType, T_dim, false &gt;"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="pmacc::TaskSetValue\l\< T_ValueType, T_dim,\l false \>",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="implementation for big values (>256 byte)"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="pmacc::TaskSetValueBase\l\< T_ValueType, T_dim \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_task_set_value_base.html",tooltip=" "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="pmacc::StreamTask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_stream_task.html",tooltip="Abstract base class for all tasks which depend on cuda streams."];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="pmacc::ITask",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_i_task.html",tooltip="Abstract base class for all tasks."];
+  Node5 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="pmacc::EventNotify",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_event_notify.html",tooltip="Implements an observable."];
+  Node6 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="pmacc::IEvent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classpmacc_1_1_i_event.html",tooltip="Interface for an observer."];
+}

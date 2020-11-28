@@ -1,0 +1,8 @@
+digraph "Graphical Class Hierarchy"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="picongpu::templates\l::twts::detail::RotateField\l\< pmacc::math::Vector\< T\l_Type, 2 \>, T_AngleType \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpicongpu_1_1templates_1_1twts_1_1detail_1_1_rotate_field_3_01pmacc_1_1math_1_1_vector_3_0113e1c7cd27fd27473a8d25ec65e97f26.html",tooltip=" "];
+}
