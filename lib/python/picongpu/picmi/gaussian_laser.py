@@ -1,5 +1,4 @@
-from ..pypicongpu import util
-from ..pypicongpu.laser import GaussianLaser
+from ..pypicongpu import util, laser
 
 import picmistandard
 
@@ -10,7 +9,7 @@ from typeguard import typechecked
 class GaussianLaser(picmistandard.PICMI_GaussianLaser):
     """PICMI object for Gaussian Laser"""
 
-    def get_as_pypicongpu(self) -> GaussianLaser:
+    def get_as_pypicongpu(self) -> laser.GaussianLaser:
         util.unsupported("laser name", self.name)
         util.unsupported("laser zeta", self.zeta)
         util.unsupported("laser beta", self.beta)
@@ -24,22 +23,22 @@ class GaussianLaser(picmistandard.PICMI_GaussianLaser):
         assert [0, 0, 0] == self.centroid_position, "centroid must be 0,0,0"
 
         polarization_by_normal = {
-            (1, 0, 0): GaussianLaser.PolarizationType.LINEAR_X,
-            (0, 0, 1): GaussianLaser.PolarizationType.LINEAR_Z,
+            (1, 0, 0): laser.GaussianLaser.PolarizationType.LINEAR_X,
+            (0, 0, 1): laser.GaussianLaser.PolarizationType.LINEAR_Z,
         }
         assert tuple(self.polarization_direction) in polarization_by_normal, \
             "only laser polarization [1, 0, 0] and [0, 0, 1] supported"
 
-        laser = GaussianLaser()
-        laser.wavelength = self.wavelength
-        laser.waist = self.waist
-        laser.duration = self.duration
-        laser.focus_pos = self.focal_position[1]
-        laser.E0 = self.E0
-        laser.phase = 0
-        laser.pulse_init = 15
-        laser.init_plane_y = 0
-        laser.polarization_type = polarization_by_normal[
+        pypicongpu_laser = laser.GaussianLaser()
+        pypicongpu_laser.wavelength = self.wavelength
+        pypicongpu_laser.waist = self.waist
+        pypicongpu_laser.duration = self.duration
+        pypicongpu_laser.focus_pos = self.focal_position[1]
+        pypicongpu_laser.E0 = self.E0
+        pypicongpu_laser.phase = 0
+        pypicongpu_laser.pulse_init = 15
+        pypicongpu_laser.init_plane_y = 0
+        pypicongpu_laser.polarization_type = polarization_by_normal[
             tuple(self.polarization_direction)]
 
-        return laser
+        return pypicongpu_laser

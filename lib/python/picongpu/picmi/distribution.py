@@ -76,7 +76,8 @@ class AnalyticDistribution(picmistandard.PICMI_AnalyticDistribution):
         util.unsupported("momentum expressions", self.momentum_expressions)
         util.unsupported("fill in", self.fill_in)
 
-        prof = species.attributes.position.profile.Analytic()
+        # TODO
+        prof = object()
         prof.lower_bound = tuple(map(lambda x: -math.inf if x is None else x,
                                      self.lower_bound))
         prof.upper_bound = tuple(map(lambda x: math.inf if x is None else x,
@@ -112,7 +113,8 @@ class GaussianBunchDistribution(picmistandard.PICMI_GaussianBunchDistribution):
 
     def get_as_pypicongpu(
             self) -> species.operation.densityprofile.DensityProfile:
-        prof = species.attributes.position.profile.GaussianCloud()
+        # TODO
+        prof = object()
         prof.lower_bound = (-math.inf, -math.inf, -math.inf)
         prof.upper_bound = (math.inf, math.inf, math.inf)
         prof.rms_bunch_size_si = self.rms_bunch_size
