@@ -65,12 +65,15 @@ class RenderedObject:
         # -> find source of pypicongpu repo,
         # from there derive schema location
         here = pathlib.Path(__file__)
-        schemas_path = here.parents[4] / "share/pypicongpu/schema"
+        schemas_path = here.parents[5] / "share/picongpu/pypicongpu/schema"
         json_fileending_re = re.compile(r"[.]json$")
         all_json_files = list(
             filter(lambda p: json_fileending_re.search(str(p)),
                    filter(lambda p: p.is_file(),
                           pathlib.Path(schemas_path).rglob("*"))))
+
+        logging.debug("found {} schemas in {}".format(len(all_json_files),
+                                                      schemas_path))
 
         RenderedObject._schema_by_uri = {}
         for json_file_path in all_json_files:
