@@ -56,23 +56,25 @@ namespace picongpu
                 //! Use only the 0th Laguerremode for a standard Gaussian
                 static constexpr uint32_t MODENUMBER = 0;
                 PMACC_CONST_VECTOR(float_X, MODENUMBER + 1, LAGUERREMODES, 1.0);
-                // This is just an example for a more complicated set of Laguerre modes
-                // constexpr uint32_t MODENUMBER = 12;
-                // PMACC_CONST_VECTOR(float_X, MODENUMBER + 1, LAGUERREMODES, -1.0, 0.0300519, 0.319461, -0.23783,
-                // 0.0954839, 0.0318653, -0.144547, 0.0249208, -0.111989, 0.0434385, -0.030038, -0.00896321,
-                // -0.0160788);
-
+                PMACC_CONST_VECTOR(float_X, MODENUMBER + 1, LAGUERREPHASES, 1.0);
             } // namespace gaussianBeam
 
             {{#laser}}
-            struct pypicongpu_gaussian_laser_t
+            struct pypicongpu_gaussian_laser_param_t
             {
                 static constexpr float_64 WAVE_LENGTH_SI = {{{wave_length_si}}};
                 static constexpr float_64 AMPLITUDE_SI = {{{E0_si}}};
                 static constexpr float_64 PULSE_LENGTH_SI = {{{pulse_length_si}}};
                 static constexpr float_64 W0_SI = {{{waist_si}}};
                 static constexpr float_64 FOCUS_POS_SI = {{{focus_pos_si}}};
+                static constexpr float_64 PULSE_INIT = {{{pulse_init}}};
+                static constexpr uint32_t initPlaneY = {{{init_plane_y}}};
                 static constexpr float_X LASER_PHASE = {{{phase}}};
+
+                using LAGUERREMODES_t = gaussianBeam::LAGUERREMODES_t;
+                using LAGUERREPHASES_t = gaussianBeam::LAGUERREPHASES_t;
+                static constexpr uint32_t MODENUMBER = gaussianBeam::MODENUMBER;
+
                 enum PolarisationType
                 {
                     LINEAR_X = 1u,
@@ -80,12 +82,8 @@ namespace picongpu
                     CIRCULAR = 4u,
                 };
                 static constexpr PolarisationType Polarisation = {{{polarization_type}}};
-                static constexpr float_64 PULSE_INIT = {{{pulse_init}}};
-                static constexpr uint32_t initPlaneY = {{{init_plane_y}}};
-                using LAGUERREMODES_t = picongpu::fields::laserProfiles::gaussianBeam::LAGUERREMODES_t;
-                static constexpr uint32_t MODENUMBER = gaussianBeam::MODENUMBER;
             };
-            using Selected = GaussianBeam<pypicongpu_gaussian_laser_t>;
+            using Selected = GaussianBeam<pypicongpu_gaussian_laser_param_t>;
             {{/laser}}
 
             {{^laser}}
