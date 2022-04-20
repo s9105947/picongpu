@@ -37,6 +37,38 @@
         "polarization_type": {
             "type": "string",
             "pattern": "^(LINEAR_X|LINEAR_Z|CIRCULAR)$"
+        },
+        "laguerre_modes": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "required": ["single_laguerre_mode"],
+                "unevaluatedProperties": false,
+                "properties": {
+                    "single_laguerre_mode": {
+                        "type": "number"
+                    }
+                }   
+            }
+        },
+        "laguerre_phases": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "required": ["single_laguerre_phase"],
+                "unevaluatedProperties": false,
+                "properties": {
+                    "single_laguerre_phase": {
+                        "type": "number"
+                    }
+                }   
+            }
+        },
+        "modenumber": {
+            "type": "integer",
+            "minimum": 0
         }
     },
     "required": [
@@ -48,7 +80,10 @@
         "E0_si",
         "pulse_init",
         "init_plane_y",
-        "polarization_type"
+        "polarization_type",
+        "laguerre_modes",
+        "laguerre_phases",
+        "modenumber"
     ],
     "unevaluatedProperties": false
 }
