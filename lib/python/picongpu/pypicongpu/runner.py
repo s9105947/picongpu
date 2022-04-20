@@ -141,7 +141,8 @@ class Runner():
 
         If not given the paths are guessed as follows:
 
-        - If not given the scratch dir is the value of the environment variable $SCRATCH
+        - If not given the scratch dir is the value of the environment variable
+          $SCRATCH
         - If not given the run dir is derived from the scratch dir.
         - If neither run nor scratch dir are given,
           a warning is printed that the run is considered temporary and
@@ -163,14 +164,16 @@ class Runner():
         require circular imports. Type of sim is checked manually.
 
         :param sim: simulation to be built
-        :param pypicongpu_template_dir: path to pypicongpu template to be copied, guessed by default
+        :param pypicongpu_template_dir: path to pypicongpu template to be
+        copied, guessed by default
         :param scratch_dir: directory where results can be stored
-        :param setup_dir: not-yet existing directory where build files (.params, built binary, etc.) will be stored
+        :param setup_dir: not-yet existing directory where build files
+        (.params, built binary, etc.) will be stored
         :param run_dir: not-yet existing directory where results will be stored
         """
 
         # note: only import here to prevent circular imports
-        from . import picmi
+        from .. import picmi
 
         if isinstance(sim, Simulation):
             self.sim = sim
@@ -214,7 +217,7 @@ class Runner():
 
     def __helper_set_pypicongpu_template_dir(
             self, pypicongpu_template_dir: typing.Optional[str]) -> None:
-        """sets the pypicongpu template dir according to description in __init__()"""
+        """sets the pypicongpu template dir as described in __init__()"""
         # guess template
         # store in private var, because people should not mess with it
         if pypicongpu_template_dir is None:
@@ -222,9 +225,9 @@ class Runner():
             # from there derive template location
             self.__pypicongpu_template_dir = \
                 path.join(reduce(lambda x, f: f(x),
-                                 [path.dirname] * 4,
+                                 [path.dirname] * 5,
                                  __file__),
-                          "share/pypicongpu/template")
+                          "share/picongpu/pypicongpu/template")
         else:
             self.__pypicongpu_template_dir = \
                 path.abspath(pypicongpu_template_dir)

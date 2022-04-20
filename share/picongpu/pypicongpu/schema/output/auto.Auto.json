@@ -1,0 +1,49 @@
+{
+    "$id": "https://registry.hzdr.de/crp/picongpu/schema/picongpu.pypicongpu.output.auto.Auto",
+    "description": "enable as many output plugins as feasable with only the period specified",
+    "type": "object",
+    "unevaluatedProperties": false,
+    "required": ["period", "phase_space_axis", "png_axis"],
+    "properties": {
+        "period": {
+            "description": "number of time steps: at each multiple output is generated",
+            "type": "integer",
+            "minimum": 1
+        },
+        "phase_space_axis": {
+            "description": "axis (space, momentum) for which to activate phase space plugin",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["space", "momentum"],
+                "unevaluatedProperties": false,
+                "properties": {
+                    "space": {
+                        "type": "string",
+                        "pattern": "^x|y|z$"
+                    },
+                    "momentum": {
+                        "type": "string",
+                        "pattern": "^p(x|y|z)$"
+                    }
+                }
+            }
+        },
+        "png_axis": {
+            "description": "axis pairs (i.e. planes) for which to generate png output",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["axis"],
+                "unevaluatedProperties": false,
+                "properties": {
+                    "axis": {
+                        "description": "actually a plane of two axis, but name follows PIConGPU",
+                        "type": "string",
+                        "pattern": "^(x|y|z)(x|y|z)$"
+                    }
+                }
+            }
+        }
+    }
+}
