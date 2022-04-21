@@ -472,7 +472,7 @@ class Simulation(picmistandard.PICMI_Simulation):
         if self.__runner is not None:
             logging.warning("runner already initialized, overwriting")
         self.__runner = runner.Runner(self.get_as_pypicongpu(),
-                                      out_dir=file_name)
+                                      setup_dir=file_name)
         self.__runner.generate()
 
     def step(self, nsteps: int = 1):

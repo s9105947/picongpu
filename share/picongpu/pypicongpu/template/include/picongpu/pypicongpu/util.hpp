@@ -10,7 +10,7 @@ namespace picongpu {
              * functor for initpipeline: does nothing
              *
              * Does *NOT* have an operator(), b/c should not be called anyways.
-             * (Which is ensured via template specialization of the struct TODO usually handling init operations.)
+             * (Which is ensured via template specialization of the struct for handling init operations pmacc::functor::Call below.)
              *
              * Background: Code generation creates trailing commas, this functor "catches" the final trailing comma (i.e. prevents a syntax error).
              *
@@ -26,7 +26,6 @@ namespace picongpu {
 
 namespace pmacc {
     namespace functor {
-
         /**
          * specialization for pypicongpu nop functor
          *
