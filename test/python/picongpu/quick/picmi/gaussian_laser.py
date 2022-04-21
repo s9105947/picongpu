@@ -16,7 +16,9 @@ class TestPicmiGaussianLaser(unittest.TestCase):
             centroid_position=[.5, 0, .5],
             E0=5,
             propagation_direction=[0, 1, 0],
-            polarization_direction=[0, 0, 1])
+            polarization_direction=[0, 0, 1],
+            picongpu_laguerre_modes=[2.0, 3.0],
+            picongpu_laguerre_phases=[4.0, 5.0])
 
         pypic_laser = picmi_laser.get_as_pypicongpu()
         # translated
@@ -27,6 +29,8 @@ class TestPicmiGaussianLaser(unittest.TestCase):
         self.assertEqual(5, pypic_laser.E0)
         self.assertEqual(pypicongpu.GaussianLaser.PolarizationType.LINEAR_Z,
                          pypic_laser.polarization_type)
+        self.assertEqual([2.0, 3.0], pypic_laser.laguerre_modes)
+        self.assertEqual([4.0, 5.0], pypic_laser.laguerre_phases)
 
         # defaults
         self.assertEqual(0, pypic_laser.phase)
@@ -105,3 +109,77 @@ class TestPicmiGaussianLaser(unittest.TestCase):
 
     def test_values_centroid_position(self):
         """centroid position is fixed for given bounding box"""
+
+    def test_laguerre_modes_types(self):
+        """laguerre type-check before translation"""
+        with self.assertRaises(TypeError):
+            picmi.GaussianLaser(
+                1, 2, 3,
+                focal_position=[0, 0, 0],
+                centroid_position=[0, 0, 0],
+                propagation_direction=[0, 1, 0],
+                E0=0,
+                picongpu_laguerre_modes=["not float"])
+
+        with self.assertRaises(TypeError):
+            picmi.GaussianLaser(
+                1, 2, 3,
+                focal_position=[.5, 0, .5],
+                centroid_position=[.5, 0, .5],
+                propagation_direction=[0, 1, 0],
+                E0=0,
+                picongpu_laguerre_phases=set(2.0))
+    
+    def test_laguerre_modes_optional(self):
+        """laguerre modes are optional"""
+        # allowed: not given at all
+        picmi_laser = picmi.GaussianLaser(
+            wavelength=1,
+            waist=2,
+            duration=3,
+            focal_position=[0, 0, 0],
+            centroid_position=[0, 0, 0],
+            E0=5,
+            propagation_direction=[0, 1, 0])
+        pypic_laser = picmi_laser.get_as_pypicongpu()
+        self.assertEqual([1.0], pypic_laser.laguerre_modes)
+        self.assertEqual([0.0], pypic_laser.laguerre_phases)
+
+        # allowed: explicitly None
+        picmi_laser = picmi.GaussianLaser(
+            wavelength=1,
+            waist=2,
+            duration=3,
+            focal_position=[0, 0, 0],
+            centroid_position=[0, 0, 0],
+            E0=5,
+            propagation_direction=[0, 1, 0],
+            picongpu_laguerre_modes=None,
+            picongpu_laguerre_phases=None)
+        pypic_laser = picmi_laser.get_as_pypicongpu()
+        self.assertEqual([1.0], pypic_laser.laguerre_modes)
+        self.assertEqual([0.0], pypic_laser.laguerre_phases)
+
+        # not allowed: only phases (or only modes) given
+        with self.assertRaisesRegex(Exception, ".*[Ll]aguerre.*"):
+            picmi.GaussianLaser(
+                wavelength=1,
+                waist=2,
+                duration=3,
+                focal_position=[0, 0, 0],
+                centroid_position=[0, 0, 0],
+                E0=5,
+                propagation_direction=[0, 1, 0],
+                picongpu_laguerre_modes=[1.0, 2.0],
+                picongpu_laguerre_phases=None)
+            
+        with self.assertRaisesRegex(Exception, ".*[Ll]aguerre.*"):
+            picmi.GaussianLaser(
+                wavelength=1,
+                waist=2,
+                duration=3,
+                focal_position=[0, 0, 0],
+                centroid_position=[0, 0, 0],
+                E0=5,
+                propagation_direction=[0, 1, 0],
+                picongpu_laguerre_phases=[1.0, 2.0])
