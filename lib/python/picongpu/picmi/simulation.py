@@ -413,6 +413,33 @@ class Simulation(picmistandard.PICMI_Simulation):
             picmi_species.picongpu_ionization_electrons = \
                 self.__get_electron_species()
 
+    def __check_laser_centroid_in_grid_center(self) -> None:
+        """
+        check that laser centroid is in grid center (and y=0)
+
+        Background: The current code generation only supports a laser being
+        initialized at 0.5*max_x, 0, 0.5*max_z. (If this changes, please remove
+        this check)
+
+        During picmi laser init the bounding box is not yet known, so this
+        check must run from here (instead of the laser itself).
+        """
+        assert self.solver is not None
+        assert self.solver.grid is not None
+
+        # note: also checked in grid itself, but with a nicer error message
+        assert [0, 0, 0] == self.solver.grid.lower_bound
+        max_x = self.solver.grid.upper_bound[0]
+        max_z = self.solver.grid.upper_bound[2]
+
+        for laser in self.lasers:
+            assert isclose(0.5*max_x, laser.centroid_position[0]), \
+                "laser centroid X must be at center of bounding box"
+            assert isclose(0, laser.centroid_position[1]), \
+                "laser centroid Y must be 0"
+            assert isclose(0.5*max_z, laser.centroid_position[2]), \
+                "laser centroid Z must be at center of bounding box"
+
     def get_as_pypicongpu(self) -> simulation.Simulation:
         """translate to PyPIConGPU object"""
         s = simulation.Simulation()
@@ -432,6 +459,9 @@ class Simulation(picmistandard.PICMI_Simulation):
         util.unsupported("particle shape", self.particle_shape)
         util.unsupported("gamma boost", self.gamma_boost)
 
+        # todo: check grid compatibility
+        s.grid = self.solver.grid.get_as_pypicongpu()
+
         # any injection method != None is not supported
         if len(self.laser_injection_methods) != \
                 self.laser_injection_methods.count(None):
@@ -442,10 +472,10 @@ class Simulation(picmistandard.PICMI_Simulation):
             util.unsupported("more than one laser")
 
         if len(self.lasers) == 1:
+            # check requires grid, so grid is translated (and thereby also
+            # checked) above
+            self.__check_laser_centroid_in_grid_center()
             s.laser = self.lasers[0].get_as_pypicongpu()
-
-        # todo: check grid compatibility
-        s.grid = self.solver.grid.get_as_pypicongpu()
 
         # resolve electrons
         self.__resolve_electrons()
