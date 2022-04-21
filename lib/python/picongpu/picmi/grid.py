@@ -14,13 +14,19 @@ class Cartesian3DGrid(picmistandard.PICMI_Cartesian3DGrid):
             "(can only be chosen by axis, not by direction)"
 
         util.unsupported("moving window", self.moving_window_velocity)
-        util.unsupported("refined regions", self.refined_regions)
-        util.unsupported("lower bound (particles)", self.lower_bound_particles)
-        util.unsupported("upper bound (particles)", self.upper_bound_particles)
+        util.unsupported("refined regions", self.refined_regions, [])
+        util.unsupported("lower bound (particles)",
+                         self.lower_bound_particles,
+                         self.lower_bound)
+        util.unsupported("upper bound (particles)",
+                         self.upper_bound_particles,
+                         self.upper_bound)
         util.unsupported("lower boundary conditions (particles)",
-                         self.lower_boundary_conditions_particles)
+                         self.lower_boundary_conditions_particles,
+                         self.lower_boundary_conditions)
         util.unsupported("upper boundary conditions (particles)",
-                         self.upper_boundary_conditions_particles)
+                         self.upper_boundary_conditions_particles,
+                         self.upper_boundary_conditions)
         util.unsupported("guard cells", self.guard_cells)
         util.unsupported("pml cells", self.pml_cells)
 
