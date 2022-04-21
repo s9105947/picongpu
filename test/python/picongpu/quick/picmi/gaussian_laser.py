@@ -42,7 +42,8 @@ class TestPicmiGaussianLaser(unittest.TestCase):
             1, 2, 3,
             focal_position=[0, 7, .5],
             centroid_position=[.5, 0, .5],
-            E0=0)
+            propagation_direction=[0, 1, 0],
+            E0=1)
         with self.assertRaisesRegex(Exception, ".*foc(us|al).*[xX].*"):
             picmi_laser.get_as_pypicongpu()
 
@@ -51,7 +52,8 @@ class TestPicmiGaussianLaser(unittest.TestCase):
             1, 2, 3,
             focal_position=[.5, 2, 500],
             centroid_position=[.5, 0, .5],
-            E0=0)
+            propagation_direction=[0, 1, 0],
+            E0=1)
         with self.assertRaisesRegex(Exception, ".*foc(us|al).*[zZ].*"):
             picmi_laser.get_as_pypicongpu()
 
@@ -60,15 +62,17 @@ class TestPicmiGaussianLaser(unittest.TestCase):
             1, 2, 3,
             focal_position=[.5, -5, .5],
             centroid_position=[.5, 0, .5],
-            E0=0)
+            propagation_direction=[0, 1, 0],
+            E0=1)
         self.assertEqual(-5, picmi_laser.get_as_pypicongpu().focus_pos)
 
         picmi_laser = picmi.GaussianLaser(
             1, 2, 3,
             focal_position=[.5, 0, .5],
             centroid_position=[.5, 0, .5],
-            E0=0)
-        self.assertEqual(-5, picmi_laser.get_as_pypicongpu().focus_pos)
+            propagation_direction=[0, 1, 0],
+            E0=1)
+        self.assertEqual(0, picmi_laser.get_as_pypicongpu().focus_pos)
 
     def test_values_propagation_direction(self):
         """only propagation in y+ permitted"""
@@ -87,7 +91,7 @@ class TestPicmiGaussianLaser(unittest.TestCase):
                 focal_position=[.5, 0, .5],
                 centroid_position=[.5, 0, .5],
                 propagation_direction=invalid_propagation_vector,
-                E0=0)
+                E0=1)
             with self.assertRaisesRegex(Exception, ".*propagation.*"):
                 picmi_laser.get_as_pypicongpu()
 
@@ -97,11 +101,134 @@ class TestPicmiGaussianLaser(unittest.TestCase):
             focal_position=[.5, 0, .5],
             centroid_position=[.5, 0, .5],
             propagation_direction=[0, 1, 0],
-            E0=0)
-
+            E0=1)
 
     def test_values_polarization(self):
         """only polarization x & z permitted"""
+        invalid_polarizations = [
+            [0, 0, 0],
+            [1, 1, 1],
+            [0, 1, 0],
+            [sqrt(2), sqrt(2), 0],
+        ]
 
-    def test_values_centroid_position(self):
+        for invalid_polarization in invalid_polarizations:
+            picmi_laser = picmi.GaussianLaser(
+                1, 2, 3,
+                propagation_direction=[0, 1, 0],
+                polarization_direction=invalid_polarization,
+                E0=1)
+            with self.assertRaisesRegex(Exception, ".*polarization.*"):
+                picmi_laser.get_as_pypicongpu()
+
+        # valid examples:
+        picmi_laser = picmi.GaussianLaser(
+            1, 2, 3,
+            propagation_direction=[0, 1, 0],
+            polarization_direction=[1, 0, 0],
+            E0=1)
+        pypic_laser = picmi_laser.get_as_pypicongpu()
+        self.assertEqual(pypicongpu.GaussianLaser.PolarizationType.LINEAR_X,
+                         pypic_laser.polarization_type)
+
+        picmi_laser = picmi.GaussianLaser(
+            1, 2, 3,
+            propagation_direction=[0, 1, 0],
+            polarization_direction=[0, 0, 1],
+            E0=1)
+        pypic_laser = picmi_laser.get_as_pypicongpu()
+        self.assertEqual(pypicongpu.GaussianLaser.PolarizationType.LINEAR_Z,
+                         pypic_laser.polarization_type)
+
+    def test_minimal(self):
+        """mimimal possible initialization"""
+        # does not throw, normal usage process works
+        picmi_laser = picmi.GaussianLaser(1, 2, 3,
+                                          propagation_direction=[0, 1, 0],
+                                          E0=1)
+        pypic_laser = picmi_laser.get_as_pypicongpu()
+        self.assertNotEqual({}, pypic_laser.get_rendering_context())
+
+    def test_values_centroid_position_y_is_zero(self):
+        """centroid position must have y=0"""
+
+        with self.assertRaisesRegex(Exception, ".*centroid.*[yY].*(zero|0).*"):
+            picmi.GaussianLaser(1, 2, 3,
+                                centroid_position=[1, 1, 1],
+                                focal_position=[1, 1, 1],
+                                propagation_direction=[0, 1, 0],
+                                E0=1).get_as_pypicongpu()
+
+        # valid example:
+        self.assertNotEqual({},
+                            picmi.GaussianLaser(
+                                1, 2, 3,
+                                centroid_position=[12, 0, 7],
+                                focal_position=[12, 0, 7],
+                                propagation_direction=[0, 1, 0],
+                                E0=1)
+                            .get_as_pypicongpu().get_rendering_context())
+
+    def test_values_centroid_position_center(self):
         """centroid position is fixed for given bounding box"""
+        # on its own, any centroid poisition with y=0 is permitted
+        picmi_laser = picmi.GaussianLaser(
+            1, 2, 3,
+            centroid_position=[8.5, 0, 21],
+            focal_position=[8.5, 2, 21],
+            propagation_direction=[0, 1, 0],
+            polarization_direction=[0, 0, 1],
+            E0=1)
+        self.assertNotEqual(
+            {}, picmi_laser.get_as_pypicongpu().get_rendering_context())
+
+        grid_valid = picmi.Cartesian3DGrid(
+            number_of_cells=[123, 456, 789],
+            lower_bound=[0, 0, 0],
+            upper_bound=[17, 192, 42],
+            lower_boundary_conditions=["periodic", "periodic", "open"],
+            upper_boundary_conditions=["periodic", "periodic", "open"])
+
+        # valid grid-laser combination working
+        solver_valid = picmi.ElectromagneticSolver(method="Yee",
+                                                   grid=grid_valid)
+        sim_valid = picmi.Simulation(time_step_size=1,
+                                     max_steps=2,
+                                     solver=solver_valid)
+        sim_valid.add_laser(picmi_laser, None)
+
+        # translates without issue:
+        self.assertNotEqual(
+            {}, sim_valid.get_as_pypicongpu().get_rendering_context())
+
+        # invalid grid-laser combination throws error
+        bounds_and_centroids_invalid = [
+            ([42, 192, 2], [21, 192, 2]),
+            ([42, 192, 2], [42, 192, 1]),
+            ([42, 192, 2], [1, 2, 2]),
+        ]
+
+        for bounds, centroid in bounds_and_centroids_invalid:
+            grid_invalid = picmi.Cartesian3DGrid(
+                number_of_cells=[123, 456, 789],
+                lower_bound=[0, 0, 0],
+                upper_bound=bounds,
+                lower_boundary_conditions=["periodic", "periodic", "open"],
+                upper_boundary_conditions=["periodic", "periodic", "open"])
+            solver_invalid = picmi.ElectromagneticSolver(method="Yee",
+                                                         grid=grid_invalid)
+            sim_invalid = picmi.Simulation(time_step_size=1,
+                                           max_steps=2,
+                                           solver=solver_invalid)
+            laser_invalid = picmi.GaussianLaser(
+                1, 2, 3,
+                centroid_position=centroid,
+                focal_position=centroid,
+                propagation_direction=[0, 1, 0],
+                polarization_direction=[0, 0, 1],
+                E0=1)
+            sim_invalid.add_laser(laser_invalid, None)
+
+            # centroid not in x & z center -> raise
+            with self.assertRaisesRegex(Exception, ".*[Ll]aser.*cent(er|roid).*"):
+                sim_invalid.get_as_pypicongpu()

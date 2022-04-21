@@ -17,12 +17,12 @@ class GaussianLaser(picmistandard.PICMI_GaussianLaser):
         # unsupported: fill_in (do not warn, b/c we don't know if it has been
         # set explicitly, and always warning is bad)
 
-        assert 0 == self.focal_position[0] and 0 == self.focal_position[2], \
-            "focal position must have x=z=0"
+        assert self.centroid_position[0] == self.focal_position[0] \
+            and self.centroid_position[2] == self.focal_position[2], \
+            "focal position x and z MUST be equal to centroid x and z"
         assert [0, 1, 0] == self.propagation_direction, \
             "only support propagation along Y axis"
-        # TODO is this correct?
-        assert [0, 0, 0] == self.centroid_position, "centroid must be 0,0,0"
+        assert 0 == self.centroid_position[1], "centroid MUST have y=0"
 
         polarization_by_normal = {
             (1, 0, 0): laser.GaussianLaser.PolarizationType.LINEAR_X,
