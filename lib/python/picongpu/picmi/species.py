@@ -170,7 +170,6 @@ class Species(picmistandard.PICMI_Species):
         util.unsupported("method", self.method)
         util.unsupported("particle shape", self.particle_shape)
         # note: placement params are respected in associated simulation object
-        util.unsupported("initial distribution", self.initial_distribution)
 
         assert self.name is not None, "name must be set"
 
