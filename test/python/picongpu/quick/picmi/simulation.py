@@ -7,6 +7,9 @@ import typing
 from picongpu.pypicongpu import species
 from copy import deepcopy
 import logging
+import tempfile
+import shutil
+import os
 
 
 @typechecked
@@ -43,9 +46,22 @@ class TestPicmiSimulation(unittest.TestCase):
 
         return sim
 
+    def __get_tmpdir_name(self):
+        name = None
+        with tempfile.TemporaryDirectory() as tmpdir:
+            name = tmpdir
+        return name
+
     def setUp(self):
         self.sim = self.__get_sim()
         self.layout = picmi.PseudoRandomLayout(n_macroparticles_per_cell=2)
+        self.non_existing_dir = self.__get_tmpdir_name()
+        assert not os.path.exists(self.non_existing_dir)
+
+    def tearDown(self):
+        if os.path.isdir(self.non_existing_dir):
+            shutil.rmtree(self.non_existing_dir)
+        assert not os.path.exists(self.non_existing_dir)
 
     def test_cfl_yee(self):
         # the Courant–Friedrichs–Lewy condition describes the relationship
@@ -534,3 +550,11 @@ class TestPicmiSimulation(unittest.TestCase):
                 self.assertEqual("nitrogen", op.species.name)
                 self.assertEqual(5, op.bound_electrons)
             # other ops (position...): ignore
+
+    def test_write_input_file(self):
+        """sanity check picmi upstream: write input file"""
+        sim = self.sim
+        self.assertTrue(not os.path.isdir(self.non_existing_dir))
+        sim.write_input_file(self.non_existing_dir)
+        self.assertTrue(os.path.isdir(self.non_existing_dir))
+        self.assertTrue(os.path.exists(self.non_existing_dir + "/include/picongpu/param/grid.param"))
