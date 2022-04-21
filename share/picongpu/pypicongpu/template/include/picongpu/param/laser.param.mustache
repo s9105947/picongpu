@@ -51,15 +51,23 @@ namespace picongpu
     {
         namespace laserProfiles
         {
+            {{#laser}}
             namespace gaussianBeam
             {
                 //! Use only the 0th Laguerremode for a standard Gaussian
-                static constexpr uint32_t MODENUMBER = 0;
-                PMACC_CONST_VECTOR(float_X, MODENUMBER + 1, LAGUERREMODES, 1.0);
-                PMACC_CONST_VECTOR(float_X, MODENUMBER + 1, LAGUERREPHASES, 1.0);
+                static constexpr uint32_t MODENUMBER = {{{modenumber}}};
+                PMACC_CONST_VECTOR(float_X, MODENUMBER + 1, LAGUERREMODES, 
+                {{#laguerre_modes}}
+                {{{single_laguerre_mode}}}{{^_last}},{{/_last}}
+                {{/laguerre_modes}}
+                );
+                PMACC_CONST_VECTOR(float_X, MODENUMBER + 1, LAGUERREPHASES,
+                {{#laguerre_phases}}
+                {{{single_laguerre_phase}}}{{^_last}},{{/_last}}
+                {{/laguerre_phases}}
+                );
             } // namespace gaussianBeam
 
-            {{#laser}}
             struct pypicongpu_gaussian_laser_param_t
             {
                 static constexpr float_64 WAVE_LENGTH_SI = {{{wave_length_si}}};
