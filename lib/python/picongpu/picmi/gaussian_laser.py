@@ -14,6 +14,8 @@ class GaussianLaser(picmistandard.PICMI_GaussianLaser):
         util.unsupported("laser zeta", self.zeta)
         util.unsupported("laser beta", self.beta)
         util.unsupported("laser phi2", self.phi2)
+        # unsupported: fill_in (do not warn, b/c we don't know if it has been
+        # set explicitly, and always warning is bad)
 
         assert 0 == self.focal_position[0] and 0 == self.focal_position[2], \
             "focal position must have x=z=0"
