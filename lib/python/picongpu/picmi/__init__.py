@@ -2,6 +2,11 @@
 PICMI for PIConGPU
 """
 
+import sys
+
+assert sys.version_info.major > 3 or sys.version_info.minor >= 9, \
+    "Python 3.9 is required for PIConGPU PICMI"
+
 from .simulation import *
 from .grid import *
 from .solver import *
