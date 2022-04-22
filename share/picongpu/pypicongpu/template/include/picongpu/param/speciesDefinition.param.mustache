@@ -57,7 +57,6 @@ namespace picongpu
             current<UsedParticleCurrentSolver>>;
 
         using ParticleAttributes_{{{typename}}} = MakeSeq_t<
-            momentum,
             {{#attributes}}
                 {{{picongpu_name}}}
                 {{^_last}}
