@@ -7,6 +7,9 @@ import typing
 from picongpu.pypicongpu import species
 from copy import deepcopy
 import logging
+import tempfile
+import shutil
+import os
 
 
 @typechecked
@@ -43,12 +46,30 @@ class TestPicmiSimulation(unittest.TestCase):
 
         return sim
 
+    def __get_tmpdir_name(self):
+        """
+        get name of non-existing tmp dir which will be automatically cleaned up
+        """
+        name = None
+        with tempfile.TemporaryDirectory() as tmpdir:
+            name = tmpdir
+        assert not os.path.exists(name)
+        self.__to_cleanup.append(name)
+        return name
+
     def setUp(self):
         self.sim = self.__get_sim()
         self.layout = picmi.PseudoRandomLayout(n_macroparticles_per_cell=2)
+        self.__to_cleanup = []
+
+    def tearDown(self):
+        for dir_to_cleanup in self.__to_cleanup:
+            if os.path.isdir(dir_to_cleanup):
+                shutil.rmtree(dir_to_cleanup)
+            assert not os.path.exists(dir_to_cleanup)
 
     def test_cfl_yee(self):
-        # the Courant–Friedrichs–Lewy condition describes the relationship
+        # the Courant-Friedrichs-Lewy condition describes the relationship
         # between delta_t, delta_[x,y,z] and a parameter, here "cfl"
         # notably, all three can be given explicitly, though only two of the
         # three are required.
@@ -534,3 +555,13 @@ class TestPicmiSimulation(unittest.TestCase):
                 self.assertEqual("nitrogen", op.species.name)
                 self.assertEqual(5, op.bound_electrons)
             # other ops (position...): ignore
+
+    def test_write_input_file(self):
+        """sanity check picmi upstream: write input file"""
+        sim = self.sim
+        outdir = self.__get_tmpdir_name()
+        self.assertTrue(not os.path.isdir(outdir))
+        sim.write_input_file(outdir)
+        self.assertTrue(os.path.isdir(outdir))
+        self.assertTrue(
+            os.path.exists(outdir + "/include/picongpu/param/grid.param"))
