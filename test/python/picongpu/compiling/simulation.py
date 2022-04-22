@@ -1,4 +1,4 @@
-import picongpu.pypicongpu
+from picongpu import pypicongpu
 
 import unittest
 
@@ -16,12 +16,15 @@ class TestSimulation(unittest.TestCase):
         sim.grid.cell_cnt_x = 1
         sim.grid.cell_cnt_y = 1
         sim.grid.cell_cnt_z = 1
-        sim.grid.boundary_condition_x = pypicongpu.BoundaryCondition.PERIODIC
-        sim.grid.boundary_condition_y = pypicongpu.BoundaryCondition.PERIODIC
-        sim.grid.boundary_condition_z = pypicongpu.BoundaryCondition.PERIODIC
+        sim.grid.boundary_condition_x = \
+            pypicongpu.grid.BoundaryCondition.PERIODIC
+        sim.grid.boundary_condition_y = \
+            pypicongpu.grid.BoundaryCondition.PERIODIC
+        sim.grid.boundary_condition_z = \
+            pypicongpu.grid.BoundaryCondition.PERIODIC
         sim.laser = None
-        sim.solver = pypicongpu.YeeSolver()
-        sim.species = []
+        sim.solver = pypicongpu.solver.YeeSolver()
+        sim.init_manager = pypicongpu.species.InitManager()
 
         runner = pypicongpu.Runner(sim)
         runner.generate()

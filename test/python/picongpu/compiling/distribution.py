@@ -21,13 +21,6 @@ class TestDistribution(unittest.TestCase):
                                max_steps=int(2048),
                                solver=solver)
 
-        laser = picmi.GaussianLaser(0.8e-6, 5.0e-6 / 1.17741, 5.0e-15,
-                                    a0=8,
-                                    propagation_direction=[0, 1, 0],
-                                    focal_position=[0, 4.62e-5, 0])
-        sim.add_laser(laser, None)
-
-        self.laser = laser
         self.grid = grid
         self.solver = solver
         self.sim = sim

@@ -31,13 +31,7 @@ class TestRunner(unittest.TestCase):
             lower_boundary_conditions=["open", "open", "periodic"],
             upper_boundary_conditions=["open", "open", "periodic"])
         solver = picmi.ElectromagneticSolver(method="Yee", grid=grid, cfl=0.99)
-        laser = picmi.GaussianLaser(0.8e-6, 5.0e-6 / 1.17741, 5.0e-15,
-                                    a0=8,
-                                    propagation_direction=[0, 1, 0],
-                                    focal_position=[0, 4.62e-5, 0]
-                                    )
         self.picmi_sim = picmi.Simulation(max_steps=int(1), solver=solver)
-        self.picmi_sim.add_laser(laser, None)
         self.sim = self.picmi_sim.get_as_pypicongpu()
 
         # unset default scratch dir if set
