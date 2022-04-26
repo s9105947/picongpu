@@ -27,11 +27,10 @@ namespace picongpu
             /**********************************/
 
             {{#operations.simple_density}}
-                // note: this functor returns the density from the profile **already scaled with the density ratio**
-                // -> density ratio MUST BE IGNORED by CreateDensity (this is the case)
+                // note: This functor assumes the ratio to be 1. The correct density ratio of the species is applied here (automatically by CreateDensity).
 
                 CreateDensity<
-                    densityProfiles::pypicongpu::init_{{{placed_species_initial.typename}}}_with_ratio,
+                    densityProfiles::pypicongpu::init_{{{placed_species_initial.typename}}},
                     startPosition::pypicongpu::init_{{{placed_species_initial.typename}}},
                     {{{placed_species_initial.typename}}}>,
 

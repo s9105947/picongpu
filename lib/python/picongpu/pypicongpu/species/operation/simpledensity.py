@@ -146,16 +146,12 @@ class SimpleDensity(Operation):
 
         Notably, this requires the initial placement to *adjust the first
         species' weighting according to its density weighting*.
-        However, PIConGPU ignores the density weighting during density
-        creation, i.e. the rendered template has to ensure the density ratio is
-        respected.
-
-        To reiterate: This is NOT typical PIConGPU behavior.
+        This is automatically performed by PIConGPU's `CreateDensity`.
         """
         self.check_preconditions()
 
         # sort species by ratio
-        # (treat no ratio as 1)
+        # (treat "has no ratio" as 1)
         sorted_species_by_ratio = sorted(
             self.species,
             key=lambda species:

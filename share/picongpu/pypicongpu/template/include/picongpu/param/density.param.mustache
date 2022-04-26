@@ -45,37 +45,24 @@ namespace picongpu
         namespace pypicongpu {
             {{#species_initmanager.operations.simple_density}}
                 /**
-                * generate the initial macroparticle position for species "{{{placed_species_initial.name}}}" ({{{placed_species_initial.typename}}})
-                *
-                * result is already multiplied with densityRatio of {{{placed_species_initial.typename}}},
-                * i.e. CreateDensity must ignore the density ratio
-                */
-                struct init_{{{placed_species_initial.typename}}}_with_ratio_functor
+                 * generate the initial macroparticle position for species "{{{placed_species_initial.name}}}" ({{{placed_species_initial.typename}}})
+                 *
+                 * (Note: This profile assumes ratio to be 1. The correct ratio is applied in the initpipeline by CreateDensity.)
+                 */
+                struct init_{{{placed_species_initial.typename}}}_functor
                 {
                     HDINLINE float_X operator()(const floatD_64& position_SI, const float3_64& cellSize_SI)
                     {
                         // TODO: respect bounding box
 
-                        {{! note: density_without_ratio is defined inside of each block
-                            rationale: sometimes constexpr is valid, sometimes not }}
-
                         {{#profile.type.uniform}}
                             // note: right hand side is double
-                            constexpr float_X density_without_ratio = {{{profile.data.density_si}}} / SI::BASE_DENSITY_SI;
+                            return {{{profile.data.density_si}}} / SI::BASE_DENSITY_SI;
                         {{/profile.type.uniform}}
-
-                        {{#placed_species_initial.constants.density_ratio}}
-                            {{! directly multiply with ratio }}
-                            return {{{placed_species_initial.constants.density_ratio.ratio}}} * density_without_ratio;
-                        {{/placed_species_initial.constants.density_ratio}}
-                        {{^placed_species_initial.constants.density_ratio}}
-                            {{! no density ratio }}
-                            return density_without_ratio;
-                        {{/placed_species_initial.constants.density_ratio}}
                     }
                 };
 
-            using init_{{{placed_species_initial.typename}}}_with_ratio = FreeFormulaImpl<init_{{{placed_species_initial.typename}}}_with_ratio_functor>;
+                using init_{{{placed_species_initial.typename}}} = FreeFormulaImpl<init_{{{placed_species_initial.typename}}}_functor>;
             {{/species_initmanager.operations.simple_density}}
 
             /**
