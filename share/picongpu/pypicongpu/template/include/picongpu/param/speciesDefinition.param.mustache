@@ -13,6 +13,10 @@
 namespace picongpu
 {
     {{#species_initmanager.species}}
+        /****************************************
+            Definition of Species {{{name}}}
+        ****************************************/
+
         {{#constants}}
             {{#mass}}
                 value_identifier(float_X, MassRatio_{{{typename}}}, {{{mass_si}}} / SI::BASE_MASS_SI);
@@ -70,7 +74,6 @@ namespace picongpu
             ParticleFlags_{{{typename}}},
             ParticleAttributes_{{{typename}}}>;
     {{/species_initmanager.species}}
-
 
 
     using VectorAllSpecies = MakeSeq_t<
