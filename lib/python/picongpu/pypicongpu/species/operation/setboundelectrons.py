@@ -15,7 +15,7 @@ class SetBoundElectrons(Operation):
     """
 
     species = util.build_typesafe_property(Species)
-    """species which will have boundElectorns set"""
+    """species which will have boundElectrons set"""
 
     bound_electrons = util.build_typesafe_property(int)
     """number of bound electrons to set"""

@@ -1,2 +1,7 @@
-from .densityprofile import *
-from .uniform import *
+from .densityprofile import DensityProfile
+from .uniform import Uniform
+
+__all__ = [
+    "DensityProfile",
+    "Uniform",
+]

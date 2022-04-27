@@ -49,6 +49,7 @@ class Species(RenderedObject):
         sanity-check self, if ok pass silently
 
         Ensure that:
+
         - species has valid name
         - constants have unique types
         - attributes have unique types
@@ -82,9 +83,9 @@ class Species(RenderedObject):
         non_unique_constants = \
             set([c for c in const_types if const_types.count(c) > 1])
         if 0 != len(non_unique_constants):
-            raise ValueError("constant names must be unique per species, "
-                             "offending: {}"
-                             .format(", ".join(map(str, non_unique_constants))))
+            raise ValueError(
+                "constant names must be unique per species, offending: {}"
+                .format(", ".join(map(str, non_unique_constants))))
 
         # each attribute (-name) can only be used once
         attr_names = list(map(lambda attr: attr.PICONGPU_NAME,

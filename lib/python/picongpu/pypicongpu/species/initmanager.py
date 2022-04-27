@@ -21,15 +21,21 @@ class InitManager(RenderedObject):
     Invokes the methods of the Operation lifecycle (check, prebook, bake).
 
     Workflow:
+
     1. Fill InitManager (from outside) with
+
        - Species and their constants (no attributes!)
        - Operations, fully initialized (all params set)
+
     2. invoke InitManager.bake(), which
+
        - checks the Species for conflicts (name...)
        - performs dependency checks, possibly reorders species
        - invokes the Operation lifecycle (check, prebook, bake)
        - sanity-checks the results
+
     3. retrieve rendering context
+
        - organizes operations into lists
 
     Note: The InitManager manages a lifecycle, it does not perform deep checks
@@ -71,6 +77,7 @@ class InitManager(RenderedObject):
         intended to verify input (i.e. before any operation is performed)
 
         conflict types:
+
         - same object twice in self.all_species
         - name not unique in self.all_species
         """
@@ -99,6 +106,7 @@ class InitManager(RenderedObject):
         intended to verify input (i.e. before any operation is performed)
 
         conflict types:
+
         - same object twice in self.all_operations
         """
         duplicate_operations = set(
@@ -246,6 +254,7 @@ class InitManager(RenderedObject):
         Transitive dependencies are supported.
 
         performs additional checks:
+
         1. all dependencies registered with init manager
         2. no circular dependencies
         """
@@ -445,14 +454,16 @@ class InitManager(RenderedObject):
         are split into separate lists containing only operations of this type,
         e.g. sth along the lines of:
 
-        {
-          species: [species1, species2, ...],
-          operations: {
-            simple_density: [density1, density2],
-            momentum: [],
-            preionization: [ionization1],
-          }
-        }
+        .. code::
+
+            {
+                species: [species1, species2, ...],
+                operations: {
+                    simple_density: [density1, density2],
+                    momentum: [],
+                    preionization: [ionization1],
+                }
+            }
 
         (Note: This also make schema description much simpler, as there is no
         need for a generic "any operation" schema.)

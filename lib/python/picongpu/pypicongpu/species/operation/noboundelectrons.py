@@ -37,9 +37,8 @@ class NoBoundElectrons(Operation):
 
         Rationale: This only provides an attribute (via
         prebook_species_attributes()), but does not do anything with the
-        generated attribute
-        -> there is no code generated
-        -> nothing to serialize
+        generated attribute -> there is no code generated -> nothing to
+        serialize
         """
         raise RuntimeError("NoBoundElectrons operation has no rendering "
                            "context representation")

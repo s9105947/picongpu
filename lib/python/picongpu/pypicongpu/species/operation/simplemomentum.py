@@ -13,6 +13,7 @@ class SimpleMomentum(Operation):
     provides momentum to a species
 
     specified by:
+
     - temperature
     - drift
 

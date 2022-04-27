@@ -73,28 +73,34 @@ class Runner():
 
     Manages 2 basic parts:
 
-    - *where* which data is stored (various `_dir`s)
+    - *where* which data is stored (various ``..._dir`` options)
     - *what* is done (generate, build, run)
 
     Where:
-    - scratch_dir: (optional) directory where many simulation results can be stored
+
+    - scratch_dir: (optional) directory where many simulation results can be
+      stored
     - run_dir: directory where data for an execution is stored
-    - setup_dir: directory where data is generated to and the simulation executable is built
+    - setup_dir: directory where data is generated to and the simulation
+      executable is built
 
     These dirs are either copied from params or guessed.
     See __init__() for a detailed description.
 
     The initialization of the dirs happens only once (!) inside __init__().
-    Any changes performed after that will be accepted and might lead to broken builds.
+    Any changes performed after that will be accepted and might lead to broken
+    builds.
 
     What:
-    - generate(): create a setup (directory) which represents the parameters given
+
+    - generate(): create a setup (directory) which represents the parameters
+      given
     - build(): run pic-build
     - run(): run tbg
 
     Typically these can only be performed in that order, and each once.
     Whether a step can be started is determined by some sanity checks:
-    Are the inputs (e.g. the setup dir, the `.build` dir) ready,
+    Are the inputs (e.g. the setup dir, the ``.build`` dir) ready,
     and is the output location empty (e.g. the run dir).
     **If those sanity checks pass, the respective process is launched.**
     If this launched program (e.g. pic-build) fails,
@@ -107,7 +113,11 @@ class Runner():
     """name of the environment variable where the scratch dir defaults to"""
 
     setup_dir = util.build_typesafe_property(str)
-    """directory containing the experiment setup (scenario), pic-build is called here"""
+    """
+    directory containing the experiment setup (scenario)
+
+    pic-build is called here
+    """
 
     scratch_dir = util.build_typesafe_property(typing.Optional[str])
     """directory where run directories can be store"""
@@ -119,7 +129,9 @@ class Runner():
     """the picongpu simulation to be run"""
 
     __valid_path_re = re.compile("^[a-zA-Z0-9/._-]+$")
-    """regex that matches a valid path. Note: allows *less* characters than the OS"""
+    """
+    regex that matches a valid path. Note: allows *less* characters than the OS
+    """
 
     def __init__(self, sim,
                  pypicongpu_template_dir: typing.Optional[str] = None,

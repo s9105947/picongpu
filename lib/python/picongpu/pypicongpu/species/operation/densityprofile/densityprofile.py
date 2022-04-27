@@ -42,26 +42,32 @@ class DensityProfile(RenderedObject):
 
         E.g.:
 
-        {
-            "type": {
-                "uniform": true,
-                "gaussian": false,
-                ...
-            },
-            "data": DATA
-        }
+        .. code::
+
+            {
+                "type": {
+                    "uniform": true,
+                    "gaussian": false,
+                    ...
+                },
+                "data": DATA
+            }
 
         where DATA is the serialization as returned by get_rendering_context().
 
         There are *two* context serialization methods for density profiles:
+
         - get_rendering_context()
+
             - provided by RenderedObject parent class, serialization ("context
               building") performed by _get_serialized()
             - _get_serialized() implemented in *every profile*
             - checks against schema of respective profile
             - returned context is a representation of *exactly this profile*
             - (left empty == not implemented in parent ProfileDensity)
+
         - get_generic_profile_rendering_context()
+
             - implemented in parent ProfileDensity
             - returned representation is generic for *any profile*
               (i.e. contains meta information which type is actually used)

@@ -37,9 +37,8 @@ class NotPlaced(Operation):
 
         Rationale: This only provides an attribute (via
         prebook_species_attributes()), but does not do anything with the
-        generated attribute
-        -> there is no code generated
-        -> nothing to serialize
+        generated attribute -> there is no code generated -> nothing to
+        serialize
         """
         raise RuntimeError(
             "NotPlaced operation has no rendering context representation")

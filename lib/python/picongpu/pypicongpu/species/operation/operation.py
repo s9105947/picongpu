@@ -24,34 +24,44 @@ class Operation(RenderedObject):
     All Operations combined generate the PIConGPU init pipeline.
 
     This leads to some notable cases:
+
     - Species that are to be placed together (ion+electrons) must be
       initialized by the **same** Operation.
     - Dependent attributes must be initialized by the **same** Operation.
 
     The typical lifecycle of an Operation object is as follows:
+
     1. Get created (i.e. __init__() is called)
+
        - performed from outside (PICMI interface)
        - affected species & parameters passed from outside (store as class
          attribute)
+
     2. check preconditions for passed species
+
        - params set correctly
        - required constants present in species
        - At the point of checking the given species object are not fully
          defined yet:
          **DO NOT CHECK FOR OTHER ATTRIBUTES, THEY WILL NOT BE THERE!!!**
        - operation-implemented in self.check_preconditions()
+
     3. prebook attributes (for each species)
+
        - generate attribute objects
        - "bookmark" that this operation will add them to the species,
          but does **NOT** assign the attributes (see 4.)
        - stored inside self.attributes_by_species
        - operation-implemented in self.prebook_species_attributes()
+
     4. associate generated attributes with their respective species
+
        - invoked by the initmanager (do **not** do this in this class)
        - based on self.attributes_by_species
        - (performed by pre-defined self.bake_species_attributes())
 
     So to define your own operator:
+
     - inherit from this class
     - accept species list & additional params from users
       (and store in attributes of self)
@@ -120,11 +130,13 @@ class Operation(RenderedObject):
         passed previously (without error).
 
         Additionally, performs the following sanity checks:
+
         - at least one attribute is assigned
         - the species does not already have an attribute of the same type
         - every attribute is assigned exclusively to one species
 
         Intended usage:
+
         1. check for dependencies in used species
         2. fill self.attributes_by_species (with newly generated objects)
            must be performed by self.prebook_species_attributes()

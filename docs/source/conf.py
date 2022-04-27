@@ -221,7 +221,9 @@ texinfo_documents = [
 
 # sphinx autoapi configuration
 autoapi_type = 'python'
-autoapi_dirs = [python_libs]
+autoapi_dirs = [
+    python_libs + '/picongpu/pypicongpu',
+]
 autoapi_generate_api_docs = True
 autoapi_options = ['members',
                    'inherited-members',
