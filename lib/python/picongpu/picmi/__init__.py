@@ -19,4 +19,9 @@ from . import constants
 import picmistandard
 
 codename = "picongpu"
+"""
+name of this PICMI implementation
+required by PICMI interface
+"""
+
 picmistandard.register_constants(constants)
