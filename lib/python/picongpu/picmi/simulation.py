@@ -476,6 +476,9 @@ class Simulation(picmistandard.PICMI_Simulation):
             # checked) above
             self.__check_laser_centroid_in_grid_center()
             s.laser = self.lasers[0].get_as_pypicongpu()
+        else:
+            # explictly disable laser (as required by pypicongpu)
+            s.laser = None
 
         # resolve electrons
         self.__resolve_electrons()
