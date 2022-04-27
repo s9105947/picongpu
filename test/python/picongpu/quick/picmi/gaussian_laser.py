@@ -27,8 +27,9 @@ class TestPicmiGaussianLaser(unittest.TestCase):
         self.assertEqual(3, pypic_laser.duration)
         self.assertEqual(4, pypic_laser.focus_pos)
         self.assertEqual(5, pypic_laser.E0)
-        self.assertEqual(pypicongpu.GaussianLaser.PolarizationType.LINEAR_Z,
-                         pypic_laser.polarization_type)
+        self.assertEqual(
+            pypicongpu.laser.GaussianLaser.PolarizationType.LINEAR_Z,
+            pypic_laser.polarization_type)
         self.assertEqual([2.0, 3.0], pypic_laser.laguerre_modes)
         self.assertEqual([4.0, 5.0], pypic_laser.laguerre_phases)
 
@@ -132,8 +133,9 @@ class TestPicmiGaussianLaser(unittest.TestCase):
             polarization_direction=[1, 0, 0],
             E0=1)
         pypic_laser = picmi_laser.get_as_pypicongpu()
-        self.assertEqual(pypicongpu.GaussianLaser.PolarizationType.LINEAR_X,
-                         pypic_laser.polarization_type)
+        self.assertEqual(
+            pypicongpu.laser.GaussianLaser.PolarizationType.LINEAR_X,
+            pypic_laser.polarization_type)
 
         picmi_laser = picmi.GaussianLaser(
             1, 2, 3,
@@ -141,8 +143,9 @@ class TestPicmiGaussianLaser(unittest.TestCase):
             polarization_direction=[0, 0, 1],
             E0=1)
         pypic_laser = picmi_laser.get_as_pypicongpu()
-        self.assertEqual(pypicongpu.GaussianLaser.PolarizationType.LINEAR_Z,
-                         pypic_laser.polarization_type)
+        self.assertEqual(
+            pypicongpu.laser.GaussianLaser.PolarizationType.LINEAR_Z,
+            pypic_laser.polarization_type)
 
     def test_minimal(self):
         """mimimal possible initialization"""

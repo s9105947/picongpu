@@ -1,4 +1,4 @@
-from picongpu.pypicongpu import GaussianLaser
+from picongpu.pypicongpu.laser import GaussianLaser
 
 import unittest
 import logging

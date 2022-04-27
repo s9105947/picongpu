@@ -10,7 +10,7 @@ from . import grid
 from . import rendering
 from . import solver
 from . import species
-from . import utils
+from . import util
 from . import output
 
 __all__ = [
@@ -21,7 +21,7 @@ __all__ = [
     "rendering",
     "solver",
     "species",
-    "utils",
+    "util",
     "grid",
 ]
 

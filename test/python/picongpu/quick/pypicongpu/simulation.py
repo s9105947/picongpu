@@ -1,5 +1,5 @@
 from picongpu.pypicongpu.simulation import Simulation
-from picongpu.pypicongpu import GaussianLaser
+from picongpu.pypicongpu.laser import GaussianLaser
 from picongpu.pypicongpu import grid, solver, species
 from picongpu.pypicongpu import rendering
 

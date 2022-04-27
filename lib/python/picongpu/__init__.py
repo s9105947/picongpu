@@ -8,4 +8,12 @@ Note that with the PICMI integration the previously existing modules have been
 moved into the "extra" submodule to keep the naming schemes consistent.
 """
 
-__all__ = ["extra", "picmi", "pypicongpu"]
+from . import extra
+from . import picmi
+from . import pypicongpu
+
+__all__ = [
+    "extra", 
+    "picmi", 
+    "pypicongpu",
+]
