@@ -42,7 +42,8 @@ extensions = ['sphinx.ext.mathjax',
               'sphinx.ext.napoleon',
               'breathe',
               'sphinxcontrib.programoutput',
-              'matplotlib.sphinxext.plot_directive']
+              'matplotlib.sphinxext.plot_directive',
+              'autoapi.extension']
 
 if not on_rtd:
     extensions.append('sphinx.ext.githubpages')
@@ -216,3 +217,21 @@ texinfo_documents = [
      and ions in the plasma based on Maxwell's equations.
      """),
 ]
+
+
+# sphinx autoapi configuration
+autoapi_type = 'python'
+autoapi_dirs = [python_libs]
+autoapi_generate_api_docs = True
+autoapi_options = ['members',
+                   'inherited-members',
+                   'undoc-members',
+                   'special-members',
+                   'show-inheritance',
+                   'show-inheritance-diagram',
+                   'show-module-summary',
+                   'imported-members',
+                   ]
+autoapi_root = 'pypicongpu/autoapi'
+# toctree entry is added manually
+autoapi_add_toctree_entry = False
