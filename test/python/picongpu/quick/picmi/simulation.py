@@ -123,7 +123,7 @@ class TestPicmiSimulation(unittest.TestCase):
         layout = picmi.PseudoRandomLayout(n_macroparticles_per_cell=3)
 
         # species list empty by default
-        self.assertEqual([], sim.get_as_pypicongpu().species)
+        self.assertEqual([], sim.get_as_pypicongpu().init_manager.all_species)
 
         # not placed
         sim.add_species(picmi.Species(name="dummy1",

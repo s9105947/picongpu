@@ -12,6 +12,16 @@ import functools
 
 @typechecked
 class Renderer:
+    """
+    helper class to render Mustache templates
+
+    Collection of (static) functions to render Mustache templates.
+
+    Also contains checks for structure of passed context (JSON) objects and the
+    JSON schema checks and related functions (loading schema database, checking
+    schemas, looking up schemas by type etc.)
+    """
+
     @staticmethod
     def __check_rendering_context_recursive(path: str, context: dict) -> None:
         """

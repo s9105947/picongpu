@@ -14,7 +14,11 @@ class Solver:
 
 @typechecked
 class YeeSolver(Solver, RenderedObject):
-    # note: has no parameters
+    """
+    Yee solver as defined by PIConGPU
+
+    note: has no parameters
+    """
 
     def _get_serialized(self) -> dict:
         return {

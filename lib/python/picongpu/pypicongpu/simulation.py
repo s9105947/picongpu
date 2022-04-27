@@ -39,10 +39,6 @@ class Simulation(RenderedObject):
     init_manager = util.build_typesafe_property(species.InitManager)
     """init manager holding all species & their information"""
 
-    def __init__(self):
-        self.laser = None
-        self.species = []
-
     def __get_output_context(self) -> dict:
         """retrieve all output objects"""
         auto = output.Auto()

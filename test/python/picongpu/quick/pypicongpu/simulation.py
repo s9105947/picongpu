@@ -34,7 +34,7 @@ class TestSimulation(unittest.TestCase):
         self.s.grid.boundary_condition_y = grid.BoundaryCondition.PERIODIC
         self.s.grid.boundary_condition_z = grid.BoundaryCondition.PERIODIC
         self.s.solver = solver.YeeSolver()
-        self.s.species = []
+        self.s.laser = None
         self.s.init_manager = species.InitManager()
 
         self.laser = GaussianLaser()
@@ -47,8 +47,8 @@ class TestSimulation(unittest.TestCase):
         self.laser.pulse_init = 1.3
         self.laser.init_plane_y = 1
         self.laser.polarization_type = GaussianLaser.PolarizationType.LINEAR_X
-        self.laser.laguerre_modes = [ 1.2, 2.4 ]
-        self.laser.laguerre_phases = [ 2.4, 3.4 ]
+        self.laser.laguerre_modes = [1.2, 2.4]
+        self.laser.laguerre_phases = [2.4, 3.4]
 
     def test_basic(self):
         s = self.s
