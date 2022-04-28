@@ -112,6 +112,42 @@ cast to a set of key-value tuples:
    It is commonly used, because it allows a concise notation,
    yet it is very much **not** mandatory.
 
+Tool Support
+------------
+
+This is a short list of tools to aid you with development.
+
+Formatting
+^^^^^^^^^^
+
+`PEP 8 <https://peps.python.org/pep-0008/>`_ (formatting guidelines) compliance:
+
+run from repo root ``flake8 lib/python/ test/python/``
+
+Note: Please obey the line length from PEP 8 even if that is annoying at times,
+this makes viewing files side-by-side much simpler.
+
+Run Tests
+^^^^^^^^^
+
+go into ``test/python/picongpu``,
+execute ``python -m quick``
+(for tests with compilation ``python -m compiling``)
+
+Test Coverage
+^^^^^^^^^^^^^
+
+0. install `coverage.py <https://coverage.readthedocs.io/>`_: ``pip install coverage``
+1. go to tests: ``cd test/python/picongpu``
+2. execute tests, record coverage: ``coverage run --branch -m quick``
+3. view reports
+
+   - for PyPIConGPU: ``find ../../../lib/python/picongpu/pypicongpu/ -name '*.py' | xargs coverage report -m``
+   - for PICMI: ``find ../../../lib/python/picongpu/picmi/ -name '*.py' | xargs coverage report -m``
+   - Goal is 100% coverage (missing sections are printed)
+
+For further options see `the coverage.py doc <https://coverage.readthedocs.io/>`_.
+
 .. _pypicongpu-misc-apidoc:
 
 API Documentation
