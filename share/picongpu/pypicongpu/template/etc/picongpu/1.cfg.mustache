@@ -67,13 +67,6 @@ TBG_periodic="--periodic {{{x}}} {{{y}}} {{{z}}}"
 ## Section: Optional Variables ##
 #################################
 
-TBG_openPMD="--openPMD.period 100   \
-             --openPMD.file simData \
-             --openPMD.ext bp \
-             --checkpoint.backend openPMD \
-             --checkpoint.period 100 \
-             --checkpoint.restart.backend openPMD"
-
 {{#output.auto}}
 # only use charge conservation if solver is yee AND using cuda backend
 if [[ "Yee" = "{{{solver.name}}}" ]] && [[ "$PIC_BACKEND" =~ ^cuda(:.+)?$ ]]
@@ -126,8 +119,7 @@ pypicongpu_output_with_newlines="
 # remove newlines
 TBG_pypicongpu_output=$(sed -z 's/\n/ /g' <<< "$pypicongpu_output_with_newlines")
 
-TBG_plugins="!TBG_openPMD                  \
-             !TBG_pypicongpu_output"
+TBG_plugins="!TBG_pypicongpu_output"
 
 #################################
 ## Section: Program Parameters ##
