@@ -16,8 +16,8 @@ class TestGaussianLaser(unittest.TestCase):
         self.laser.pulse_init = 1.3
         self.laser.init_plane_y = 1
         self.laser.polarization_type = GaussianLaser.PolarizationType.LINEAR_X
-        self.laser.laguerre_modes = [ 1.0 ]
-        self.laser.laguerre_phases = [ 0.0 ]
+        self.laser.laguerre_modes = [1.0]
+        self.laser.laguerre_phases = [0.0]
 
     def test_types(self):
         """invalid types are rejected"""
@@ -45,7 +45,7 @@ class TestGaussianLaser(unittest.TestCase):
         for not_polarization_type in [1, 1.3, None, "", []]:
             with self.assertRaises(TypeError):
                 laser.polarization_type = not_polarization_type
-        
+
         for invalid_list in [None, 1.2, "1.2", ["string"]]:
             with self.assertRaises(TypeError):
                 laser.laguerre_modes = invalid_list
@@ -75,7 +75,7 @@ class TestGaussianLaser(unittest.TestCase):
         laser.laguerre_modes = []
         with self.assertRaisesRegex(ValueError, ".*mode.*empty.*"):
             laser.get_rendering_context()
-        laser.laguerre_modes = [ 1.0 ]
+        laser.laguerre_modes = [1.0]
         laser.laguerre_phases = []
         with self.assertRaisesRegex(ValueError, ".*phase.*empty.*"):
             laser.get_rendering_context()
@@ -83,7 +83,7 @@ class TestGaussianLaser(unittest.TestCase):
     def test_invalid_laguerre_modes_invalid_length(self):
         """num of laguerre modes/phases must be equal"""
         laser = self.laser
-        laser.laguerre_modes = [ 1.0 ]
+        laser.laguerre_modes = [1.0]
         laser.laguerre_phases = [2, 3]
 
         with self.assertRaisesRegex(ValueError, ".*[Ll]aguerre.*length.*"):
@@ -96,7 +96,7 @@ class TestGaussianLaser(unittest.TestCase):
     def test_positive_definite_laguerre_modes(self):
         """test whether laguerre modes are positive definite"""
         laser = self.laser
-        laser.laguerre_modes = [ -1.0 ]
+        laser.laguerre_modes = [-1.0]
         with self.assertLogs(level="WARNING") as caught_logs:
             # valid, but warns
             self.assertNotEqual({}, laser.get_rendering_context())
@@ -112,7 +112,7 @@ class TestGaussianLaser(unittest.TestCase):
             logging.warning("TESTWARN")
         self.assertEqual(1, len(other_caught_logs.output))
         self.assertTrue("TESTWARN" in other_caught_logs.output[0])
- 
+
     def test_translation(self):
         """is translated to context object"""
         # note: implicitly checks against schema
@@ -126,7 +126,8 @@ class TestGaussianLaser(unittest.TestCase):
                          self.laser.polarization_type.get_cpp_str())
         self.assertEqual(context["pulse_init"], self.laser.pulse_init)
         self.assertEqual(context["init_plane_y"], self.laser.init_plane_y)
-        self.assertEqual(context["laguerre_modes"], [{"single_laguerre_mode": 1.0}])
-        self.assertEqual(context["laguerre_phases"], [{"single_laguerre_phase": 0.0}])
+        self.assertEqual(context["laguerre_modes"],
+                         [{"single_laguerre_mode": 1.0}])
+        self.assertEqual(context["laguerre_phases"],
+                         [{"single_laguerre_phase": 0.0}])
         self.assertEqual(context["modenumber"], 0)
- 

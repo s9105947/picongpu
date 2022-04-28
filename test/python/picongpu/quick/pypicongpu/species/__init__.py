@@ -1,3 +1,4 @@
+# flake8: noqa
 from .species import *
 from .initmanager import *
 from .constant import *

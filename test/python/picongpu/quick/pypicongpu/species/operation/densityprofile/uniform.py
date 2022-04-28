@@ -1,4 +1,5 @@
-from picongpu.pypicongpu.species.operation.densityprofile import Uniform, DensityProfile
+from picongpu.pypicongpu.species.operation.densityprofile import \
+    Uniform, DensityProfile
 
 import unittest
 

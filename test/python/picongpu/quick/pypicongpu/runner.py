@@ -374,7 +374,7 @@ class TestRunner(unittest.TestCase):
             # note: put in subdir, b/c not all directories are cloned by
             # pic-create
             os.makedirs(template_path / "etc" / "picongpu")
-            testfile_template = template_path / "etc"/ "picongpu" / \
+            testfile_template = template_path / "etc" / "picongpu" / \
                 "date.mustache"
             with open(testfile_template, "w") as tpl_file:
                 tpl_file.write("{{{_date}}}")

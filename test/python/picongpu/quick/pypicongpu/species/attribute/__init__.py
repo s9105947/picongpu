@@ -1,3 +1,4 @@
+# flake8: noqa
 from .attribute import *
 from .position import *
 from .weighting import *

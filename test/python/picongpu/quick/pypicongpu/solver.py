@@ -1,5 +1,4 @@
 from picongpu.pypicongpu.solver import Solver, YeeSolver
-from picongpu.pypicongpu import grid
 
 import unittest
 

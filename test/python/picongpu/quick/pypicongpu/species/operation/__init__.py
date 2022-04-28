@@ -1,3 +1,4 @@
+# flake8: noqa
 from .operation import *
 from .densityprofile import *
 from .simpledensity import *

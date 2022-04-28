@@ -195,7 +195,7 @@ class TestPicmiGaussianLaser(unittest.TestCase):
                 propagation_direction=[0, 1, 0],
                 E0=0,
                 picongpu_laguerre_phases=set(2.0))
-    
+
     def test_laguerre_modes_optional(self):
         """laguerre modes are optional"""
         # allowed: not given at all
@@ -238,7 +238,7 @@ class TestPicmiGaussianLaser(unittest.TestCase):
                 propagation_direction=[0, 1, 0],
                 picongpu_laguerre_modes=[1.0, 2.0],
                 picongpu_laguerre_phases=None)
-            
+
         with self.assertRaisesRegex(Exception, ".*[Ll]aguerre.*"):
             picmi.GaussianLaser(
                 wavelength=1,

@@ -44,7 +44,6 @@ repository root:
 
 .. code:: bash
 
-   # TODO all test
    python -m quick
    python -m compiling
    python -m e2e
@@ -55,7 +54,14 @@ accessed with their class name, and optional method name:
 
 .. code:: bash
 
-   TODO
+   python -m quick TestElement
+   python -m quick TestElement.test_periodic_table_names
+
+.. note::
+
+   The tests are loaded by using ``from SOMEWHERE import *`` -- which is bad style.
+   For that reason all ``__init__.py`` files in the tests have the style checks disabled with ``# flake8: noqa``.
+   When changing the test runner (maybe in the future) these skipped checks should be abandoned.
 
 PICMI
 -----

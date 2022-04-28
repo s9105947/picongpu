@@ -4,7 +4,8 @@ import unittest
 
 from picongpu.pypicongpu.species import Species
 from picongpu.pypicongpu.species.constant import Mass, Charge
-from picongpu.pypicongpu.species.attribute import Position, Momentum, BoundElectrons
+from picongpu.pypicongpu.species.attribute import \
+    Position, Momentum, BoundElectrons
 from picongpu.picmi import constants
 
 

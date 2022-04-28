@@ -4,7 +4,8 @@ import unittest
 
 from picongpu.pypicongpu.species import Species
 from picongpu.pypicongpu.species.constant import Ionizers
-from picongpu.pypicongpu.species.attribute import BoundElectrons, Position, Momentum
+from picongpu.pypicongpu.species.attribute import \
+    BoundElectrons, Position, Momentum
 
 
 class TestSetBoundElectrons(unittest.TestCase):
