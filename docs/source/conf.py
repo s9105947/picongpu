@@ -23,6 +23,9 @@ import sys
 python_libs = os.path.abspath('../../lib/python')
 sys.path.insert(0, python_libs)
 
+# for autodoc example
+sys.path.insert(0, os.path.abspath("./pypicongpu"))
+
 
 # -- General configuration ------------------------------------------------
 
