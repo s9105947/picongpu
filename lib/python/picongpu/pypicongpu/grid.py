@@ -7,6 +7,7 @@ License: GPLv3+
 
 from . import util
 from typeguard import typechecked
+import typing
 import enum
 from .rendering import RenderedObject
 
@@ -67,6 +68,9 @@ class Grid3D(RenderedObject):
     boundary_condition_z = util.build_typesafe_property(BoundaryCondition)
     """behavior towards particles crossing the Z boundary"""
 
+    n_gpus = util.build_typesafe_property(typing.Tuple[int])
+    """number of GPUs in x y and z direction as 3-integer tuple"""
+
     def _get_serialized(self) -> dict:
         """serialized representation provided for RenderedObject"""
         return {
@@ -84,5 +88,10 @@ class Grid3D(RenderedObject):
                 "x": self.boundary_condition_x.get_cfg_str(),
                 "y": self.boundary_condition_y.get_cfg_str(),
                 "z": self.boundary_condition_z.get_cfg_str(),
+            },
+            "gpu_cnt": {
+                "x": self.n_gpus[0],
+                "y": self.n_gpus[1],
+                "z": self.n_gpus[2],
             }
         }

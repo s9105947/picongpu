@@ -76,11 +76,11 @@ class Cartesian3DGrid(picmistandard.PICMI_Cartesian3DGrid):
         # gpu distribution
                 # convert input to 3 integer list
         if self.n_gpus == None:
-            g.n_gpus = [1, 1, 1]
+            g.n_gpus = tuple([1, 1, 1])
         elif len(self.n_gpus) == 1:
-            g.ngpus = [1, self.n_gpus[0], 1]
+            g.ngpus = tuple([1, self.n_gpus[0], 1])
         elif len(self.n_gpus) == 3:
-            g.n_gpus = self.n_gpus
+            g.n_gpus = tuple(self.n_gpus)
         else:
             assert False, "n_gpus was neither None, a 1-integer-list or a 3-integer-list"
 
