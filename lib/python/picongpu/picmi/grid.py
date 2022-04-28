@@ -17,26 +17,10 @@ import typing
 class Cartesian3DGrid(picmistandard.PICMI_Cartesian3DGrid):
     def __init__(self, n_gpus: typing.Optional[typing.List[int]] = None, *kw):
         """overwriting PICMI init to extract gpu distribution for PIConGPU"""
-
-        # convert input to 3 integer list
-        if n_gpus == None:
-            self.n_gpus = [1, 1, 1]
-        elif len(n_gpus) == 1:
-            self.ngpus = [1, n_gpus, 1]
-        elif len(n_gpus) == 3:
-            self.n_gpus = n_gpus
+        self.n_gpus = n_gpus
 
         # continue with regular init
         super().__init__(**kw)
-
-        # check if gpu distribution fits grid
-        # TODO: super_cell_size still hard coded
-        self.super_cell_size = [8, 8, 4]
-        cells = [self.nx, self.ny, self.nz]
-        dim_name = ["x", "y", "z"]
-        for dim in range(3):
-            assert ((cells[i] // n_gpus[i]) // self.super_cell_size[i]) * n_gpus[i]) * self.super_cell_size[i] == cells[i], \
-                "GPU- and/or super-cell-distribution in {} dimension does not match grid size".format(dim_name[i])
 
     def get_as_pypicongpu(self):
         # todo check
@@ -88,4 +72,25 @@ class Cartesian3DGrid(picmistandard.PICMI_Cartesian3DGrid):
             picongpu_boundary_condition_by_picmi_id[self.bc_ymin]
         g.boundary_condition_z = \
             picongpu_boundary_condition_by_picmi_id[self.bc_zmin]
+
+        # gpu distribution
+                # convert input to 3 integer list
+        if self.n_gpus == None:
+            g.n_gpus = [1, 1, 1]
+        elif len(self.n_gpus) == 1:
+            g.ngpus = [1, self.n_gpus[0], 1]
+        elif len(self.n_gpus) == 3:
+            g.n_gpus = self.n_gpus
+        else:
+            assert False, "n_gpus was neither None, a 1-integer-list or a 3-integer-list"
+
+        # check if gpu distribution fits grid
+        # TODO: super_cell_size still hard coded
+        super_cell_size = [8, 8, 4]
+        cells = [self.nx, self.ny, self.nz]
+        dim_name = ["x", "y", "z"]
+        for dim in range(3):
+            assert ((cells[i] // n_gpus[i]) // super_cell_size[i]) * n_gpus[i]) * super_cell_size[i] == cells[i], \
+                "GPU- and/or super-cell-distribution in {} dimension does not match grid size".format(dim_name[i])
+
         return g
