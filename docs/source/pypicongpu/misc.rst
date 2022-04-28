@@ -173,6 +173,15 @@ e.g. ``:ref:`MARK```.
 To document parameters, return values etc. make them compatible with Sphinx's autodoc.
 For details please refer to `the respective documentation section <https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html>`_.
 
+.. note::
+
+   If there is an reStructuredText syntax error during generation (printed as warning after sphinx invocation ``make html``) to debug:
+
+   1. visit the respective page
+   2. click *View page source* at the top of the page
+
+      (This might be only availble **locally**, the online version displays *Edit on GitHub* instead)
+
 An example can be found in `the official documentation <https://sphinx-rtd-tutorial.readthedocs.io/en/latest/docstrings.html>`_.
 The types are implictly given by the `type hints <https://www.python.org/dev/peps/pep-0484/>`_,
 so these can be omitted:
