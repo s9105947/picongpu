@@ -5,22 +5,27 @@ import picmistandard
 from typeguard import typechecked
 import typing
 
+
 @typechecked
 class GaussianLaser(picmistandard.PICMI_GaussianLaser):
     """PICMI object for Gaussian Laser"""
 
-    def __init__(self, wavelength, waist, duration,
-            picongpu_laguerre_modes: typing.Optional[typing.List[float]] = None,
-            picongpu_laguerre_phases: typing.Optional[typing.List[float]] = None,
-            **kw
-            ):
-        assert (picongpu_laguerre_modes is None and picongpu_laguerre_phases is None) or \
-               (picongpu_laguerre_modes is not None and picongpu_laguerre_phases is not None), \
-               "laguerre_modes and laguerre_phases MUST BE both set or both unset"
-        self.picongpu_laguerre_modes=picongpu_laguerre_modes
-        self.picongpu_laguerre_phases=picongpu_laguerre_phases
+    def __init__(
+            self, wavelength, waist, duration,
+            picongpu_laguerre_modes: typing.Optional[
+                typing.List[float]] = None,
+            picongpu_laguerre_phases: typing.Optional[
+                typing.List[float]] = None,
+            **kw):
+        assert (picongpu_laguerre_modes is None
+                and picongpu_laguerre_phases is None) or \
+               (picongpu_laguerre_modes is not None
+                and picongpu_laguerre_phases is not None), \
+               "laguerre_modes and laguerre_phases MUST BE both set or " \
+               "both unset"
+        self.picongpu_laguerre_modes = picongpu_laguerre_modes
+        self.picongpu_laguerre_phases = picongpu_laguerre_phases
         super().__init__(wavelength, waist, duration, **kw)
-
 
     def get_as_pypicongpu(self) -> laser.GaussianLaser:
         util.unsupported("laser name", self.name)
@@ -57,12 +62,12 @@ class GaussianLaser(picmistandard.PICMI_GaussianLaser):
             tuple(self.polarization_direction)]
 
         if self.picongpu_laguerre_modes is None:
-            pypicongpu_laser.laguerre_modes = [ 1.0 ]
+            pypicongpu_laser.laguerre_modes = [1.0]
         else:
             pypicongpu_laser.laguerre_modes = self.picongpu_laguerre_modes
 
         if self.picongpu_laguerre_phases is None:
-            pypicongpu_laser.laguerre_phases = [ 0.0 ]
+            pypicongpu_laser.laguerre_phases = [0.0]
         else:
             pypicongpu_laser.laguerre_phases = self.picongpu_laguerre_phases
 

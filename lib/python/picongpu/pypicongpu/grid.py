@@ -8,10 +8,11 @@ from .rendering import RenderedObject
 class BoundaryCondition(enum.Enum):
     """
     Boundary Condition of PIConGPU
-    
+
     Defines how particles that pass the simulation bounding box are treated.
-    
-    TODO: implement the other methods supported by PIConGPU (reflecting, thermal)
+
+    TODO: implement the other methods supported by PIConGPU
+    (reflecting, thermal)
     """
     PERIODIC = 1
     ABSORBING = 2
@@ -32,9 +33,9 @@ class BoundaryCondition(enum.Enum):
 class Grid3D(RenderedObject):
     """
     PIConGPU 3 dimensional (cartesian) grid
-    
+
     Defined by the dimensions of each cell and the number of cells per axis.
-    
+
     The bounding box is implicitly given as TODO.
     """
 

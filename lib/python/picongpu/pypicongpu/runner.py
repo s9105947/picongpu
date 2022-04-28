@@ -297,7 +297,8 @@ class Runner():
 
     def __log_dirs(self):
         """print human-readble list of paths to log"""
-        logging.info(" template dir: {}". format(self.__pypicongpu_template_dir))
+        logging.info(" template dir: {}"
+                     .format(self.__pypicongpu_template_dir))
         logging.info("    setup dir: {}".format(self.setup_dir))
         logging.info("      run dir: {}".format(self.run_dir))
         logging.info("  params file: {}".format(self.__params_file()))

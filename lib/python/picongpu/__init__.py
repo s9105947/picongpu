@@ -13,7 +13,7 @@ from . import picmi
 from . import pypicongpu
 
 __all__ = [
-    "extra", 
-    "picmi", 
+    "extra",
+    "picmi",
     "pypicongpu",
 ]

@@ -5,6 +5,7 @@ from .rendering import RenderedObject
 import typing
 import logging
 
+
 @typechecked
 class GaussianLaser(RenderedObject):
     """
@@ -50,16 +51,18 @@ class GaussianLaser(RenderedObject):
     """array containing the magnitudes of radial Laguerre-modes"""
     laguerre_phases = util.build_typesafe_property(typing.List[float])
     """array containing the phases of radial Laguerre-modes"""
-    
+
     def _get_serialized(self) -> dict:
         if [] == self.laguerre_modes:
             raise ValueError("Laguerre modes MUST NOT be empty.")
         if [] == self.laguerre_phases:
             raise ValueError("Laguerre phases MUST NOT be empty.")
         if len(self.laguerre_phases) != len(self.laguerre_modes):
-            raise ValueError("Laguerre modes and Laguerre phases MUST BE arrays of equal length.")
-        if len(list(filter(lambda x: x<0, self.laguerre_modes)))>0:
-            logging.warning("Laguerre mode magnitudes SHOULD BE positive definite.")
+            raise ValueError("Laguerre modes and Laguerre phases MUST BE "
+                             "arrays of equal length.")
+        if len(list(filter(lambda x: x < 0, self.laguerre_modes))) > 0:
+            logging.warning(
+                "Laguerre mode magnitudes SHOULD BE positive definite.")
         return {
             "wave_length_si": self.wavelength,
             "waist_si": self.waist,
@@ -70,7 +73,9 @@ class GaussianLaser(RenderedObject):
             "pulse_init": self.pulse_init,
             "init_plane_y": self.init_plane_y,
             "polarization_type": self.polarization_type.get_cpp_str(),
-            "laguerre_modes": list(map(lambda x: {"single_laguerre_mode": x}, self.laguerre_modes)),
-            "laguerre_phases": list(map(lambda x: {"single_laguerre_phase": x}, self.laguerre_phases)),
+            "laguerre_modes": list(map(lambda x: {"single_laguerre_mode": x},
+                                       self.laguerre_modes)),
+            "laguerre_phases": list(map(lambda x: {"single_laguerre_phase": x},
+                                        self.laguerre_phases)),
             "modenumber": len(self.laguerre_modes)-1,
         }

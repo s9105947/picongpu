@@ -33,20 +33,23 @@ def build_typesafe_property(
 
 
 @typechecked
-def unsupported(name: str, value: typing.Any = 1, default: typing.Any = None) -> None:
+def unsupported(name: str, value: typing.Any = 1,
+                default: typing.Any = None) -> None:
     """
     Print a msg that the feature/parameter/thing is unsupported.
 
-    If 2nd param (value) and 3rd param (default) are set: supress msg if value == default
-    
-    If 2nd param (value) is set and 3rd is missing: supress msg if value is None
-    
+    If 2nd param (value) and 3rd param (default) are set:
+    supress msg if value == default
+
+    If 2nd param (value) is set and 3rd is missing:
+    supress msg if value is None
+
     If only 1st param (name) is set: always print msg
-    
+
     :param name: name of the feature/parameter/thing that is unsupported
     :param value: If set: only print warning if this is not None
     :param default: If set: check value against this param instead of none
     """
-    
+
     if value != default:
         logging.warning("unsupported: {}".format(name))
