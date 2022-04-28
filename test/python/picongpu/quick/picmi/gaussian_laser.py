@@ -1,3 +1,10 @@
+"""
+This file is part of the PIConGPU.
+Copyright 2021-2022 PIConGPU contributors
+Authors: Hannes Tröpgen, Brian Edward Marré, Alexander Debus
+License: GPLv3+
+"""
+
 from picongpu import picmi
 
 import unittest

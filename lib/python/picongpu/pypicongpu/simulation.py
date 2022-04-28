@@ -1,3 +1,10 @@
+"""
+This file is part of the PIConGPU.
+Copyright 2021-2022 PIConGPU contributors
+Authors: Hannes Tröpgen, Brian Edward Marré
+License: GPLv3+
+"""
+
 from .grid import Grid3D
 from .laser import GaussianLaser
 from .solver import Solver

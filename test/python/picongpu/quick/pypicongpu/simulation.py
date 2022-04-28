@@ -1,3 +1,10 @@
+"""
+This file is part of the PIConGPU.
+Copyright 2021-2022 PIConGPU contributors
+Authors: Hannes Tröpgen, Brian Edward Marré, Alexander Debus
+License: GPLv3+
+"""
+
 from picongpu.pypicongpu.simulation import Simulation
 from picongpu.pypicongpu.laser import GaussianLaser
 from picongpu.pypicongpu import grid, solver, species

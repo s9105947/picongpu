@@ -1,3 +1,10 @@
+"""
+This file is part of the PIConGPU.
+Copyright 2021-2022 PIConGPU contributors
+Authors: Hannes Tröpgen, Brian Edward Marré
+License: GPLv3+
+"""
+
 from .operation import Operation
 from typeguard import typechecked
 from ... import util
@@ -5,9 +12,7 @@ from ..species import Species
 from .densityprofile import DensityProfile
 import typing
 from ..attribute import Position, Weighting
-from ..constant import DensityRatio, Charge
-import logging
-import math
+from ..constant import DensityRatio
 
 
 @typechecked

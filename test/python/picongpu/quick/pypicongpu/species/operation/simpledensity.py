@@ -1,3 +1,10 @@
+"""
+This file is part of the PIConGPU.
+Copyright 2021-2022 PIConGPU contributors
+Authors: Hannes Tröpgen, Brian Edward Marré
+License: GPLv3+
+"""
+
 from picongpu.pypicongpu.species.operation import SimpleDensity, Operation
 
 import unittest
@@ -6,12 +13,7 @@ from picongpu.pypicongpu.species import Species
 from picongpu.pypicongpu.species.operation import densityprofile
 from picongpu.pypicongpu.species.attribute import \
     Position, Weighting, Momentum
-from picongpu.pypicongpu.species.constant import DensityRatio, Charge
-from picongpu import picmi
-
-import logging
-import re
-from typeguard import typechecked
+from picongpu.pypicongpu.species.constant import DensityRatio
 
 
 class TestSimpleDensity(unittest.TestCase):
