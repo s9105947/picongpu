@@ -456,7 +456,7 @@ class Simulation(picmistandard.PICMI_Simulation):
                 "runtime not specified (neither as step count nor max time)")
 
         util.unsupported("verbose", self.verbose)
-        util.unsupported("particle shape", self.particle_shape)
+        util.unsupported("particle shape", self.particle_shape, "linear")
         util.unsupported("gamma boost", self.gamma_boost)
 
         # todo: check grid compatibility

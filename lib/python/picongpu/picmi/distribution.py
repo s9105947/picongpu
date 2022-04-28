@@ -37,8 +37,8 @@ class UniformDistribution(picmistandard.PICMI_UniformDistribution):
     def get_as_pypicongpu(
             self) -> species.operation.densityprofile.DensityProfile:
         util.unsupported("fill in", self.fill_in)
-        util.unsupported("lower bound", self.lower_bound)
-        util.unsupported("upper bound", self.upper_bound)
+        util.unsupported("lower bound", self.lower_bound, [None, None, None])
+        util.unsupported("upper bound", self.upper_bound, [None, None, None])
 
         prof = species.operation.densityprofile.Uniform()
         prof.density_si = self.density

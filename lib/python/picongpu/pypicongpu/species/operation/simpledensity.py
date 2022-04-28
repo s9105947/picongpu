@@ -58,60 +58,9 @@ class SimpleDensity(Operation):
     def prebook_species_attributes(self) -> None:
         self.attributes_by_species = {}
 
-        if not self.__is_species_charge_neutral():
-            species_str_list = []
-            for species in self.species:
-                if species.has_constant_of_type(DensityRatio):
-                    ratio = species.get_constant_by_type(DensityRatio).ratio
-                    species_str_list.append(
-                        "{} (ratio: {})".format(species.name,
-                                                ratio))
-                else:
-                    species_str_list.append(
-                        "{} (no explicit ratio)".format(species.name))
-
-            logging.warning("the following species are placed together, but "
-                            "are not charge neutral (see 'Quasi-Neutral "
-                            "Initialization'): {}"
-                            .format(", ".join(species_str_list)))
-
         # assign weighting & position to every species
         for species in self.species:
             self.attributes_by_species[species] = [Position(), Weighting()]
-
-    def __is_species_charge_neutral(self) -> bool:
-        """
-        check if placed species will be charge neutral
-
-        In general, particles must be locally charge neutral in
-        total (or they'd  repel each other all over the place).
-
-        In PIConGPU in particular (and typical PIC codes), this is implicitly
-        assumed: If particles (read: placed species) are NOT charge neutral,
-        *ghost charges* will be created.
-
-        This might be a configuration mistake (e.g. species that should be
-        placed together do not end up in the same Operation).
-        Hence, this is checked here explicitly (and potentially warned about).
-        """
-        # note: all use same profile -> only examine charge & density ratio
-        # note: keep summands in list to keep precision
-        charge_summands = []
-
-        for species in self.species:
-            # charge is not mandatory for simple density operation
-            if not species.has_constant_of_type(Charge):
-                continue
-
-            ratio = 1
-            if species.has_constant_of_type(DensityRatio):
-                ratio = species.get_constant_by_type(DensityRatio).ratio
-
-            charge = species.get_constant_by_type(Charge).charge_si
-
-            charge_summands.append(charge * ratio)
-
-        return abs(math.fsum(charge_summands)) <= 1e-30
 
     def _get_serialized(self) -> dict:
         """
