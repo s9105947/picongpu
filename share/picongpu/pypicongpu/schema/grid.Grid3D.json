@@ -41,6 +41,25 @@
                 }
             }
         },
+        "gpu_cnt": {
+            "description": "number of gpus",
+            "type": "object",
+            "unevaluatedProperties": false,
+            "required": ["x", "y", "z"],
+            "properties": {
+                "x": {
+                    "$anchor": "gpu_cnt_component",
+                    "type": "integer",
+                    "minimum": 1
+                },
+                "y": {
+                    "$ref": "#cell_cnt_component"
+                },
+                "z": {
+                    "$ref": "#cell_cnt_component"
+                }
+            }
+        },
         "boundary_condition": {
             "description": "boundary condition to be passed to --periodic (encoded as number)",
             "type": "object",
