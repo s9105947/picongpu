@@ -33,6 +33,7 @@ class HelperTestPicmiBoundaries:
         """
         raise NotImplementedError("must be implemented in child classes")
 
+    @unittest.skip("not implemented")
     def test_boundary_not_given_at_all(self):
         """no boundaries supplied at all"""
         picmi_dist = self._get_distribution([None, None, None],
@@ -41,6 +42,7 @@ class HelperTestPicmiBoundaries:
         self.assertEqual((math.inf, math.inf, math.inf), pypic.upper_bound)
         self.assertEqual((-math.inf, -math.inf, -math.inf), pypic.lower_bound)
 
+    @unittest.skip("not implemented")
     def test_boundary_not_given_partial(self):
         """only some boundaries (components) are missing"""
         picmi_dist = self._get_distribution(lower_bound=[123, -569, None],
@@ -49,6 +51,7 @@ class HelperTestPicmiBoundaries:
         self.assertEqual((123, -569, -math.inf), pypic.lower_bound)
         self.assertEqual((124, math.inf, 17), pypic.upper_bound)
 
+    @unittest.skip("not implemented")
     def test_boundary_passthru(self):
         picmi_dist = self._get_distribution(lower_bound=[111, 222, 333],
                                             upper_bound=[444, 555, 666])
@@ -59,8 +62,8 @@ class HelperTestPicmiBoundaries:
         self.assertEqual((444, 555, 666), pypic.upper_bound)
 
 
-class TestPicmiUniformDistribution(unittest.TestCase):
-             # TODO: rm comment -- HelperTestPicmiBoundaries):
+class TestPicmiUniformDistribution(unittest.TestCase,
+                                   HelperTestPicmiBoundaries):
     def _get_distribution(self, lower_bound, upper_bound):
         return picmi.UniformDistribution(density=1716273,
                                          lower_bound=lower_bound,
@@ -121,10 +124,10 @@ class TestPicmiUniformDistribution(unittest.TestCase):
                                0.004318114799291135)
 
 
+@unittest.skip("not implemented")
 @typechecked
-class TestPicmiAnalyticDistriution:
-    # class TestPicmiAnalyticDistriution(unittest.TestCase,
-    #                                    HelperTestPicmiBoundaries):
+class TestPicmiAnalyticDistriution(unittest.TestCase,
+                                   HelperTestPicmiBoundaries):
     def _get_distribution(self, lower_bound, upper_bound):
         return picmi.AnalyticDistribution(density_expression="x+y+z",
                                           lower_bound=lower_bound,
@@ -183,7 +186,8 @@ class TestPicmiAnalyticDistriution:
             picmi.AnalyticDistribution().get_as_pypicongpu()
 
         # density is only required param
-        picmi.AnalyticDistribution(density_expression="3.14").get_as_pypicongpu()
+        picmi.AnalyticDistribution(density_expression="3.14") \
+             .get_as_pypicongpu()
 
     def test_drift(self):
         """drift is correctly translated"""
@@ -210,9 +214,9 @@ class TestPicmiAnalyticDistriution:
                                0.5773502691896257)
 
 
+@unittest.skip("not implemented")
 @typechecked
-class TestPicmiGaussianBunchDistribution:
-    # class TestPicmiGaussianBunchDistribution(unittest.TestCase):
+class TestPicmiGaussianBunchDistribution(unittest.TestCase):
     def test_full(self):
         """check for all possible params"""
         gb = picmi.GaussianBunchDistribution(1337, 0.05,

@@ -33,9 +33,10 @@ class TestPicmiSpecies(unittest.TestCase):
         intended to run tests against this temperature
         """
         return [
-            picmi.GaussianBunchDistribution(4e10, 4e-15),
+            # TODO add profiles after implementation
+            # picmi.GaussianBunchDistribution(4e10, 4e-15),
             picmi.UniformDistribution(8e24),
-            picmi.AnalyticDistribution("x+y+z"),
+            # picmi.AnalyticDistribution("x+y+z"),
         ]
 
     def test_basic(self):
