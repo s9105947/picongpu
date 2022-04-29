@@ -112,6 +112,9 @@ cast to a set of key-value tuples:
    It is commonly used, because it allows a concise notation,
    yet it is very much **not** mandatory.
 
+
+.. _pypicongpu-misc-toolsupport:
+
 Tool Support
 ------------
 

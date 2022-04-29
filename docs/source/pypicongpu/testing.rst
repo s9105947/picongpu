@@ -23,6 +23,12 @@ rigid, so they might fail even if they are not supposed to. When
 encountering a failing test act with care and adjust the test case if
 that is plausible.
 
+.. note::
+
+   For an explanation on the python ``unittests`` module please refer to the `python manual <https://docs.python.org/3.8/library/unittest.html>`_.
+
+   For more notes on tools support (including test coverage) see :ref:`pypicongpu-misc-toolsupport`.
+
 Structure
 ---------
 
