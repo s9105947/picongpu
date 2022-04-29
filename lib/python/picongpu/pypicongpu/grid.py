@@ -73,6 +73,12 @@ class Grid3D(RenderedObject):
 
     def _get_serialized(self) -> dict:
         """serialized representation provided for RenderedObject"""
+        assert self.cell_cnt_x > 0, "cell_cnt_x must be greater than 0"
+        assert self.cell_cnt_y > 0, "cell_cnt_y must be greater than 0"
+        assert self.cell_cnt_z > 0, "cell_cnt_z must be greater than 0"
+        for i in range(3):
+            assert self.n_gpus[i] > 0, "all n_gpus entries must be greater than 0"
+
         return {
             "cell_size": {
                 "x": self.cell_size_x_si,

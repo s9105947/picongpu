@@ -15,7 +15,7 @@ import typing
 
 @typechecked
 class Cartesian3DGrid(picmistandard.PICMI_Cartesian3DGrid):
-    def __init__(self, n_gpus: typing.Optional[typing.List[int]] = None, *kw):
+    def __init__(self, n_gpus: typing.Optional[typing.List[int]] = None, **kw):
         """overwriting PICMI init to extract gpu distribution for PIConGPU"""
         self.n_gpus = n_gpus
 
@@ -78,8 +78,11 @@ class Cartesian3DGrid(picmistandard.PICMI_Cartesian3DGrid):
         if self.n_gpus == None:
             g.n_gpus = tuple([1, 1, 1])
         elif len(self.n_gpus) == 1:
-            g.ngpus = tuple([1, self.n_gpus[0], 1])
+            assert self.n_gpus[0] > 0, "number of gpus must be positive integer" 
+            g.n_gpus = tuple([1, self.n_gpus[0], 1])
         elif len(self.n_gpus) == 3:
+            for dim in range(3):
+                assert self.n_gpus[dim] > 0, "number of gpus must be positive integer" 
             g.n_gpus = tuple(self.n_gpus)
         else:
             raise ValueError("n_gpus was neither None, a 1-integer-list or a 3-integer-list")
@@ -90,7 +93,8 @@ class Cartesian3DGrid(picmistandard.PICMI_Cartesian3DGrid):
         cells = [self.nx, self.ny, self.nz]
         dim_name = ["x", "y", "z"]
         for dim in range(3):
-            assert ((cells[i] // n_gpus[i]) // super_cell_size[i]) * n_gpus[i] * super_cell_size[i] == cells[i], \
-                "GPU- and/or super-cell-distribution in {} dimension does not match grid size".format(dim_name[i])
+            assert (((cells[dim] // g.n_gpus[dim]) // super_cell_size[dim]) 
+                    * g.n_gpus[dim] * super_cell_size[dim] == cells[dim]), \
+                "GPU- and/or super-cell-distribution in {} dimension does not match grid size".format(dim_name[dim])
 
         return g

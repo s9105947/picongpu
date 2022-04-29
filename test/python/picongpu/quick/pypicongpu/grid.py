@@ -22,7 +22,7 @@ class TestGrid3D(unittest.TestCase):
         self.g.boundary_condition_x = BoundaryCondition.PERIODIC
         self.g.boundary_condition_y = BoundaryCondition.ABSORBING
         self.g.boundary_condition_z = BoundaryCondition.PERIODIC
-        self.g.n_gpus = tuple([1, 1, 1])
+        self.g.n_gpus = tuple([2, 4, 1])
 
     def test_basic(self):
         g = self.g
@@ -56,6 +56,24 @@ class TestGrid3D(unittest.TestCase):
             g.boundary_condition_y = 1
         with self.assertRaises(TypeError):
             g.boundary_condition_z = {}
+        with self.assertRaises(TypeError):
+            g.n_gpus = [1, 1, 1] # list not accepted - tuple needed
+
+    def test_positiv(self):
+        g = self.g
+        with self.assertRaisesRegex(Exception, ".*greater than 0.*"):
+            g.cell_cnt_x = -1
+            g._get_serialized()
+        with self.assertRaisesRegex(Exception, ".*greater than 0.*"):
+            g.cell_cnt_y = -2
+            g._get_serialized()
+        with self.assertRaisesRegex(Exception, ".*greater than 0.*"):
+            g.cell_cnt_z = 0
+            g._get_serialized()
+        for wrong_n_gpus in [tuple([-1, 1, 1]), tuple([1, 1, 0])]:
+            with self.assertRaisesRegex(Exception, ".*greater than 0.*"):
+                g.n_gpus = wrong_n_gpus
+                g._get_serialized()
 
     def test_mandatory(self):
         # check that mandatory arguments can't be none
@@ -78,6 +96,8 @@ class TestGrid3D(unittest.TestCase):
             g.boundary_condition_y = None
         with self.assertRaises(TypeError):
             g.boundary_condition_z = None
+        with self.assertRaises(TypeError):
+            g.n_gpus = None
 
     def test_get_rendering_context(self):
         """object is correctly serialized"""
@@ -95,6 +115,10 @@ class TestGrid3D(unittest.TestCase):
         self.assertEqual("0", context["boundary_condition"]["y"])
         self.assertEqual("1", context["boundary_condition"]["z"])
 
+        # n_gpus ouput
+        self.assertEqual(2, context["gpu_cnt"]["x"])
+        self.assertEqual(4, context["gpu_cnt"]["y"])
+        self.assertEqual(1, context["gpu_cnt"]["z"])
 
 class TestBoundaryCondition(unittest.TestCase):
     def test_cfg_translation(self):
