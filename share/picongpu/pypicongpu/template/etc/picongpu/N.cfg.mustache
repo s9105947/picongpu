@@ -69,12 +69,6 @@ TBG_periodic="--periodic {{{x}}} {{{y}}} {{{z}}}"
 ## Section: Optional Variables ##
 #################################
 
-TBG_openPMD="--openPMD.period 100   \
-             --openPMD.file simData \
-             --openPMD.ext bp \
-             --checkpoint.backend openPMD \
-             --checkpoint.period 100 \
-             --checkpoint.restart.backend openPMD"
 
 {{#output.auto}}
 # only use charge conservation if solver is yee AND using cuda backend
@@ -104,16 +98,6 @@ pypicongpu_output_with_newlines="
             --{{{name}}}_energyHistogram.minEnergy 0
             --{{{name}}}_energyHistogram.maxEnergy 256000
     
-            {{#phase_space_axis}}
-                --{{{name}}}_phaseSpace.period {{{period}}}
-                --{{{name}}}_phaseSpace.filter all
-                --{{{name}}}_phaseSpace.space {{{space}}}
-                --{{{name}}}_phaseSpace.momentum {{{momentum}}}
-                --{{{name}}}_phaseSpace.min -10
-                --{{{name}}}_phaseSpace.max 10
-                --{{{name}}}_phaseSpace.ext bp
-            {{/phase_space_axis}}
-
             {{#png_axis}}
                 --{{{name}}}_png.period {{{period}}}
                 --{{{name}}}_png.axis {{{axis}}}
@@ -128,8 +112,7 @@ pypicongpu_output_with_newlines="
 # remove newlines
 TBG_pypicongpu_output=$(sed -z 's/\n/ /g' <<< "$pypicongpu_output_with_newlines")
 
-TBG_plugins="!TBG_openPMD                  \
-             !TBG_pypicongpu_output"
+TBG_plugins="!TBG_pypicongpu_output"
 
 #################################
 ## Section: Program Parameters ##
