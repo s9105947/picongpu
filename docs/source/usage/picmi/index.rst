@@ -3,6 +3,11 @@ PICMI
 
 PIConGPU supports `PICMI <https://picmi-standard.github.io/>`_ to create simulation setups from Python.
 
+.. note::
+
+   This is the **user** documentation.
+   For the developer documentation on the translation layer *PyPIConGPU* see :ref:`here <pypicongpu>`.
+
 .. warning::
 
    The PICMI support is still **experimental**.
