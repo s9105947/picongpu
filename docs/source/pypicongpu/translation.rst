@@ -1,3 +1,5 @@
+.. _pypicongpu-translation:
+
 Translation Process
 ===================
 
@@ -451,6 +453,8 @@ which makes both ``{..., "laser": null, ...}`` and
 Notably, from this process’ perspective “the rendering context” is the
 rendering context of the PyPIConGPU simulation object.
 
+.. _pypicongpu-translation-mustache:
+
 Mustache Syntax
 ~~~~~~~~~~~~~~~
 
@@ -485,6 +489,8 @@ Example Sequence
 ----------------
 
 These examples should demonstrate how the translation process works.
+
+.. _pypicongpu-translation-example-boundingbox:
 
 Bounding Box
 ~~~~~~~~~~~~

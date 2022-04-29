@@ -69,6 +69,7 @@ In case you are already fluent in compiling C++ projects and HPC, running PIC si
    usage/param
    usage/plugins
    usage/tbg
+   usage/picmi/index
    usage/python_utils
    usage/examples
    usage/workflows
