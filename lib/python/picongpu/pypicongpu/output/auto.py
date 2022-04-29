@@ -46,16 +46,6 @@ class Auto(RenderedObject):
             "period": self.period,
 
             # helper to avoid repeating code
-            "phase_space_axis": [
-                {
-                    "space": "x",
-                    "momentum": "py",
-                },
-                {
-                    "space": "y",
-                    "momentum": "px",
-                },
-            ],
             "png_axis": [
                 {"axis": "yx"},
                 {"axis": "yz"},
