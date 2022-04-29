@@ -346,13 +346,13 @@ class Runner():
         """
         execute PIConGPU
 
-        this uses the 1.cfg provided by the template,
+        this uses the N.cfg provided by the template,
         therefore will not work with any other configuration
         TODO multi-device support
         """
         chdir(self.setup_dir)
         runArgs("PIConGPU",
-                "tbg -s bash -c etc/picongpu/1.cfg -t "
+                "tbg -s bash -c etc/picongpu/N.cfg -t "
                 "etc/picongpu/bash/mpiexec.tpl".split(" ") + [self.run_dir])
 
     def generate(self):

@@ -646,7 +646,7 @@ these parameters to the ``pypicongpu.json`` before continuing rendering:
    }
 
 These are now used by the template from ``share/pypicongpu/template``,
-e.g. in the ``1.cfg.mustache``:
+e.g. in the ``N.cfg.mustache``:
 
 .. code:: bash
 
