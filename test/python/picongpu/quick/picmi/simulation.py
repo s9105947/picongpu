@@ -17,6 +17,7 @@ import logging
 import tempfile
 import shutil
 import os
+import pathlib
 
 
 @typechecked
@@ -572,3 +573,106 @@ class TestPicmiSimulation(unittest.TestCase):
         self.assertTrue(os.path.isdir(outdir))
         self.assertTrue(
             os.path.exists(outdir + "/include/picongpu/param/grid.param"))
+
+    def test_custom_template_dir_basic(self):
+        """providing custom template dir possible"""
+        # note: automatically cleaned up in teardown
+        out_dir = self.__get_tmpdir_name()
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            # create test template dir
+            with open(tmpdir + "/time_steps.mustache", "w") as testfile:
+                testfile.write("{{{time_steps}}}")
+
+            grid = get_grid(1, 1, 1, 32)
+            solver = picmi.ElectromagneticSolver(method="Yee", grid=grid)
+            # explicitly set to None
+            sim = picmi.Simulation(time_step_size=17,
+                                   max_steps=128,
+                                   solver=solver,
+                                   picongpu_template_dir=tmpdir)
+            sim.write_input_file(out_dir)
+
+        # check for generated (rendered) dir
+        self.assertTrue(os.path.isfile(out_dir + "/time_steps"))
+        with open(out_dir + "/time_steps") as rendered_file:
+            self.assertEqual("128", rendered_file.read())
+
+        # JSON has been dumped
+        self.assertTrue(os.path.isfile(out_dir + "/pypicongpu.json"))
+
+    def test_custom_template_dir_optional(self):
+        """custom template dir is optional"""
+        grid = get_grid(1, 1, 1, 32)
+        solver = picmi.ElectromagneticSolver(method="Yee", grid=grid)
+        # explicitly set to None
+        sim = picmi.Simulation(time_step_size=17,
+                               max_steps=4,
+                               solver=solver,
+                               picongpu_template_dir=None)
+
+        # simulation is valid
+        self.assertNotEqual(
+            {}, self.sim.get_as_pypicongpu().get_rendering_context())
+        runner = sim.picongpu_get_runner()
+
+        # good default template dir is selected
+        self.assertNotEqual(None, runner.pypicongpu_template_dir)
+        self.assertNotEqual("", runner.pypicongpu_template_dir)
+
+    def test_custom_template_dir_checks(self):
+        """sanity checks are run on template dir"""
+        grid = get_grid(1, 1, 1, 32)
+        solver = picmi.ElectromagneticSolver(method="Yee", grid=grid)
+
+        # empty string
+        with self.assertRaises(Exception, ".*template.*"):
+            picmi.Simulation(time_step_size=17,
+                             max_steps=4,
+                             solver=solver,
+                             picongpu_template_dir="")
+
+        # existing dir is ok:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            template_dir_name = tmpdir
+            sim = picmi.Simulation(time_step_size=17,
+                                   max_steps=4,
+                                   solver=solver,
+                                   picongpu_template_dir=template_dir_name)
+
+            self.assertNotEqual(
+                {}, sim.get_as_pypicongpu().get_rendering_context())
+            # no throw:
+            sim.picongpu_get_runner()
+
+        # left "with" block -- tmpdir is now deleted
+        # -> now raises
+        with self.assertRaises(Exception, ".*template.*"):
+            picmi.Simulation(time_step_size=17,
+                             max_steps=4,
+                             solver=solver,
+                             picongpu_template_dir=template_dir_name)
+
+    def test_custom_template_dir_types(self):
+        """custom template dir is typechecked"""
+        grid = get_grid(1, 1, 1, 32)
+        solver = picmi.ElectromagneticSolver(method="Yee", grid=grid)
+
+        valid_paths = [None, "/", pathlib.Path("/")]
+        for valid_path in valid_paths:
+            sim = picmi.Simulation(time_step_size=17,
+                                   max_steps=4,
+                                   solver=solver,
+                                   picongpu_template_dir=valid_path)
+            self.assertNotEqual(
+                {}, sim.get_as_pypicongpu().get_rendering_context())
+            # no throw:
+            sim.picongpu_get_runner()
+
+        invalid_paths = [1, ["/"], {}]
+        for invalid_path in invalid_paths:
+            with self.assertRaises(TypeError):
+                picmi.Simulation(time_step_size=17,
+                                 max_steps=4,
+                                 solver=solver,
+                                 picongpu_template_dir=invalid_path)
