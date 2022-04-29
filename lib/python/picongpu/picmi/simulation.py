@@ -14,6 +14,7 @@ import picmistandard
 
 from math import sqrt, isclose
 from typeguard import typechecked
+import pathlib
 import logging
 import typing
 
@@ -98,7 +99,10 @@ class Simulation(picmistandard.PICMI_Simulation):
             # if neither delta_t nor cfl are given simply silently pass
             # (might change in the future)
 
-    def __init__(self, **kw):
+    def __init__(self,
+                 picongpu_template_dir: typing.Optional[
+                     typing.Union[str, pathlib.Path]] = None,
+                 **kw):
         # delegate actual work to parent
         super().__init__(**kw)
 
@@ -109,6 +113,17 @@ class Simulation(picmistandard.PICMI_Simulation):
            "Yee" == self.solver.method and \
            isinstance(self.solver.grid, Cartesian3DGrid):
             self.__yee_compute_cfl_or_delta_t()
+
+        if picongpu_template_dir is None:
+            self.picongpu_template_dir = None
+        else:
+            assert "" != picongpu_template_dir, \
+                "picongpu_template_dir MUST NOT be empty"
+            # note: pathlib.Path(pathlib.Path(...)) is valid
+            template_path = pathlib.Path(picongpu_template_dir)
+            assert template_path.is_dir(), \
+                "picongpu_template_dir must be existing dir"
+            self.picongpu_template_dir = str(template_path)
 
         # store runner state
         self.__runner = None
@@ -496,7 +511,8 @@ class Simulation(picmistandard.PICMI_Simulation):
     def picongpu_run(self) -> None:
         """build and run PIConGPU simulation"""
         if self.__runner is None:
-            self.__runner = runner.Runner(self.get_as_pypicongpu())
+            self.__runner = runner.Runner(self.get_as_pypicongpu(),
+                                          self.picongpu_template_dir)
         self.__runner.generate()
         self.__runner.build()
         self.__runner.run()
@@ -512,6 +528,7 @@ class Simulation(picmistandard.PICMI_Simulation):
         if self.__runner is not None:
             logging.warning("runner already initialized, overwriting")
         self.__runner = runner.Runner(self.get_as_pypicongpu(),
+                                      self.picongpu_template_dir,
                                       setup_dir=file_name)
         self.__runner.generate()
 
@@ -524,5 +541,6 @@ class Simulation(picmistandard.PICMI_Simulation):
 
     def picongpu_get_runner(self) -> runner.Runner:
         if self.__runner is None:
-            self.__runner = runner.Runner(self.get_as_pypicongpu())
+            self.__runner = runner.Runner(self.get_as_pypicongpu(),
+                                          self.picongpu_template_dir)
         return self.__runner

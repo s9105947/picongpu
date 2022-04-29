@@ -574,14 +574,18 @@ class TestPicmiSimulation(unittest.TestCase):
         self.assertTrue(
             os.path.exists(outdir + "/include/picongpu/param/grid.param"))
 
-    def test_custom_template_dir_basic(self):
-        """providing custom template dir possible"""
+    def test_custom_template_dir_basic_write_input_file(self):
+        """providing custom template dir possible or write_input_file"""
         # note: automatically cleaned up in teardown
         out_dir = self.__get_tmpdir_name()
 
         with tempfile.TemporaryDirectory() as tmpdir:
             # create test template dir
-            with open(tmpdir + "/time_steps.mustache", "w") as testfile:
+            # -> use include/picongpu,
+            #    because pic-create does not copy every dir
+            os.makedirs(tmpdir + "/include/picongpu")
+            with open(tmpdir + "/include/picongpu/time_steps.mustache",
+                      "w") as testfile:
                 testfile.write("{{{time_steps}}}")
 
             grid = get_grid(1, 1, 1, 32)
@@ -594,12 +598,33 @@ class TestPicmiSimulation(unittest.TestCase):
             sim.write_input_file(out_dir)
 
         # check for generated (rendered) dir
-        self.assertTrue(os.path.isfile(out_dir + "/time_steps"))
-        with open(out_dir + "/time_steps") as rendered_file:
+        self.assertTrue(
+            os.path.isfile(out_dir + "/include/picongpu/time_steps"))
+        with open(out_dir + "/include/picongpu/time_steps") as rendered_file:
             self.assertEqual("128", rendered_file.read())
 
         # JSON has been dumped
         self.assertTrue(os.path.isfile(out_dir + "/pypicongpu.json"))
+
+    def test_custom_template_dir_basic_get_runner(self):
+        """using picongpu_get_runner() directly sets template dir"""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            grid = get_grid(1, 1, 1, 32)
+            solver = picmi.ElectromagneticSolver(method="Yee", grid=grid)
+            # explicitly set to None
+            sim = picmi.Simulation(time_step_size=17,
+                                   max_steps=128,
+                                   solver=solver,
+                                   picongpu_template_dir=tmpdir)
+            runner = sim.picongpu_get_runner()
+
+            self.assertEqual(
+                # note: this is the mangled name to access a private attribute
+                # *actually* you should not access private variables,
+                # however the alternative would be executing the runner,
+                # which is very costly
+                os.path.abspath(runner._Runner__pypicongpu_template_dir),
+                os.path.abspath(tmpdir))
 
     def test_custom_template_dir_optional(self):
         """custom template dir is optional"""
@@ -617,8 +642,8 @@ class TestPicmiSimulation(unittest.TestCase):
         runner = sim.picongpu_get_runner()
 
         # good default template dir is selected
-        self.assertNotEqual(None, runner.pypicongpu_template_dir)
-        self.assertNotEqual("", runner.pypicongpu_template_dir)
+        self.assertNotEqual(None, runner._Runner__pypicongpu_template_dir)
+        self.assertNotEqual("", runner._Runner__pypicongpu_template_dir)
 
     def test_custom_template_dir_checks(self):
         """sanity checks are run on template dir"""
@@ -626,7 +651,7 @@ class TestPicmiSimulation(unittest.TestCase):
         solver = picmi.ElectromagneticSolver(method="Yee", grid=grid)
 
         # empty string
-        with self.assertRaises(Exception, ".*template.*"):
+        with self.assertRaisesRegex(Exception, ".*template.*"):
             picmi.Simulation(time_step_size=17,
                              max_steps=4,
                              solver=solver,
@@ -647,7 +672,7 @@ class TestPicmiSimulation(unittest.TestCase):
 
         # left "with" block -- tmpdir is now deleted
         # -> now raises
-        with self.assertRaises(Exception, ".*template.*"):
+        with self.assertRaisesRegex(Exception, ".*template.*"):
             picmi.Simulation(time_step_size=17,
                              max_steps=4,
                              solver=solver,

@@ -5,9 +5,26 @@ Authors: Hannes Tröpgen, Brian Edward Marré
 License: GPLv3+
 """
 
-from picongpu import pypicongpu
+from picongpu import pypicongpu, picmi
+
+from typeguard import typechecked
 
 import unittest
+import tempfile
+import os
+
+
+@typechecked
+def get_grid(delta_x: float, delta_y: float, delta_z: float, n: int):
+    # sets delta_[x,y,z] implicitly by providing bounding box+cell count
+    return picmi.Cartesian3DGrid(
+        number_of_cells=[n, n, n],
+        lower_bound=[0, 0, 0],
+        upper_bound=list(map(lambda x: n*x,
+                             [delta_x, delta_y, delta_z])),
+        # required, otherwise won't spawn
+        lower_boundary_conditions=["open", "open", "periodic"],
+        upper_boundary_conditions=["open", "open", "periodic"])
 
 
 class TestSimulation(unittest.TestCase):
@@ -37,3 +54,33 @@ class TestSimulation(unittest.TestCase):
         runner.generate()
         runner.build()
         runner.run()
+
+    def test_custom_template_dir(self):
+        """may pass custom template dir"""
+
+        # note: is not required to compile
+        # this test checks if the correct dir is **passed to the runner**
+        # (instead of checking if the correct files have been generated)
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            grid = get_grid(1, 1, 1, 32)
+            solver = picmi.ElectromagneticSolver(method="Yee", grid=grid)
+            # explicitly set to None
+            sim = picmi.Simulation(time_step_size=17,
+                                   max_steps=128,
+                                   solver=solver,
+                                   picongpu_template_dir=tmpdir)
+
+            # there is no code -> this should not compile
+            with self.assertRaises(Exception):
+                sim.picongpu_run()
+
+            template_dir_name = tmpdir
+
+        runner = sim.picongpu_get_runner()
+
+        # check for generated (rendered) dir
+        self.assertTrue(os.path.isdir(runner.setup_dir))
+        self.assertEqual(
+            os.path.abspath(template_dir_name),
+            os.path.abspath(runner._Runner__pypicongpu_template_dir))
