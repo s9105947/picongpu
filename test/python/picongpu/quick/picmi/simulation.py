@@ -46,7 +46,7 @@ def get_sim_cfl_helper(
 
 class TestPicmiSimulation(unittest.TestCase):
     def __get_sim(self):
-        grid = get_grid(1, 1, 1, 5)
+        grid = get_grid(1, 1, 1, 32)
         solver = picmi.ElectromagneticSolver(method='Yee', grid=grid)
         sim = picmi.Simulation(time_step_size=17,
                                max_steps=4,
@@ -123,7 +123,7 @@ class TestPicmiSimulation(unittest.TestCase):
 
     def test_species_translation(self):
         """test that species are moved to PyPIConGPU simulation"""
-        grid = get_grid(1, 1, 1, 5)
+        grid = get_grid(1, 1, 1, 64)
         solver = picmi.ElectromagneticSolver(method='Yee', grid=grid)
         sim = picmi.Simulation(time_step_size=17, max_steps=4, solver=solver)
 

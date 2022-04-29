@@ -37,6 +37,7 @@ class TestSimulation(unittest.TestCase):
         self.s.grid.cell_cnt_x = 4
         self.s.grid.cell_cnt_y = 5
         self.s.grid.cell_cnt_z = 6
+        self.s.grid.n_gpus = tuple([1, 1, 1])
         self.s.grid.boundary_condition_x = grid.BoundaryCondition.PERIODIC
         self.s.grid.boundary_condition_y = grid.BoundaryCondition.PERIODIC
         self.s.grid.boundary_condition_z = grid.BoundaryCondition.PERIODIC
