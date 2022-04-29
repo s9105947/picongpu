@@ -22,6 +22,7 @@ class TestGrid3D(unittest.TestCase):
         self.g.boundary_condition_x = BoundaryCondition.PERIODIC
         self.g.boundary_condition_y = BoundaryCondition.ABSORBING
         self.g.boundary_condition_z = BoundaryCondition.PERIODIC
+        self.g.n_gpus = tuple([1, 1, 1])
 
     def test_basic(self):
         g = self.g

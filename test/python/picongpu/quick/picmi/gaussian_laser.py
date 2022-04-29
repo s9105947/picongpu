@@ -271,7 +271,7 @@ class TestPicmiGaussianLaser(unittest.TestCase):
             {}, picmi_laser.get_as_pypicongpu().get_rendering_context())
 
         grid_valid = picmi.Cartesian3DGrid(
-            number_of_cells=[123, 456, 789],
+            number_of_cells=[128, 512, 256],
             lower_bound=[0, 0, 0],
             upper_bound=[17, 192, 42],
             lower_boundary_conditions=["periodic", "periodic", "open"],
@@ -298,7 +298,7 @@ class TestPicmiGaussianLaser(unittest.TestCase):
 
         for bounds, centroid in bounds_and_centroids_invalid:
             grid_invalid = picmi.Cartesian3DGrid(
-                number_of_cells=[123, 456, 789],
+                number_of_cells=[128, 512, 64],
                 lower_bound=[0, 0, 0],
                 upper_bound=bounds,
                 lower_boundary_conditions=["periodic", "periodic", "open"],
