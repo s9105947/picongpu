@@ -68,7 +68,7 @@ class Grid3D(RenderedObject):
     boundary_condition_z = util.build_typesafe_property(BoundaryCondition)
     """behavior towards particles crossing the Z boundary"""
 
-    n_gpus = util.build_typesafe_property(typing.Tuple[int])
+    n_gpus = util.build_typesafe_property(typing.Tuple[int, int, int])
     """number of GPUs in x y and z direction as 3-integer tuple"""
 
     def _get_serialized(self) -> dict:

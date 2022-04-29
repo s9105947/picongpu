@@ -82,7 +82,7 @@ class Cartesian3DGrid(picmistandard.PICMI_Cartesian3DGrid):
         elif len(self.n_gpus) == 3:
             g.n_gpus = tuple(self.n_gpus)
         else:
-            assert False, "n_gpus was neither None, a 1-integer-list or a 3-integer-list"
+            raise ValueError("n_gpus was neither None, a 1-integer-list or a 3-integer-list")
 
         # check if gpu distribution fits grid
         # TODO: super_cell_size still hard coded
@@ -90,7 +90,7 @@ class Cartesian3DGrid(picmistandard.PICMI_Cartesian3DGrid):
         cells = [self.nx, self.ny, self.nz]
         dim_name = ["x", "y", "z"]
         for dim in range(3):
-            assert ((cells[i] // n_gpus[i]) // super_cell_size[i]) * n_gpus[i]) * super_cell_size[i] == cells[i], \
+            assert ((cells[i] // n_gpus[i]) // super_cell_size[i]) * n_gpus[i] * super_cell_size[i] == cells[i], \
                 "GPU- and/or super-cell-distribution in {} dimension does not match grid size".format(dim_name[i])
 
         return g
