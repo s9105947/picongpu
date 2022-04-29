@@ -23,7 +23,7 @@ Step-by-Step Guide
 1. Create a copy of the template: ``cp -r $PICSRC/share/picongpu/pypicongpu/template my_template_dir``
 2. Change whatever you need in the template
 
-   e.g. ``vim my_template_dir/etc/picongpu/1.cfg.mustache``
+   e.g. ``vim my_template_dir/etc/picongpu/N.cfg.mustache``
 
    find ``pypicongpu_output_with_newlines`` and insert:
 
@@ -53,7 +53,7 @@ Step-by-Step Guide
 4. run PICMI script
 5. inspect generated files
 
-   e.g. ``less generated_input/etc/picongpu/1.cfg`` now contains the output added above
+   e.g. ``less generated_input/etc/picongpu/N.cfg`` now contains the output added above
 
 .. warning::
 

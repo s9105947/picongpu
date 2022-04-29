@@ -53,10 +53,10 @@
                     "minimum": 1
                 },
                 "y": {
-                    "$ref": "#cell_cnt_component"
+                    "$ref": "#gpu_cnt_component"
                 },
                 "z": {
-                    "$ref": "#cell_cnt_component"
+                    "$ref": "#gpu_cnt_component"
                 }
             }
         },

@@ -12,6 +12,7 @@ import unittest
 
 class TestGrid3D(unittest.TestCase):
     def setUp(self):
+        """setup default grid"""
         self.g = Grid3D()
         self.g.cell_size_x_si = 1.2
         self.g.cell_size_y_si = 2.3
@@ -25,6 +26,7 @@ class TestGrid3D(unittest.TestCase):
         self.g.n_gpus = tuple([2, 4, 1])
 
     def test_basic(self):
+        """test default setup"""
         g = self.g
         self.assertEqual(1.2, g.cell_size_x_si)
         self.assertEqual(2.3, g.cell_size_y_si)
@@ -37,6 +39,7 @@ class TestGrid3D(unittest.TestCase):
         self.assertEqual(BoundaryCondition.PERIODIC, g.boundary_condition_z)
 
     def test_types(self):
+        """test raising errors if types are wrong"""
         g = self.g
         with self.assertRaises(TypeError):
             g.cell_size_x_si = "54.3"
@@ -59,23 +62,28 @@ class TestGrid3D(unittest.TestCase):
         with self.assertRaises(TypeError):
             g.n_gpus = [1, 1, 1] # list not accepted - tuple needed
 
-    def test_positiv(self):
+    def test_gpu_and_cell_cnt_positive(self):
+        """test if n_gpus and cell number s are >0"""
         g = self.g
-        with self.assertRaisesRegex(Exception, ".*greater than 0.*"):
+        with self.assertRaisesRegex(Exception, ".*cell_cnt_x.*greater than 0.*"):
             g.cell_cnt_x = -1
             g._get_serialized()
-        with self.assertRaisesRegex(Exception, ".*greater than 0.*"):
+        with self.assertRaisesRegex(Exception, ".*cell_cnt_y.*greater than 0.*"):
+            g.cell_cnt_x = 6 # revert changes
             g.cell_cnt_y = -2
             g._get_serialized()
-        with self.assertRaisesRegex(Exception, ".*greater than 0.*"):
+        with self.assertRaisesRegex(Exception, ".*cell_cnt_z.*greater than 0.*"):
+            g.cell_cnt_y = 7 # revert changes
             g.cell_cnt_z = 0
             g._get_serialized()
+        self.g.cell_cnt_z = 8 # revert changes
         for wrong_n_gpus in [tuple([-1, 1, 1]), tuple([1, 1, 0])]:
             with self.assertRaisesRegex(Exception, ".*greater than 0.*"):
                 g.n_gpus = wrong_n_gpus
                 g._get_serialized()
 
     def test_mandatory(self):
+        """test if None as content fails"""
         # check that mandatory arguments can't be none
         g = self.g
         with self.assertRaises(TypeError):
@@ -122,6 +130,7 @@ class TestGrid3D(unittest.TestCase):
 
 class TestBoundaryCondition(unittest.TestCase):
     def test_cfg_translation(self):
+        """test boundary condition strings"""
         p = BoundaryCondition.PERIODIC
         a = BoundaryCondition.ABSORBING
         self.assertEqual("0", a.get_cfg_str())

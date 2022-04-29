@@ -85,6 +85,14 @@ Parameters/Methods prefixed with ``picongpu_`` are PIConGPU-exclusive.
     Specify the template dir to use for code generation,
     please refer to :ref:`the documentation on the matter for details <picmi-custom-generation>`
 
+- Grid
+  
+  - ``picongpu_n_gpus``:
+    list of a 1 or 3 integers, greater than zero, describing GPU distribution in space
+    3-integer list: ``[N_gpu_x, N_gpu_y, N_gpu_z]``
+    1-integer list: ``[1, N_gpu_y, 1]``
+    Default is ``None`` equal to ``[1, 1, 1]``
+
 - Gaussian Laser
 
   - Laguerre Modes (``picongpu_laguerre_modes`` and ``picongpu_laguerre_phases``):

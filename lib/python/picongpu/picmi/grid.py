@@ -15,9 +15,14 @@ import typing
 
 @typechecked
 class Cartesian3DGrid(picmistandard.PICMI_Cartesian3DGrid):
-    def __init__(self, n_gpus: typing.Optional[typing.List[int]] = None, **kw):
-        """overwriting PICMI init to extract gpu distribution for PIConGPU"""
-        self.n_gpus = n_gpus
+    def __init__(self, picongpu_n_gpus: typing.Optional[typing.List[int]] = None, **kw):
+        """overwriting PICMI init to extract gpu distribution for PIConGPU
+           :param picongpu_n_gpus: number of gpus for each dimension
+                          None matches to a single GPU (1, 1, 1)
+                          a single integer assumes parallelization in y (1, N, 1)
+                          a 3-integer-long list is distributed directly as (Nx, Ny, Nz)
+        """
+        self.picongpu_n_gpus = picongpu_n_gpus
 
         # continue with regular init
         super().__init__(**kw)
@@ -74,18 +79,18 @@ class Cartesian3DGrid(picmistandard.PICMI_Cartesian3DGrid):
             picongpu_boundary_condition_by_picmi_id[self.bc_zmin]
 
         # gpu distribution
-                # convert input to 3 integer list
-        if self.n_gpus == None:
+        # convert input to 3 integer list
+        if self.picongpu_n_gpus == None:
             g.n_gpus = tuple([1, 1, 1])
-        elif len(self.n_gpus) == 1:
-            assert self.n_gpus[0] > 0, "number of gpus must be positive integer" 
-            g.n_gpus = tuple([1, self.n_gpus[0], 1])
-        elif len(self.n_gpus) == 3:
+        elif len(self.picongpu_n_gpus) == 1:
+            assert self.picongpu_n_gpus[0] > 0, "number of gpus must be positive integer" 
+            g.n_gpus = tuple([1, self.picongpu_n_gpus[0], 1])
+        elif len(self.picongpu_n_gpus) == 3:
             for dim in range(3):
-                assert self.n_gpus[dim] > 0, "number of gpus must be positive integer" 
-            g.n_gpus = tuple(self.n_gpus)
+                assert self.picongpu_n_gpus[dim] > 0, "number of gpus must be positive integer" 
+            g.n_gpus = tuple(self.picongpu_n_gpus)
         else:
-            raise ValueError("n_gpus was neither None, a 1-integer-list or a 3-integer-list")
+            raise ValueError("picongpu_n_gpus was neither None, a 1-integer-list or a 3-integer-list")
 
         # check if gpu distribution fits grid
         # TODO: super_cell_size still hard coded
